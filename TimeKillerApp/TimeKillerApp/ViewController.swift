@@ -1,13 +1,13 @@
 //
 //  ViewController.swift
-//  TapMe
 //
-//  Created by Ahad Sheriff on 2/12/17.
-//  Copyright © 2017 Ahad Sheriff. All rights reserved.
+//  Created by Bogdan Bystritskiy on 10/11/17.
+//  Copyright © 2017 Bogdan Bystritskiy. All rights reserved.
 //
 
 import UIKit
 import Firebase
+import SCLAlertView
 
 class ViewController: UIViewController {
     
@@ -23,11 +23,14 @@ class ViewController: UIViewController {
     var scoreRef: DatabaseReference!
     
 
+    @IBOutlet weak var switchModeGame: UISwitch!
+    @IBOutlet weak var hardcoreLabel: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var startGameButton: UIButton!
-    
-    
+    @IBOutlet weak var mainTapButton: UIButton! //клик в игре - который самый главный
+
 
     
     
@@ -35,6 +38,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
+        self.scoreLabel.isHidden = true
 
         
         // Firebase reference
@@ -47,7 +53,14 @@ class ViewController: UIViewController {
     
     @IBAction func startGameButtonDidTapped(_ sender: Any) {
         
-        startGameButton.isHidden = true
+        self.mainTapButton.isHidden = false
+        self.highScoreLabel.isHidden = false
+        self.scoreLabel.isHidden = false
+        
+        self.startGameButton.isHidden = true
+        self.hardcoreLabel.isHidden = true
+        self.switchModeGame.isHidden = true
+        
         self.setupGame()
         
     }
@@ -77,28 +90,44 @@ class ViewController: UIViewController {
         
         if seconds == 0 {
             timer?.invalidate()
-            let alert = UIAlertController(title: "Конец игры!", message: "Вы набрали \(count) очков", preferredStyle: UIAlertControllerStyle.alert)
             
-            alert.addAction(UIAlertAction(title: "Играть снова", style: UIAlertActionStyle.default, handler: { (alert:UIAlertAction) -> Void in
-                
-                 let itemRef = self.scoreRef.childByAutoId()
-                
-                 let scoreItem = [
-                    "username": self.username,
-                    "highscore": self.highScore
-                    ] as [String : Any]
-                
-                print(self.username, "XXX YYYY ", self.highScore)
-                print(self.count)
-                print(self.uid)
-                
-                itemRef.setValue(scoreItem)
- 
+            
+             let itemRef = self.scoreRef.childByAutoId()
+
+             let scoreItem = [
+                "username": self.username,
+                "highscore": self.highScore
+                ] as [String : Any]
+
+            print(self.username, "ЧЧЧЧЧЧЧЧ", self.highScore)
+            print(self.count)
+            print(self.uid)
+
+            itemRef.setValue(scoreItem)
+            
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false
+            )
+            
+            let alertView = SCLAlertView(appearance: appearance)
+            
+            alertView.addButton("Начать заново") {
+                //рестарт игры
                 self.setupGame()
-                
-            }))
+            }
             
-            self.present(alert, animated: true, completion: nil)
+            alertView.addButton("Таблица лидеров") {
+                
+                //переходим на страницу с лидербоард
+                self.tabBarController?.selectedIndex = 1
+
+                
+                
+            }
+            
+            alertView.showSuccess("Вы крут!", subTitle: "Вы набрали \(count). очков")
+            
+            
             
         }
         

@@ -25,32 +25,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(UserDefaults.standard.dictionaryRepresentation())
         
         
-        //проверка на первый запуск приложения
-        if isAppAlreadyLaunchedOnce() == true {
-            
-            //переходим на страницу с игрой
-            let storyboard = UIStoryboard(name: "Main", bundle: nil )
-            let jump = storyboard.instantiateViewController(withIdentifier: "MainGameWindow")
-            window?.rootViewController = jump
-            
-        } else {
-            
-            //переходим на страницу с логином
-            let storyboard = UIStoryboard(name: "Main",bundle: nil )
-            let jump = storyboard.instantiateViewController(withIdentifier: "LoginVC")
-            window?.rootViewController = jump
-            
-        }
-        
-
-        
-        
+//        //проверка на первый запуск приложения
+//        if isAppAlreadyLaunchedOnce() == true {
+//            
+//            //переходим на страницу с игрой
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil )
+//            let jump = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+//            window?.rootViewController = jump
+//            
+//        } else {
+//            
+//            //переходим на страницу с логином
+//            let storyboard = UIStoryboard(name: "Main",bundle: nil )
+//            let jump = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+//            window?.rootViewController = jump
+//            
+//        }
         
         return true
     }
     
-    
-    
+
+
     
 
     func isAppAlreadyLaunchedOnce() -> Bool {
@@ -65,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("App launched first time")
             return false
         }
+        
     }
     
     

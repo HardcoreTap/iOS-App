@@ -141,12 +141,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVG-eN-Mih">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVG-eN-Mih">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="586"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                <state key="normal" title="TapMe">
+                                <state key="normal" title="Кликай">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -154,7 +154,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsI-to-WQC">
-                                <rect key="frame" x="74" y="81" width="226" height="33"/>
+                                <rect key="frame" x="74" y="87" width="226" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -187,7 +187,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG3-Od-H5f">
-                                <rect key="frame" x="87" y="377" width="200" height="47"/>
+                                <rect key="frame" x="87" y="270" width="200" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
@@ -195,9 +195,21 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="restartPressed:" destination="bow-2t-fyi" eventType="touchUpInside" id="OV3-HZ-kzp"/>
                                     <action selector="startGameButtonDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="siN-qO-vk8"/>
                                 </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g8n-v8-CEI">
+                                <rect key="frame" x="163" y="338" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="onTintColor" red="1" green="0.046772837529804212" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-Fj-PDe">
+                                <rect key="frame" x="127" y="371" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Полный хардкор">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -209,8 +221,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Игра" id="0rO-s3-SAa"/>
                     <connections>
+                        <outlet property="hardcoreLabel" destination="CpA-Fj-PDe" id="FLV-I8-VEr"/>
+                        <outlet property="highScoreLabel" destination="m6W-2S-upj" id="69C-Fh-g8y"/>
+                        <outlet property="mainTapButton" destination="AVG-eN-Mih" id="xye-co-4Uh"/>
                         <outlet property="scoreLabel" destination="8WE-Nr-zW6" id="yFk-Ny-TI6"/>
                         <outlet property="startGameButton" destination="XG3-Od-H5f" id="VHB-2Y-b2Z"/>
+                        <outlet property="switchModeGame" destination="g8n-v8-CEI" id="yUf-xp-kb5"/>
                         <outlet property="timerLabel" destination="hsI-to-WQC" id="8sL-KV-Cdz"/>
                     </connections>
                 </viewController>
@@ -280,7 +296,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="97C-nj-LsA">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="RQK-Z7-Ytj" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="RQK-Z7-Ytj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9TM-7x-8hP">
                         <autoresizingMask key="autoresizingMask"/>
@@ -298,7 +314,7 @@
         <!--Рекорды-->
         <scene sceneID="hlx-dD-ObS">
             <objects>
-                <viewController id="kS2-IT-05Y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leaderBoard" id="kS2-IT-05Y" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gZw-Yd-0b4"/>
                         <viewControllerLayoutGuide type="bottom" id="l9J-bd-nG1"/>

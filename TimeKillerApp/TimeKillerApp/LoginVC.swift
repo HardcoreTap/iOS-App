@@ -31,6 +31,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         Auth.auth().signInAnonymously { (user, error) in
             if let user = user {
                 self.username = self.textBox.text!
+                
                 print("User is signed in with uid: ", user.uid)
                 print("Username: ", self.username)
                 
@@ -42,6 +43,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             } else {
                 print("No user is signed in.")
             }
+            
             self.performSegue(withIdentifier: "LoginToPlay", sender: nil)
         }
         
@@ -54,7 +56,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
     {
         textField.resignFirstResponder()
-        return true;
+        return true
     }
     
 
