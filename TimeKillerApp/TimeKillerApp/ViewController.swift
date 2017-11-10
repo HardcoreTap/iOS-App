@@ -42,8 +42,16 @@ class ViewController: UIViewController {
         //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
         self.scoreLabel.isHidden = true
 
+        //подгрузка рекорда из UserDefaults
+        if UserDefaults.standard.value(forKey: "highscore") != nil {
+            
+            highScore = UserDefaults.standard.value(forKey: "highscore") as! Int
+            
+            self.highScoreLabel.text = "Ваш рекорд: \(highScore)"
+            
+        }
         
-        // Firebase reference
+        //Firebase
         scoreRef = rootRef.child("High Score")
         
     }
@@ -69,6 +77,17 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: Any) {
         count += 1
         scoreLabel.text = "Очки: \(count)"
+        
+        //добавления нового рекорда
+        if count > highScore {
+            
+            highScore = count
+            self.highScoreLabel.text = "Ваш рекорд: \(highScore)"
+            
+            UserDefaults.standard.set(highScore, forKey: "highscore")
+            
+        }
+        
     }
     
     
@@ -91,17 +110,13 @@ class ViewController: UIViewController {
         if seconds == 0 {
             timer?.invalidate()
             
-            
              let itemRef = self.scoreRef.childByAutoId()
 
              let scoreItem = [
-                "username": self.username,
-                "highscore": self.highScore
+                "username": UserDefaults.standard.value(forKey: "userNAME") as! String,
+                "highscore": UserDefaults.standard.value(forKey: "highscore") as! Int
                 ] as [String : Any]
 
-            print(self.username, "ЧЧЧЧЧЧЧЧ", self.highScore)
-            print(self.count)
-            print(self.uid)
 
             itemRef.setValue(scoreItem)
             
@@ -121,11 +136,9 @@ class ViewController: UIViewController {
                 //переходим на страницу с лидербоард
                 self.tabBarController?.selectedIndex = 1
 
-                
-                
             }
             
-            alertView.showSuccess("Вы крут!", subTitle: "Вы набрали \(count). очков")
+            alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
             
             
             

@@ -40,6 +40,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 
                 self.userID = user.uid
 
+                //запись в UserDefaults: userID и userNAME
+                UserDefaults.standard.set(user.uid, forKey: "userID")
+                UserDefaults.standard.set(self.username, forKey: "userNAME")
+
+                
+                
+                
             } else {
                 print("No user is signed in.")
             }
