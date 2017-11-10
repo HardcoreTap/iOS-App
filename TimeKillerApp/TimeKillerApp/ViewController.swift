@@ -22,12 +22,20 @@ class ViewController: UIViewController {
     var rootRef = Database.database().reference()
     var scoreRef: DatabaseReference!
     
+
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var startGameButton: UIButton!
     
+    
+
+    
+    
+    //MARK : viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.setupGame()
         
         // Firebase reference
         scoreRef = rootRef.child("High Score")
@@ -35,8 +43,14 @@ class ViewController: UIViewController {
     }
     
 
-    @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
+
+    
+    @IBAction func startGameButtonDidTapped(_ sender: Any) {
+        
+        startGameButton.isHidden = true
+        self.setupGame()
+        
+    }
     
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -46,10 +60,11 @@ class ViewController: UIViewController {
     
     
     func setupGame() {
-        seconds = 30
+        
+        seconds = 5
         count = 0
         
-        timerLabel.text = "Время: \(seconds)"
+        timerLabel.text = "\(seconds)"
         scoreLabel.text = "Очки: \(count)"
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.subtractTime), userInfo: nil, repeats: true)
@@ -58,21 +73,26 @@ class ViewController: UIViewController {
     
     @objc func subtractTime() {
         seconds -= 1
-        timerLabel.text = "Время: \(seconds)"
+        timerLabel.text = "\(seconds)"
         
         if seconds == 0 {
             timer?.invalidate()
-            let alert = UIAlertController(title: "Time's Up!", message: "You scored \(count) points", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Конец игры!", message: "Вы набрали \(count) очков", preferredStyle: UIAlertControllerStyle.alert)
             
-            alert.addAction(UIAlertAction(title: "Play Again", style: UIAlertActionStyle.default, handler: { (alert:UIAlertAction) -> Void in
+            alert.addAction(UIAlertAction(title: "Играть снова", style: UIAlertActionStyle.default, handler: { (alert:UIAlertAction) -> Void in
                 
                  let itemRef = self.scoreRef.childByAutoId()
+                
                  let scoreItem = [
                     "username": self.username,
                     "highscore": self.highScore
                     ] as [String : Any]
-                 
-                 itemRef.setValue(scoreItem)
+                
+                print(self.username, "XXX YYYY ", self.highScore)
+                print(self.count)
+                print(self.uid)
+                
+                itemRef.setValue(scoreItem)
  
                 self.setupGame()
                 
@@ -83,13 +103,7 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    @IBAction func restartPressed(_ sender: Any) {
-        print("Global username: ", self.username)
-        timer?.invalidate()
-        self.viewDidLoad()
-    }
-    
+
     
     
 }

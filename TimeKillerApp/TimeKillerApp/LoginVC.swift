@@ -38,7 +38,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 print("Global Username: ", mainInstance.name)
                 
                 self.userID = user.uid
-                // Answers.logCustomEvent(withName: "Signed in", customAttributes: nil)
+
             } else {
                 print("No user is signed in.")
             }
