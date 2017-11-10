@@ -219,7 +219,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssz-tz-xuz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Игра" id="0rO-s3-SAa"/>
+                    <tabBarItem key="tabBarItem" title="Игра" image="start" selectedImage="start" id="0rO-s3-SAa"/>
                     <connections>
                         <outlet property="hardcoreLabel" destination="CpA-Fj-PDe" id="FLV-I8-VEr"/>
                         <outlet property="highScoreLabel" destination="m6W-2S-upj" id="69C-Fh-g8y"/>
@@ -358,7 +358,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WvZ-ok-R2A"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Рекорды" id="H8h-Ls-s24"/>
+                    <tabBarItem key="tabBarItem" title="Рекорды" image="leaderboard" selectedImage="leaderboard" id="H8h-Ls-s24"/>
                     <connections>
                         <outlet property="tableView" destination="T1T-7p-deQ" id="iYh-YG-Z8I"/>
                     </connections>
@@ -368,4 +368,8 @@
             <point key="canvasLocation" x="1240.8" y="566.26686656671666"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="leaderboard" width="50" height="50"/>
+        <image name="start" width="50" height="50"/>
+    </resources>
 </document>
