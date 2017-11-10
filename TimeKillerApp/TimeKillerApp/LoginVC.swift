@@ -32,9 +32,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             if let user = user {
                 self.username = self.textBox.text!
                 
-                print("User is signed in with uid: ", user.uid)
-                print("Username: ", self.username)
-                
                 let mainInstance = Main(name: self.username)
                 print("Global Username: ", mainInstance.name)
                 
@@ -44,9 +41,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 UserDefaults.standard.set(user.uid, forKey: "userID")
                 UserDefaults.standard.set(self.username, forKey: "userNAME")
 
-                
-                
-                
             } else {
                 print("No user is signed in.")
             }

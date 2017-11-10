@@ -314,7 +314,7 @@
         <!--Рекорды-->
         <scene sceneID="hlx-dD-ObS">
             <objects>
-                <viewController storyboardIdentifier="leaderBoard" id="kS2-IT-05Y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leaderBoard" id="kS2-IT-05Y" customClass="LeadearBoardVC" customModule="TimeKillerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gZw-Yd-0b4"/>
                         <viewControllerLayoutGuide type="bottom" id="l9J-bd-nG1"/>
@@ -324,7 +324,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таблица лидеров" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBv-gI-wwV">
-                                <rect key="frame" x="38" y="75" width="299" height="43"/>
+                                <rect key="frame" x="38" y="43" width="299" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="Hh1-tH-G6s"/>
                                     <constraint firstAttribute="width" constant="299" id="qIw-3c-LmM"/>
@@ -333,21 +333,39 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T1T-7p-deQ">
+                                <rect key="frame" x="38" y="91" width="299" height="484"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5wA-xA-dop" customClass="LeaderBoardCell" customModule="TimeKillerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="299" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wA-xA-dop" id="czX-PB-ika">
+                                            <rect key="frame" x="0.0" y="0.0" width="299" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oBv-gI-wwV" firstAttribute="leading" secondItem="Xy7-bt-zhk" secondAttribute="leadingMargin" constant="22" id="Ed3-4o-rzC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oBv-gI-wwV" secondAttribute="trailing" constant="22" id="KoB-sn-OY5"/>
-                            <constraint firstItem="oBv-gI-wwV" firstAttribute="top" secondItem="gZw-Yd-0b4" secondAttribute="bottom" constant="55" id="uBx-yp-PfZ"/>
-                            <constraint firstItem="l9J-bd-nG1" firstAttribute="top" secondItem="oBv-gI-wwV" secondAttribute="bottom" constant="549" id="vgR-Ho-h4M"/>
+                            <constraint firstItem="oBv-gI-wwV" firstAttribute="top" secondItem="gZw-Yd-0b4" secondAttribute="bottom" constant="23" id="uBx-yp-PfZ"/>
+                            <constraint firstItem="l9J-bd-nG1" firstAttribute="top" secondItem="oBv-gI-wwV" secondAttribute="bottom" constant="532" id="vgR-Ho-h4M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WvZ-ok-R2A"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Рекорды" id="H8h-Ls-s24"/>
+                    <connections>
+                        <outlet property="tableView" destination="T1T-7p-deQ" id="iYh-YG-Z8I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0W-ga-w6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1241" y="567"/>
+            <point key="canvasLocation" x="1240.8" y="566.26686656671666"/>
         </scene>
     </scenes>
 </document>

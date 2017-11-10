@@ -117,13 +117,12 @@ class ViewController: UIViewController {
                 "highscore": UserDefaults.standard.value(forKey: "highscore") as! Int
                 ] as [String : Any]
 
-
+            //отправка данных в Firebase
             itemRef.setValue(scoreItem)
             
-            let appearance = SCLAlertView.SCLAppearance(
-                showCloseButton: false
-            )
             
+            //MARK: SCLAlertView после окончания игры
+            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
             let alertView = SCLAlertView(appearance: appearance)
             
             alertView.addButton("Начать заново") {
@@ -132,10 +131,8 @@ class ViewController: UIViewController {
             }
             
             alertView.addButton("Таблица лидеров") {
-                
                 //переходим на страницу с лидербоард
                 self.tabBarController?.selectedIndex = 1
-
             }
             
             alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
