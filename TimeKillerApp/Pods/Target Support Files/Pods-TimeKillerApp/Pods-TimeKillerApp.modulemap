@@ -1,0 +1,6 @@
+framework module Pods_TimeKillerApp {
+  umbrella header "Pods-TimeKillerApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
