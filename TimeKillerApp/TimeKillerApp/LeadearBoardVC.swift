@@ -80,7 +80,6 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        print(self.contentLeaderboards[indexPath.row].sName)
 //        UserDefaults.standard.synchronize()
 
-<<<<<<< HEAD
 //        if indexPath.row == 10 {
 //            cell.backgroundColor = UIColor.gray
 //
@@ -98,8 +97,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.pointsCellLabel.text = "\(self.contentLeaderboards[indexPath.row].sPoints)"
         
 //        }
-=======
->>>>>>> sergey2
+
         
         return cell
         

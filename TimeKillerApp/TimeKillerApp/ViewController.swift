@@ -206,8 +206,7 @@ class ViewController: UIViewController {
             //отправка данных в Firebase
             self.scoreRef.setValue(scoreItem)
         }
-        
-
+    
         
         //MARK: SCLAlertView после окончания игры
         let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
@@ -228,10 +227,7 @@ class ViewController: UIViewController {
     
     
     func updateTimerLabel() {
-<<<<<<< HEAD
-        timerLabel.text = String(format: "00:%02d:%d0", seconds, seconds10)
-=======
->>>>>>> sergey2
+        timerLabel.text = String(format: "00:%02d:%02d", seconds, seconds100)
     }
     
 }
