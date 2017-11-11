@@ -82,17 +82,17 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         
         
         //кастомный label с анимацией
-        label89val = LTMorphingLabel(frame: CGRect(x: 20, y: 229, width: 339, height: 248))
-        label89val.delegate = self
-        label89val.textAlignment = .center
-        label89val.morphingEffect = .fall
-        label89val.text = ""
-        label89val.textColor = UIColor.white
-        label89val.font = UIFont.boldSystemFont(ofSize: 300.0)
-        label89val.setNeedsDisplay()
-        label89val.reloadInputViews()
-        self.view.addSubview(label89val)
-        label89val.isHidden = true
+//        label89val = LTMorphingLabel(frame: CGRect(x: 20, y: 229, width: 339, height: 248))
+//        label89val.delegate = self
+//        label89val.textAlignment = .center
+//        label89val.morphingEffect = .fall
+//        label89val.text = ""
+//        label89val.textColor = UIColor(red: 110/255.0, green: 110/255.0, blue: 110/255.0, alpha: 100)
+//        label89val.font = UIFont.boldSystemFont(ofSize: 300.0)
+//        label89val.setNeedsDisplay()
+//        label89val.reloadInputViews()
+//        self.view.addSubview(label89val)
+//        label89val.isHidden = true
         
         
         startGameButton.isHidden = false
@@ -106,7 +106,7 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         if switchModeGame.isOn == false {
             self.faultLabel.text = "Погрешность: 0.1"
         } else {
-            self.faultLabel.text = "Погрешность: 0.0"
+            self.faultLabel.text = "Погрешность отключена"
         }
         
     }
@@ -118,9 +118,8 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
             if fabs(Double(seconds - count - 1) + Double(seconds100) / 100) <= fault {
                 // Плюс очко
                 count += 1
-//                scoreLabel.text = "\(count)"
-                label89val.text = "\(count)"
-
+                scoreLabel.text = "\(count)"
+//                label89val.text = "\(count)"
             } else {
                 self.gameOver()
             }
@@ -136,8 +135,8 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
     func setupGame() {
         
         highScoreLabel.isHidden = false
-//        scoreLabel.isHidden = false
-        label89val.isHidden = false
+        scoreLabel.isHidden = false
+//        label89val.isHidden = false
 
         
         shareButton.isHidden = true
@@ -157,10 +156,8 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         updateTimerLabel()
         
         //для анимации
-//        scoreLabel.text = "\(count)"
-        
-        label89val.text = "\(count)"
-
+        scoreLabel.text = "\(count)"
+//        label89val.text = "\(count)"
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: timerBlock(timer:))
         
@@ -186,6 +183,7 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         }
     }
     
+    
     //нажали кнопку выйти
     @IBAction func logOutButtonDidTapped(_ sender: Any) {
         
@@ -208,6 +206,7 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         
     }
     
+    
     //нажали выход на алерте
     func exitClicked() {
         
@@ -226,6 +225,7 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
     }
     
     
+    //конец игры
     func gameOver() {
         
         timer.invalidate()
@@ -235,8 +235,6 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         tapToRestartButton.isHidden = false
         shareButton.isHidden = false
 
-
-        
         //добавления нового рекорда
         if count > highScore {
             
@@ -249,20 +247,20 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
             let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
             let alertView = SCLAlertView(appearance: appearance)
             
-            alertView.addButton("Начать заново") {
+            alertView.addButton("Играть дальше", backgroundColor: UIColor(patternImage: UIImage(named: "bg")!), action: {
                 //рестарт игры
                 self.tapToRestartButton.isHidden = true
                 self.setupGame()
-            }
-            
-            alertView.addButton("Таблица лидеров") {
+            })
+
+            alertView.addButton("Таблица лидеров", backgroundColor: UIColor(patternImage: UIImage(named: "bg")!), action: {
                 //переходим на страницу с лидербоард
                 self.tabBarController?.selectedIndex = 1
-            }
+                
+            })
             
-            alertView.showSuccess("Поздравляем!", subTitle: "Вы побили рекод. Ваш новый результат \(count) очков")
-            
-            
+            alertView.showSuccess("Поздравляем!", subTitle: "Вы свой побили рекорд. Ваш новый результат \(count) очков")
+      
         }
         
         if let highscore = UserDefaults.standard.value(forKey: "highscore") {
@@ -279,9 +277,11 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
     
     }
     
+    
     func updateTimerLabel() {
         timerLabel.text = String(format: "00:%02d:%02d", seconds, seconds100)
     }
+    
     
     
     @IBAction func tapToRestartDidTapped(_ sender: Any) {
