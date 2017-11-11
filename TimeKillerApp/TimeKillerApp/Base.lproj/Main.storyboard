@@ -15,9 +15,6 @@
             <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-Regular</string>
         </array>
-        <array key="OpenSans-Regular.ttf">
-            <string>OpenSans</string>
-        </array>
         <array key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
         </array>
@@ -126,52 +123,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aym-H5-3wX">
-                                <rect key="frame" x="37.5" y="447" width="300" height="121"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u5g-OG-vhr">
-                                        <rect key="frame" x="74.5" y="0.0" width="151.5" height="121"/>
-                                        <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WE-Nr-zW6">
-                                                <rect key="frame" x="0.0" y="0.0" width="151.5" height="86.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="86.5" id="UEY-HQ-abL"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш рекорд:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6W-2S-upj">
-                                                <rect key="frame" x="0.0" y="86.5" width="151.5" height="34.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="34.5" id="Gi8-jm-PaZ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="fdQ-VE-FuA"/>
-                                    <constraint firstAttribute="height" constant="121" id="lB2-wl-0P9"/>
-                                </constraints>
-                            </stackView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WE-Nr-zW6">
+                                <rect key="frame" x="20" y="221" width="339" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="300"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ваш рекорд" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6W-2S-upj">
+                                <rect key="frame" x="117" y="582" width="140" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG3-Od-H5f">
-                                <rect key="frame" x="87" y="270" width="200" height="47"/>
+                                <rect key="frame" x="47" y="447" width="280" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" name="lipstick"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
                                 <state key="normal" title="Начать игру">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startGameButtonDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="siN-qO-vk8"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g8n-v8-CEI">
-                                <rect key="frame" x="163" y="338" width="49" height="31"/>
+                                <rect key="frame" x="164" y="549" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="onTintColor" red="1" green="0.046772837529804212" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -179,22 +158,16 @@
                                     <action selector="switchModeDidTapped:" destination="bow-2t-fyi" eventType="valueChanged" id="Erq-n7-RcD"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-Fj-PDe">
-                                <rect key="frame" x="127" y="371" width="120" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-Fj-PDe">
+                                <rect key="frame" x="112" y="521" width="155" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Полный хардкор">
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <state key="normal" title="Режим хардкора">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Погрешность: 0.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1J-oQ-GMt">
-                                <rect key="frame" x="60" y="154" width="255" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpQ-u1-P5I">
-                                <rect key="frame" x="341" y="35" width="19" height="22"/>
+                                <rect key="frame" x="341" y="44" width="19" height="22"/>
                                 <state key="normal" image="iconLogout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -202,37 +175,17 @@
                                     <action selector="logOutButtonDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="d2k-dQ-eY1"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wxi-c8-9tV">
-                                <rect key="frame" x="15" y="35" width="154" height="19"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menIcon" translatesAutoresizingMaskIntoConstraints="NO" id="E6i-S5-zna">
-                                        <rect key="frame" x="0.0" y="0.0" width="9" height="19"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="9" id="jWX-u4-DYt"/>
-                                            <constraint firstAttribute="height" constant="19" id="woD-3N-Ugj"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игрок: Богдан" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJZ-hy-0KT">
-                                        <rect key="frame" x="19" y="0.0" width="135" height="19"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="19" id="VI6-rx-lL9"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="19" id="rb7-L7-Mgx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rJZ-hy-0KT" secondAttribute="trailing" id="6qI-J2-0WB"/>
-                                    <constraint firstItem="E6i-S5-zna" firstAttribute="leading" secondItem="wxi-c8-9tV" secondAttribute="leading" id="E8G-TH-Oul"/>
-                                    <constraint firstItem="rJZ-hy-0KT" firstAttribute="top" secondItem="wxi-c8-9tV" secondAttribute="top" id="J1b-SO-Ubu"/>
-                                    <constraint firstAttribute="height" constant="19" id="Zkq-Kk-BIr"/>
-                                    <constraint firstAttribute="bottom" secondItem="E6i-S5-zna" secondAttribute="bottom" id="dfU-KH-pH0"/>
-                                    <constraint firstAttribute="bottom" secondItem="rJZ-hy-0KT" secondAttribute="bottom" id="pfZ-yQ-nf5"/>
-                                    <constraint firstItem="E6i-S5-zna" firstAttribute="top" secondItem="wxi-c8-9tV" secondAttribute="top" id="qTP-qN-7bA"/>
-                                </constraints>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menIcon" translatesAutoresizingMaskIntoConstraints="NO" id="E6i-S5-zna">
+                                <rect key="frame" x="20" y="44" width="9" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Игрок: Богдан" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJZ-hy-0KT">
+                                <rect key="frame" x="39" y="44" width="194" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsI-to-WQC">
                                 <rect key="frame" x="54" y="96" width="266" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -240,15 +193,45 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Погрешность: 0.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1J-oQ-GMt">
+                                <rect key="frame" x="47" y="163" width="280" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtA-4Z-dfW">
+                                <rect key="frame" x="16" y="82" width="343" height="469"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="200"/>
+                                <state key="normal" title="Тапните, чтобы попытаться снова">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapToRestartDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="VeJ-cC-rRI"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSx-q7-BB9">
+                                <rect key="frame" x="148" y="477" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <state key="normal" title="Поделиться">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="osH-4p-Khc"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="hvL-80-ion">
+                                <rect key="frame" x="120" y="482" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EpQ-u1-P5I" firstAttribute="top" secondItem="3iA-h3-eqe" secondAttribute="top" constant="35" id="2Jv-ub-LcJ"/>
+                            <constraint firstItem="EpQ-u1-P5I" firstAttribute="top" secondItem="3iA-h3-eqe" secondAttribute="top" constant="44" id="2Jv-ub-LcJ"/>
                             <constraint firstItem="ssz-tz-xuz" firstAttribute="trailing" secondItem="EpQ-u1-P5I" secondAttribute="trailing" constant="15" id="92p-BK-wOs"/>
-                            <constraint firstItem="aym-H5-3wX" firstAttribute="centerX" secondItem="3iA-h3-eqe" secondAttribute="centerX" id="ZFe-MM-EBQ"/>
-                            <constraint firstItem="wxi-c8-9tV" firstAttribute="top" secondItem="3iA-h3-eqe" secondAttribute="top" constant="35" id="aGg-aU-BTL"/>
-                            <constraint firstItem="9SF-t2-sgv" firstAttribute="top" secondItem="aym-H5-3wX" secondAttribute="bottom" constant="50" id="cDh-CM-mgI"/>
-                            <constraint firstItem="wxi-c8-9tV" firstAttribute="leading" secondItem="ssz-tz-xuz" secondAttribute="leading" constant="15" id="q70-J6-Evg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssz-tz-xuz"/>
                     </view>
@@ -261,8 +244,11 @@
                         <outlet property="highScoreLabel" destination="m6W-2S-upj" id="69C-Fh-g8y"/>
                         <outlet property="playerNameLabel" destination="rJZ-hy-0KT" id="XfE-fM-s1h"/>
                         <outlet property="scoreLabel" destination="8WE-Nr-zW6" id="yFk-Ny-TI6"/>
+                        <outlet property="shareButton" destination="aSx-q7-BB9" id="fsx-C4-peR"/>
+                        <outlet property="shareImage" destination="hvL-80-ion" id="FbQ-EG-2yg"/>
                         <outlet property="startGameButton" destination="XG3-Od-H5f" id="VHB-2Y-b2Z"/>
                         <outlet property="switchModeGame" destination="g8n-v8-CEI" id="yUf-xp-kb5"/>
+                        <outlet property="tapToRestartButton" destination="mtA-4Z-dfW" id="1tl-Bb-fwf"/>
                         <outlet property="timerLabel" destination="hsI-to-WQC" id="8sL-KV-Cdz"/>
                     </connections>
                 </viewController>
@@ -354,24 +340,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Имя" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdR-5C-oFn">
-                                                    <rect key="frame" x="49" y="11" width="154" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Кол-во очков" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhr-Rb-TiP">
-                                                    <rect key="frame" x="177" y="12" width="151" height="21"/>
+                                                    <rect key="frame" x="250" y="13" width="80" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nO-Ep-rkR">
-                                                    <rect key="frame" x="15" y="14" width="18" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nO-Ep-rkR">
+                                                    <rect key="frame" x="17" y="14" width="26" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Имя" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdR-5C-oFn">
+                                                    <rect key="frame" x="51" y="13" width="188" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -387,12 +373,12 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таблица лидеров" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBv-gI-wwV">
-                                <rect key="frame" x="100" y="44" width="175" height="25"/>
+                                <rect key="frame" x="81" y="44" width="213" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="H8q-mb-LIW"/>
+                                    <constraint firstAttribute="width" constant="213" id="H8q-mb-LIW"/>
                                     <constraint firstAttribute="height" constant="25" id="TL4-Fi-cSb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -427,6 +413,7 @@
         <image name="iconRaiting" width="30" height="27"/>
         <image name="iconRules" width="22" height="27"/>
         <image name="menIcon" width="9" height="11"/>
+        <image name="share" width="100" height="100"/>
         <namedColor name="lipstick">
             <color red="0.9100000262260437" green="0.17599999904632568" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

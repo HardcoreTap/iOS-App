@@ -27,6 +27,9 @@ class ViewController: UIViewController {
     var scoreRef: DatabaseReference!
     
     @IBOutlet weak var switchModeGame: UISwitch!
+    
+    @IBOutlet weak var shareImage: UIImageView!
+    @IBOutlet weak var tapToRestartButton: UIButton!
     @IBOutlet weak var hardcoreLabel: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -34,9 +37,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var faultLabel: UILabel!
-    
+    @IBOutlet weak var shareButton: UIButton!
     
     //MARK: - viewDidLoad
+    
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +60,6 @@ class ViewController: UIViewController {
             scoreRef = rootRef.child("leaderboards").child("Имя не определено")
         }
         
-        //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
-        scoreLabel.isHidden = true
         
         //подгрузка рекорда из UserDefaults
         if UserDefaults.standard.value(forKey: "highscore") != nil {
@@ -69,6 +74,12 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
+        scoreLabel.isHidden = true
+        shareButton.isHidden = true
+        tapToRestartButton.isHidden = true
+        shareImage.isHidden = true
+        
         startGameButton.isHidden = false
         switchModeGame.isHidden = false
         hardcoreLabel.isHidden = false
@@ -77,10 +88,10 @@ class ViewController: UIViewController {
     
     @IBAction func switchModeDidTapped(_ sender: Any) {
         
-        if switchModeGame.tag == 0 {
-            faultLabel.text = "Погрешность: 0.1"
+        if switchModeGame.isOn == false {
+            self.faultLabel.text = "Погрешность: 0.1"
         } else {
-            faultLabel.text = "Погрешность: 0.0\nТы уверен?"
+            self.faultLabel.text = "Погрешность: 0.0"
         }
         
     }
@@ -92,27 +103,30 @@ class ViewController: UIViewController {
             if fabs(Double(seconds - count - 1) + Double(seconds100) / 100) <= fault {
                 // Плюс очко
                 count += 1
-                scoreLabel.text = "Очки: \(count)"
+                scoreLabel.text = "\(count)"
             } else {
                 self.gameOver()
             }
         }
     }
     
+    
     @IBAction func startGameButtonDidTapped(_ sender: Any) {
+        setupGame()
+    }
+    
+    
+    func setupGame() {
         
         highScoreLabel.isHidden = false
         scoreLabel.isHidden = false
         
+        shareButton.isHidden = true
         startGameButton.isHidden = true
         hardcoreLabel.isHidden = true
         switchModeGame.isHidden = true
-        
-        setupGame()
-        
-    }
-    
-    func setupGame() {
+        shareImage.isHidden = true
+
         
         count = 0
         seconds = 0
@@ -123,7 +137,7 @@ class ViewController: UIViewController {
         
         updateTimerLabel()
         
-        scoreLabel.text = "Очки: \(count)"
+        scoreLabel.text = "\(count)"
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: timerBlock(timer:))
         
@@ -194,12 +208,37 @@ class ViewController: UIViewController {
         timer.invalidate()
         flPlaying = false
         
+        shareImage.isHidden = false
+        tapToRestartButton.isHidden = false
+        shareButton.isHidden = false
+
+
+        
         //добавления нового рекорда
         if count > highScore {
             
             highScore = count
             highScoreLabel.text = "Ваш рекорд: \(highScore)"
             UserDefaults.standard.set(highScore, forKey: "highscore")
+            
+            
+            //        MARK: SCLAlertView после окончания игры
+            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+            let alertView = SCLAlertView(appearance: appearance)
+            
+            alertView.addButton("Начать заново") {
+                //рестарт игры
+                self.tapToRestartButton.isHidden = true
+                self.setupGame()
+            }
+            
+            alertView.addButton("Таблица лидеров") {
+                //переходим на страницу с лидербоард
+                self.tabBarController?.selectedIndex = 1
+            }
+            
+            alertView.showSuccess("Поздравляем!", subTitle: "Вы побили рекод. Ваш новый результат \(count) очков")
+            
             
         }
         
@@ -212,33 +251,33 @@ class ViewController: UIViewController {
             
             //отправка данных в Firebase
             self.scoreRef.setValue(scoreItem)
+            
         }
     
-        
-//        MARK: SCLAlertView после окончания игры
-        let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-        let alertView = SCLAlertView(appearance: appearance)
-
-        alertView.addButton("Начать заново") {
-            //рестарт игры
-            self.setupGame()
-        }
-
-        alertView.addButton("Таблица лидеров") {
-            //переходим на страницу с лидербоард
-            self.tabBarController?.selectedIndex = 1
-        }
-
-        alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
-        
-
-        
     }
-    
     
     func updateTimerLabel() {
         timerLabel.text = String(format: "00:%02d:%02d", seconds, seconds100)
     }
+    
+    
+    @IBAction func tapToRestartDidTapped(_ sender: Any) {
+        tapToRestartButton.isHidden = true
+        self.setupGame()
+
+    }
+    
+    //Кнопка поделиться
+    @IBAction func shareButtonDidTapped(_ sender: Any) {
+        
+        let activityVC = UIActivityViewController(activityItems: ["Хэй, мой рекорд в HardcoreTap"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+        
+    }
+    
+    
+
     
 }
 
