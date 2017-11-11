@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         //для отладки: что хранится в userdefaults
-        print("UserDefaults: ================================")
-        print(UserDefaults.standard.dictionaryRepresentation())
+//        print("UserDefaults: ================================")
+//        print(UserDefaults.standard.dictionaryRepresentation())
         
         
         

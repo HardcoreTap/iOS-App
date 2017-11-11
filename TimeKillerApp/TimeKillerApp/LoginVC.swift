@@ -21,7 +21,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
         self.textBox.delegate = self
         
     }

@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var switchModeGame: UISwitch!
+    
     @IBOutlet weak var hardcoreLabel: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -44,11 +45,11 @@ class ViewController: UIViewController {
         if let name = UserDefaults.standard.value(forKey: "userNAME") {
             self.playerNameLabel.text = (name as! String)
             //Firebase
-            scoreRef = rootRef.child(name as! String)
+            scoreRef = rootRef.child("leaderboards").child(name as! String)
         } else {
             self.playerNameLabel.text = "???"
             //Firebase
-            scoreRef = rootRef.child("nameNotDefined")
+            scoreRef = rootRef.child("leaderboards").child("nameNotDefined")
         }
         
         //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
@@ -177,6 +178,7 @@ class ViewController: UIViewController {
     
     
     func gameOver() {
+        
         timer.invalidate()
         flPlaying = false
         
@@ -221,7 +223,7 @@ class ViewController: UIViewController {
     
     
     func updateTimerLabel() {
-        timerLabel.text = String(format: "00:%02d:%02d", seconds, seconds10)
+        timerLabel.text = String(format: "00:%02d:%d0", seconds, seconds10)
     }
     
 }
