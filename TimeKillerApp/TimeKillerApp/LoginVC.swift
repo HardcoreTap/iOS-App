@@ -38,12 +38,12 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 //запись в UserDefaults: userID и userNAME
                 UserDefaults.standard.set(self.userID, forKey: "userID")
                 UserDefaults.standard.set(self.username, forKey: "userNAME")
-                UserDefaults.standard.synchronize()
                 
             } else {
                 print("No user is signed in.")
             }
             
+            UserDefaults.standard.synchronize()
             self.performSegue(withIdentifier: "LoginToPlay", sender: nil)
         }
         

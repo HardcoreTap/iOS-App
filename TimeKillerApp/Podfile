@@ -7,11 +7,12 @@ target 'TimeKillerApp' do
 
   # Pods for TimeKillerApp
 
-	pod 'Firebase'
-	pod 'Firebase/Core'
-	pod 'Firebase/Database'
-    pod 'SCLAlertView'
-    pod 'Firebase/Auth'
+pod 'Firebase'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'SCLAlertView'
+pod 'Firebase/Auth'
+pod 'LTMorphingLabel'
 
 
 end

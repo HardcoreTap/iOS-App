@@ -83,9 +83,6 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.placeCellLabel.text = "\(indexPath.row + 1)"
 
         }
-        
-        
-        
 
         return cell
         
