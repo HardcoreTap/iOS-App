@@ -13,6 +13,7 @@ class LeaderBoardCell: UITableViewCell {
     
     @IBOutlet weak var nameCellLabel: UILabel!
     @IBOutlet weak var pointsCellLabel: UILabel!
+    @IBOutlet weak var placeCellLabel: UILabel!
     
     
     override func awakeFromNib() {

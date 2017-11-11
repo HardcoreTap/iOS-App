@@ -22,6 +22,9 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+
+        
         getDataFromFirebase()
 
 
@@ -83,6 +86,15 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.nameCellLabel.text = self.contentLeaderboards[indexPath.row].sName
         cell.pointsCellLabel.text = "\(self.contentLeaderboards[indexPath.row].sPoints!)"
+        
+        //для первых трек добавляем иконку короны
+        if indexPath.row < 3 {
+            cell.placeCellLabel.text = ""
+            cell.placeCellLabel.backgroundColor = UIColor(patternImage: UIImage(named: "iconLeader")!)
+        } else {
+            cell.placeCellLabel.text = "\(indexPath.row)"
+
+        }
         
 //        }
 

@@ -11,6 +11,8 @@
 		3C092AFC1FB76AC80019687C /* UIFont+OLYAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AFA1FB76AC80019687C /* UIFont+OLYAdditions.swift */; };
 		3C092B021FB76CE20019687C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */; };
 		3C092B031FB76CE20019687C /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */; };
+		3C092B061FB771EF0019687C /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B051FB771EF0019687C /* RulesVC.swift */; };
+		3C092B0A1FB774010019687C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B091FB774010019687C /* TabBarVC.swift */; };
 		3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12BFC1FB62FED00945352 /* AppDelegate.swift */; };
 		3CE12BFF1FB62FEE00945352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12BFE1FB62FEE00945352 /* ViewController.swift */; };
 		3CE12C021FB62FEE00945352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE12C001FB62FEE00945352 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		3C092AFA1FB76AC80019687C /* UIFont+OLYAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+OLYAdditions.swift"; sourceTree = "<group>"; };
 		3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		3C092B051FB771EF0019687C /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
+		3C092B091FB774010019687C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		3CE12BF91FB62FED00945352 /* TimeKillerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKillerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE12BFC1FB62FED00945352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE12BFE1FB62FEE00945352 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,11 +114,13 @@
 				3CE12BFE1FB62FEE00945352 /* ViewController.swift */,
 				3CE12C141FB663A000945352 /* LeadearBoardVC.swift */,
 				3CE12C161FB6666200945352 /* LeaderBoardCell.swift */,
+				3C092B051FB771EF0019687C /* RulesVC.swift */,
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 				3CE12C081FB62FEE00945352 /* Info.plist */,
 				3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
+				3C092B091FB774010019687C /* TabBarVC.swift */,
 			);
 			path = TimeKillerApp;
 			sourceTree = "<group>";
@@ -272,6 +278,8 @@
 				3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */,
 				3C092AFC1FB76AC80019687C /* UIFont+OLYAdditions.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* ViewController.swift in Sources */,
+				3C092B0A1FB774010019687C /* TabBarVC.swift in Sources */,
+				3C092B061FB771EF0019687C /* RulesVC.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
 				3C092AFB1FB76AC80019687C /* UIColor+OLYAdditions.swift in Sources */,
 				3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */,

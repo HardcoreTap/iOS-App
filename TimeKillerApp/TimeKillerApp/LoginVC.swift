@@ -18,6 +18,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         self.textBox.delegate = self

@@ -41,6 +41,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        
         //имя пользователя в левом вехнем углу
         if UserDefaults.standard.value(forKey: "userNAME") != nil {
             let name = UserDefaults.standard.value(forKey: "userNAME") as! String
