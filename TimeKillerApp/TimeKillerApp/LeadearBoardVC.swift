@@ -17,13 +17,14 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var rootRef = Database.database().reference()
     var contentLeaderboards : [content] = []
-
+    var nameUser : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 
+        nameUser = UserDefaults.standard.value(forKey: "userNAME") as! String
         
         getDataFromFirebase()
 
@@ -59,7 +60,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.contentLeaderboards.count
+        return self.contentLeaderboards.count-1
     }
     
     
@@ -67,25 +68,12 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeaderBoardCell
         
-        
-//        print(self.contentLeaderboards[indexPath.row].sName)
-//        UserDefaults.standard.synchronize()
-
-//        if indexPath.row == 10 {
-//            cell.backgroundColor = UIColor.gray
-//
-//            if let highscore = UserDefaults.standard.value(forKey: "highscore") {
-//                cell.nameCellLabel.text = (UserDefaults.standard.value(forKey: "userNAME") as! String)
-//                cell.pointsCellLabel.text = "\(highscore)"
-//            } else {
-//                cell.nameCellLabel.text = (UserDefaults.standard.value(forKey: "userNAME") as! String)
-//                cell.pointsCellLabel.text = "0"
-//            }
-//
-//        } else {
-        
         cell.nameCellLabel.text = self.contentLeaderboards[indexPath.row].sName
         cell.pointsCellLabel.text = "\(self.contentLeaderboards[indexPath.row].sPoints!)"
+        
+        if self.contentLeaderboards[indexPath.row].sName! == nameUser  {
+            cell.backgroundColor = UIColor.olyLipstick
+        }
         
         //для первых трек добавляем иконку короны
         if indexPath.row < 3 {
@@ -96,7 +84,8 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         }
         
-//        }
+        
+        
 
         return cell
         

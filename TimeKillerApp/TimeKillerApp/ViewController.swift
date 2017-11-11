@@ -270,7 +270,7 @@ class ViewController: UIViewController {
     //Кнопка поделиться
     @IBAction func shareButtonDidTapped(_ sender: Any) {
         
-        let activityVC = UIActivityViewController(activityItems: ["Хэй, мой рекорд в HardcoreTap"], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: ["Хэй, мой рекорд в HardcoreTap: \(self.highScore)"], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)
         
