@@ -211,6 +211,24 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpQ-u1-P5I">
+                                <rect key="frame" x="266" y="20" width="93" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Выйти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButtonDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="d2k-dQ-eY1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Игрок: Богдан" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJZ-hy-0KT">
+                                <rect key="frame" x="16" y="20" width="170" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -224,6 +242,7 @@
                         <outlet property="hardcoreLabel" destination="CpA-Fj-PDe" id="FLV-I8-VEr"/>
                         <outlet property="highScoreLabel" destination="m6W-2S-upj" id="69C-Fh-g8y"/>
                         <outlet property="mainTapButton" destination="AVG-eN-Mih" id="xye-co-4Uh"/>
+                        <outlet property="playerNameLabel" destination="rJZ-hy-0KT" id="XfE-fM-s1h"/>
                         <outlet property="scoreLabel" destination="8WE-Nr-zW6" id="yFk-Ny-TI6"/>
                         <outlet property="startGameButton" destination="XG3-Od-H5f" id="VHB-2Y-b2Z"/>
                         <outlet property="switchModeGame" destination="g8n-v8-CEI" id="yUf-xp-kb5"/>
@@ -299,6 +318,7 @@
                 <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="RQK-Z7-Ytj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9TM-7x-8hP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

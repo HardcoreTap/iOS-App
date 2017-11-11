@@ -35,6 +35,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         if indexPath.row == 10 {
             cell.textLabel?.tintColor = UIColor.brown
             cell.textLabel?.text = "Ваш результат: \(UserDefaults.standard.value(forKey: "highscore") as! Int)"
+            }
         } else {
             cell.textLabel?.text = "Топ \(indexPath.row + 1): "
         }

@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var mainTapButton: UIButton! //клик в игре - который самый главный
 
@@ -39,6 +40,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //имя пользователя в левом вехнем углу
+        self.playerNameLabel.text = UserDefaults.standard.value(forKey: "userNAME") as! String
+        
         //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
         self.scoreLabel.isHidden = true
 
@@ -74,6 +78,54 @@ class ViewController: UIViewController {
     }
     
     
+    //нажали кнопку выйти
+    @IBAction func logOutButtonDidTapped(_ sender: Any) {
+        
+        //удаляем сохраненную инфу о юзере
+        
+        let alert : UIAlertController = UIAlertController()
+        let exitAction = UIAlertAction(title: "Выйти", style: .destructive, handler: {action in self.exitClicked()})
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+        
+        alert.addAction(exitAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        //фон кнопки выход на алерте
+        let subView = alert.view.subviews.first!
+        let alertContentView = subView.subviews.first!
+        alertContentView.backgroundColor = UIColor.white
+        alertContentView.layer.cornerRadius = 15
+        
+    }
+    
+    
+    //нажали выход на алерте
+    func exitClicked() {
+        
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: "userNAME")
+            defaults.removeObject(forKey: "highscore")
+        }
+        defaults.synchronize()
+        
+//        if user != nil {
+//            print(user!)
+//        }
+//        else {
+//            print("все стерли!")
+//        }
+        
+        //переход на страницу авторизации
+        let loginvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        self.present(loginvc, animated: true, completion: nil)
+        
+    }
+    
+    
     @IBAction func buttonPressed(_ sender: Any) {
         count += 1
         scoreLabel.text = "Очки: \(count)"
@@ -83,7 +135,7 @@ class ViewController: UIViewController {
             
             highScore = count
             self.highScoreLabel.text = "Ваш рекорд: \(highScore)"
-            
+        
             UserDefaults.standard.set(highScore, forKey: "highscore")
             
         }
@@ -108,17 +160,23 @@ class ViewController: UIViewController {
         timerLabel.text = "\(seconds)"
         
         if seconds == 0 {
+            
             timer?.invalidate()
             
+            
              let itemRef = self.scoreRef.childByAutoId()
-
-             let scoreItem = [
-                "username": UserDefaults.standard.value(forKey: "userNAME") as! String,
-                "highscore": UserDefaults.standard.value(forKey: "highscore") as! Int
-                ] as [String : Any]
-
-            //отправка данных в Firebase
-            itemRef.setValue(scoreItem)
+            
+             if let highscore = UserDefaults.standard.value(forKey: "highscore") {
+                
+                let scoreItem = [
+                    "username": UserDefaults.standard.value(forKey: "userNAME") as! String,
+                    "highscore": highscore
+                    ] as [String : Any]
+                
+                //отправка данных в Firebase
+                itemRef.setValue(scoreItem)
+                
+             }
             
             
             //MARK: SCLAlertView после окончания игры
@@ -136,8 +194,6 @@ class ViewController: UIViewController {
             }
             
             alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
-            
-            
             
         }
         

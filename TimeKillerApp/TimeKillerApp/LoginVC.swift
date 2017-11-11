@@ -30,6 +30,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBAction func loginDidTouch(_ sender: Any) {
         Auth.auth().signInAnonymously { (user, error) in
             if let user = user {
+                
                 self.username = self.textBox.text!
                 
                 let mainInstance = Main(name: self.username)
@@ -54,8 +55,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
-    {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
