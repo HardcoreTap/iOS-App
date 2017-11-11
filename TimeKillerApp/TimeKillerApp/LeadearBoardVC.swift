@@ -17,6 +17,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -32,16 +33,20 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeaderBoardCell
         
+        UserDefaults.standard.synchronize()
+
         if indexPath.row == 10 {
             cell.textLabel?.tintColor = UIColor.brown
             
             if let highscore = UserDefaults.standard.value(forKey: "highscore") {
                 cell.textLabel?.text = "Ваш результат: \(highscore)"
             } else {
-                cell.textLabel?.text = "Ваш результат: ???)"
+                cell.textLabel?.text = "Ваш результат: ???"
             }
             
         } else {
+            
+            //TODO: функция подгрузки топа
             cell.textLabel?.text = "Топ \(indexPath.row + 1): "
         }
         

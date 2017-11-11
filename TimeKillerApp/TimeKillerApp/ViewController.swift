@@ -41,7 +41,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         //имя пользователя в левом вехнем углу
-        self.playerNameLabel.text = UserDefaults.standard.value(forKey: "userNAME") as! String
+        if let name = UserDefaults.standard.value(forKey: "userNAME") {
+            self.playerNameLabel.text = name as! String
+        } else {
+            self.playerNameLabel.text = "???"
+        }
         
         //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
         self.scoreLabel.isHidden = true
@@ -135,7 +139,6 @@ class ViewController: UIViewController {
             
             highScore = count
             self.highScoreLabel.text = "Ваш рекорд: \(highScore)"
-        
             UserDefaults.standard.set(highScore, forKey: "highscore")
             
         }
@@ -193,7 +196,7 @@ class ViewController: UIViewController {
                 self.tabBarController?.selectedIndex = 1
             }
             
-            alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
+            alertView.showSuccess("Поздравляем!", subTitle: "Ваш результат \(count) очков")
             
         }
         
