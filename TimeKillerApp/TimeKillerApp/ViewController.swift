@@ -19,8 +19,7 @@ class ViewController: UIViewController {
     var timer = Timer()
     var flPlaying: Bool = false // Флаг запуска игры
     var uid: String = ""
-    let username = mainInstance.name
-
+    
     
     var highScore: Int = 0
     
@@ -41,7 +40,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //имя пользователя в левом вехнем углу
         if let name = UserDefaults.standard.value(forKey: "userNAME") {
             self.playerNameLabel.text = name as! String
@@ -64,11 +63,10 @@ class ViewController: UIViewController {
             
         }
         
-
-        
         // Регистрация рекогнайзера жестов
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
         view.addGestureRecognizer(tapGR)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -131,8 +129,13 @@ class ViewController: UIViewController {
         flPlaying = true
         
         updateTimerLabel()
+        
+        scoreLabel.text = "Очки: \(count)"
+        
+        timer = Timer.scheduledTimer(withTimeInterval: interval10, repeats: true, block: timerBlock(timer:))
+        
     }    
-  
+    
     //нажали кнопку выйти
     @IBAction func logOutButtonDidTapped(_ sender: Any) {
         
@@ -183,38 +186,43 @@ class ViewController: UIViewController {
             
             highScore = count
             highScoreLabel.text = "Ваш рекорд: \(highScore)"
-
             UserDefaults.standard.set(highScore, forKey: "highscore")
             
         }
         
         let itemRef = scoreRef.childByAutoId()
         
-        let scoreItem = [
-            "username": UserDefaults.standard.value(forKey: "userNAME") as! String,
-            "highscore": UserDefaults.standard.value(forKey: "highscore") as! Int
-            ] as [String : Any]
-        
-        //отправка данных в Firebase
-        itemRef.setValue(scoreItem)
-        
-        
-        //MARK: SCLAlertView после окончания игры
-        let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-        let alertView = SCLAlertView(appearance: appearance)
-        
-        alertView.addButton("Начать заново") {
-            //рестарт игры
-            self.setupGame()
-
+        if let highscore = UserDefaults.standard.value(forKey: "highscore") {
+            
+            let scoreItem = [
+                "username": UserDefaults.standard.value(forKey: "userNAME") as! String,
+                "highscore": highscore
+                ] as [String : Any]
+            
+            //отправка данных в Firebase
+            itemRef.setValue(scoreItem)
+            
+            
+            //MARK: SCLAlertView после окончания игры
+            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+            let alertView = SCLAlertView(appearance: appearance)
+            
+            alertView.addButton("Начать заново") {
+                //рестарт игры
+                self.setupGame()
+                
+            }
+            
+            alertView.addButton("Таблица лидеров") {
+                //переходим на страницу с лидербоард
+                self.tabBarController?.selectedIndex = 1
+            }
+            
+            alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
         }
         
-        alertView.addButton("Таблица лидеров") {
-            //переходим на страницу с лидербоард
-            self.tabBarController?.selectedIndex = 1
-        }
         
-        alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
+        
     }
     
     func updateTimerLabel() {

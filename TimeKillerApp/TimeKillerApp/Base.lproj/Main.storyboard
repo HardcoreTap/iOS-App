@@ -229,13 +229,11 @@
                     <connections>
                         <outlet property="hardcoreLabel" destination="CpA-Fj-PDe" id="FLV-I8-VEr"/>
                         <outlet property="highScoreLabel" destination="m6W-2S-upj" id="69C-Fh-g8y"/>
-                        <outlet property="mainTapButton" destination="AVG-eN-Mih" id="xye-co-4Uh"/>
                         <outlet property="playerNameLabel" destination="rJZ-hy-0KT" id="XfE-fM-s1h"/>
                         <outlet property="scoreLabel" destination="8WE-Nr-zW6" id="yFk-Ny-TI6"/>
                         <outlet property="startGameButton" destination="XG3-Od-H5f" id="VHB-2Y-b2Z"/>
                         <outlet property="switchModeGame" destination="g8n-v8-CEI" id="yUf-xp-kb5"/>
                         <outlet property="timerLabel" destination="hsI-to-WQC" id="8sL-KV-Cdz"/>
-
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E89-7V-kn1" sceneMemberID="firstResponder"/>
@@ -278,9 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bX-zp-xcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="1241" y="1298"/>
-
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="97C-nj-LsA">
