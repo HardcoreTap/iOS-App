@@ -92,7 +92,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.placeCellLabel.text = ""
             cell.placeCellLabel.backgroundColor = UIColor(patternImage: UIImage(named: "iconLeader")!)
         } else {
-            cell.placeCellLabel.text = "\(indexPath.row)"
+            cell.placeCellLabel.text = "\(indexPath.row + 1)"
 
         }
         

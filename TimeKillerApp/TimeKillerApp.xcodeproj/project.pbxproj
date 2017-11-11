@@ -110,6 +110,7 @@
 				3C092B041FB76CEA0019687C /* Fonts */,
 				3C092AFD1FB76AEF0019687C /* For design */,
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
+				3C092B091FB774010019687C /* TabBarVC.swift */,
 				3CE12C101FB643CB00945352 /* LoginVC.swift */,
 				3CE12BFE1FB62FEE00945352 /* ViewController.swift */,
 				3CE12C141FB663A000945352 /* LeadearBoardVC.swift */,
@@ -120,7 +121,6 @@
 				3CE12C081FB62FEE00945352 /* Info.plist */,
 				3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
-				3C092B091FB774010019687C /* TabBarVC.swift */,
 			);
 			path = TimeKillerApp;
 			sourceTree = "<group>";

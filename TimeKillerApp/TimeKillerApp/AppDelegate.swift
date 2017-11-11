@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        UITabBar.appearance().backgroundColor = .clear
-    
+        //белый status bar
+        UIApplication.shared.statusBarStyle = .lightContent
+
         
         FirebaseApp.configure()
 
