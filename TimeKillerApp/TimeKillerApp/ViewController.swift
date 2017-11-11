@@ -186,9 +186,7 @@ class ViewController: UIViewController {
             UserDefaults.standard.set(highScore, forKey: "highscore")
             
         }
-        
-        let itemRef = scoreRef.childByAutoId()
-        
+                
         if let highscore = UserDefaults.standard.value(forKey: "highscore") {
             
             let scoreItem = [
@@ -197,7 +195,7 @@ class ViewController: UIViewController {
                 ] as [String : Any]
             
             //отправка данных в Firebase
-            itemRef.setValue(scoreItem)
+            self.scoreRef.setValue(scoreItem)
         }
         
 
