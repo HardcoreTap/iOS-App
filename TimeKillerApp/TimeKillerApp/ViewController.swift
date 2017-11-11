@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     let deltaInterval10: Double = 0.01 // Дельта изменеия интервала секунды для ускорения
     var timer = Timer()
     var flPlaying: Bool = false // Флаг запуска игры
-    var uid: String = ""
     
     
     var highScore: Int = 0
@@ -44,11 +43,9 @@ class ViewController: UIViewController {
         //имя пользователя в левом вехнем углу
         if let name = UserDefaults.standard.value(forKey: "userNAME") {
             self.playerNameLabel.text = name as! String
-            //Firebase
             scoreRef = rootRef.child(name as! String)
         } else {
             self.playerNameLabel.text = "???"
-            //Firebase
             scoreRef = rootRef.child("nameNotDefined")
         }
         
@@ -82,7 +79,7 @@ class ViewController: UIViewController {
                 scoreLabel.text = "Очки: \(count)"
                 interval10 -= deltaInterval10
             } else {
-                gameOver()
+                self.gameOver()
             }
         }
     }
@@ -201,29 +198,27 @@ class ViewController: UIViewController {
             
             //отправка данных в Firebase
             itemRef.setValue(scoreItem)
-            
-            
-            //MARK: SCLAlertView после окончания игры
-            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-            let alertView = SCLAlertView(appearance: appearance)
-            
-            alertView.addButton("Начать заново") {
-                //рестарт игры
-                self.setupGame()
-                
-            }
-            
-            alertView.addButton("Таблица лидеров") {
-                //переходим на страницу с лидербоард
-                self.tabBarController?.selectedIndex = 1
-            }
-            
-            alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
         }
         
+
         
+        //MARK: SCLAlertView после окончания игры
+        let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+        let alertView = SCLAlertView(appearance: appearance)
         
+        alertView.addButton("Начать заново") {
+            //рестарт игры
+            self.setupGame()
+        }
+        
+        alertView.addButton("Таблица лидеров") {
+            //переходим на страницу с лидербоард
+            self.tabBarController?.selectedIndex = 1
+        }
+        
+        alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
     }
+    
     
     func updateTimerLabel() {
         timerLabel.text = String(format: "00:%02d:%d", seconds, seconds10)
