@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var flPlaying: Bool = false // Флаг запуска игры
     var uid: String = ""
     let username = mainInstance.name
+
     
     var highScore: Int = 0
     
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
+    @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var startGameButton: UIButton!
     
     
@@ -39,6 +41,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //имя пользователя в левом вехнем углу
+        if let name = UserDefaults.standard.value(forKey: "userNAME") {
+            self.playerNameLabel.text = name as! String
+            //Firebase
+            scoreRef = rootRef.child(name as! String)
+        } else {
+            self.playerNameLabel.text = "???"
+            //Firebase
+            scoreRef = rootRef.child("nameNotDefined")
+        }
         
         //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
         scoreLabel.isHidden = true
@@ -47,13 +60,11 @@ class ViewController: UIViewController {
         if UserDefaults.standard.value(forKey: "highscore") != nil {
             
             highScore = UserDefaults.standard.value(forKey: "highscore") as! Int
-            
             highScoreLabel.text = "Ваш рекорд: \(highScore)"
             
         }
         
-        //Firebase
-        scoreRef = rootRef.child("High Score")
+
         
         // Регистрация рекогнайзера жестов
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
@@ -120,11 +131,48 @@ class ViewController: UIViewController {
         flPlaying = true
         
         updateTimerLabel()
-        scoreLabel.text = "Очки: \(count)"
+    }    
+  
+    //нажали кнопку выйти
+    @IBAction func logOutButtonDidTapped(_ sender: Any) {
         
-        timer = Timer.scheduledTimer(withTimeInterval: interval10, repeats: true, block: timerBlock(timer:))
+        //удаляем сохраненную инфу о юзере
+        
+        let alert : UIAlertController = UIAlertController()
+        let exitAction = UIAlertAction(title: "Выйти", style: .destructive, handler: {action in self.exitClicked()})
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+        
+        alert.addAction(exitAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        //фон кнопки выход на алерте
+        let subView = alert.view.subviews.first!
+        let alertContentView = subView.subviews.first!
+        alertContentView.backgroundColor = UIColor.white
+        alertContentView.layer.cornerRadius = 15
         
     }
+    
+    
+    //нажали выход на алерте
+    func exitClicked() {
+        
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: "userNAME")
+            defaults.removeObject(forKey: "highscore")
+        }
+        defaults.synchronize()
+        
+        //переход на страницу авторизации
+        let loginvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        self.present(loginvc, animated: true, completion: nil)
+        
+    }
+    
     
     func gameOver() {
         timer.invalidate()
@@ -135,7 +183,7 @@ class ViewController: UIViewController {
             
             highScore = count
             highScoreLabel.text = "Ваш рекорд: \(highScore)"
-            
+
             UserDefaults.standard.set(highScore, forKey: "highscore")
             
         }
@@ -158,6 +206,7 @@ class ViewController: UIViewController {
         alertView.addButton("Начать заново") {
             //рестарт игры
             self.setupGame()
+
         }
         
         alertView.addButton("Таблица лидеров") {

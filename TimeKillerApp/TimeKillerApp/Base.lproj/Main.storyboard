@@ -199,6 +199,24 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpQ-u1-P5I">
+                                <rect key="frame" x="266" y="20" width="93" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Выйти">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButtonDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="d2k-dQ-eY1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Игрок: Богдан" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJZ-hy-0KT">
+                                <rect key="frame" x="16" y="20" width="170" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -211,17 +229,20 @@
                     <connections>
                         <outlet property="hardcoreLabel" destination="CpA-Fj-PDe" id="FLV-I8-VEr"/>
                         <outlet property="highScoreLabel" destination="m6W-2S-upj" id="69C-Fh-g8y"/>
+                        <outlet property="mainTapButton" destination="AVG-eN-Mih" id="xye-co-4Uh"/>
+                        <outlet property="playerNameLabel" destination="rJZ-hy-0KT" id="XfE-fM-s1h"/>
                         <outlet property="scoreLabel" destination="8WE-Nr-zW6" id="yFk-Ny-TI6"/>
                         <outlet property="startGameButton" destination="XG3-Od-H5f" id="VHB-2Y-b2Z"/>
                         <outlet property="switchModeGame" destination="g8n-v8-CEI" id="yUf-xp-kb5"/>
                         <outlet property="timerLabel" destination="hsI-to-WQC" id="8sL-KV-Cdz"/>
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E89-7V-kn1" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1240.8" y="-135.38230884557723"/>
         </scene>
-        <!--View Controller-->
+        <!--Правила-->
         <scene sceneID="QqO-HF-qLO">
             <objects>
                 <viewController id="Tzv-UF-5XT" sceneMemberID="viewController">
@@ -233,24 +254,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmo-rZ-px7">
-                                <rect key="frame" x="78" y="556" width="219" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5Lx-tk-dt1"/>
-                                    <constraint firstAttribute="width" constant="219" id="KqD-ZL-6LO"/>
-                                    <constraint firstAttribute="height" constant="50" id="QY1-IT-zIr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="Ок, я понял. Го игра">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правила игры" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQL-pV-vHn">
                                 <rect key="frame" x="38" y="75" width="299" height="43"/>
                                 <constraints>
@@ -264,21 +267,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="tmo-rZ-px7" secondAttribute="trailing" constant="62" id="Pmw-e0-SYt"/>
-                            <constraint firstItem="OYF-KU-6Nb" firstAttribute="top" secondItem="tmo-rZ-px7" secondAttribute="bottom" constant="61" id="ZIL-Gb-U0b"/>
                             <constraint firstItem="LQL-pV-vHn" firstAttribute="top" secondItem="CZM-r0-AZn" secondAttribute="bottom" constant="55" id="aIv-jO-60n"/>
-                            <constraint firstItem="tmo-rZ-px7" firstAttribute="top" secondItem="CZM-r0-AZn" secondAttribute="bottom" constant="536" id="b3s-EE-PV1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LQL-pV-vHn" secondAttribute="trailing" constant="22" id="bUm-c6-Gwo"/>
                             <constraint firstItem="OYF-KU-6Nb" firstAttribute="top" secondItem="LQL-pV-vHn" secondAttribute="bottom" constant="549" id="kl9-ar-mOA"/>
-                            <constraint firstItem="tmo-rZ-px7" firstAttribute="leading" secondItem="sbM-06-t3z" secondAttribute="leadingMargin" constant="62" id="kwS-IL-wKi"/>
                             <constraint firstItem="LQL-pV-vHn" firstAttribute="leading" secondItem="sbM-06-t3z" secondAttribute="leadingMargin" constant="22" id="paG-gW-8Iz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NDE-DQ-sHE"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Правила" id="AsA-DB-DKx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bX-zp-xcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-276" y="875"/>
+
+            <point key="canvasLocation" x="1241" y="1298"/>
+
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="97C-nj-LsA">
@@ -293,6 +295,7 @@
                     <connections>
                         <segue destination="bow-2t-fyi" kind="relationship" relationship="viewControllers" id="WVX-fT-3Ud"/>
                         <segue destination="kS2-IT-05Y" kind="relationship" relationship="viewControllers" id="lSD-43-IVa"/>
+                        <segue destination="Tzv-UF-5XT" kind="relationship" relationship="viewControllers" id="y5m-Ye-3Ir"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ty9-ld-6NC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,7 +335,27 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wA-xA-dop" id="czX-PB-ika">
                                             <rect key="frame" x="0.0" y="0.0" width="299" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Имя" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdR-5C-oFn">
+                                                    <rect key="frame" x="15" y="11" width="154" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Кол-во очков" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhr-Rb-TiP">
+                                                    <rect key="frame" x="177" y="12" width="107" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameCellLabel" destination="UdR-5C-oFn" id="aXx-3G-YCN"/>
+                                            <outlet property="pointsCellLabel" destination="dhr-Rb-TiP" id="z80-Xo-WAc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

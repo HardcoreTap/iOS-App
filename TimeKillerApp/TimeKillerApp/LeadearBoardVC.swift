@@ -7,20 +7,46 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var tableView: UITableView!
     
+    var leaderboardDict : [String: String] = [String: String]()
+    var rootRef = Database.database().reference()
+    var leaderboardRef: DatabaseReference!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        rootRef.observe(.value, with: { (snapshot) in
+            
+            //получение всего словаря с данными всех игроков
+            if let dict = snapshot.value as? [String:Any] {
+                
+                
+                print(dict)
+//                    let name = dict["username"] as? String
+//                    print(name)
+//                    let points = dict["highscore"] as? String
+//                    print(points)
+                
+            }
+            
+        })
+
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
-        
+
     }
+    
+
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,11 +58,24 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeaderBoardCell
         
+        UserDefaults.standard.synchronize()
+
         if indexPath.row == 10 {
-            cell.textLabel?.tintColor = UIColor.brown
-            cell.textLabel?.text = "Ваш результат: \(UserDefaults.standard.value(forKey: "highscore") as! Int)"
+            cell.backgroundColor = UIColor.gray
+
+            if let highscore = UserDefaults.standard.value(forKey: "highscore") {
+                cell.nameCellLabel.text = UserDefaults.standard.value(forKey: "userNAME") as! String
+                cell.pointsCellLabel.text = "\(highscore)"
+            } else {
+                cell.nameCellLabel.text = UserDefaults.standard.value(forKey: "userNAME") as! String
+                cell.pointsCellLabel.text = "0"
+            }
+            
         } else {
-            cell.textLabel?.text = "Топ \(indexPath.row + 1): "
+            
+            //TODO: функция подгрузки топа
+            cell.nameCellLabel.text = "\(indexPath.row + 1):"
+            cell.pointsCellLabel.text = ""
         }
         
         return cell

@@ -14,7 +14,6 @@
 		3CE12C071FB62FEE00945352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */; };
 		3CE12C0F1FB63B5F00945352 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */; };
 		3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C101FB643CB00945352 /* LoginVC.swift */; };
-		3CE12C131FB6442900945352 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C121FB6442900945352 /* Main.swift */; };
 		3CE12C151FB663A000945352 /* LeadearBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C141FB663A000945352 /* LeadearBoardVC.swift */; };
 		3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C161FB6666200945352 /* LeaderBoardCell.swift */; };
 		EE8E157F8B7ABA77328DDAD4 /* Pods_TimeKillerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504B4932D3133CE5CF2FA2FF /* Pods_TimeKillerApp.framework */; };
@@ -30,7 +29,6 @@
 		3CE12C081FB62FEE00945352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CE12C101FB643CB00945352 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		3CE12C121FB6442900945352 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		3CE12C141FB663A000945352 /* LeadearBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadearBoardVC.swift; sourceTree = "<group>"; };
 		3CE12C161FB6666200945352 /* LeaderBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardCell.swift; sourceTree = "<group>"; };
 		3DDF6AA78FA1E1E24239535B /* Pods-TimeKillerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKillerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKillerApp/Pods-TimeKillerApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
-				3CE12C121FB6442900945352 /* Main.swift */,
 				3CE12C101FB643CB00945352 /* LoginVC.swift */,
 				3CE12BFE1FB62FEE00945352 /* ViewController.swift */,
 				3CE12C141FB663A000945352 /* LeadearBoardVC.swift */,
@@ -245,7 +242,6 @@
 				3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* ViewController.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
-				3CE12C131FB6442900945352 /* Main.swift in Sources */,
 				3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
