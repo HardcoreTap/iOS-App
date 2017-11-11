@@ -10,36 +10,20 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-struct content {
-    var sName : String!
-    var sPoints : Int!
-    
-    init(sName: String, sPoints: Int) {
-        self.sName = sName
-        self.sPoints = sPoints
-    }
-}
-
 
 class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
     @IBOutlet weak var tableView: UITableView!
     
     var rootRef = Database.database().reference()
     var contentLeaderboards : [content] = []
 
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        getDataFromFirebase()
 
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getDataFromFirebase()
+
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,7 +33,6 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     func getDataFromFirebase() {
-   
         rootRef.child("leaderboards").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
             
             for snap in snapshot.children.allObjects as! [DataSnapshot] {
@@ -58,17 +41,19 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 
                 if let rankedBy = snap.value as? [String : Any]  {
                     self.contentLeaderboards.append(content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
+                    self.tableView.reloadData()
                 }
             }
             
+            self.contentLeaderboards.reverse()
+
         })
         
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-//        return self.contentLeaderboards.count-1
+        return self.contentLeaderboards.count
     }
     
     
@@ -93,8 +78,8 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 //
 //        } else {
         
-            cell.nameCellLabel.text = self.contentLeaderboards[indexPath.row].sName
-            cell.pointsCellLabel.text = "\(self.contentLeaderboards[indexPath.row].sPoints)"
+        cell.nameCellLabel.text = self.contentLeaderboards[indexPath.row].sName
+        cell.pointsCellLabel.text = "\(self.contentLeaderboards[indexPath.row].sPoints!)"
         
 //        }
 
@@ -105,4 +90,16 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     
+}
+
+
+
+struct content {
+    var sName : String!
+    var sPoints : Int!
+    
+    init(sName: String, sPoints: Int) {
+        self.sName = sName
+        self.sPoints = sPoints
+    }
 }
