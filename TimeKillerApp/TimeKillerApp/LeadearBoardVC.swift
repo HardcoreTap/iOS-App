@@ -36,18 +36,21 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         UserDefaults.standard.synchronize()
 
         if indexPath.row == 10 {
-            cell.textLabel?.tintColor = UIColor.brown
             
             if let highscore = UserDefaults.standard.value(forKey: "highscore") {
-                cell.textLabel?.text = "Ваш результат: \(highscore)"
+                cell.nameCellLabel.text = UserDefaults.standard.value(forKey: "userNAME") as! String
+                cell.pointsCellLabel.text = "\(highscore)"
+                cell.backgroundColor = UIColor.gray
             } else {
-                cell.textLabel?.text = "Ваш результат: ???"
+                cell.nameCellLabel.text = "???"
+                cell.pointsCellLabel.text = "0"
             }
             
         } else {
             
             //TODO: функция подгрузки топа
-            cell.textLabel?.text = "Топ \(indexPath.row + 1): "
+            cell.nameCellLabel.text = "\(indexPath.row + 1)"
+            cell.pointsCellLabel.text = ""
         }
         
         return cell
