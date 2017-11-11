@@ -2,14 +2,13 @@
 //  LoginViewController.swift
 //
 //
-
 import UIKit
 import FirebaseAuth
 import Firebase
 
 class LoginVC: UIViewController, UITextFieldDelegate {
     
-    var ref: DatabaseReference! 
+    var ref: DatabaseReference!
     var userID: String = ""
     var username: String = ""
     
@@ -31,13 +30,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         Auth.auth().signInAnonymously { (user, error) in
             if let user = user {
                 
-                self.username = self.textBox.text!                
+                self.username = self.textBox.text!
                 self.userID = user.uid
-
+                
                 //запись в UserDefaults: userID и userNAME
-                UserDefaults.standard.set(user.uid, forKey: "userID")
+                UserDefaults.standard.set(self.userID, forKey: "userID")
                 UserDefaults.standard.set(self.username, forKey: "userNAME")
-
+                
             } else {
                 print("No user is signed in.")
             }
@@ -56,7 +55,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
-
+    
     
 }
-

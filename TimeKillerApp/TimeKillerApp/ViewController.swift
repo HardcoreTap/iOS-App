@@ -42,10 +42,12 @@ class ViewController: UIViewController {
         
         //имя пользователя в левом вехнем углу
         if let name = UserDefaults.standard.value(forKey: "userNAME") {
-            self.playerNameLabel.text = name as! String
+            self.playerNameLabel.text = (name as! String)
+            //Firebase
             scoreRef = rootRef.child(name as! String)
         } else {
             self.playerNameLabel.text = "???"
+            //Firebase
             scoreRef = rootRef.child("nameNotDefined")
         }
         
@@ -186,7 +188,7 @@ class ViewController: UIViewController {
             UserDefaults.standard.set(highScore, forKey: "highscore")
             
         }
-                
+        
         if let highscore = UserDefaults.standard.value(forKey: "highscore") {
             
             let scoreItem = [
@@ -219,7 +221,7 @@ class ViewController: UIViewController {
     
     
     func updateTimerLabel() {
-        timerLabel.text = String(format: "00:%02d:%d", seconds, seconds10)
+        timerLabel.text = String(format: "00:%02d:%02d", seconds, seconds10)
     }
     
 }
