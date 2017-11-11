@@ -31,11 +31,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         Auth.auth().signInAnonymously { (user, error) in
             if let user = user {
                 
-                self.username = self.textBox.text!
-                
-                let mainInstance = Main(name: self.username)
-                print("Global Username: ", mainInstance.name)
-                
+                self.username = self.textBox.text!                
                 self.userID = user.uid
 
                 //запись в UserDefaults: userID и userNAME

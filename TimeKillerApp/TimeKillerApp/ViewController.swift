@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     var count: Int = 0
     var seconds: Int = 0
     var timer: Timer?
-    var uid: String = ""
-    let username = mainInstance.name
     
     var highScore: Int = 0
     
@@ -43,8 +41,12 @@ class ViewController: UIViewController {
         //имя пользователя в левом вехнем углу
         if let name = UserDefaults.standard.value(forKey: "userNAME") {
             self.playerNameLabel.text = name as! String
+            //Firebase
+            scoreRef = rootRef.child(name as! String)
         } else {
             self.playerNameLabel.text = "???"
+            //Firebase
+            scoreRef = rootRef.child("nameNotDefined")
         }
         
         //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
@@ -54,13 +56,11 @@ class ViewController: UIViewController {
         if UserDefaults.standard.value(forKey: "highscore") != nil {
             
             highScore = UserDefaults.standard.value(forKey: "highscore") as! Int
-            
             self.highScoreLabel.text = "Ваш рекорд: \(highScore)"
             
         }
         
-        //Firebase
-        scoreRef = rootRef.child("High Score")
+
         
     }
     
@@ -116,13 +116,6 @@ class ViewController: UIViewController {
         }
         defaults.synchronize()
         
-//        if user != nil {
-//            print(user!)
-//        }
-//        else {
-//            print("все стерли!")
-//        }
-        
         //переход на страницу авторизации
         let loginvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
         self.present(loginvc, animated: true, completion: nil)
@@ -167,7 +160,6 @@ class ViewController: UIViewController {
             timer?.invalidate()
             
             
-             let itemRef = self.scoreRef.childByAutoId()
             
              if let highscore = UserDefaults.standard.value(forKey: "highscore") {
                 
@@ -177,7 +169,7 @@ class ViewController: UIViewController {
                     ] as [String : Any]
                 
                 //отправка данных в Firebase
-                itemRef.setValue(scoreItem)
+                self.scoreRef.setValue(scoreItem)
                 
              }
             
