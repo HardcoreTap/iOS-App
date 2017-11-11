@@ -64,10 +64,10 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.backgroundColor = UIColor.gray
 
             if let highscore = UserDefaults.standard.value(forKey: "highscore") {
-                cell.nameCellLabel.text = UserDefaults.standard.value(forKey: "userNAME") as! String
+                cell.nameCellLabel.text = UserDefaults.standard.value(forKey: "userNAME") as? String
                 cell.pointsCellLabel.text = "\(highscore)"
             } else {
-                cell.nameCellLabel.text = UserDefaults.standard.value(forKey: "userNAME") as! String
+                cell.nameCellLabel.text = UserDefaults.standard.value(forKey: "userNAME") as? String
                 cell.pointsCellLabel.text = "0"
             }
             
