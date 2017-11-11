@@ -8,7 +8,6 @@ import Firebase
 
 class LoginVC: UIViewController, UITextFieldDelegate {
     
-    var ref: DatabaseReference!
     var userID: String = ""
     var username: String = ""
     
@@ -25,6 +24,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    
     @IBAction func loginDidTouch(_ sender: Any) {
         Auth.auth().signInAnonymously { (user, error) in
             if let user = user {
@@ -35,6 +35,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 //запись в UserDefaults: userID и userNAME
                 UserDefaults.standard.set(self.userID, forKey: "userID")
                 UserDefaults.standard.set(self.username, forKey: "userNAME")
+                UserDefaults.standard.synchronize()
                 
             } else {
                 print("No user is signed in.")

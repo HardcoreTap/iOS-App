@@ -86,7 +86,6 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 //        }
 
-        
         return cell
         
     }

@@ -10,8 +10,8 @@ target 'TimeKillerApp' do
 	pod 'Firebase'
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
-        pod 'SCLAlertView'
-        pod 'Firebase/Auth'
+    pod 'SCLAlertView'
+    pod 'Firebase/Auth'
 
 
 end

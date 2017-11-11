@@ -21,16 +21,12 @@ class ViewController: UIViewController {
     }
     var timer = Timer()
     var flPlaying: Bool = false // Флаг запуска игры
-    
-    
     var highScore: Int = 0
     
     var rootRef = Database.database().reference()
     var scoreRef: DatabaseReference!
     
-    
     @IBOutlet weak var switchModeGame: UISwitch!
-    
     @IBOutlet weak var hardcoreLabel: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -46,14 +42,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //имя пользователя в левом вехнем углу
-        if let name = UserDefaults.standard.value(forKey: "userNAME") {
-            self.playerNameLabel.text = (name as! String)
-            //Firebase
-            scoreRef = rootRef.child("leaderboards").child(name as! String)
+        if UserDefaults.standard.value(forKey: "userNAME") != nil {
+            let name = UserDefaults.standard.value(forKey: "userNAME") as! String
+            self.playerNameLabel.text = name
+            scoreRef = rootRef.child("leaderboards").child(name)
         } else {
-            self.playerNameLabel.text = "???"
-            //Firebase
-            scoreRef = rootRef.child("leaderboards").child("nameNotDefined")
+            self.playerNameLabel.text = "Имя не определено"
+            scoreRef = rootRef.child("leaderboards").child("Имя не определено")
         }
         
         //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
@@ -61,10 +56,8 @@ class ViewController: UIViewController {
         
         //подгрузка рекорда из UserDefaults
         if UserDefaults.standard.value(forKey: "highscore") != nil {
-            
             highScore = UserDefaults.standard.value(forKey: "highscore") as! Int
             highScoreLabel.text = "Ваш рекорд: \(highScore)"
-            
         }
         
         // Регистрация рекогнайзера жестов
@@ -78,6 +71,18 @@ class ViewController: UIViewController {
         switchModeGame.isHidden = false
         hardcoreLabel.isHidden = false
     }
+    
+    
+    @IBAction func switchModeDidTapped(_ sender: Any) {
+        
+        if switchModeGame.tag == 0 {
+            faultLabel.text = "Погрешность: 0.1"
+        } else {
+            faultLabel.text = "Погрешность: 0.0\nТы уверен?"
+        }
+        
+    }
+    
     
     @objc func didTap(tapGR: UITapGestureRecognizer) {
         if flPlaying {
@@ -111,6 +116,7 @@ class ViewController: UIViewController {
         seconds = 0
         seconds100 = 0
         fault = switchModeGame.isOn ? 0.0 : 0.1
+        
         flPlaying = true
         
         updateTimerLabel()
@@ -163,7 +169,6 @@ class ViewController: UIViewController {
         
     }
     
-    
     //нажали выход на алерте
     func exitClicked() {
         
@@ -208,21 +213,24 @@ class ViewController: UIViewController {
         }
     
         
-        //MARK: SCLAlertView после окончания игры
+//        MARK: SCLAlertView после окончания игры
         let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
         let alertView = SCLAlertView(appearance: appearance)
-        
+
         alertView.addButton("Начать заново") {
             //рестарт игры
             self.setupGame()
         }
-        
+
         alertView.addButton("Таблица лидеров") {
             //переходим на страницу с лидербоард
             self.tabBarController?.selectedIndex = 1
         }
-        
+
         alertView.showSuccess("Поздравляем!", subTitle: "Вы набрали \(count). очков")
+        
+
+        
     }
     
     
