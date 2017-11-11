@@ -11,11 +11,14 @@ import SCLAlertView
 
 class ViewController: UIViewController {
     
-    var count: Int = 0
+    var count: Int = 0                 // Счетчик очков
     var seconds: Int = 0               // Счетчик секунд
-    var seconds10: Int = 0             // Счетчик десятых секунды
-    var interval10: Double = 0.1       // Текущий интервал десятой секунды
-    let deltaInterval10: Double = 0.01 // Дельта изменеия интервала секунды для ускорения
+    var seconds100: Int = 0            // Счетчик десятых секунды
+    var fault = 0.1 {                  // Погрешность
+        didSet {
+            faultLabel.text = "Погрешность: \(fault)"
+        }
+    }
     var timer = Timer()
     var flPlaying: Bool = false // Флаг запуска игры
     
@@ -34,6 +37,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var highScoreLabel: UILabel!
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var startGameButton: UIButton!
+    @IBOutlet weak var faultLabel: UILabel!
     
     
     //MARK: - viewDidLoad
@@ -71,39 +75,20 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         startGameButton.isHidden = false
+        switchModeGame.isHidden = false
+        hardcoreLabel.isHidden = false
     }
     
     @objc func didTap(tapGR: UITapGestureRecognizer) {
         if flPlaying {
             // Проверка точности попадания
-            if seconds10 == 0 {
+            if fabs(Double(seconds - count - 1) + Double(seconds100) / 100) <= fault {
                 // Плюс очко
                 count += 1
                 scoreLabel.text = "Очки: \(count)"
-                interval10 -= deltaInterval10
             } else {
                 self.gameOver()
             }
-        }
-    }
-    
-    func timerBlock(timer: Timer) {
-        
-        seconds10 += 1
-        if seconds10 == 10 {
-            seconds += 1
-            seconds10 = 0
-            
-            // Смена таймеров так сделано, чтобы не было притормаживание секундомера
-            let newTimer = Timer.scheduledTimer(withTimeInterval: interval10, repeats: true, block: timerBlock(timer:))
-            timer.invalidate()
-            self.timer = newTimer
-        }
-        updateTimerLabel()
-        
-        if seconds10 == 1 && seconds > count {
-            // Пропущено нажатие
-            gameOver()
         }
     }
     
@@ -124,17 +109,37 @@ class ViewController: UIViewController {
         
         count = 0
         seconds = 0
-        seconds10 = 0
-        interval10 = 0.1
+        seconds100 = 0
+        fault = switchModeGame.isOn ? 0.0 : 0.1
         flPlaying = true
         
         updateTimerLabel()
         
         scoreLabel.text = "Очки: \(count)"
         
-        timer = Timer.scheduledTimer(withTimeInterval: interval10, repeats: true, block: timerBlock(timer:))
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: timerBlock(timer:))
         
     }    
+    
+    func timerBlock(timer: Timer) {
+        
+        seconds100 += 1
+        if seconds100 == 100 {
+            seconds += 1
+            seconds100 = 0
+            
+            if fault > 0 {
+                fault -= 0.01
+            }
+            
+        }
+        updateTimerLabel()
+        
+        if Double(seconds - count - 1) + Double(seconds100) / 100 > fault {
+            // Пропущено нажатие
+            gameOver()
+        }
+    }
     
     //нажали кнопку выйти
     @IBAction func logOutButtonDidTapped(_ sender: Any) {
@@ -223,7 +228,10 @@ class ViewController: UIViewController {
     
     
     func updateTimerLabel() {
+<<<<<<< HEAD
         timerLabel.text = String(format: "00:%02d:%d0", seconds, seconds10)
+=======
+>>>>>>> sergey2
     }
     
 }
