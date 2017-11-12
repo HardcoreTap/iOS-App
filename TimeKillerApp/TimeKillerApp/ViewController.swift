@@ -41,7 +41,7 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
     @IBOutlet weak var shareButton: UIButton!
     
     
-     var label89val = LTMorphingLabel()
+//     var label89val = LTMorphingLabel()
     
     //MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -212,10 +212,9 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         
         let defaults = UserDefaults.standard
         let dictionary = defaults.dictionaryRepresentation()
-        dictionary.keys.forEach { key in
-            defaults.removeObject(forKey: "userNAME")
-            defaults.removeObject(forKey: "highscore")
-        }
+        
+        defaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        
         defaults.synchronize()
         
         //переход на страницу авторизации
