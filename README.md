@@ -13,7 +13,6 @@ _Игра реализована в рамках олимпиады от Swiftbo
 ![Screenshot-2](https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/02.png)
 ![Screenshot-3](https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/03.png)
 ![Screenshot-4](https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/04.png)
-![Screenshot-5](https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/05.png)
 
 
 ### Геймлейное видео
