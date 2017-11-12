@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     }
     var timer = Timer()
     var flPlaying: Bool = false // Флаг запуска игры
-    var highScore: Int = 0
     var timeStop = Date()
     
     let layerColors = [UIColor(red: 1.0, green: 0.5, blue: 0.5, alpha: 0.6),
@@ -38,7 +37,6 @@ class ViewController: UIViewController {
     var shadowButton = AddButtonShadow()
     
     @IBOutlet weak var switchModeGame: UISwitch!
-    
     @IBOutlet weak var shareImage: UIImageView!
     @IBOutlet weak var tapToRestartButton: UIButton!
     @IBOutlet weak var hardcoreLabel: UIButton!
@@ -50,11 +48,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var faultLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     
-        
+    
+    var nameFromUserDefaults = " "
+    var highscoreFromUserDefaults : Int = 0
+
+    
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
         
@@ -62,9 +63,9 @@ class ViewController: UIViewController {
         
         //имя пользователя в левом вехнем углу
         if UserDefaults.standard.value(forKey: "userNAME") != nil {
-            let name = UserDefaults.standard.value(forKey: "userNAME") as! String
-            self.playerNameLabel.text = name
-            scoreRef = rootRef.child("leaderboards").child(name)
+            self.nameFromUserDefaults = UserDefaults.standard.value(forKey: "userNAME") as! String
+            self.playerNameLabel.text = self.nameFromUserDefaults
+            scoreRef = rootRef.child("leaderboards").child(nameFromUserDefaults)
         } else {
             self.playerNameLabel.text = "Имя не определено"
             scoreRef = rootRef.child("leaderboards").child("Имя не определено")
@@ -73,8 +74,11 @@ class ViewController: UIViewController {
         
         //подгрузка рекорда из UserDefaults
         if UserDefaults.standard.value(forKey: "highscore") != nil {
-            highScore = UserDefaults.standard.value(forKey: "highscore") as! Int
-            highScoreLabel.text = "Ваш рекорд: \(highScore)"
+            self.highscoreFromUserDefaults = UserDefaults.standard.value(forKey: "highscore") as! Int
+            highScoreLabel.text = "Ваш рекорд: \(self.highscoreFromUserDefaults)"
+        } else {
+            highScoreLabel.text = "Ваш рекорд: 0"
+
         }
         
         // Регистрация рекогнайзера жестов
@@ -88,7 +92,9 @@ class ViewController: UIViewController {
         
         view.layer.insertSublayer(rightLayer, at: 0)
         view.layer.insertSublayer(leftLayer, at: 0)
+        
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
@@ -101,7 +107,9 @@ class ViewController: UIViewController {
         startGameButton.isHidden = false
         switchModeGame.isHidden = false
         hardcoreLabel.isHidden = false
+        
     }
+    
     
     func setupGALayers() {
         
@@ -118,6 +126,7 @@ class ViewController: UIViewController {
         leftLayer.position.x = view.bounds.midX
         
     }
+    
     
     func changeLayers() {
         
@@ -140,6 +149,7 @@ class ViewController: UIViewController {
         leftLayer.add(animationLeft, forKey: nil)
         
     }
+    
     
     @IBAction func switchModeDidTapped(_ sender: Any) {
         
@@ -164,7 +174,6 @@ class ViewController: UIViewController {
             }
         } else {
             // Если 0.4 секунды прошло, можно запускать
-
             if timeStop.timeIntervalSinceNow <= -0.4 && startGameButton.isHidden {
                 self.setupGame()
             }
@@ -205,7 +214,8 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: timerBlock(timer:))
         
         changeLayers()
-    }    
+    }
+    
     
     func timerBlock(timer: Timer) {
         
@@ -220,12 +230,14 @@ class ViewController: UIViewController {
             
             changeLayers()
         }
+        
         updateTimerLabel()
         
         if Double(seconds - count - 1) + Double(seconds100) / 100 > fault {
             // Пропущено нажатие
             gameOver()
         }
+        
     }
     
     
@@ -283,14 +295,13 @@ class ViewController: UIViewController {
         shareButton.isHidden = false
 
         //добавления нового рекорда
-        if count > highScore {
+        if count > highscoreFromUserDefaults {
             
-            highScore = count
-            highScoreLabel.text = "Ваш рекорд: \(highScore)"
-            UserDefaults.standard.set(highScore, forKey: "highscore")
+            highscoreFromUserDefaults = count
+            highScoreLabel.text = "Ваш рекорд: \(highscoreFromUserDefaults)"
+            UserDefaults.standard.set(highscoreFromUserDefaults, forKey: "highscore")
             
-            
-            //        MARK: SCLAlertView после окончания игры
+            //MARK: SCLAlertView после окончания игры
             let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
             let alertView = SCLAlertView(appearance: appearance)
             
@@ -310,17 +321,17 @@ class ViewController: UIViewController {
       
         }
         
-        if let highscore = UserDefaults.standard.value(forKey: "highscore") {
+        
             
-            let scoreItem = [
-                "username": UserDefaults.standard.value(forKey: "userNAME") as! String,
-                "highscore": highscore
-                ] as [String : Any]
+        let scoreItem = [
+            "username": nameFromUserDefaults,
+            "highscore": highscoreFromUserDefaults
+            ] as [String : Any]
+        
+        //отправка данных в Firebase
+        self.scoreRef.setValue(scoreItem)
             
-            //отправка данных в Firebase
-            self.scoreRef.setValue(scoreItem)
-            
-        }
+    
     
     }
     
@@ -340,7 +351,7 @@ class ViewController: UIViewController {
     //Кнопка поделиться
     @IBAction func shareButtonDidTapped(_ sender: Any) {
         
-        let activityVC = UIActivityViewController(activityItems: ["Хэй, мой рекорд в HardcoreTap: \(self.highScore)"], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: ["Хэй, мой рекорд в HardcoreTap: \(self.highscoreFromUserDefaults)"], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)
         

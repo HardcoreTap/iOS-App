@@ -33,6 +33,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func loginDidTouch(_ sender: Any) {
+        
         Auth.auth().signInAnonymously { (user, error) in
             if let user = user {
                 
@@ -53,6 +54,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
