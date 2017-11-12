@@ -63,21 +63,33 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeaderBoardCell
         
+        
+        //обнуляем сначала (защита от бага с переопределением)
+        cell.placeCellLabel.text = nil
+        cell.nameCellLabel.text = nil
+        cell.pointsCellLabel.text = nil
+        
+        
         cell.nameCellLabel.text = self.contentLeaderboards[indexPath.row].sName
         cell.pointsCellLabel.text = "\(self.contentLeaderboards[indexPath.row].sPoints!)"
         
+
         if self.contentLeaderboards[indexPath.row].sName! == nameUser  {
             cell.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)
         }
         
         //для первых трек добавляем иконку короны
         if indexPath.row < 3 {
+            cell.placeCellLabel.text = nil
             cell.placeCellLabel.text = ""
             cell.placeCellLabel.backgroundColor = UIColor(patternImage: UIImage(named: "iconLeader")!)
         } else {
+            cell.placeCellLabel.backgroundColor = nil
+            cell.placeCellLabel.text = nil
             cell.placeCellLabel.text = "\(indexPath.row + 1)"
 
         }
+
 
         return cell
         
