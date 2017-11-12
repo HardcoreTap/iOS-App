@@ -85,6 +85,9 @@ class ViewController: UIViewController {
 		shadowButton.addShadow(nameButton: startGameButton)
         
         setupGALayers()
+        
+        view.layer.insertSublayer(rightLayer, at: 0)
+        view.layer.insertSublayer(leftLayer, at: 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,9 +116,6 @@ class ViewController: UIViewController {
         leftLayer.endPoint = CGPoint(x: 0, y: 1)
         leftLayer.frame = view.bounds
         leftLayer.position.x = view.bounds.midX
- 
-        view.layer.insertSublayer(rightLayer, at: 0)
-        view.layer.insertSublayer(leftLayer, at: 0)
         
     }
     
@@ -126,17 +126,18 @@ class ViewController: UIViewController {
         let index = (seconds + 1) % 5
         leftLayer.colors![0] = layerColors[index].cgColor
         
-        let animationLeft = CABasicAnimation(keyPath: "position.x")
-        animationLeft.fromValue = -view.bounds.midX
-        animationLeft.toValue = view.bounds.midX
-        animationLeft.duration = 0.99
-        leftLayer.add(animationLeft, forKey: nil)
-        
         let animationRight = CABasicAnimation(keyPath: "position.x")
         animationRight.fromValue = view.bounds.midX
         animationRight.toValue = view.bounds.width + view.bounds.midX
         animationRight.duration = 0.99
+        
+        let animationLeft = CABasicAnimation(keyPath: "position.x")
+        animationLeft.fromValue = -view.bounds.midX
+        animationLeft.toValue = view.bounds.midX
+        animationLeft.duration = 0.99
+        
         rightLayer.add(animationRight, forKey: nil)
+        leftLayer.add(animationLeft, forKey: nil)
         
     }
     
@@ -162,8 +163,8 @@ class ViewController: UIViewController {
                 self.gameOver()
             }
         } else {
-            // Если 0.2 секунды прошло, можно запускать
-            if timeStop.timeIntervalSinceNow <= -0.2 && startGameButton.isHidden {
+            // Если 0.4 секунды прошло, можно запускать
+            if timeStop.timeIntervalSinceNow <= -0.4 && startGameButton.isHidden {
                 self.setupGame()
             }
         }
@@ -194,6 +195,7 @@ class ViewController: UIViewController {
         
         flPlaying = true
         
+        setupGALayers()
         updateTimerLabel()
         
         //для анимации
@@ -270,6 +272,10 @@ class ViewController: UIViewController {
         timer.invalidate()
         timeStop = Date()
         flPlaying = false
+        leftLayer.position.x = leftLayer.presentation()!.position.x
+        leftLayer.removeAllAnimations()
+        rightLayer.position.x = rightLayer.presentation()!.position.x
+        rightLayer.removeAllAnimations()
                 
         shareImage.isHidden = false
         tapToRestartButton.isHidden = false
