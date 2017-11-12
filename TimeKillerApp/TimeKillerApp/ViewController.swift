@@ -129,14 +129,14 @@ class ViewController: UIViewController {
         let animationLeft = CABasicAnimation(keyPath: "position.x")
         animationLeft.fromValue = -view.bounds.midX
         animationLeft.toValue = view.bounds.midX
-        animationLeft.duration = 1.0
+        animationLeft.duration = 0.99
         leftLayer.add(animationLeft, forKey: nil)
         
         let animationRight = CABasicAnimation(keyPath: "position.x")
         animationRight.fromValue = view.bounds.midX
         animationRight.toValue = view.bounds.width + view.bounds.midX
-        animationRight.duration = 1.0
-        rightLayer.add(animationLeft, forKey: nil)
+        animationRight.duration = 0.99
+        rightLayer.add(animationRight, forKey: nil)
         
     }
     
@@ -270,7 +270,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         timeStop = Date()
         flPlaying = false
-        
+                
         shareImage.isHidden = false
         tapToRestartButton.isHidden = false
         shareButton.isHidden = false
