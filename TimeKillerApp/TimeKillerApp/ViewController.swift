@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     var rootRef = Database.database().reference()
     var scoreRef: DatabaseReference!
+		var shadowButton = AddButtonShadow()
     
     @IBOutlet weak var switchModeGame: UISwitch!
     
@@ -69,7 +70,10 @@ class ViewController: UIViewController {
         // Регистрация рекогнайзера жестов
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
         view.addGestureRecognizer(tapGR)
-        
+			
+				// Тень у кнопки
+				shadowButton.addShadow(nameButton: startGameButton)
+			
     }
     
     override func viewWillAppear(_ animated: Bool) {
