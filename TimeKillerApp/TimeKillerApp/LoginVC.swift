@@ -44,6 +44,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 UserDefaults.standard.set(self.username, forKey: "userNAME")
                 
             } else {
+                UserDefaults.standard.set(self.username, forKey: "userNAME")
                 print("No user is signed in.")
             }
             

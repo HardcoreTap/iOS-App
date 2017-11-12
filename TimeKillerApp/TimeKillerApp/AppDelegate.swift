@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil )
             let jump = storyboard.instantiateViewController(withIdentifier: "tabBarController")
             window?.rootViewController = jump
+            UserDefaults.standard.synchronize()
 
         } else {
 
@@ -46,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "Main",bundle: nil )
             let jump = storyboard.instantiateViewController(withIdentifier: "LoginVC")
             window?.rootViewController = jump
+            UserDefaults.standard.synchronize()
+
 
         }
         
