@@ -1,5 +1,6 @@
 # HardcoreTap
 ![Swift Support](https://img.shields.io/badge/Swift-4.0-orange.svg)
+![iOS Support](https://img.shields.io/badge/iOS-10.0%2B-yellow.svg)
 
 
 _Игра реализована в рамках олимпиады от Swiftbook.ru_
