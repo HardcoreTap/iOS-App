@@ -16,7 +16,7 @@ _Игра реализована в рамках олимпиады от Swiftbo
 
 
 ### Геймлейное видео
-[![Youtube](https://img.youtube.com/vi/6XC2gn-wFDI/0.jpg)](https://www.youtube.com/watch?v=6XC2gn-wFDI "Demo")
+[![Youtube](https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/youtube.png)](https://www.youtube.com/watch?v=6XC2gn-wFDI "Demo")
 
 ### Будущее развитие приложения
 * Раздельная таблица лидеров (для нормального и хардкорного режима)
