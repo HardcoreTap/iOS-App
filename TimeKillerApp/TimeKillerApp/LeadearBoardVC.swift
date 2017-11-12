@@ -72,7 +72,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.pointsCellLabel.text = "\(self.contentLeaderboards[indexPath.row].sPoints!)"
         
         if self.contentLeaderboards[indexPath.row].sName! == nameUser  {
-            cell.backgroundColor = UIColor.olyLipstick
+            cell.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)
         }
         
         //для первых трек добавляем иконку короны
