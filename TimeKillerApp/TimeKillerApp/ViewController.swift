@@ -22,10 +22,20 @@ class ViewController: UIViewController {
     var timer = Timer()
     var flPlaying: Bool = false // Флаг запуска игры
     var highScore: Int = 0
+    var timeStop = Date()
+    
+    let layerColors = [UIColor(red: 1.0, green: 0.5, blue: 0.5, alpha: 0.6),
+                       UIColor(red: 0.5, green: 0.1, blue: 0.5, alpha: 0.6),
+                       UIColor(red: 0.5, green: 0.5, blue: 0.1, alpha: 0.6),
+                       UIColor(red: 1.0, green: 1.0, blue: 0.5, alpha: 0.6),
+                       UIColor(red: 1.0, green: 0.5, blue: 1.0, alpha: 0.6)]
+    
+    let leftLayer = CAGradientLayer()
+    let rightLayer = CAGradientLayer()
     
     var rootRef = Database.database().reference()
     var scoreRef: DatabaseReference!
-		var shadowButton = AddButtonShadow()
+    var shadowButton = AddButtonShadow()
     
     @IBOutlet weak var switchModeGame: UISwitch!
     
@@ -71,9 +81,10 @@ class ViewController: UIViewController {
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
         view.addGestureRecognizer(tapGR)
 			
-				// Тень у кнопки
-				shadowButton.addShadow(nameButton: startGameButton)
-			
+        // Тень у кнопки
+		shadowButton.addShadow(nameButton: startGameButton)
+        
+        setupGALayers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -89,6 +100,45 @@ class ViewController: UIViewController {
         hardcoreLabel.isHidden = false
     }
     
+    func setupGALayers() {
+        
+        rightLayer.colors = [layerColors[4].cgColor, UIColor(red: 61 / 255, green: 52 / 255, blue: 110 / 255, alpha: 0.0).cgColor]
+        rightLayer.startPoint = CGPoint(x: 0, y: 0)
+        rightLayer.endPoint = CGPoint(x: 0, y: 1)
+        rightLayer.frame = view.bounds
+        rightLayer.position.x = view.bounds.width + view.bounds.midX
+        
+        leftLayer.colors = [layerColors[0].cgColor, UIColor(red: 61 / 255, green: 52 / 255, blue: 110 / 255, alpha: 0.0).cgColor]
+        leftLayer.startPoint = CGPoint(x: 0, y: 0)
+        leftLayer.endPoint = CGPoint(x: 0, y: 1)
+        leftLayer.frame = view.bounds
+        leftLayer.position.x = view.bounds.midX
+ 
+        view.layer.insertSublayer(rightLayer, at: 0)
+        view.layer.insertSublayer(leftLayer, at: 0)
+        
+    }
+    
+    func changeLayers() {
+        
+        rightLayer.colors![0] = leftLayer.colors![0]
+        
+        let index = (seconds + 1) % 5
+        leftLayer.colors![0] = layerColors[index].cgColor
+        
+        let animationLeft = CABasicAnimation(keyPath: "position.x")
+        animationLeft.fromValue = -view.bounds.midX
+        animationLeft.toValue = view.bounds.midX
+        animationLeft.duration = 1.0
+        leftLayer.add(animationLeft, forKey: nil)
+        
+        let animationRight = CABasicAnimation(keyPath: "position.x")
+        animationRight.fromValue = view.bounds.midX
+        animationRight.toValue = view.bounds.width + view.bounds.midX
+        animationRight.duration = 1.0
+        rightLayer.add(animationLeft, forKey: nil)
+        
+    }
     
     @IBAction func switchModeDidTapped(_ sender: Any) {
         
@@ -110,6 +160,11 @@ class ViewController: UIViewController {
                 scoreLabel.text = "\(count)"
             } else {
                 self.gameOver()
+            }
+        } else {
+            // Если 0.2 секунды прошло, можно запускать
+            if timeStop.timeIntervalSinceNow <= -0.2 && startGameButton.isHidden {
+                self.setupGame()
             }
         }
     }
@@ -146,6 +201,7 @@ class ViewController: UIViewController {
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: timerBlock(timer:))
         
+        changeLayers()
     }    
     
     func timerBlock(timer: Timer) {
@@ -159,6 +215,7 @@ class ViewController: UIViewController {
                 fault -= 0.01
             }
             
+            changeLayers()
         }
         updateTimerLabel()
         
@@ -211,6 +268,7 @@ class ViewController: UIViewController {
     func gameOver() {
         
         timer.invalidate()
+        timeStop = Date()
         flPlaying = false
         
         shareImage.isHidden = false
