@@ -10,10 +10,12 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     var userID: String = ""
     var username: String = ""
+		var shadowButton = AddButtonShadow()
     
     
     @IBOutlet weak var textBox: UITextField!
-    
+	  @IBOutlet weak var startPlayButton: UIButton!
+	
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         self.textBox.delegate = self
-        
+			
+				// Тень у кнопки
+				shadowButton.addShadow(nameButton: startPlayButton)
     }
     
     
@@ -56,8 +60,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    
-    
+	}
+	
 }

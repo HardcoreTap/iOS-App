@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -104,6 +105,7 @@
                         <viewLayoutGuide key="safeArea" id="iqp-QE-ikA"/>
                     </view>
                     <connections>
+                        <outlet property="startPlayButton" destination="esu-eB-SNL" id="qGh-W5-toJ"/>
                         <outlet property="textBox" destination="dEd-IO-Vjh" id="22L-iD-Z4l"/>
                     </connections>
                 </viewController>

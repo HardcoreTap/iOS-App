@@ -22,6 +22,7 @@
 		3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C101FB643CB00945352 /* LoginVC.swift */; };
 		3CE12C151FB663A000945352 /* LeadearBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C141FB663A000945352 /* LeadearBoardVC.swift */; };
 		3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C161FB6666200945352 /* LeaderBoardCell.swift */; };
+		73BC136B1FB876A200BDB8B0 /* ButtonSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */; };
 		EE8E157F8B7ABA77328DDAD4 /* Pods_TimeKillerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 504B4932D3133CE5CF2FA2FF /* Pods_TimeKillerApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		3DDF6AA78FA1E1E24239535B /* Pods-TimeKillerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKillerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKillerApp/Pods-TimeKillerApp.release.xcconfig"; sourceTree = "<group>"; };
 		504B4932D3133CE5CF2FA2FF /* Pods_TimeKillerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeKillerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		701D61271984730341DAB1A1 /* Pods-TimeKillerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKillerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKillerApp/Pods-TimeKillerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				3CE12C081FB62FEE00945352 /* Info.plist */,
 				3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
+				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
 			);
 			path = TimeKillerApp;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE12C151FB663A000945352 /* LeadearBoardVC.swift in Sources */,
+				73BC136B1FB876A200BDB8B0 /* ButtonSupport.swift in Sources */,
 				3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */,
 				3C092AFC1FB76AC80019687C /* UIFont+OLYAdditions.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* ViewController.swift in Sources */,
