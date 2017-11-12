@@ -8,9 +8,8 @@
 import UIKit
 import Firebase
 import SCLAlertView
-import LTMorphingLabel
 
-class ViewController: UIViewController, LTMorphingLabelDelegate {
+class ViewController: UIViewController {
     
     var count: Int = 0                 // Счетчик очков
     var seconds: Int = 0               // Счетчик секунд
@@ -40,15 +39,15 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
     @IBOutlet weak var faultLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
     
-    
-//     var label89val = LTMorphingLabel()
-    
+        
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        
+        UserDefaults.standard.synchronize()
         
         //имя пользователя в левом вехнем углу
         if UserDefaults.standard.value(forKey: "userNAME") != nil {
@@ -81,20 +80,6 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         shareImage.isHidden = true
         
         
-        //кастомный label с анимацией
-//        label89val = LTMorphingLabel(frame: CGRect(x: 20, y: 229, width: 339, height: 248))
-//        label89val.delegate = self
-//        label89val.textAlignment = .center
-//        label89val.morphingEffect = .fall
-//        label89val.text = ""
-//        label89val.textColor = UIColor(red: 110/255.0, green: 110/255.0, blue: 110/255.0, alpha: 100)
-//        label89val.font = UIFont.boldSystemFont(ofSize: 300.0)
-//        label89val.setNeedsDisplay()
-//        label89val.reloadInputViews()
-//        self.view.addSubview(label89val)
-//        label89val.isHidden = true
-        
-        
         startGameButton.isHidden = false
         switchModeGame.isHidden = false
         hardcoreLabel.isHidden = false
@@ -104,7 +89,7 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
     @IBAction func switchModeDidTapped(_ sender: Any) {
         
         if switchModeGame.isOn == false {
-            self.faultLabel.text = "Погрешность: 0.1"
+            self.faultLabel.text = "Погрешность: 0.10"
         } else {
             self.faultLabel.text = "Погрешность отключена"
         }
@@ -119,7 +104,6 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
                 // Плюс очко
                 count += 1
                 scoreLabel.text = "\(count)"
-//                label89val.text = "\(count)"
             } else {
                 self.gameOver()
             }
@@ -136,8 +120,6 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         
         highScoreLabel.isHidden = false
         scoreLabel.isHidden = false
-//        label89val.isHidden = false
-
         
         shareButton.isHidden = true
         startGameButton.isHidden = true
@@ -157,7 +139,6 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
         
         //для анимации
         scoreLabel.text = "\(count)"
-//        label89val.text = "\(count)"
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: timerBlock(timer:))
         
@@ -211,10 +192,8 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
     func exitClicked() {
         
         let defaults = UserDefaults.standard
-        let dictionary = defaults.dictionaryRepresentation()
         
         defaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
-        
         defaults.synchronize()
         
         //переход на страницу авторизации

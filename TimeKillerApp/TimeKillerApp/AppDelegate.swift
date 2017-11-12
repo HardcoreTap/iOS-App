@@ -13,6 +13,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var defaults = UserDefaults.standard
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -57,14 +58,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func isAppAlreadyLaunchedOnce() -> Bool {
         
-        let defaults = UserDefaults.standard
-        
         if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
-            print("App already launched : \(isAppAlreadyLaunchedOnce)")
             return true
         } else {
             defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
-            print("App launched first time")
             return false
         }
         

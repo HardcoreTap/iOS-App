@@ -27,12 +27,10 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         nameUser = UserDefaults.standard.value(forKey: "userNAME") as! String
         
         getDataFromFirebase()
-
-
+        
         tableView.delegate = self
         tableView.dataSource = self
 
-        
     }
     
 
@@ -51,11 +49,8 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.tableView.reloadData()
                 }
             }
-            
             self.contentLeaderboards.reverse()
-
         })
-        
     }
 
     
