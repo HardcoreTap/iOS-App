@@ -25,6 +25,6 @@ _Игра реализована в рамках олимпиады от Swiftbo
 Все участники получат от меня виртуальные "дай пять", и, черт возьми, вы можете забыть, что вы не участвуете в open source.
 
 ### Связаться с нами
-[Bogdan Bystritskiy](http://t.me/bogdan98)
-[Pasha Anpleenko](http://t.me/allakin)
-[Sergey Dunaev](http://t.me/SDunaev)
+* [Bogdan Bystritskiy](http://t.me/bogdan98)
+* [Pasha Anpleenko](http://t.me/allakin)
+* [Sergey Dunaev](http://t.me/SDunaev)
