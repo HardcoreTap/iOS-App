@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите свой ник" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-IO-Vjh">
-                                <rect key="frame" x="47" y="387" width="280" height="50"/>
+                                <rect key="frame" x="47" y="376" width="280" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UOs-Jr-0B4"/>
@@ -43,7 +43,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" textContentType="name"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Играете в первый раз?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVt-ar-X1q">
-                                <rect key="frame" x="12" y="349" width="351" height="30"/>
+                                <rect key="frame" x="12" y="338" width="351" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -82,13 +82,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="glL-Wx-SsB">
-                                <rect key="frame" x="111" y="134" width="153" height="200"/>
+                                <rect key="frame" x="111" y="128" width="153" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dEd-IO-Vjh" firstAttribute="top" secondItem="yXd-K4-Dqg" secondAttribute="bottom" constant="367" id="1U1-f7-feF"/>
+                            <constraint firstItem="dEd-IO-Vjh" firstAttribute="top" secondItem="yXd-K4-Dqg" secondAttribute="bottom" constant="356" id="1U1-f7-feF"/>
                             <constraint firstItem="8WJ-hy-V4a" firstAttribute="top" secondItem="yXd-K4-Dqg" secondAttribute="bottom" constant="55" id="96x-Jh-C3H"/>
                             <constraint firstItem="esu-eB-SNL" firstAttribute="leading" secondItem="Zap-Ep-wmz" secondAttribute="leadingMargin" constant="31" id="C0h-zT-yP8"/>
                             <constraint firstItem="dEd-IO-Vjh" firstAttribute="leading" secondItem="Zap-Ep-wmz" secondAttribute="leadingMargin" constant="31" id="Edh-Ak-EcG"/>
@@ -99,7 +99,7 @@
                             <constraint firstItem="esu-eB-SNL" firstAttribute="top" secondItem="yXd-K4-Dqg" secondAttribute="bottom" constant="537" id="bnl-Cj-MOo"/>
                             <constraint firstItem="B9P-Jl-gCU" firstAttribute="top" secondItem="esu-eB-SNL" secondAttribute="bottom" constant="60" id="fg0-x2-5bX"/>
                             <constraint firstItem="B9P-Jl-gCU" firstAttribute="top" secondItem="8WJ-hy-V4a" secondAttribute="bottom" constant="549" id="kig-La-m7M"/>
-                            <constraint firstItem="B9P-Jl-gCU" firstAttribute="top" secondItem="dEd-IO-Vjh" secondAttribute="bottom" constant="230" id="mpH-xp-Rc1"/>
+                            <constraint firstItem="B9P-Jl-gCU" firstAttribute="top" secondItem="dEd-IO-Vjh" secondAttribute="bottom" constant="241" id="mpH-xp-Rc1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iqp-QE-ikA"/>
                     </view>
@@ -238,7 +238,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssz-tz-xuz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Игра" id="0rO-s3-SAa">
+                    <tabBarItem key="tabBarItem" title="Игра" image="iconGame" selectedImage="iconGame" id="0rO-s3-SAa">
                         <color key="badgeColor" name="yellowishGreen"/>
                     </tabBarItem>
                     <connections>
@@ -281,24 +281,43 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dP-S2-pXO">
-                                <rect key="frame" x="66" y="113" width="273" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dP-S2-pXO">
+                                <rect key="frame" x="133" y="106" width="226" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="28"/>
+                                <string key="text">Нужно тапать по экрану
+и стараться попасть каждую секунду точно
+в 00 миллисекунд</string>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TI-q5-Pfw">
-                                <rect key="frame" x="66" y="193" width="273" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rules1" translatesAutoresizingMaskIntoConstraints="NO" id="6XD-Tp-dQ4">
+                                <rect key="frame" x="16" y="106" width="103" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="28"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rules2" translatesAutoresizingMaskIntoConstraints="NO" id="cjF-Ix-sy3">
+                                <rect key="frame" x="16" y="261" width="103" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bff-sU-cWH">
+                                <rect key="frame" x="133" y="415" width="226" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Цель игры, набрать, наиболее, большое количество очком
+и попасть в топ 10 игроков!</string>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVp-x1-eSg">
-                                <rect key="frame" x="66" y="273" width="273" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rules3" translatesAutoresizingMaskIntoConstraints="NO" id="cSF-wU-BgT">
+                                <rect key="frame" x="16" y="415" width="103" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="28"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mer-Lc-Srv">
+                                <rect key="frame" x="133" y="246" width="226" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Если счётчик доходит
+до следующей секунды и превышает погрешность, то вы проиграли. Также не стоит нажимать раньше времени ;)</string>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -433,10 +452,14 @@
     </scenes>
     <resources>
         <image name="icon" width="153" height="200"/>
+        <image name="iconGame" width="29" height="29"/>
         <image name="iconLogout" width="19" height="16"/>
         <image name="iconRaiting" width="30" height="27"/>
         <image name="iconRules" width="22" height="27"/>
         <image name="menIcon" width="9" height="11"/>
+        <image name="rules1" width="103" height="103"/>
+        <image name="rules2" width="103" height="103"/>
+        <image name="rules3" width="103" height="103"/>
         <image name="share" width="100" height="100"/>
         <namedColor name="lipstick">
             <color red="0.9100000262260437" green="0.17599999904632568" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

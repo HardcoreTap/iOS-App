@@ -1,0 +1,13 @@
+{
+  "info" : {
+    "author" : "zeplin",
+    "version" : 1
+  },
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "rules3@3x.png",
+      "scale" : "3x"
+    }
+  ]
+}
