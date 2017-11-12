@@ -77,6 +77,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         if self.contentLeaderboards[indexPath.row].sName! == nameUser  {
             cell.backgroundColor = nil
             cell.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)
+        } else {
         }
         
         //для первых трек добавляем иконку короны

@@ -164,6 +164,7 @@ class ViewController: UIViewController {
             }
         } else {
             // Если 0.4 секунды прошло, можно запускать
+
             if timeStop.timeIntervalSinceNow <= -0.4 && startGameButton.isHidden {
                 self.setupGame()
             }
