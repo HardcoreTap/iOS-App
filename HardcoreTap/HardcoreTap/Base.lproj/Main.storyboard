@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eor-8H-aYO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+        <array key="Baskerville.ttc">
+            <string>Baskerville-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Привет-->
+        <scene sceneID="So1-33-l2V">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="g2N-sI-lqp" customClass="LoginVC" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yXd-K4-Dqg"/>
+                        <viewControllerLayoutGuide type="bottom" id="B9P-Jl-gCU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zap-Ep-wmz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Введите свой ник" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-IO-Vjh">
+                                <rect key="frame" x="47" y="530" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="done" textContentType="name"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Играете в первый раз?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVt-ar-X1q">
+                                <rect key="frame" x="8" y="492" width="351" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esu-eB-SNL">
+                                <rect key="frame" x="47" y="597" width="280" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="lipstick"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Играть">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginDidTouch:" destination="g2N-sI-lqp" eventType="touchUpInside" id="asM-eq-TEP"/>
+                                    <segue destination="RQK-Z7-Ytj" kind="presentation" identifier="LoginToPlay" id="ISH-P4-MhP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="glL-Wx-SsB">
+                                <rect key="frame" x="111" y="284" width="153" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HardcoreTap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WJ-hy-V4a">
+                                <rect key="frame" x="38" y="223" width="299" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Baskerville-Bold" family="Baskerville" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="iqp-QE-ikA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Привет" id="sMB-c9-Vtc"/>
+                    <connections>
+                        <outlet property="startPlayButton" destination="esu-eB-SNL" id="qGh-W5-toJ"/>
+                        <outlet property="textBox" destination="dEd-IO-Vjh" id="22L-iD-Z4l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1i-7m-Uvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="122.78860569715144"/>
+        </scene>
+        <!--HardcoreTap-->
+        <scene sceneID="rtq-bR-eC2">
+            <objects>
+                <viewController storyboardIdentifier="MainGameWindow" id="bow-2t-fyi" customClass="ViewController" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VMo-Qr-o3W"/>
+                        <viewControllerLayoutGuide type="bottom" id="9SF-t2-sgv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3iA-h3-eqe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WE-Nr-zW6">
+                                <rect key="frame" x="20" y="221" width="339" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="300"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="morphingEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG3-Od-H5f">
+                                <rect key="frame" x="47" y="447" width="280" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="lipstick"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="Начать игру">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGameButtonDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="siN-qO-vk8"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g8n-v8-CEI">
+                                <rect key="frame" x="247" y="408" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="onTintColor" red="1" green="0.046772837529804212" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchModeDidTapped:" destination="bow-2t-fyi" eventType="valueChanged" id="Erq-n7-RcD"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpA-Fj-PDe">
+                                <rect key="frame" x="81" y="408" width="155" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <state key="normal" title="Режим хардкора">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsI-to-WQC">
+                                <rect key="frame" x="56" y="8" width="266" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtA-4Z-dfW">
+                                <rect key="frame" x="16" y="239" width="343" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="200"/>
+                                <state key="normal" title="Нажмите, чтобы попытаться снова">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapToRestartDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="VeJ-cC-rRI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ваш рекорд" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6W-2S-upj">
+                                <rect key="frame" x="102" y="576" width="170" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSx-q7-BB9">
+                                <rect key="frame" x="146" y="477" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                <state key="normal" title="Поделиться">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="osH-4p-Khc"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="hvL-80-ion">
+                                <rect key="frame" x="118" y="482" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Погрешность: 0.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1J-oQ-GMt">
+                                <rect key="frame" x="47" y="75" width="280" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ssz-tz-xuz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HardcoreTap" id="w3h-z6-VRz">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="FiB-hQ-RVn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xkd-9d-Me8">
+                                <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="aai-I2-OCS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EpQ-u1-P5I" userLabel="LogOutButton">
+                                <rect key="frame" x="340" y="11" width="19" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="iconLogout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutButtonDidTapped:" destination="bow-2t-fyi" eventType="touchUpInside" id="d2k-dQ-eY1"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="faultLabel" destination="d1J-oQ-GMt" id="VhN-cO-Sj0"/>
+                        <outlet property="hardcoreLabel" destination="CpA-Fj-PDe" id="FLV-I8-VEr"/>
+                        <outlet property="highScoreLabel" destination="m6W-2S-upj" id="69C-Fh-g8y"/>
+                        <outlet property="scoreLabel" destination="8WE-Nr-zW6" id="yFk-Ny-TI6"/>
+                        <outlet property="shareButton" destination="aSx-q7-BB9" id="fsx-C4-peR"/>
+                        <outlet property="shareImage" destination="hvL-80-ion" id="FbQ-EG-2yg"/>
+                        <outlet property="startGameButton" destination="XG3-Od-H5f" id="VHB-2Y-b2Z"/>
+                        <outlet property="switchModeGame" destination="g8n-v8-CEI" id="yUf-xp-kb5"/>
+                        <outlet property="tapToRestartButton" destination="mtA-4Z-dfW" id="1tl-Bb-fwf"/>
+                        <outlet property="timerLabel" destination="hsI-to-WQC" id="8sL-KV-Cdz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E89-7V-kn1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="-136.28185907046478"/>
+        </scene>
+        <!--Правила игры-->
+        <scene sceneID="QqO-HF-qLO">
+            <objects>
+                <viewController id="Tzv-UF-5XT" customClass="RulesVC" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CZM-r0-AZn"/>
+                        <viewControllerLayoutGuide type="bottom" id="OYF-KU-6Nb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sbM-06-t3z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="px0-Zr-zya">
+                                <rect key="frame" x="49" y="150" width="269" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rules1" translatesAutoresizingMaskIntoConstraints="NO" id="6XD-Tp-dQ4">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="H1V-Ka-Vmy"/>
+                                            <constraint firstAttribute="width" constant="70" id="QcX-As-AQW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dP-S2-pXO">
+                                        <rect key="frame" x="90" y="0.0" width="179" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="jMt-zT-6Nx"/>
+                                            <constraint firstAttribute="width" constant="179" id="umx-XN-Y72"/>
+                                        </constraints>
+                                        <string key="text">Нужно тапать по экрану
+и стараться попасть каждую секунду точно
+в 00 миллисекунд</string>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rules2" translatesAutoresizingMaskIntoConstraints="NO" id="cjF-Ix-sy3">
+                                <rect key="frame" x="16" y="258" width="103" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bff-sU-cWH">
+                                <rect key="frame" x="133" y="385" width="226" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Цель игры, набрать, наиболее, большое количество очком
+и попасть в топ 10 игроков!</string>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rules3" translatesAutoresizingMaskIntoConstraints="NO" id="cSF-wU-BgT">
+                                <rect key="frame" x="16" y="385" width="103" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mer-Lc-Srv">
+                                <rect key="frame" x="133" y="243" width="226" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Если счётчик доходит
+до следующей секунды и превышает погрешность, то вы проиграли. Также не стоит нажимать раньше времени ;)</string>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFQ-ym-wgf">
+                                <rect key="frame" x="93" y="573" width="180" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Об игре / разработчиках">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="grm-T7-0u7" kind="show" id="5b9-aV-Pqc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="NDE-DQ-sHE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Правила игры" id="eVo-gA-CMV">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="yhm-YQ-Yrd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nBh-Ik-cfs">
+                                <rect key="frame" x="16" y="7" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Статистика">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Shm-MH-gmR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DdI-VV-Ed1">
+                                <rect key="frame" x="281" y="7" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Настройка">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bX-zp-xcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210.4000000000001" y="1608.8455772113944"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8B0-Cy-dFp">
+            <objects>
+                <viewController id="grm-T7-0u7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pWJ-RP-xTH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tOb-4S-3YX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TU8-qT-UIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2254" y="1595"/>
+        </scene>
+        <!--Tab BarVC-->
+        <scene sceneID="97C-nj-LsA">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="RQK-Z7-Ytj" customClass="TabBarVC" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="2Fq-Fs-wu5"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9TM-7x-8hP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="yellowishGreen"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="myTabBar" destination="9TM-7x-8hP" id="Iee-xF-lw8"/>
+                        <segue destination="9pV-7m-EFu" kind="relationship" relationship="viewControllers" id="WVX-fT-3Ud"/>
+                        <segue destination="0Qh-01-gta" kind="relationship" relationship="viewControllers" id="lSD-43-IVa"/>
+                        <segue destination="dCJ-Se-syC" kind="relationship" relationship="viewControllers" id="y5m-Ye-3Ir"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ty9-ld-6NC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.79999999999995" y="122.78860569715144"/>
+        </scene>
+        <!--Таблица лидеров-->
+        <scene sceneID="hlx-dD-ObS">
+            <objects>
+                <viewController storyboardIdentifier="leaderBoard" id="kS2-IT-05Y" customClass="LeadearBoardVC" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZw-Yd-0b4"/>
+                        <viewControllerLayoutGuide type="bottom" id="l9J-bd-nG1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xy7-bt-zhk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T1T-7p-deQ">
+                                <rect key="frame" x="15" y="164" width="345" height="446"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5wA-xA-dop" customClass="LeaderBoardCell" customModule="HardcoreTap" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="345" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wA-xA-dop" id="czX-PB-ika">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Имя" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdR-5C-oFn">
+                                                    <rect key="frame" x="58" y="8" width="188" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nO-Ep-rkR">
+                                                    <rect key="frame" x="15" y="11" width="22" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Кол-во очков" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhr-Rb-TiP">
+                                                    <rect key="frame" x="250" y="14" width="80" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="19"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="nameCellLabel" destination="UdR-5C-oFn" id="aXx-3G-YCN"/>
+                                            <outlet property="placeCellLabel" destination="6nO-Ep-rkR" id="BoQ-mr-WGO"/>
+                                            <outlet property="pointsCellLabel" destination="dhr-Rb-TiP" id="z80-Xo-WAc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WFX-ln-b8a">
+                                <rect key="frame" x="16" y="124" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="rHf-TV-FcR"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Обычный"/>
+                                    <segment title="Хардкор"/>
+                                </segments>
+                                <color key="tintColor" name="yellowishGreen"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T1T-7p-deQ" firstAttribute="centerX" secondItem="Xy7-bt-zhk" secondAttribute="centerX" id="4o5-ft-AvP"/>
+                            <constraint firstItem="WvZ-ok-R2A" firstAttribute="trailing" secondItem="WFX-ln-b8a" secondAttribute="trailing" constant="16" id="90i-2M-t3a"/>
+                            <constraint firstItem="WFX-ln-b8a" firstAttribute="centerX" secondItem="Xy7-bt-zhk" secondAttribute="centerX" id="By9-6w-KGg"/>
+                            <constraint firstItem="WvZ-ok-R2A" firstAttribute="trailing" secondItem="T1T-7p-deQ" secondAttribute="trailing" constant="15" id="LxH-jK-JV4"/>
+                            <constraint firstItem="T1T-7p-deQ" firstAttribute="top" secondItem="WFX-ln-b8a" secondAttribute="bottom" constant="12" id="TaN-05-pHA"/>
+                            <constraint firstItem="WFX-ln-b8a" firstAttribute="leading" secondItem="WvZ-ok-R2A" secondAttribute="leading" constant="16" id="Tst-Bl-YMu"/>
+                            <constraint firstItem="T1T-7p-deQ" firstAttribute="leading" secondItem="WvZ-ok-R2A" secondAttribute="leading" constant="15" id="fgI-Br-dt3"/>
+                            <constraint firstItem="WFX-ln-b8a" firstAttribute="top" secondItem="gZw-Yd-0b4" secondAttribute="bottom" constant="8" id="ioa-7t-TrL"/>
+                            <constraint firstItem="T1T-7p-deQ" firstAttribute="leading" secondItem="WvZ-ok-R2A" secondAttribute="leading" constant="15" id="o3k-45-CdB"/>
+                            <constraint firstItem="l9J-bd-nG1" firstAttribute="top" secondItem="T1T-7p-deQ" secondAttribute="bottom" constant="8" id="qf0-y3-GH9"/>
+                            <constraint firstItem="WvZ-ok-R2A" firstAttribute="trailing" secondItem="T1T-7p-deQ" secondAttribute="trailing" constant="15" id="shJ-JS-wCT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WvZ-ok-R2A"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Таблица лидеров" id="WfK-Xn-GZ7"/>
+                    <connections>
+                        <outlet property="segmentedControlLeaderBoard" destination="WFX-ln-b8a" id="dXm-KG-ZvZ"/>
+                        <outlet property="tableView" destination="T1T-7p-deQ" id="iYh-YG-Z8I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0W-ga-w6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="599.55022488755628"/>
+        </scene>
+        <!--Игра-->
+        <scene sceneID="B8P-Vr-blc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9pV-7m-EFu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Игра" image="iconGame" selectedImage="iconGame" id="0rO-s3-SAa">
+                        <color key="badgeColor" name="yellowishGreen"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Whx-qi-OPJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bow-2t-fyi" kind="relationship" relationship="rootViewController" id="9uq-Z9-Phs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EX5-1h-7Eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1578.4000000000001" y="-136.28185907046478"/>
+        </scene>
+        <!--Рекорды-->
+        <scene sceneID="ktp-m5-7k1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Qh-01-gta" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Рекорды" image="iconRaiting" selectedImage="iconRaiting" id="H8h-Ls-s24">
+                        <color key="badgeColor" name="yellowishGreen"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9NR-uO-gAj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kS2-IT-05Y" kind="relationship" relationship="rootViewController" id="bHj-aw-aVC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ejq-0g-eeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="599.55022488755628"/>
+        </scene>
+        <!--Правила-->
+        <scene sceneID="hzn-LO-dqm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dCJ-Se-syC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Правила" image="iconRules" selectedImage="iconRules" id="AsA-DB-DKx">
+                        <color key="badgeColor" name="yellowishGreen"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="kYc-H5-qXV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tzv-UF-5XT" kind="relationship" relationship="rootViewController" id="kt8-2t-d66"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cId-yp-UgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="1339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ySg-Ho-dHD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eor-8H-aYO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="3Fa-WU-irw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g2N-sI-lqp" kind="relationship" relationship="rootViewController" id="h56-1h-Nqg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EL0-CU-AeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-910" y="123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon" width="153" height="200"/>
+        <image name="iconGame" width="29" height="29"/>
+        <image name="iconLogout" width="19" height="16"/>
+        <image name="iconRaiting" width="30" height="27"/>
+        <image name="iconRules" width="22" height="27"/>
+        <image name="rules1" width="103" height="103"/>
+        <image name="rules2" width="103" height="103"/>
+        <image name="rules3" width="103" height="103"/>
+        <image name="share" width="100" height="100"/>
+        <namedColor name="lipstick">
+            <color red="0.9100000262260437" green="0.17599999904632568" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellowishGreen">
+            <color red="0.59200000762939453" green="0.90200001001358032" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
