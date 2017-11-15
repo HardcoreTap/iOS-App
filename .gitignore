@@ -121,4 +121,6 @@ playground.xcworkspace
 ehthumbs.db
 Thumbs.db
 TimeKillerApp/.DS_Store
-GoogleService-Info.plist
+HardcoreTap/HardcoreTap/GoogleService-Info.plist
+HardcoreTap/GoogleService-Info.plist
+/GoogleService-Info.plist
