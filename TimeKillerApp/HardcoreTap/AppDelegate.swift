@@ -61,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func isAppAlreadyLaunchedOnce() -> Bool {
         
-        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
+        if defaults.string(forKey: "isAppAlreadyLaunchedOnce") != nil {
             return true
         } else {
             defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")

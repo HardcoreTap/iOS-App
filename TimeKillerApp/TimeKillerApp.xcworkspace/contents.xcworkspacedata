@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:TimeKillerApp.xcodeproj">
+      location = "group:/Users/bogdanbystritskiy/Yandex.Disk.localized/SWIFT/Work/SweamProject/TimeKillerApp/HardcoreTap.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

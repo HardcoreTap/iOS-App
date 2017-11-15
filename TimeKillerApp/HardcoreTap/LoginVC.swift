@@ -20,7 +20,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.b
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 
         

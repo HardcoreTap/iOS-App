@@ -41,7 +41,7 @@
 		3C6EECFB1FBBC05600DCFC10 /* BNBOLD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNBOLD.ttf; sourceTree = "<group>"; };
 		3C6EECFC1FBBC05800DCFC10 /* BNBOOK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNBOOK.ttf; sourceTree = "<group>"; };
 		3CA83B8A1FBA5D7B0046ED8D /* bmp60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bmp60.mp3; sourceTree = "<group>"; };
-		3CE12BF91FB62FED00945352 /* TimeKillerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKillerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CE12BF91FB62FED00945352 /* HardcoreTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HardcoreTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE12BFC1FB62FED00945352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE12BFE1FB62FEE00945352 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3CE12C011FB62FEE00945352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 		3CE12BF01FB62FED00945352 = {
 			isa = PBXGroup;
 			children = (
-				3CE12BFB1FB62FED00945352 /* TimeKillerApp */,
+				3CE12BFB1FB62FED00945352 /* HardcoreTap */,
 				3CE12BFA1FB62FED00945352 /* Products */,
 				41218FFB041B28DBA62CEC47 /* Pods */,
 				1BA9CB629E2E5E5DFDBC2826 /* Frameworks */,
@@ -113,12 +113,12 @@
 		3CE12BFA1FB62FED00945352 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3CE12BF91FB62FED00945352 /* TimeKillerApp.app */,
+				3CE12BF91FB62FED00945352 /* HardcoreTap.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3CE12BFB1FB62FED00945352 /* TimeKillerApp */ = {
+		3CE12BFB1FB62FED00945352 /* HardcoreTap */ = {
 			isa = PBXGroup;
 			children = (
 				3C6EECF61FBBBBBA00DCFC10 /* Fonts */,
@@ -137,7 +137,7 @@
 				3C6EECF71FBBBEFA00DCFC10 /* AudioFiles */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
 			);
-			path = TimeKillerApp;
+			path = HardcoreTap;
 			sourceTree = "<group>";
 		};
 		41218FFB041B28DBA62CEC47 /* Pods */ = {
@@ -152,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3CE12BF81FB62FED00945352 /* TimeKillerApp */ = {
+		3CE12BF81FB62FED00945352 /* HardcoreTap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3CE12C0B1FB62FEE00945352 /* Build configuration list for PBXNativeTarget "TimeKillerApp" */;
+			buildConfigurationList = 3CE12C0B1FB62FEE00945352 /* Build configuration list for PBXNativeTarget "HardcoreTap" */;
 			buildPhases = (
 				D0AC01134F44F8FC2E6B6E29 /* [CP] Check Pods Manifest.lock */,
 				3CE12BF51FB62FED00945352 /* Sources */,
@@ -167,9 +167,9 @@
 			);
 			dependencies = (
 			);
-			name = TimeKillerApp;
+			name = HardcoreTap;
 			productName = TimeKillerApp;
-			productReference = 3CE12BF91FB62FED00945352 /* TimeKillerApp.app */;
+			productReference = 3CE12BF91FB62FED00945352 /* HardcoreTap.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +188,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3CE12BF41FB62FED00945352 /* Build configuration list for PBXProject "TimeKillerApp" */;
+			buildConfigurationList = 3CE12BF41FB62FED00945352 /* Build configuration list for PBXProject "HardcoreTap" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -201,7 +201,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3CE12BF81FB62FED00945352 /* TimeKillerApp */,
+				3CE12BF81FB62FED00945352 /* HardcoreTap */,
 			);
 		};
 /* End PBXProject section */
@@ -448,7 +448,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				INFOPLIST_FILE = TimeKillerApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
@@ -465,7 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				INFOPLIST_FILE = TimeKillerApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
@@ -478,7 +478,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3CE12BF41FB62FED00945352 /* Build configuration list for PBXProject "TimeKillerApp" */ = {
+		3CE12BF41FB62FED00945352 /* Build configuration list for PBXProject "HardcoreTap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3CE12C091FB62FEE00945352 /* Debug */,
@@ -487,7 +487,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3CE12C0B1FB62FEE00945352 /* Build configuration list for PBXNativeTarget "TimeKillerApp" */ = {
+		3CE12C0B1FB62FEE00945352 /* Build configuration list for PBXNativeTarget "HardcoreTap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3CE12C0C1FB62FEE00945352 /* Debug */,
