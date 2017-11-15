@@ -15,12 +15,20 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var segmentedControlLeaderBoard: UISegmentedControl!
+    
+    
     var rootRef = Database.database().reference()
     var contentLeaderboards : [content] = []
     var nameUser : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 

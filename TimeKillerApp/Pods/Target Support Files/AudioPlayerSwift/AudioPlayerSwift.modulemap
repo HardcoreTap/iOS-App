@@ -1,0 +1,6 @@
+framework module AudioPlayer {
+  umbrella header "AudioPlayerSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

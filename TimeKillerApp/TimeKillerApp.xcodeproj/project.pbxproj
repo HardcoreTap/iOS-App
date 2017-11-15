@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C092AFB1FB76AC80019687C /* UIColor+OLYAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AF91FB76AC80019687C /* UIColor+OLYAdditions.swift */; };
-		3C092AFC1FB76AC80019687C /* UIFont+OLYAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092AFA1FB76AC80019687C /* UIFont+OLYAdditions.swift */; };
 		3C092B021FB76CE20019687C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */; };
 		3C092B031FB76CE20019687C /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */; };
 		3C092B061FB771EF0019687C /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B051FB771EF0019687C /* RulesVC.swift */; };
 		3C092B0A1FB774010019687C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B091FB774010019687C /* TabBarVC.swift */; };
+		3C6EED021FBBC32E00DCFC10 /* BNBOLD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECFB1FBBC05600DCFC10 /* BNBOLD.ttf */; };
+		3C6EED031FBBC32E00DCFC10 /* BNBOOK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECFC1FBBC05800DCFC10 /* BNBOOK.ttf */; };
+		3C6EED041FBBC32E00DCFC10 /* BNLIGHT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECF81FBBC05100DCFC10 /* BNLIGHT.ttf */; };
+		3C6EED051FBBC32E00DCFC10 /* BNREGULAR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECFA1FBBC05400DCFC10 /* BNREGULAR.ttf */; };
+		3C6EED061FBBC32E00DCFC10 /* BNTHUN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECF91FBBC05200DCFC10 /* BNTHUN.ttf */; };
+		3CA83B8B1FBA5D7B0046ED8D /* bmp60.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CA83B8A1FBA5D7B0046ED8D /* bmp60.mp3 */; };
 		3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12BFC1FB62FED00945352 /* AppDelegate.swift */; };
 		3CE12BFF1FB62FEE00945352 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12BFE1FB62FEE00945352 /* ViewController.swift */; };
 		3CE12C021FB62FEE00945352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE12C001FB62FEE00945352 /* Main.storyboard */; };
@@ -27,12 +31,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C092AF91FB76AC80019687C /* UIColor+OLYAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+OLYAdditions.swift"; sourceTree = "<group>"; };
-		3C092AFA1FB76AC80019687C /* UIFont+OLYAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+OLYAdditions.swift"; sourceTree = "<group>"; };
 		3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		3C092B051FB771EF0019687C /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
 		3C092B091FB774010019687C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		3C6EECF81FBBC05100DCFC10 /* BNLIGHT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNLIGHT.ttf; sourceTree = "<group>"; };
+		3C6EECF91FBBC05200DCFC10 /* BNTHUN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNTHUN.ttf; sourceTree = "<group>"; };
+		3C6EECFA1FBBC05400DCFC10 /* BNREGULAR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNREGULAR.ttf; sourceTree = "<group>"; };
+		3C6EECFB1FBBC05600DCFC10 /* BNBOLD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNBOLD.ttf; sourceTree = "<group>"; };
+		3C6EECFC1FBBC05800DCFC10 /* BNBOOK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNBOOK.ttf; sourceTree = "<group>"; };
+		3CA83B8A1FBA5D7B0046ED8D /* bmp60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bmp60.mp3; sourceTree = "<group>"; };
 		3CE12BF91FB62FED00945352 /* TimeKillerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKillerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE12BFC1FB62FED00945352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE12BFE1FB62FEE00945352 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,22 +78,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3C092AFD1FB76AEF0019687C /* For design */ = {
+		3C6EECF61FBBBBBA00DCFC10 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				3C092AF91FB76AC80019687C /* UIColor+OLYAdditions.swift */,
-				3C092AFA1FB76AC80019687C /* UIFont+OLYAdditions.swift */,
-			);
-			name = "For design";
-			sourceTree = "<group>";
-		};
-		3C092B041FB76CEA0019687C /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
+				3C6EECFB1FBBC05600DCFC10 /* BNBOLD.ttf */,
+				3C6EECFC1FBBC05800DCFC10 /* BNBOOK.ttf */,
+				3C6EECF81FBBC05100DCFC10 /* BNLIGHT.ttf */,
+				3C6EECFA1FBBC05400DCFC10 /* BNREGULAR.ttf */,
+				3C6EECF91FBBC05200DCFC10 /* BNTHUN.ttf */,
 				3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */,
 				3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */,
 			);
-			name = Fonts;
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3C6EECF71FBBBEFA00DCFC10 /* AudioFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3CA83B8A1FBA5D7B0046ED8D /* bmp60.mp3 */,
+			);
+			name = AudioFiles;
 			sourceTree = "<group>";
 		};
 		3CE12BF01FB62FED00945352 = {
@@ -109,8 +121,7 @@
 		3CE12BFB1FB62FED00945352 /* TimeKillerApp */ = {
 			isa = PBXGroup;
 			children = (
-				3C092B041FB76CEA0019687C /* Fonts */,
-				3C092AFD1FB76AEF0019687C /* For design */,
+				3C6EECF61FBBBBBA00DCFC10 /* Fonts */,
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
 				3C092B091FB774010019687C /* TabBarVC.swift */,
 				3CE12C101FB643CB00945352 /* LoginVC.swift */,
@@ -118,12 +129,13 @@
 				3CE12C141FB663A000945352 /* LeadearBoardVC.swift */,
 				3CE12C161FB6666200945352 /* LeaderBoardCell.swift */,
 				3C092B051FB771EF0019687C /* RulesVC.swift */,
+				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 				3CE12C081FB62FEE00945352 /* Info.plist */,
 				3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */,
+				3C6EECF71FBBBEFA00DCFC10 /* AudioFiles */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
-				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
 			);
 			path = TimeKillerApp;
 			sourceTree = "<group>";
@@ -199,12 +211,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6EED021FBBC32E00DCFC10 /* BNBOLD.ttf in Resources */,
+				3C6EED031FBBC32E00DCFC10 /* BNBOOK.ttf in Resources */,
+				3C6EED041FBBC32E00DCFC10 /* BNLIGHT.ttf in Resources */,
+				3C6EED051FBBC32E00DCFC10 /* BNREGULAR.ttf in Resources */,
+				3C6EED061FBBC32E00DCFC10 /* BNTHUN.ttf in Resources */,
 				3CE12C071FB62FEE00945352 /* LaunchScreen.storyboard in Resources */,
 				3CE12C0F1FB63B5F00945352 /* GoogleService-Info.plist in Resources */,
 				3CE12C041FB62FEE00945352 /* Assets.xcassets in Resources */,
 				3C092B021FB76CE20019687C /* OpenSans-Regular.ttf in Resources */,
 				3C092B031FB76CE20019687C /* OpenSans-Semibold.ttf in Resources */,
 				3CE12C021FB62FEE00945352 /* Main.storyboard in Resources */,
+				3CA83B8B1FBA5D7B0046ED8D /* bmp60.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,19 +236,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TimeKillerApp/Pods-TimeKillerApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AudioPlayerSwift/AudioPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -282,12 +304,10 @@
 				3CE12C151FB663A000945352 /* LeadearBoardVC.swift in Sources */,
 				73BC136B1FB876A200BDB8B0 /* ButtonSupport.swift in Sources */,
 				3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */,
-				3C092AFC1FB76AC80019687C /* UIFont+OLYAdditions.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* ViewController.swift in Sources */,
 				3C092B0A1FB774010019687C /* TabBarVC.swift in Sources */,
 				3C092B061FB771EF0019687C /* RulesVC.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
-				3C092AFB1FB76AC80019687C /* UIColor+OLYAdditions.swift in Sources */,
 				3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

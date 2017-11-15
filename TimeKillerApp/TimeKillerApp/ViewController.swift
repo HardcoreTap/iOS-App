@@ -8,8 +8,14 @@
 import UIKit
 import Firebase
 import SCLAlertView
+import AVFoundation
+
+//import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var bombSoundEffect: AVAudioPlayer?
+
     
     var count: Int = 0                 // Счетчик очков
     var seconds: Int = 0               // Счетчик секунд
@@ -52,22 +58,34 @@ class ViewController: UIViewController {
     var nameFromUserDefaults = " "
     var highscoreFromUserDefaults : Int = 0
 
+//    var audioPlayer : AVAudioPlayer!
+//    var soundURL : URL?
     
+//    var sound1: AudioPlayer?
+
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
         
-        UserDefaults.standard.synchronize()
+        let backgroundGradientImage = UIImage(named: "bg")
+        let backgroundGradientImageView = UIImageView(image: backgroundGradientImage)
+        backgroundGradientImageView.contentMode = .scaleAspectFill
+        view.backgroundColor = UIColor(patternImage: backgroundGradientImageView.image!)
+        
+        
         
         //имя пользователя в левом вехнем углу
         if UserDefaults.standard.value(forKey: "userNAME") != nil {
             self.nameFromUserDefaults = UserDefaults.standard.value(forKey: "userNAME") as! String
-            self.playerNameLabel.text = self.nameFromUserDefaults
+//            self.playerNameLabel.text = self.nameFromUserDefaults
             scoreRef = rootRef.child("leaderboards").child(nameFromUserDefaults)
         } else {
-            self.playerNameLabel.text = "Имя не определено"
+//            self.playerNameLabel.text = "Имя не определено"
             scoreRef = rootRef.child("leaderboards").child("Имя не определено")
         }
         
@@ -78,7 +96,6 @@ class ViewController: UIViewController {
             highScoreLabel.text = "Ваш рекорд: \(self.highscoreFromUserDefaults)"
         } else {
             highScoreLabel.text = "Ваш рекорд: 0"
-
         }
         
         // Регистрация рекогнайзера жестов
@@ -93,7 +110,10 @@ class ViewController: UIViewController {
         view.layer.insertSublayer(rightLayer, at: 0)
         view.layer.insertSublayer(leftLayer, at: 0)
         
+        
     }
+    
+
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -188,6 +208,16 @@ class ViewController: UIViewController {
     
     func setupGame() {
         
+        let path = Bundle.main.path(forResource: "bmp60.mp3", ofType: nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            bombSoundEffect = try AVAudioPlayer(contentsOf: url)
+            bombSoundEffect?.play()
+        } catch {
+            // couldn't load file :(
+        }
+        
         highScoreLabel.isHidden = false
         scoreLabel.isHidden = false
         
@@ -212,7 +242,7 @@ class ViewController: UIViewController {
         scoreLabel.text = "\(count)"
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: timerBlock(timer:))
-        
+
         changeLayers()
     }
     
@@ -244,8 +274,6 @@ class ViewController: UIViewController {
     //нажали кнопку выйти
     @IBAction func logOutButtonDidTapped(_ sender: Any) {
         
-        //удаляем сохраненную инфу о юзере
-        
         let alert : UIAlertController = UIAlertController()
         let exitAction = UIAlertAction(title: "Выйти", style: .destructive, handler: {action in self.exitClicked()})
         let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
@@ -268,7 +296,6 @@ class ViewController: UIViewController {
     func exitClicked() {
         
         let defaults = UserDefaults.standard
-        
         defaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
         defaults.synchronize()
         
@@ -281,6 +308,9 @@ class ViewController: UIViewController {
     
     //конец игры
     func gameOver() {
+        
+        bombSoundEffect?.stop()
+
         
         timer.invalidate()
         timeStop = Date()
@@ -347,6 +377,7 @@ class ViewController: UIViewController {
         self.setupGame()
 
     }
+    
     
     //Кнопка поделиться
     @IBAction func shareButtonDidTapped(_ sender: Any) {

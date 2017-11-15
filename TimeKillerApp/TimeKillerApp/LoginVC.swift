@@ -14,12 +14,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var textBox: UITextField!
-	  @IBOutlet weak var startPlayButton: UIButton!
+    @IBOutlet weak var startPlayButton: UIButton!
 	
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.b
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 
         
@@ -27,8 +28,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         view.addGestureRecognizer(tap)
         self.textBox.delegate = self
 			
-				// Тень у кнопки
-				shadowButton.addShadow(nameButton: startPlayButton)
+        // Тень у кнопки
+        shadowButton.addShadow(nameButton: startPlayButton)
     }
     
     
@@ -56,10 +57,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
