@@ -122,3 +122,5 @@ ehthumbs.db
 Thumbs.db
 TimeKillerApp/.DS_Store
 HardcoreTap/HardcoreTap/GoogleService-Info.plist
+HardcoreTap/GoogleService-Info.plist
+/GoogleService-Info.plist
