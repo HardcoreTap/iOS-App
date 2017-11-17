@@ -14,9 +14,7 @@ import FirebaseDatabase
 class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var segmentedControlLeaderBoard: UISegmentedControl!
-    
     
     var rootRef = Database.database().reference()
     var contentLeaderboards : [content] = []
@@ -43,7 +41,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     func getDataFromFirebase() {
-        rootRef.child("leaderboards").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
+        rootRef.child("leaderboards_normal").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
         
             //очищаем на всякий случай
             self.contentLeaderboards = []
