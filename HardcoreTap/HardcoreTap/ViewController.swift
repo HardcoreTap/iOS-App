@@ -10,7 +10,6 @@ import Firebase
 import SCLAlertView
 import AVFoundation
 
-//import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -20,7 +19,7 @@ class ViewController: UIViewController {
     var count: Int = 0                 // Счетчик очков
     var seconds: Int = 0               // Счетчик секунд
     var seconds100: Int = 0            // Счетчик десятых секунды
-    var fault = 0.1 {                  // Погрешность
+    var fault = 0.10 {                  // Погрешность
         didSet {
             faultLabel.text = "Погрешность: \(fault)"
         }
@@ -43,13 +42,13 @@ class ViewController: UIViewController {
     var shadowButton = AddButtonShadow()
     
     @IBOutlet weak var switchModeGame: UISwitch!
-    @IBOutlet weak var shareImage: UIImageView!
+//    @IBOutlet weak var shareImage: UIImageView!
     @IBOutlet weak var tapToRestartButton: UIButton!
     @IBOutlet weak var hardcoreLabel: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel! //касмотный класс для анимаций
     @IBOutlet weak var highScoreLabel: UILabel!
-    @IBOutlet weak var playerNameLabel: UILabel!
+//    @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var faultLabel: UILabel!
     @IBOutlet weak var shareButton: UIButton!
@@ -61,11 +60,17 @@ class ViewController: UIViewController {
 //    var audioPlayer : AVAudioPlayer!
 //    var soundURL : URL?
     
-//    var sound1: AudioPlayer?
 
+    //    var sound1: AudioPlayer?
+    @IBOutlet weak var helloButtonWithPlayerName: UIButton!
+    
+    @IBAction func helloButtonWithPlayerNameDidTapped(_ sender: Any) {
+    }
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -105,6 +110,22 @@ class ViewController: UIViewController {
         // Тень у кнопки
 		shadowButton.addShadow(nameButton: startGameButton)
         
+        
+        
+        if #available(iOS 11.0, *) {
+            
+            self.navigationItem.title = "HardcoreTap"
+            self.helloButtonWithPlayerName.setTitle("Привет, \(self.nameFromUserDefaults)", for: .normal)
+            self.helloButtonWithPlayerName.isEnabled = false
+            
+        } else {
+            
+            self.helloButtonWithPlayerName.isHidden = true
+            self.navigationItem.title = "HardcoreTap"
+            
+        }
+        
+        
         setupGALayers()
         
         view.layer.insertSublayer(rightLayer, at: 0)
@@ -121,8 +142,8 @@ class ViewController: UIViewController {
         scoreLabel.isHidden = true
         shareButton.isHidden = true
         tapToRestartButton.isHidden = true
-        shareImage.isHidden = true
-        
+//        shareImage.isHidden = true
+        highScoreLabel.isHidden = true
         
         startGameButton.isHidden = false
         switchModeGame.isHidden = false
@@ -220,12 +241,14 @@ class ViewController: UIViewController {
         
         highScoreLabel.isHidden = false
         scoreLabel.isHidden = false
+        highScoreLabel.isHidden = false
+
         
         shareButton.isHidden = true
         startGameButton.isHidden = true
         hardcoreLabel.isHidden = true
         switchModeGame.isHidden = true
-        shareImage.isHidden = true
+//        shareImage.isHidden = true
 
         
         count = 0
@@ -256,6 +279,8 @@ class ViewController: UIViewController {
             
             if fault > 0 {
                 fault -= 0.01
+            } else {
+                fault = 0.00
             }
             
             changeLayers()
@@ -320,7 +345,7 @@ class ViewController: UIViewController {
         rightLayer.position.x = rightLayer.presentation()!.position.x
         rightLayer.removeAllAnimations()
                 
-        shareImage.isHidden = false
+//        shareImage.isHidden = false
         tapToRestartButton.isHidden = false
         shareButton.isHidden = false
 

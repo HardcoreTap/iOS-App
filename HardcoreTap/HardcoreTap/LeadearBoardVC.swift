@@ -41,7 +41,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     func getDataFromFirebase() {
-        rootRef.child("leaderboards_normal").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
+        rootRef.child("leaderboards").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
         
             //очищаем на всякий случай
             self.contentLeaderboards = []
