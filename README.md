@@ -19,10 +19,7 @@ _Игра реализована в рамках олимпиады от Swiftbo
 [![Youtube](https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/youtube.png)](https://www.youtube.com/watch?v=6XC2gn-wFDI "Demo")
 
 ### Будущее развитие приложения
-* Раздельная таблица лидеров (для нормального и хардкорного режима)
 
-### Учавствовать в разработке
-Все участники получат от меня виртуальные "дай пять", и, черт возьми, вы можете забыть, что вы не участвуете в open source.
 
 ### Связаться с нами
 * [Bogdan Bystritskiy](http://t.me/bogdan98)
