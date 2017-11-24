@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17862FC4FED1FDCAF5ADB30F /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */; };
 		3C092B021FB76CE20019687C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */; };
 		3C092B031FB76CE20019687C /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */; };
 		3C092B061FB771EF0019687C /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B051FB771EF0019687C /* RulesVC.swift */; };
@@ -31,6 +30,8 @@
 		3CE12C151FB663A000945352 /* LeadearBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C141FB663A000945352 /* LeadearBoardVC.swift */; };
 		3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C161FB6666200945352 /* LeaderBoardCell.swift */; };
 		73BC136B1FB876A200BDB8B0 /* ButtonSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */; };
+		8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA24751FC7F80600282E06 /* RateManager.swift */; };
+		A3F913136299C4D434B8C562 /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		701D61271984730341DAB1A1 /* Pods-TimeKillerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKillerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKillerApp/Pods-TimeKillerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSupport.swift; sourceTree = "<group>"; };
 		817881E89D929624EF8BC84B /* Pods-HardcoreTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.release.xcconfig"; sourceTree = "<group>"; };
+		8DAA24751FC7F80600282E06 /* RateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManager.swift; sourceTree = "<group>"; };
 		C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.debug.xcconfig"; sourceTree = "<group>"; };
 		F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17862FC4FED1FDCAF5ADB30F /* Pods_HardcoreTap.framework in Frameworks */,
+				A3F913136299C4D434B8C562 /* Pods_HardcoreTap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +139,7 @@
 				3C6EECF61FBBBBBA00DCFC10 /* Fonts */,
 				3C52CAE71FBBC873004E31B8 /* AudioFiles */,
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
+				8DAA24751FC7F80600282E06 /* RateManager.swift */,
 				3C092B091FB774010019687C /* TabBarVC.swift */,
 				3CE12C101FB643CB00945352 /* LoginVC.swift */,
 				3CE12BFE1FB62FEE00945352 /* ViewController.swift */,
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CE12C151FB663A000945352 /* LeadearBoardVC.swift in Sources */,
+				8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */,
 				73BC136B1FB876A200BDB8B0 /* ButtonSupport.swift in Sources */,
 				3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* ViewController.swift in Sources */,

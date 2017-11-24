@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import Siren
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,27 +21,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //белый status bar
-        UIApplication.shared.statusBarStyle = .lightContent
+//        UIApplication.shared.statusBarStyle = .lightContent
 
         
         FirebaseApp.configure()
 
-        //для отладки: что хранится в userdefaults
-//        print("UserDefaults: ================================")
-//        print(UserDefaults.standard.dictionaryRepresentation())
+        
+        //проверка на актуальность версии
+        let siren = Siren.shared
+        siren.alertType = .option
+        siren.showAlertAfterCurrentVersionHasBeenReleasedForDays = 0
+        siren.checkVersion(checkType: .daily)
         
         
+        //увеличиваем счестчик запуска приложения
+        if #available(iOS 10.3, *) {
+            RateManager.incrementCount()
+        } else {
+            // Fallback on earlier versions
+        }
         
-        // MARK: Проверка на первый запуск приложения
-        //       Закомментить, чтобы отключить для тестов
-   
+        
         if isAppAlreadyLaunchedOnce() == true {
 
             //переходим на страницу с игрой
             let storyboard = UIStoryboard(name: "Main", bundle: nil )
             let jump = storyboard.instantiateViewController(withIdentifier: "tabBarController")
             window?.rootViewController = jump
-            UserDefaults.standard.synchronize()
 
         } else {
 
@@ -47,7 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "Main",bundle: nil )
             let jump = storyboard.instantiateViewController(withIdentifier: "LoginVC")
             window?.rootViewController = jump
-            UserDefaults.standard.synchronize()
 
 
         }
@@ -68,6 +75,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
+    }
+    
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        Siren.shared.checkVersion(checkType: .immediately)
     }
     
     

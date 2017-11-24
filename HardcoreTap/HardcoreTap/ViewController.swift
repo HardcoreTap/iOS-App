@@ -14,7 +14,6 @@ import AVFoundation
 class ViewController: UIViewController {
     
     var bombSoundEffect: AVAudioPlayer?
-
     
     var count: Int = 0                 // Счетчик очков
     var seconds: Int = 0               // Счетчик секунд
@@ -43,26 +42,24 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var switchModeGame: UISwitch!
 //    @IBOutlet weak var shareImage: UIImageView!
-    @IBOutlet weak var tapToRestartButton: UIButton!
-    @IBOutlet weak var hardcoreLabel: UIButton!
+    
+    
     @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel! //касмотный класс для анимаций
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
-//    @IBOutlet weak var playerNameLabel: UILabel!
-    @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var faultLabel: UILabel!
+    
+    @IBOutlet weak var tapToRestartButton: UIButton!
+    @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var helloButtonWithPlayerName: UIButton!
+    @IBOutlet weak var hardcoreLabel: UIButton!
+
     
     
     var nameFromUserDefaults = " "
     var highscoreFromUserDefaults : Int = 0
 
-//    var audioPlayer : AVAudioPlayer!
-//    var soundURL : URL?
-    
-
-    //    var sound1: AudioPlayer?
-    @IBOutlet weak var helloButtonWithPlayerName: UIButton!
     
     @IBAction func helloButtonWithPlayerNameDidTapped(_ sender: Any) {
     }
@@ -336,7 +333,6 @@ class ViewController: UIViewController {
         
         bombSoundEffect?.stop()
 
-        
         timer.invalidate()
         timeStop = Date()
         flPlaying = false

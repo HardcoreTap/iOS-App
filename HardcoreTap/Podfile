@@ -10,9 +10,9 @@ target 'HardcoreTap' do
 pod 'Firebase'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
+pod 'Firebase/Performance'
 pod 'SCLAlertView'
 pod 'Firebase/Auth'
 pod 'Siren'
-pod 'Firebase/Performance'
 
 end

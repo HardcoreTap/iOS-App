@@ -18,7 +18,6 @@ class RulesVC: UIViewController {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
         
-        
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 
     }

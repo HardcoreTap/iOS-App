@@ -88,12 +88,12 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HardcoreTap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WJ-hy-V4a">
-                                <rect key="frame" x="30.5" y="115" width="259" height="43"/>
+                                <rect key="frame" x="30" y="124" width="259" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="259" id="3T1-2N-WqP"/>
                                     <constraint firstAttribute="height" constant="43" id="DnX-5S-SxZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="39"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -101,7 +101,7 @@
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dEd-IO-Vjh" firstAttribute="leading" secondItem="iqp-QE-ikA" secondAttribute="leading" constant="47" id="39K-Ez-SEl"/>
-                            <constraint firstItem="glL-Wx-SsB" firstAttribute="top" secondItem="8WJ-hy-V4a" secondAttribute="bottom" constant="10" id="3EY-55-DCi"/>
+                            <constraint firstItem="glL-Wx-SsB" firstAttribute="top" secondItem="8WJ-hy-V4a" secondAttribute="bottom" constant="1" id="3EY-55-DCi"/>
                             <constraint firstItem="glL-Wx-SsB" firstAttribute="centerX" secondItem="Zap-Ep-wmz" secondAttribute="centerX" id="6NG-Av-n3T"/>
                             <constraint firstItem="jVt-ar-X1q" firstAttribute="centerX" secondItem="Zap-Ep-wmz" secondAttribute="centerX" id="7Sn-Lk-5OS"/>
                             <constraint firstItem="jVt-ar-X1q" firstAttribute="leading" secondItem="iqp-QE-ikA" secondAttribute="leading" constant="47" id="JNf-Y8-ZTL"/>
@@ -339,26 +339,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rules2" translatesAutoresizingMaskIntoConstraints="NO" id="cjF-Ix-sy3">
-                                <rect key="frame" x="16" y="258" width="103" height="103"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rules2" translatesAutoresizingMaskIntoConstraints="NO" id="cjF-Ix-sy3">
+                                <rect key="frame" x="26" y="269" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bff-sU-cWH">
-                                <rect key="frame" x="133" y="385" width="226" height="103"/>
+                                <rect key="frame" x="116" y="383" width="179" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Цель игры, набрать, наиболее, большое количество очком
-и попасть в топ 10 игроков!</string>
+                                <string key="text">Цель игры набрать наибольшее количество очков
+и попасть в TOP 10 игроков!</string>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rules3" translatesAutoresizingMaskIntoConstraints="NO" id="cSF-wU-BgT">
-                                <rect key="frame" x="16" y="385" width="103" height="103"/>
+                                <rect key="frame" x="26" y="399" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mer-Lc-Srv">
-                                <rect key="frame" x="133" y="243" width="226" height="132"/>
-                                <string key="text">Если счётчик доходит
-до следующей секунды и превышает погрешность, то вы проиграли. Также не стоит нажимать раньше времени ;)</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mer-Lc-Srv">
+                                <rect key="frame" x="116" y="238" width="179" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Если, доходя до следующей секунды, вы превышаете погрешность, то вы проигрываете. При этом не стоит нажимать на экран раньше времени.</string>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -373,36 +374,19 @@
                                     <segue destination="grm-T7-0u7" kind="show" id="5b9-aV-Pqc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rules1" translatesAutoresizingMaskIntoConstraints="NO" id="6XD-Tp-dQ4">
-                                <rect key="frame" x="26" y="135" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="H1V-Ka-Vmy"/>
-                                    <constraint firstAttribute="width" constant="70" id="QcX-As-AQW"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rules1" translatesAutoresizingMaskIntoConstraints="NO" id="6XD-Tp-dQ4">
+                                <rect key="frame" x="26" y="139" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dP-S2-pXO">
-                                <rect key="frame" x="116" y="135" width="179" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="jMt-zT-6Nx"/>
-                                    <constraint firstAttribute="width" constant="179" id="umx-XN-Y72"/>
-                                </constraints>
-                                <string key="text">Нужно тапать по экрану
-и стараться попасть каждую секунду точно
-в 00 миллисекунд</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Нужно тапать по экрану, стараясь попасть в период равный одной секунде с точностью до 00 миллисекунд." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dP-S2-pXO">
+                                <rect key="frame" x="116" y="128" width="179" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Mer-Lc-Srv" firstAttribute="top" secondItem="8dP-S2-pXO" secondAttribute="bottom" constant="38" id="16I-ZN-2aa"/>
-                            <constraint firstItem="6XD-Tp-dQ4" firstAttribute="top" secondItem="8dP-S2-pXO" secondAttribute="top" id="Ocg-RW-A0n"/>
-                            <constraint firstItem="6XD-Tp-dQ4" firstAttribute="top" secondItem="CZM-r0-AZn" secondAttribute="bottom" constant="19" id="Y7T-Px-GqE"/>
-                            <constraint firstItem="cjF-Ix-sy3" firstAttribute="top" secondItem="6XD-Tp-dQ4" secondAttribute="bottom" constant="53" id="rP8-DH-4hP"/>
-                            <constraint firstItem="8dP-S2-pXO" firstAttribute="leading" secondItem="6XD-Tp-dQ4" secondAttribute="trailing" constant="20" id="vAH-jX-iXu"/>
-                            <constraint firstItem="6XD-Tp-dQ4" firstAttribute="leading" secondItem="NDE-DQ-sHE" secondAttribute="leading" constant="26" id="wqd-sm-iak"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NDE-DQ-sHE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Правила игры" id="eVo-gA-CMV">
@@ -435,16 +419,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bX-zp-xcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210.4000000000001" y="1608.8455772113944"/>
+            <point key="canvasLocation" x="1209.375" y="1608.8028169014085"/>
         </scene>
-        <!--View Controller-->
+        <!--Статистика-->
         <scene sceneID="P22-tP-0yI">
             <objects>
-                <viewController id="RFt-P1-IXC" sceneMemberID="viewController">
+                <viewController title="Статистика" id="RFt-P1-IXC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i2A-sv-ADR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="lipstick"/>
                         <viewLayoutGuide key="safeArea" id="mSL-Zs-MSv"/>
                     </view>
                 </viewController>
@@ -459,7 +443,16 @@
                     <view key="view" contentMode="scaleToFill" id="TMM-YF-aRR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Информация об игре" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCB-kM-sRs">
+                                <rect key="frame" x="71" y="94" width="179" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="lipstick"/>
                         <viewLayoutGuide key="safeArea" id="Zqz-Eh-Dkp"/>
                     </view>
                 </viewController>
@@ -467,14 +460,14 @@
             </objects>
             <point key="canvasLocation" x="1362" y="2501"/>
         </scene>
-        <!--View Controller-->
+        <!--Об игре-->
         <scene sceneID="8B0-Cy-dFp">
             <objects>
-                <viewController id="grm-T7-0u7" sceneMemberID="viewController">
+                <viewController title="Об игре" id="grm-T7-0u7" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pWJ-RP-xTH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="lipstick"/>
                         <viewLayoutGuide key="safeArea" id="tOb-4S-3YX"/>
                     </view>
                 </viewController>
@@ -713,6 +706,9 @@
         <image name="rules1" width="103" height="103"/>
         <image name="rules2" width="103" height="103"/>
         <image name="rules3" width="103" height="103"/>
+        <namedColor name="lipstick">
+            <color red="0.9100000262260437" green="0.17599999904632568" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="lipstick">
             <color red="0.9100000262260437" green="0.17599999904632568" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

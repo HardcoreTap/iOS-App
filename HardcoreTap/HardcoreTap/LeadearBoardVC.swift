@@ -99,7 +99,6 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         }
 
-
         return cell
         
     }
@@ -111,6 +110,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
 struct content {
+    
     var sName : String!
     var sPoints : Int!
     
@@ -118,4 +118,5 @@ struct content {
         self.sName = sName
         self.sPoints = sPoints
     }
+    
 }

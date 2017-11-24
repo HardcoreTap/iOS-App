@@ -10,7 +10,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     var userID: String = ""
     var username: String = ""
-		var shadowButton = AddButtonShadow()
+    var shadowButton = AddButtonShadow()
     
     
     @IBOutlet weak var textBox: UITextField!
@@ -22,13 +22,13 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 
-        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
         view.addGestureRecognizer(tap)
         self.textBox.delegate = self
 			
         // Тень у кнопки
         shadowButton.addShadow(nameButton: startPlayButton)
+        
     }
     
     
@@ -46,11 +46,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 
             } else {
                 UserDefaults.standard.set(self.username, forKey: "userNAME")
-                print("No user is signed in.")
             }
             
-            UserDefaults.standard.synchronize()
             self.performSegue(withIdentifier: "LoginToPlay", sender: nil)
+            
         }
         
     }
