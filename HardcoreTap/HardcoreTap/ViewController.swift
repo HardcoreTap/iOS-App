@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import SCLAlertView
+import AudioToolbox
 import AVFoundation
 
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     var bombSoundEffect: AVAudioPlayer?
     
     var count: Int = 0                 // Счетчик очков
+    
     var seconds: Int = 0               // Счетчик секунд
     var seconds100: Int = 0            // Счетчик десятых секунды
     var fault = 0.10 {                  // Погрешность
@@ -23,6 +25,7 @@ class ViewController: UIViewController {
             faultLabel.text = "Погрешность: \(fault)"
         }
     }
+    
     var timer = Timer()
     var flPlaying: Bool = false // Флаг запуска игры
     var timeStop = Date()
@@ -55,8 +58,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var helloButtonWithPlayerName: UIButton!
     @IBOutlet weak var hardcoreLabel: UIButton!
 
-    
-    
+
     var nameFromUserDefaults = " "
     var highscoreFromUserDefaults : Int = 0
 
@@ -73,6 +75,8 @@ class ViewController: UIViewController {
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+        
+        
         
         let backgroundGradientImage = UIImage(named: "bg")
         let backgroundGradientImageView = UIImageView(image: backgroundGradientImage)
@@ -192,7 +196,7 @@ class ViewController: UIViewController {
     @IBAction func switchModeDidTapped(_ sender: Any) {
         
         if switchModeGame.isOn == false {
-            self.faultLabel.text = "Погрешность: 0.10"
+            self.faultLabel.text = "Погрешность: 0.05 мс"
         } else {
             self.faultLabel.text = "Погрешность отключена"
         }
@@ -203,7 +207,7 @@ class ViewController: UIViewController {
     @objc func didTap(tapGR: UITapGestureRecognizer) {
         if flPlaying {
             // Проверка точности попадания
-            if fabs(Double(seconds - count - 1) + Double(seconds100) / 100) <= fault {
+            if fabs(Double(seconds - count - 1) + Double(seconds100) / 100) <= fault + 0.0001{
                 // Плюс очко
                 count += 1
                 scoreLabel.text = "\(count)"
@@ -211,8 +215,9 @@ class ViewController: UIViewController {
                 self.gameOver()
             }
         } else {
+            // Задержка после проигрыша
             // Если 0.4 секунды прошло, можно запускать
-            if timeStop.timeIntervalSinceNow <= -0.4 && startGameButton.isHidden {
+            if timeStop.timeIntervalSinceNow <= -0.5 && startGameButton.isHidden {
                 self.setupGame()
             }
         }
@@ -258,12 +263,12 @@ class ViewController: UIViewController {
         setupGALayers()
         updateTimerLabel()
         
-        //для анимации
         scoreLabel.text = "\(count)"
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: timerBlock(timer:))
 
         changeLayers()
+        
     }
     
     
@@ -274,18 +279,20 @@ class ViewController: UIViewController {
             seconds += 1
             seconds100 = 0
             
-            if fault > 0 {
+            //
+            if fault > 0.0501 {
                 fault -= 0.01
             } else {
-                fault = 0.00
+                fault = 0.05
             }
             
             changeLayers()
+            
         }
         
         updateTimerLabel()
         
-        if Double(seconds - count - 1) + Double(seconds100) / 100 > fault {
+        if Double(seconds - count - 1) + (Double(seconds100) / 100) > fault {
             // Пропущено нажатие
             gameOver()
         }
@@ -317,6 +324,7 @@ class ViewController: UIViewController {
     //нажали выход на алерте
     func exitClicked() {
         
+        //удаление данных из UserDefaults
         let defaults = UserDefaults.standard
         defaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
         defaults.synchronize()
@@ -336,8 +344,10 @@ class ViewController: UIViewController {
         timer.invalidate()
         timeStop = Date()
         flPlaying = false
+        
         leftLayer.position.x = leftLayer.presentation()!.position.x
         leftLayer.removeAllAnimations()
+        
         rightLayer.position.x = rightLayer.presentation()!.position.x
         rightLayer.removeAllAnimations()
                 
@@ -368,7 +378,7 @@ class ViewController: UIViewController {
                 
             })
             
-            alertView.showSuccess("Поздравляем!", subTitle: "Вы свой побили рекорд. Ваш новый результат \(count) очков")
+            alertView.showSuccess("Поздравляем!", subTitle: "Вы побили рекорд. Ваш новый результат \(count) очков")
       
         }
         
@@ -396,7 +406,6 @@ class ViewController: UIViewController {
     @IBAction func tapToRestartDidTapped(_ sender: Any) {
         tapToRestartButton.isHidden = true
         self.setupGame()
-
     }
     
     

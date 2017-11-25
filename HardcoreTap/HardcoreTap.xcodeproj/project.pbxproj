@@ -30,6 +30,9 @@
 		3CE12C151FB663A000945352 /* LeadearBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C141FB663A000945352 /* LeadearBoardVC.swift */; };
 		3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C161FB6666200945352 /* LeaderBoardCell.swift */; };
 		73BC136B1FB876A200BDB8B0 /* ButtonSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */; };
+		8D0B2BED1FC89B3700CE102C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */; };
+		8D0B2BEF1FC89B4E00CE102C /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */; };
+		8D0B2BF11FC89BA400CE102C /* AboutGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */; };
 		8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA24751FC7F80600282E06 /* RateManager.swift */; };
 		A3F913136299C4D434B8C562 /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +67,9 @@
 		701D61271984730341DAB1A1 /* Pods-TimeKillerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKillerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKillerApp/Pods-TimeKillerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSupport.swift; sourceTree = "<group>"; };
 		817881E89D929624EF8BC84B /* Pods-HardcoreTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.release.xcconfig"; sourceTree = "<group>"; };
+		8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
+		8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameVC.swift; sourceTree = "<group>"; };
 		8DAA24751FC7F80600282E06 /* RateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManager.swift; sourceTree = "<group>"; };
 		C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.debug.xcconfig"; sourceTree = "<group>"; };
 		F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,11 +153,14 @@
 				3CE12C161FB6666200945352 /* LeaderBoardCell.swift */,
 				3C092B051FB771EF0019687C /* RulesVC.swift */,
 				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
+				8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */,
+				8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */,
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 				3CE12C081FB62FEE00945352 /* Info.plist */,
 				3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
+				8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */,
 			);
 			path = HardcoreTap;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 				3CE12BF71FB62FED00945352 /* Resources */,
 				82DB403C88DC0A94BE796E4A /* [CP] Embed Pods Frameworks */,
 				F85385122A5294858AB54908 /* [CP] Copy Pods Resources */,
+				8D13C0DF1FC9933C00EACE26 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -280,6 +290,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8D13C0DF1FC9933C00EACE26 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"";
+		};
 		D0AC01134F44F8FC2E6B6E29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,9 +349,12 @@
 				3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* ViewController.swift in Sources */,
 				3C092B0A1FB774010019687C /* TabBarVC.swift in Sources */,
+				8D0B2BEF1FC89B4E00CE102C /* StatisticsVC.swift in Sources */,
 				3C092B061FB771EF0019687C /* RulesVC.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
 				3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */,
+				8D0B2BF11FC89BA400CE102C /* AboutGameVC.swift in Sources */,
+				8D0B2BED1FC89B3700CE102C /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

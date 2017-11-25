@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //белый status bar
-//        UIApplication.shared.statusBarStyle = .lightContent
+        UINavigationBar.appearance().tintColor = .white
 
         
         FirebaseApp.configure()

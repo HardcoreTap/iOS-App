@@ -18,7 +18,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var rootRef = Database.database().reference()
     var contentLeaderboards : [content] = []
-    var nameUser : String = ""
+    var nameUser : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,11 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 
-        nameUser = UserDefaults.standard.value(forKey: "userNAME") as! String
+        if var nameUser = UserDefaults.standard.value(forKey: "userNAME") {
+            nameUser = UserDefaults.standard.value(forKey: "userNAME")
+        } else {
+            nameUser = "хз"
+        }
         
         getDataFromFirebase()
         
@@ -55,6 +59,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.tableView.reloadData()
                 }
             }
+            
             self.contentLeaderboards.reverse()
         })
     }

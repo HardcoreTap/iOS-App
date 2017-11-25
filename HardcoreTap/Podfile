@@ -7,12 +7,14 @@ target 'HardcoreTap' do
 
   # Pods for HardcoreTap
 
-pod 'Firebase'
-pod 'Firebase/Core'
-pod 'Firebase/Database'
-pod 'Firebase/Performance'
-pod 'SCLAlertView'
-pod 'Firebase/Auth'
-pod 'Siren'
+  pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Performance'
+  pod 'Firebase/Auth'
+  pod 'Fabric', '~> 1.7.2'
+  pod 'Crashlytics', '~> 3.9.3'
+  pod 'SCLAlertView'
+  pod 'Siren'
 
 end
