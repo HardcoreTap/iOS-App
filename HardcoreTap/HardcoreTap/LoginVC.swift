@@ -23,17 +23,14 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
         
-        //        // Тень у кнопки
-        //        shadowButton.addShadow(nameButton: startPlayButton)
-        
-        //сдвиг экрана наверх и обратно
+        //Cдвиг экрана наверх и обратно
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
     }
     
     
-    //прикоснулись к экрану за пределами  поля ввода
+    //Прикоснулись к экрану за пределами  поля ввода
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //скрываем клавиатуру
         self.view.endEditing(false)
@@ -42,11 +39,13 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
     
     @IBAction func loginDidTouch(_ sender: Any) {
         
-        //если не заполнили поля
+        //Если не заполнили поля
         if textBox.text!.isEmpty {
             
-            //меняем цвет плейсхолдеров
+            print("textTTEXSADASD")
+            //Меняем цвет плейсхолдеров
             textBox.attributedPlaceholder = NSAttributedString(string: "Придумайте никнейм", attributes: [NSAttributedStringKey.foregroundColor: UIColor.red])
+            
             
         } else {
             
@@ -56,11 +55,12 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
             Auth.auth().signInAnonymously { (user, error) in
                 
                 self.username = self.textBox.text!
-                self.userID = user!.uid
+                //                self.userID = user!.uid
                 
                 //запись в UserDefaults: userID и userNAME
-                UserDefaults.standard.set(self.userID, forKey: "userID")
+                //                UserDefaults.standard.set(self.userID, forKey: "userID")
                 UserDefaults.standard.set(self.username, forKey: "userNAME")
+                UserDefaults.standard.synchronize()
                 
                 self.performSegue(withIdentifier: "LoginToPlay", sender: nil)
                 
@@ -78,7 +78,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
     }
     
     
-    //если клавиатура открыта
+    //Клавиатура открыта
     @objc func keyboardShow(notification:NSNotification)  {
         
         let userInfo = notification.userInfo! as NSDictionary
@@ -93,7 +93,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
     }
     
     
-    //если клавиатура закрыта
+    //Клавиатура закрыта
     @objc func keyboardHide()  {
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
@@ -103,7 +103,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
     }
     
     
-    //установка целей на проверку заполнения полей
+    //Установка целей на проверку заполнения полей
     func setupAddTargetIsNotEmptyTextFields() {
         
         //стили неактивной кнопки
@@ -113,29 +113,23 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
     }
     
     
-    //проверка заполнения полей
+    //Проверка заполнения полей
     @objc func textFieldsIsNotEmpty(sender: UITextField) {
         
         sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
         
-        guard
+        guard let text = textBox.text, !text.isEmpty else {
             
-            let text = textBox.text, !text.isEmpty
+            self.startPlayButton.layer.backgroundColor = UIColor.gray.cgColor
+            return
             
-            else {
-                
-                self.startPlayButton.layer.backgroundColor = UIColor.clear.cgColor
-                self.startPlayButton.setTitleColor(UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha:1), for: UIControlState.normal)
-                
-                return
-                
         }
         
         self.startPlayButton.layer.backgroundColor = UIColor.red.cgColor
-        self.startPlayButton.setTitleColor(UIColor.white, for: .normal)
-        
         return
         
     }
+    
+    
     
 }

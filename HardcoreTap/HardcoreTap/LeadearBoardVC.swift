@@ -30,11 +30,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 
-        if var nameUser = UserDefaults.standard.value(forKey: "userNAME") {
-            nameUser = UserDefaults.standard.value(forKey: "userNAME")
-        } else {
-            nameUser = "хз"
-        }
+        nameUser = UserDefaults.standard.value(forKey: "userNAME") as! String
         
         getDataFromFirebase()
         
@@ -74,17 +70,14 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeaderBoardCell
         
-        
         //обнуляем сначала (защита от бага с переопределением)
         cell.placeCellLabel.text = nil
         cell.nameCellLabel.text = nil
         cell.pointsCellLabel.text = nil
         
-        
         cell.nameCellLabel.text = self.contentLeaderboards[indexPath.row].sName
         cell.pointsCellLabel.text = "\(self.contentLeaderboards[indexPath.row].sPoints!)"
-        
-
+    
         if self.contentLeaderboards[indexPath.row].sName! == nameUser  {
             cell.backgroundColor = nil
             cell.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)

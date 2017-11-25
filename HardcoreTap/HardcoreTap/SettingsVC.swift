@@ -14,6 +14,7 @@ class SettingsVC: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        
     }
 
 
