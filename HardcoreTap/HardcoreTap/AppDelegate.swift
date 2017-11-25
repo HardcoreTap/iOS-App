@@ -20,28 +20,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //белый status bar
+        //Косметика navigationBar
         UINavigationBar.appearance().tintColor = .white
-
         
+        
+        //Конфигурация Firebase
         FirebaseApp.configure()
 
-        
-        //проверка на актуальность версии
+
+        //Проверка на актуальность версии
         let siren = Siren.shared
         siren.alertType = .option
         siren.showAlertAfterCurrentVersionHasBeenReleasedForDays = 0
         siren.checkVersion(checkType: .daily)
         
         
-        //увеличиваем счестчик запуска приложения
+        //Увеличиваем счестчик запуска приложения
         if #available(iOS 10.3, *) {
             RateManager.incrementCount()
-        } else {
-            // Fallback on earlier versions
         }
         
         
+        //Проверка на первых вход
         if isAppAlreadyLaunchedOnce() == true {
 
             //переходим на страницу с игрой
@@ -82,6 +82,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Siren.shared.checkVersion(checkType: .immediately)
     }
     
+    
+
+
     
     
 }

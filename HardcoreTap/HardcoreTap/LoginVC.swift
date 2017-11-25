@@ -42,9 +42,8 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
         //Если не заполнили поля
         if textBox.text!.isEmpty {
             
-            print("textTTEXSADASD")
             //Меняем цвет плейсхолдеров
-            textBox.attributedPlaceholder = NSAttributedString(string: "Придумайте никнейм", attributes: [NSAttributedStringKey.foregroundColor: UIColor.red])
+            textBox.attributedPlaceholder = NSAttributedString(string: "Придумайте никнейм", attributes: [NSAttributedStringKey.foregroundColor: UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)])
             
             
         } else {
@@ -121,11 +120,15 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
         guard let text = textBox.text, !text.isEmpty else {
             
             self.startPlayButton.layer.backgroundColor = UIColor.gray.cgColor
+            self.shadowButton.clearShadow(nameButton: startPlayButton)
+
             return
             
         }
         
-        self.startPlayButton.layer.backgroundColor = UIColor.red.cgColor
+        self.startPlayButton.layer.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100).cgColor
+        self.shadowButton.addShadow(nameButton: startPlayButton)
+        
         return
         
     }

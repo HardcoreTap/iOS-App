@@ -62,9 +62,6 @@
 		3CE12C101FB643CB00945352 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3CE12C141FB663A000945352 /* LeadearBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadearBoardVC.swift; sourceTree = "<group>"; };
 		3CE12C161FB6666200945352 /* LeaderBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardCell.swift; sourceTree = "<group>"; };
-		3DDF6AA78FA1E1E24239535B /* Pods-TimeKillerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKillerApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKillerApp/Pods-TimeKillerApp.release.xcconfig"; sourceTree = "<group>"; };
-		504B4932D3133CE5CF2FA2FF /* Pods_TimeKillerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeKillerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		701D61271984730341DAB1A1 /* Pods-TimeKillerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKillerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimeKillerApp/Pods-TimeKillerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSupport.swift; sourceTree = "<group>"; };
 		817881E89D929624EF8BC84B /* Pods-HardcoreTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.release.xcconfig"; sourceTree = "<group>"; };
 		8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -90,7 +87,6 @@
 		1BA9CB629E2E5E5DFDBC2826 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				504B4932D3133CE5CF2FA2FF /* Pods_TimeKillerApp.framework */,
 				F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */,
 			);
 			name = Frameworks;
@@ -152,15 +148,15 @@
 				3CE12C141FB663A000945352 /* LeadearBoardVC.swift */,
 				3CE12C161FB6666200945352 /* LeaderBoardCell.swift */,
 				3C092B051FB771EF0019687C /* RulesVC.swift */,
-				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
 				8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */,
 				8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */,
+				8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */,
+				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 				3CE12C081FB62FEE00945352 /* Info.plist */,
 				3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
-				8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */,
 			);
 			path = HardcoreTap;
 			sourceTree = "<group>";
@@ -168,8 +164,6 @@
 		41218FFB041B28DBA62CEC47 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				701D61271984730341DAB1A1 /* Pods-TimeKillerApp.debug.xcconfig */,
-				3DDF6AA78FA1E1E24239535B /* Pods-TimeKillerApp.release.xcconfig */,
 				C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */,
 				817881E89D929624EF8BC84B /* Pods-HardcoreTap.release.xcconfig */,
 			);

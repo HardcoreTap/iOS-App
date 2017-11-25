@@ -17,7 +17,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var segmentedControlLeaderBoard: UISegmentedControl!
     
     var rootRef = Database.database().reference()
-    var contentLeaderboards : [content] = []
+    var contentLeaderboards : [Content] = []
     var nameUser : String?
 
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 
-        nameUser = UserDefaults.standard.value(forKey: "userNAME") as! String
+        nameUser = (UserDefaults.standard.value(forKey: "userNAME") as! String)
         
         getDataFromFirebase()
         
@@ -43,7 +43,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     func getDataFromFirebase() {
         rootRef.child("leaderboards").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
         
-            //очищаем на всякий случай
+            //очищаем
             self.contentLeaderboards = []
             
             for snap in snapshot.children.allObjects as! [DataSnapshot] {
@@ -51,7 +51,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let name = snap.key
                 
                 if let rankedBy = snap.value as? [String : Any]  {
-                    self.contentLeaderboards.append(content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
+                    self.contentLeaderboards.append(Content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
                     self.tableView.reloadData()
                 }
             }
@@ -107,7 +107,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
 
-struct content {
+struct Content {
     
     var sName : String!
     var sPoints : Int!

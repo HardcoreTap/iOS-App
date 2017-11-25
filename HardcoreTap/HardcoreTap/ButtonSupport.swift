@@ -21,4 +21,15 @@ class AddButtonShadow {
         
 	}
     
+    
+    func clearShadow(nameButton: UIButton) {
+        
+        nameButton.layer.shadowColor = UIColor.clear.cgColor
+        nameButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        nameButton.layer.shadowOpacity = 0
+        nameButton.layer.shadowRadius = 0
+        nameButton.layer.masksToBounds = false
+        
+    }
+    
 }

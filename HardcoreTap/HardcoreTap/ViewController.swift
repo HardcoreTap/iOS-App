@@ -14,7 +14,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    var bombSoundEffect: AVAudioPlayer?
+    var bombSoundEffect: AVAudioPlayer? // Плеер звуков
     
     var count: Int = 0                 // Счетчик очков
     
@@ -44,8 +44,6 @@ class ViewController: UIViewController {
     var shadowButton = AddButtonShadow()
     
     @IBOutlet weak var switchModeGame: UISwitch!
-//    @IBOutlet weak var shareImage: UIImageView!
-    
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -63,35 +61,22 @@ class ViewController: UIViewController {
     var highscoreFromUserDefaults : Int = 0
 
     
-    @IBAction func helloButtonWithPlayerNameDidTapped(_ sender: Any) {
-    }
+
+    
+    
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
-        
-        
-        
-        let backgroundGradientImage = UIImage(named: "bg")
-        let backgroundGradientImageView = UIImageView(image: backgroundGradientImage)
-        backgroundGradientImageView.contentMode = .scaleAspectFill
-        view.backgroundColor = UIColor(patternImage: backgroundGradientImageView.image!)
-        
+        //Косметика navbar и фон
+        toDoTransperentAndBackgroundImage()
         
         
         //имя пользователя в левом вехнем углу
         if UserDefaults.standard.value(forKey: "userNAME") != nil {
             self.nameFromUserDefaults = UserDefaults.standard.value(forKey: "userNAME") as! String
-//            self.playerNameLabel.text = self.nameFromUserDefaults
             scoreRef = rootRef.child("leaderboards").child(nameFromUserDefaults)
         } else {
-//            self.playerNameLabel.text = "Имя не определено"
             scoreRef = rootRef.child("leaderboards").child("Имя не определено")
         }
         
@@ -104,13 +89,14 @@ class ViewController: UIViewController {
             highScoreLabel.text = "Ваш рекорд: 0"
         }
         
+        
         // Регистрация рекогнайзера жестов
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
         view.addGestureRecognizer(tapGR)
 			
+        
         // Тень у кнопки
 		shadowButton.addShadow(nameButton: startGameButton)
-        
         
         
         if #available(iOS 11.0, *) {
@@ -229,6 +215,7 @@ class ViewController: UIViewController {
     }
     
     
+    
     func setupGame() {
         
         let path = Bundle.main.path(forResource: "bmp60.mp3", ofType: nil)!
@@ -318,6 +305,12 @@ class ViewController: UIViewController {
         alertContentView.backgroundColor = UIColor.white
         alertContentView.layer.cornerRadius = 15
         
+    }
+    
+    
+    //
+    @IBAction func helloButtonWithPlayerNameDidTapped(_ sender: Any) {
+    
     }
     
     
@@ -419,6 +412,14 @@ class ViewController: UIViewController {
     }
     
     
+    func toDoTransperentAndBackgroundImage() {
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        
+    }
 
     
 }
