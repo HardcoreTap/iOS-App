@@ -54,10 +54,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
             Auth.auth().signInAnonymously { (user, error) in
                 
                 self.username = self.textBox.text!
-                //                self.userID = user!.uid
-                
-                //запись в UserDefaults: userID и userNAME
-                //                UserDefaults.standard.set(self.userID, forKey: "userID")
+
                 UserDefaults.standard.set(self.username, forKey: "userNAME")
                 UserDefaults.standard.synchronize()
                 

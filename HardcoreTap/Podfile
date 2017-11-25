@@ -16,5 +16,6 @@ target 'HardcoreTap' do
   pod 'Crashlytics', '~> 3.9.3'
   pod 'SCLAlertView'
   pod 'Siren'
+  pod 'Google-Mobile-Ads-SDK'
 
 end

@@ -788,9 +788,6 @@
         <namedColor name="lipstick">
             <color red="0.9100000262260437" green="0.17599999904632568" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="lipstick">
-            <color red="0.9100000262260437" green="0.17599999904632568" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="yellowishGreen">
             <color red="0.59200000762939453" green="0.90200001001358032" blue="0.13699999451637268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import Siren
-
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Конфигурация Firebase
         FirebaseApp.configure()
+        //Конфигурация Google AdMod
+        GADMobileAds.configure(withApplicationID: PrivateInfo.admodKey)
 
 
         //Проверка на актуальность версии
