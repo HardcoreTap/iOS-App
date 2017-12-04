@@ -17,5 +17,6 @@ target 'HardcoreTap' do
   pod 'SCLAlertView'
   pod 'Siren'
   pod 'Google-Mobile-Ads-SDK'
+  pod 'SwiftyOnboard'
 
 end

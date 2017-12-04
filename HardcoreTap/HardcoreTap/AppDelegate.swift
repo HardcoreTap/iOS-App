@@ -11,6 +11,8 @@ import Firebase
 import Siren
 import GoogleMobileAds
 
+var isHarcoreMode : Bool = false
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -55,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             //переходим на страницу с логином
             let storyboard = UIStoryboard(name: "Main",bundle: nil )
-            let jump = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+            let jump = storyboard.instantiateViewController(withIdentifier: "Onboarding")
             window?.rootViewController = jump
 
 
