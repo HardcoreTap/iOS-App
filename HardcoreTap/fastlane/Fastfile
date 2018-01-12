@@ -1,0 +1,48 @@
+default_platform :ios
+
+platform :ios do
+  before_all do
+    # cocoapods
+  end
+
+  desc 'Runs all the tests'
+  lane :test do
+    scan
+  end
+
+  lane :beta do
+    # Increment the build number (not the version number)
+    #increment_build_number
+
+    # Manage code signing
+    match(type: 'adhoc')
+
+    # Build your app - more options available
+    gym(export_method: "ad-hoc", scheme: 'HardcoreTap')
+
+    # Upload to Crashlytics
+    crashlytics
+
+  end
+
+  lane :release do
+    # match(type: 'appstore')
+    # snapshot
+    gym(scheme: 'HardcoreTap') # Build your app - more options available
+    deliver(force: true)
+  end
+
+
+  after_all do |lane|
+    # slack(
+    #   message: 'Successfully deployed new App Update.'
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end

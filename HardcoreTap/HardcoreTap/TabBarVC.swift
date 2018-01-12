@@ -9,17 +9,15 @@
 import UIKit
 
 class TabBarVC: UITabBarController {
-
-    @IBOutlet weak var myTabBar: UITabBar!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        делаем прозрачный tabbar
-        myTabBar.backgroundColor = UIColor.clear
-        myTabBar.backgroundImage = UIImage()
-        myTabBar.shadowImage = UIImage()
-
-    }
-
+  
+  @IBOutlet weak var myTabBar: UITabBar!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    //        делаем прозрачный tabbar
+    myTabBar.backgroundColor = UIColor.clear
+    myTabBar.backgroundImage = UIImage()
+    myTabBar.shadowImage = UIImage()
+  }
+  
 }

@@ -1,0 +1,18 @@
+# A list of devices you want to take the screenshots from
+devices([
+  "iPhone 5",
+  "iPhone 6",
+  "iPhone 6 Plus",
+  "iPad Retina"
+])
+ 
+# A list of supported languages
+languages([
+  'ru-RU'
+])
+ 
+# Where should the resulting screenshots be stored?
+output_directory "./fastlane/screenshots"
+ 
+# Clears previous screenshots
+clear_previous_screenshots true

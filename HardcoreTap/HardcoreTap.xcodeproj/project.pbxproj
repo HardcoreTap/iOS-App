@@ -25,7 +25,6 @@
 		3CE12C021FB62FEE00945352 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE12C001FB62FEE00945352 /* Main.storyboard */; };
 		3CE12C041FB62FEE00945352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CE12C031FB62FEE00945352 /* Assets.xcassets */; };
 		3CE12C071FB62FEE00945352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */; };
-		3CE12C0F1FB63B5F00945352 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */; };
 		3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C101FB643CB00945352 /* LoginVC.swift */; };
 		3CE12C151FB663A000945352 /* LeadearBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C141FB663A000945352 /* LeadearBoardVC.swift */; };
 		3CE12C171FB6666200945352 /* LeaderBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C161FB6666200945352 /* LeaderBoardCell.swift */; };
@@ -35,6 +34,7 @@
 		8D0B2BF11FC89BA400CE102C /* AboutGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */; };
 		8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */; };
 		8D378CE41FCC734E007FC3B4 /* PaperOnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */; };
+		8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */; };
 		8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA24751FC7F80600282E06 /* RateManager.swift */; };
 		A3F913136299C4D434B8C562 /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,6 @@
 		3CE12C031FB62FEE00945352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CE12C061FB62FEE00945352 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CE12C081FB62FEE00945352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CE12C101FB643CB00945352 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3CE12C141FB663A000945352 /* LeadearBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadearBoardVC.swift; sourceTree = "<group>"; };
 		3CE12C161FB6666200945352 /* LeaderBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardCell.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameVC.swift; sourceTree = "<group>"; };
 		8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateInfo.swift; sourceTree = "<group>"; };
 		8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperOnBoarding.swift; sourceTree = "<group>"; };
+		8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DAA24751FC7F80600282E06 /* RateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManager.swift; sourceTree = "<group>"; };
 		C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.debug.xcconfig"; sourceTree = "<group>"; };
 		F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,7 +161,7 @@
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 				3CE12C081FB62FEE00945352 /* Info.plist */,
-				3CE12C0E1FB63B5F00945352 /* GoogleService-Info.plist */,
+				8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
 			);
 			path = HardcoreTap;
@@ -212,7 +212,7 @@
 				TargetAttributes = {
 					3CE12BF81FB62FED00945352 = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -241,12 +241,12 @@
 			files = (
 				3C1B77371FBEB85100A4ADB3 /* SFUIDisplay-Regular.otf in Resources */,
 				3C6EED021FBBC32E00DCFC10 /* BNBOLD.ttf in Resources */,
+				8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */,
 				3C6EED031FBBC32E00DCFC10 /* BNBOOK.ttf in Resources */,
 				3C6EED041FBBC32E00DCFC10 /* BNLIGHT.ttf in Resources */,
 				3C6EED051FBBC32E00DCFC10 /* BNREGULAR.ttf in Resources */,
 				3C6EED061FBBC32E00DCFC10 /* BNTHUN.ttf in Resources */,
 				3CE12C071FB62FEE00945352 /* LaunchScreen.storyboard in Resources */,
-				3CE12C0F1FB63B5F00945352 /* GoogleService-Info.plist in Resources */,
 				3CE12C041FB62FEE00945352 /* Assets.xcassets in Resources */,
 				3C092B021FB76CE20019687C /* OpenSans-Regular.ttf in Resources */,
 				3C1B77381FBEB85100A4ADB3 /* SFUIDisplay-Bold.otf in Resources */,
@@ -496,13 +496,14 @@
 			baseConfigurationReference = C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7AZ625QQ5;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -513,13 +514,14 @@
 			baseConfigurationReference = 817881E89D929624EF8BC84B /* Pods-HardcoreTap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7AZ625QQ5;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

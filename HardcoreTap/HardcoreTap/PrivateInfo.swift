@@ -9,7 +9,5 @@
 import Foundation
 
 struct PrivateInfo {
-    
     static var admodKey = "ca-app-pub-1700430795037685~8586021594"
-    
 }
