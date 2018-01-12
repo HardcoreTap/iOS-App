@@ -10,6 +10,9 @@ import UIKit
 import Firebase
 import Siren
 import GoogleMobileAds
+import Fabric
+import Crashlytics
+
 
 var isHarcoreMode : Bool = false
 
@@ -25,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Косметика navigationBar
     UINavigationBar.appearance().tintColor = .white
     
+    //Конфигурация Fabric
+    Fabric.with([Crashlytics.self])
+
     //Конфигурация Firebase
     FirebaseApp.configure()
     
