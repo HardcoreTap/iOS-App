@@ -521,14 +521,76 @@
                     <view key="view" contentMode="scaleToFill" id="pWJ-RP-xTH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SyL-pk-Y91">
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
+                                <color key="backgroundColor" name="lipstick"/>
+                                <color key="tintColor" name="lipstick"/>
+                                <color key="sectionIndexColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" name="lipstick"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="7TK-e3-zWn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About game" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jgd-6A-c27">
+                                            <rect key="frame" x="15" y="15" width="345" height="170"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="lipstick"/>
+                                    <constraints>
+                                        <constraint firstItem="Jgd-6A-c27" firstAttribute="leading" secondItem="7TK-e3-zWn" secondAttribute="leading" constant="15" id="YOk-k0-Tx2"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jgd-6A-c27" secondAttribute="bottom" constant="15" id="b9n-jf-EqI"/>
+                                        <constraint firstAttribute="trailing" secondItem="Jgd-6A-c27" secondAttribute="trailing" constant="15" id="dpa-8o-9gU"/>
+                                        <constraint firstItem="Jgd-6A-c27" firstAttribute="top" secondItem="7TK-e3-zWn" secondAttribute="top" constant="15" id="ko0-Kk-pc2"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="vhZ-yn-GUD" style="IBUITableViewCellStyleDefault" id="X9P-FJ-DUU">
+                                        <rect key="frame" x="0.0" y="228" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X9P-FJ-DUU" id="rey-0F-tLb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vhZ-yn-GUD">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="lipstick"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="grm-T7-0u7" id="b3y-AF-rAr"/>
+                                    <outlet property="delegate" destination="grm-T7-0u7" id="sKP-yO-iwR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" name="lipstick"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SyL-pk-Y91" firstAttribute="bottom" secondItem="tOb-4S-3YX" secondAttribute="bottom" id="40w-LV-u7R"/>
+                            <constraint firstItem="SyL-pk-Y91" firstAttribute="trailing" secondItem="tOb-4S-3YX" secondAttribute="trailing" id="Jv1-Hf-jL6"/>
+                            <constraint firstItem="SyL-pk-Y91" firstAttribute="leading" secondItem="tOb-4S-3YX" secondAttribute="leading" id="ZYb-sU-7T5"/>
+                            <constraint firstItem="SyL-pk-Y91" firstAttribute="top" secondItem="tOb-4S-3YX" secondAttribute="top" id="zkn-9X-yFH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tOb-4S-3YX"/>
                     </view>
+                    <connections>
+                        <outlet property="aboutGameLabel" destination="Jgd-6A-c27" id="PdS-x3-15A"/>
+                        <outlet property="tableView" destination="SyL-pk-Y91" id="Etk-lD-MPY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU8-qT-UIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3551" y="2242"/>
+            <point key="canvasLocation" x="3549.5999999999999" y="2241.2293853073465"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="97C-nj-LsA">
@@ -796,6 +858,9 @@
         <image name="rules2" width="103" height="103"/>
         <image name="rules3" width="103" height="103"/>
         <image name="share" width="100" height="100"/>
+        <namedColor name="lipstick">
+            <color red="0.9100000262260437" green="0.17599999904632568" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="lipstick">
             <color red="0.9100000262260437" green="0.17599999904632568" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
