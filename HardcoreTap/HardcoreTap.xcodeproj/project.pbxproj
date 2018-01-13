@@ -496,6 +496,7 @@
 			baseConfigurationReference = C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
 				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Info.plist";

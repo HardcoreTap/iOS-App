@@ -33,3 +33,4 @@ playground.xcworkspace
 /*.gcno
 *.xcuserstate
 .DS_Store
+HardcoreTap/fastlane/report.xml
