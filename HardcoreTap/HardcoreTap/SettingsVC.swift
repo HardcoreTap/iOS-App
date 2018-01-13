@@ -9,14 +9,11 @@
 import UIKit
 
 class SettingsVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
-        
-    }
-
-
-
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+  }
+  
 }

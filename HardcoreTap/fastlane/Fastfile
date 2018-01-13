@@ -1,0 +1,48 @@
+default_platform :ios
+
+platform :ios do
+  before_all do
+    # cocoapods
+  end
+
+  desc 'Runs all the tests'
+  lane :test do
+    scan
+  end
+
+  lane :beta do
+    # Increment the build number (not the version number)
+    #increment_build_number
+	
+    # Build your app - more options available
+    gym
+
+    # Upload to Crashlytics
+        crashlytics(
+      api_token: "91cafb2b72a5d88bedb070de82e095b0ecd90caf",
+      build_secret: "1c957528cc9da324f53eda599b1415444f67d1c9a7c2f8906bd2175abedf20c1"
+    )
+
+  end
+
+  lane :release do
+    # match(type: 'appstore')
+    # snapshot
+    gym(scheme: 'HardcoreTap') # Build your app - more options available
+    deliver(force: true)
+  end
+
+
+  after_all do |lane|
+    # slack(
+    #   message: 'Successfully deployed new App Update.'
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
