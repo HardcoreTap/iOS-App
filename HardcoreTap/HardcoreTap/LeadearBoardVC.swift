@@ -32,7 +32,11 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     self.navigationController?.view.backgroundColor = .clear
     view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     
-    nameUser = (UserDefaults.standard.value(forKey: "userNAME") as! String)
+    if let nameUser = UserDefaults.standard.value(forKey: "userNAME") as? String {
+      self.nameUser = nameUser
+    } else {
+      self.nameUser = "Имя не определено"
+    }
     
     //получение рекордов из обычного режима
     getNormalRecords()
@@ -55,9 +59,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
   
   func getNormalRecords() {
-    
     rootRef.child("leaderboards_normal").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
-      
       //очищаем
       self.contentLeaderboardsNormal = []
       

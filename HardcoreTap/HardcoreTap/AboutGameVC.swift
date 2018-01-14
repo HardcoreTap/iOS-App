@@ -13,10 +13,8 @@ class AboutGameVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    self.navigationController?.navigationBar.isTranslucent = true
-    self.navigationController?.view.backgroundColor = .clear
-    view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+    self.view.backgroundColor = .clear
+    self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
   }
   
 }

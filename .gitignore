@@ -18,10 +18,10 @@ xcuserdata/
 *.dSYM
 /Pods
 /Firebase cloud functions/functions/node_modules
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
+HardcoreTap/fastlane/report.xml
+HardcoreTap/fastlane/Preview.html
+HardcoreTap/fastlane/screenshots
+HardcoreTap/fastlane/test_output
 iOSInjectionProject/
 timeline.xctimeline
 playground.xcworkspace
@@ -33,4 +33,3 @@ playground.xcworkspace
 /*.gcno
 *.xcuserstate
 .DS_Store
-HardcoreTap/fastlane/report.xml

@@ -479,14 +479,26 @@
                     <view key="view" contentMode="scaleToFill" id="i2A-sv-ADR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скоро" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-Qn-L8Y">
+                                <rect key="frame" x="145.5" y="317.5" width="84" height="32.5"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" name="lipstick"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hcv-Qn-L8Y" firstAttribute="centerY" secondItem="i2A-sv-ADR" secondAttribute="centerY" id="6f1-xt-z03"/>
+                            <constraint firstItem="Hcv-Qn-L8Y" firstAttribute="centerX" secondItem="i2A-sv-ADR" secondAttribute="centerX" id="eeG-3T-fdr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mSL-Zs-MSv"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxT-na-xbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1718" y="2243"/>
+            <point key="canvasLocation" x="1717.5999999999999" y="2242.1289355322342"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="ut7-fG-Zf5">
@@ -496,16 +508,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yfcnhjqrb" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCB-kM-sRs">
-                                <rect key="frame" x="71" y="94" width="179" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скоро" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzv-oW-jvo">
+                                <rect key="frame" x="145" y="317" width="84" height="32.5"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" name="lipstick"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dzv-oW-jvo" firstAttribute="centerY" secondItem="TMM-YF-aRR" secondAttribute="centerY" id="EvH-Pa-GpI"/>
+                            <constraint firstItem="dzv-oW-jvo" firstAttribute="centerX" secondItem="TMM-YF-aRR" secondAttribute="centerX" id="nqw-Lo-hbo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zqz-Eh-Dkp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Настройки" id="XLE-0V-4kJ"/>
@@ -521,8 +536,20 @@
                     <view key="view" contentMode="scaleToFill" id="pWJ-RP-xTH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скоро" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KT5-87-VgB">
+                                <rect key="frame" x="145" y="317" width="84" height="32.5"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Bold" family="SF UI Display" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" name="lipstick"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KT5-87-VgB" firstAttribute="centerY" secondItem="pWJ-RP-xTH" secondAttribute="centerY" id="2ex-xM-1RA"/>
+                            <constraint firstItem="KT5-87-VgB" firstAttribute="centerX" secondItem="pWJ-RP-xTH" secondAttribute="centerX" id="MZR-t2-Aaz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tOb-4S-3YX"/>
                     </view>
                 </viewController>
