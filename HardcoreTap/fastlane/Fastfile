@@ -13,10 +13,11 @@ platform :ios do
 
      # match(type: 'adhoc')
     
-     # gym
+     gym
     
      crashlytics(
        groups: "hardcoretap-test",
+       notes: "Сделал билд only for iphone",
        notifications: true,
        ipa_path: "./HardcoreTap.ipa",
        api_token: "91cafb2b72a5d88bedb070de82e095b0ecd90caf",
