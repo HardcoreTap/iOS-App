@@ -21,4 +21,7 @@ class RulesVC: UIViewController {
     view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
   }
   
+	@IBAction func showSettingScreenAction(_ sender: Any) {
+		performSegue(withIdentifier: "showSettingScreen", sender: self)
+	}
 }

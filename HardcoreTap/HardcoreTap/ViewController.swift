@@ -28,6 +28,7 @@ class ViewController: UIViewController {
   
   var timer = Timer()
   var flPlaying: Bool = false // Флаг запуска игры
+	var bgSound: Bool = true // Флаг проигрывание музыки
   var timeStop = Date()
   
   let layerColors = [UIColor(red: 1.0, green: 0.5, blue: 0.5, alpha: 0.6),
@@ -51,6 +52,7 @@ class ViewController: UIViewController {
   var rootRef = Database.database().reference()
   var scoreRef: DatabaseReference!
   var shadowButton = AddButtonShadow()
+	let userDefaults = UserDefaults.standard
   
   @IBOutlet weak var switchModeGame: UISwitch!
   
@@ -79,9 +81,16 @@ class ViewController: UIViewController {
     
     //Косметика navbar и фон
     toDoTransperentAndBackgroundImage()
-    
-    
-    
+		
+		// проверка проигрывания фоновой музыки
+		if userDefaults.bool(forKey: "bgSound") {
+			bgSound = true
+			userDefaults.set(bgSound, forKey: "bgSound")
+		} else {
+			bgSound = false
+			userDefaults.set(bgSound, forKey: "bgSound")
+		}
+		
     //имя пользователя в левом вехнем углу
     if let username = UserDefaults.standard.value(forKey: "userNAME") as? String {
       self.nameFromUserDefaults = username
@@ -224,8 +233,12 @@ class ViewController: UIViewController {
     
     do {
       bombSoundEffect = try AVAudioPlayer(contentsOf: url)
-      bombSoundEffect?.play()
-    } catch {
+			if userDefaults.bool(forKey: "bgSound"){
+				bombSoundEffect?.play()
+			} else {
+				bombSoundEffect?.stop()
+			}
+		} catch {
       // couldn't load file :(
     }
     
