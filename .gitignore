@@ -16,13 +16,14 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
-/Pods
+
 /Firebase cloud functions/functions/node_modules
 HardcoreTap/fastlane/report.xml
 HardcoreTap/fastlane/Preview.html
 HardcoreTap/fastlane/screenshots
 HardcoreTap/fastlane/test_output
 HardcoreTap/fastlane/metadata
+HardcoreTap/Pods
 iOSInjectionProject/
 timeline.xctimeline
 playground.xcworkspace
@@ -34,4 +35,3 @@ playground.xcworkspace
 /*.gcno
 *.xcuserstate
 .DS_Store
-HardcoreTap/Preview.html
