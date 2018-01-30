@@ -11,24 +11,23 @@ platform :ios do
 
   lane :beta do
 
-     # match(type: 'adhoc')
+     #match(type: 'adhoc')
     
      gym
     
      crashlytics(
        groups: "hardcoretap-test",
-       notes: "Сделал билд only for iphone",
+       notes: "",
        notifications: true,
-       ipa_path: "./HardcoreTap.ipa",
        api_token: "91cafb2b72a5d88bedb070de82e095b0ecd90caf",
        build_secret: "1c957528cc9da324f53eda599b1415444f67d1c9a7c2f8906bd2175abedf20c1"
      )
   end
 
   lane :release do
-    match(type: 'appstore')
-    capture_screenshots                  # generate new screenshots for the App Store
-    sync_code_signing(type: "appstore")  # see code signing guide for more information
+    #match(type: 'appstore')
+    #capture_screenshots                 
+    sync_code_signing(type: "appstore")
     gym(scheme: "HardcoreTap")
     upload_to_app_store    
   end

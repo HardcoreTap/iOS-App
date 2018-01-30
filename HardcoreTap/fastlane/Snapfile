@@ -7,7 +7,7 @@ devices([
  
 # A list of supported languages
 languages([
-  'ru-RU'
+  'ru'
 ])
  
 # Where should the resulting screenshots be stored?
@@ -17,4 +17,4 @@ output_directory "./fastlane/screenshots"
 clear_previous_screenshots true
  
 # Latest version of iOS
-ios_version '11.0'
+ios_version '11.2'

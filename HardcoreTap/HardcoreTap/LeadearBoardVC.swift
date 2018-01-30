@@ -17,8 +17,8 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
   @IBOutlet weak var segmentedControlLeaderBoard: UISegmentedControl!
   
   var rootRef = Database.database().reference()
-  var contentLeaderboardsNormal : [Content] = []
-  var contentLeaderboardsHardcore : [Content] = []
+  var contentLeaderboardsNormal = [Content]()
+  var contentLeaderboardsHardcore = [Content]()
   var countRowsInTable = Int()
   
   var nameUser : String?
@@ -42,12 +42,10 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     getNormalRecords()
     
     //получение рекордов из харкдор режима
-    getHardcoreRecords()
+//    getHardcoreRecords()
     
     tableView.delegate = self
     tableView.dataSource = self
-    
-    tableView.reloadData()
     
     //        //показывам при загрузке экрана ту таблицу, какой режим игры был выбран
     //        if isHarcoreMode {
@@ -55,7 +53,6 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     //        } else {
     //            segmentedControlLeaderBoard.selectedSegmentIndex = 0
     //        }
-    
   }
   
   func getNormalRecords() {
@@ -64,7 +61,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
       self.contentLeaderboardsNormal = []
       
       for snap in snapshot.children.allObjects as! [DataSnapshot] {
-        
+        print(snapshot.children.allObjects)
         let name = snap.key
         
         if let rankedBy = snap.value as? [String : Any]  {
@@ -79,7 +76,6 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   func getHardcoreRecords() {
     rootRef.child("leaderboards_hadrcore").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
-      
       //очищаем
       self.contentLeaderboardsHardcore = []
       
@@ -97,7 +93,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.countRowsInTable-1
+    return self.countRowsInTable
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
