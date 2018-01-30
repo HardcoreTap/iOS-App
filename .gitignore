@@ -34,3 +34,4 @@ playground.xcworkspace
 /*.gcno
 *.xcuserstate
 .DS_Store
+HardcoreTap/Preview.html
