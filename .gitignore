@@ -22,6 +22,7 @@ HardcoreTap/fastlane/report.xml
 HardcoreTap/fastlane/Preview.html
 HardcoreTap/fastlane/screenshots
 HardcoreTap/fastlane/test_output
+HardcoreTap/fastlane/metadata
 iOSInjectionProject/
 timeline.xctimeline
 playground.xcworkspace
