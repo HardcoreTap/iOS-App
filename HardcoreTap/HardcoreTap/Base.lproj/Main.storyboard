@@ -355,13 +355,13 @@
                                                     <constraint firstAttribute="height" constant="100" id="Z1N-ru-rZM"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нужно тапать по экрану, стараясь попасть в период равный одной секунде с точностью до 00 миллисекунд." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dP-S2-pXO">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тапай по экрану с интервалом ровно в одну секунду. Идеальная точность — 00 миллисекунд." lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dP-S2-pXO">
                                                 <rect key="frame" x="80" y="0.0" width="234" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="92" id="JqK-aL-aNR"/>
                                                     <constraint firstAttribute="width" constant="179" id="Tr7-Uu-ImN"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="13"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -377,14 +377,13 @@
                                                     <constraint firstAttribute="width" constant="70" id="hNA-SE-tuM"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mer-Lc-Srv">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="С ростом уровня, тебе нужно быть всё точнее. Допустимая погрешность уменьшается и приближается к нулю. " lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mer-Lc-Srv">
                                                 <rect key="frame" x="80" y="0.0" width="234" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="5Bf-vZ-zzI"/>
                                                     <constraint firstAttribute="width" constant="179" id="vOn-sy-0b2"/>
                                                 </constraints>
-                                                <string key="text">Если, доходя до следующей секунды, вы превышаете погрешность, то вы проигрываете. При этом не стоит нажимать на экран раньше времени.</string>
-                                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="13"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -400,15 +399,13 @@
                                                     <constraint firstAttribute="height" constant="100" id="qxb-a4-5HY"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bff-sU-cWH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цель игры — стать лучшим ловцом ритма и возглавить TOP 10 игроков!" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bff-sU-cWH">
                                                 <rect key="frame" x="80" y="0.0" width="234" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="70" id="OCI-fS-TEc"/>
                                                     <constraint firstAttribute="width" constant="179" id="dY4-yk-1T5"/>
                                                 </constraints>
-                                                <string key="text">Цель игры набрать наибольшее количество очков
-и попасть в TOP 10 игроков!</string>
-                                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="13"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
