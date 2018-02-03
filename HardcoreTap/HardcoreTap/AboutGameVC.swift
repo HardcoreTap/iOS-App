@@ -22,7 +22,7 @@ class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     self.navigationController?.navigationBar.isTranslucent = true
     self.navigationController?.view.backgroundColor = .clear
-    view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+		view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 		tableView.tableFooterView = UIView(frame: CGRect.zero)
 		aboutGameLabel.text = "Служба Яндекс.Рефераты предназначена для студентов и школьников, дизайнеров и журналистов, создателей научных заявок и отчетов — для всех, кто относится к тексту, как к количеству знаков. Нажав на кнопку «Написать реферат», вы лично создаете."
   }
@@ -36,7 +36,8 @@ extension AboutGameVC {
 	func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
 		let header = view as? UITableViewHeaderFooterView
 		header?.textLabel?.font = UIFont(name: "OpenSans-Regular", size: 10)
-		header?.textLabel?.textColor = UIColor.white
+		header?.textLabel?.textColor = UIColor(hue:0.24, saturation:0.75, brightness:0.89, alpha:1.00)
+		header?.backgroundView?.backgroundColor = UIColor(hue:0.24, saturation:0.75, brightness:0.89, alpha:0.1)
 	}
 	
 	// MARK: - Table view data source
