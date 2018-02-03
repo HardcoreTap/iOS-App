@@ -33,7 +33,6 @@
 		8D0B2BEF1FC89B4E00CE102C /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */; };
 		8D0B2BF11FC89BA400CE102C /* AboutGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */; };
 		8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */; };
-		8D378CE41FCC734E007FC3B4 /* PaperOnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */; };
 		8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */; };
 		8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA24751FC7F80600282E06 /* RateManager.swift */; };
 		A3F913136299C4D434B8C562 /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */; };
@@ -89,7 +88,6 @@
 		8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameVC.swift; sourceTree = "<group>"; };
 		8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateInfo.swift; sourceTree = "<group>"; };
-		8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperOnBoarding.swift; sourceTree = "<group>"; };
 		8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DAA24751FC7F80600282E06 /* RateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManager.swift; sourceTree = "<group>"; };
 		B6A27BCD200BCA0800CD4600 /* HardcoreTap UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HardcoreTap UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,19 +188,12 @@
 				3C6EECF61FBBBBBA00DCFC10 /* Fonts */,
 				3C52CAE71FBBC873004E31B8 /* AudioFiles */,
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
-				8DAA24751FC7F80600282E06 /* RateManager.swift */,
 				3C092B091FB774010019687C /* TabBarVC.swift */,
 				3CE12C101FB643CB00945352 /* LoginVC.swift */,
-				3CE12BFE1FB62FEE00945352 /* ViewController.swift */,
-				3CE12C141FB663A000945352 /* LeadearBoardVC.swift */,
-				3CE12C161FB6666200945352 /* LeaderBoardCell.swift */,
-				3C092B051FB771EF0019687C /* RulesVC.swift */,
-				8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */,
-				8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */,
-				8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */,
-				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
-				8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */,
-				8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */,
+				B6F71C802025A4D600AB59DB /* GameTab */,
+				B6F71C822025A4EA00AB59DB /* LeaderboardsTab */,
+				B6F71C812025A4DF00AB59DB /* RulesTab */,
+				B6F71C832025A55700AB59DB /* Extensions */,
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 				3CE12C081FB62FEE00945352 /* Info.plist */,
@@ -238,6 +229,44 @@
 				B6A27BE1200BCCF100CD4600 /* Info.plist */,
 			);
 			path = "HardcoreTap Tests";
+			sourceTree = "<group>";
+		};
+		B6F71C802025A4D600AB59DB /* GameTab */ = {
+			isa = PBXGroup;
+			children = (
+				3CE12BFE1FB62FEE00945352 /* ViewController.swift */,
+			);
+			path = GameTab;
+			sourceTree = "<group>";
+		};
+		B6F71C812025A4DF00AB59DB /* RulesTab */ = {
+			isa = PBXGroup;
+			children = (
+				3C092B051FB771EF0019687C /* RulesVC.swift */,
+				8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */,
+				8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */,
+				8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */,
+			);
+			path = RulesTab;
+			sourceTree = "<group>";
+		};
+		B6F71C822025A4EA00AB59DB /* LeaderboardsTab */ = {
+			isa = PBXGroup;
+			children = (
+				3CE12C161FB6666200945352 /* LeaderBoardCell.swift */,
+				3CE12C141FB663A000945352 /* LeadearBoardVC.swift */,
+			);
+			path = LeaderboardsTab;
+			sourceTree = "<group>";
+		};
+		B6F71C832025A55700AB59DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8DAA24751FC7F80600282E06 /* RateManager.swift */,
+				8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */,
+				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,7 +427,6 @@
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyOnboard/SwiftyOnboard.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -409,7 +437,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyOnboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -484,7 +511,6 @@
 				3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */,
 				8D0B2BF11FC89BA400CE102C /* AboutGameVC.swift in Sources */,
 				8D0B2BED1FC89B3700CE102C /* SettingsVC.swift in Sources */,
-				8D378CE41FCC734E007FC3B4 /* PaperOnBoarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,7 +689,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "12492178-7525-4cd6-a47a-caabe066f267";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.bystritskiy.HardcoreTap";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -683,7 +709,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "987473b7-2aec-46c1-97b6-61b6cf74e73b";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.bystritskiy.HardcoreTap";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

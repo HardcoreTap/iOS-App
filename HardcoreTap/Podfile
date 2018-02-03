@@ -11,7 +11,7 @@ target 'HardcoreTap' do
   pod 'Crashlytics'
   pod 'SCLAlertView'
   pod 'Siren'
-  pod 'Google-Mobile-Ads-SDK'
-  pod 'SwiftyOnboard'
+  #pod 'Google-Mobile-Ads-SDK'
+  #pod 'SwiftyOnboard'
 
 end

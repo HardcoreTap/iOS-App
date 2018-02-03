@@ -23,14 +23,17 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
   
   var nameUser : String?
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.isTranslucent = true
     self.navigationController?.view.backgroundColor = .clear
     view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
     if let nameUser = UserDefaults.standard.value(forKey: "userNAME") as? String {
       self.nameUser = nameUser
@@ -42,7 +45,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     getNormalRecords()
     
     //получение рекордов из харкдор режима
-//    getHardcoreRecords()
+    getHardcoreRecords()
     
     tableView.delegate = self
     tableView.dataSource = self
@@ -66,9 +69,9 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if let rankedBy = snap.value as? [String : Any]  {
           self.contentLeaderboardsNormal.append(Content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
-          self.tableView.reloadData()
         }
       }
+      self.tableView.reloadData()
       self.countRowsInTable = self.contentLeaderboardsNormal.count
       self.contentLeaderboardsNormal.reverse()
     })
@@ -84,9 +87,9 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if let rankedBy = snap.value as? [String : Any]  {
           self.contentLeaderboardsHardcore.append(Content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
-          self.tableView.reloadData()
         }
       }
+      self.tableView.reloadData()
       self.countRowsInTable = self.contentLeaderboardsHardcore.count
       self.contentLeaderboardsHardcore.reverse()
     })
@@ -105,6 +108,17 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     cell.nameCellLabel.text = nil
     cell.pointsCellLabel.text = nil
     
+    //для первых трек добавляем иконку короны
+    if indexPath.row < 3 {
+      cell.placeCellLabel.text = nil
+      cell.placeCellLabel.text = ""
+      cell.placeCellLabel.backgroundColor = UIColor(patternImage: UIImage(named: "iconLeader")!)
+    } else {
+      cell.placeCellLabel.backgroundColor = nil
+      cell.placeCellLabel.text = nil
+      cell.placeCellLabel.text = "\(indexPath.row + 1)"
+    }
+    
     if segmentedControlLeaderBoard.selectedSegmentIndex == 0 {
       
       cell.nameCellLabel.text = self.contentLeaderboardsNormal[indexPath.row].sName
@@ -116,6 +130,8 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
       } else {
         cell.backgroundColor = nil
       }
+      
+      return cell
       
     } else {
       
@@ -129,27 +145,14 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.backgroundColor = nil
       }
       
+      return cell
     }
-    
-    //для первых трек добавляем иконку короны
-    if indexPath.row < 3 {
-      cell.placeCellLabel.text = nil
-      cell.placeCellLabel.text = ""
-      cell.placeCellLabel.backgroundColor = UIColor(patternImage: UIImage(named: "iconLeader")!)
-    } else {
-      cell.placeCellLabel.backgroundColor = nil
-      cell.placeCellLabel.text = nil
-      cell.placeCellLabel.text = "\(indexPath.row + 1)"
-    }
-    return cell
   }
-  
 }
 
 
 
 struct Content {
-  
   var sName : String!
   var sPoints : Int!
   
@@ -157,5 +160,4 @@ struct Content {
     self.sName = sName
     self.sPoints = sPoints
   }
-  
 }

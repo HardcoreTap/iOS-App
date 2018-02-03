@@ -308,7 +308,7 @@ class ViewController: UIViewController {
     defaults.synchronize()
     
     //переход на страницу авторизации
-    let loginvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+    let loginvc = self.storyboard?.instantiateViewController(withIdentifier: "loginVC") as! LoginVC
     self.present(loginvc, animated: true, completion: nil)
   }
   

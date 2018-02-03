@@ -9,10 +9,9 @@
 import UIKit
 import Firebase
 import Siren
-import GoogleMobileAds
+//import GoogleMobileAds
 import Fabric
 import Crashlytics
-
 
 var isHarcoreMode : Bool = false
 
@@ -35,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     FirebaseApp.configure()
     
     //Конфигурация Google AdMod
-    GADMobileAds.configure(withApplicationID: PrivateInfo.admodKey)
+//    GADMobileAds.configure(withApplicationID: PrivateInfo.admodKey)
     
     //Проверка на актуальность версии
     checkVersionApp()
@@ -61,16 +60,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func checkOnFirstLaunchApp() {
     if isAppAlreadyLaunchedOnce() == true {
       //переходим на страницу с игрой
-      let storyboard = UIStoryboard(name: "Main", bundle: nil )
-      let jump = storyboard.instantiateViewController(withIdentifier: "tabBarController")
-      window?.rootViewController = jump
+      let storyboard = UIStoryboard(name: "Main",bundle: nil)
+      let tabBar = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+      window?.rootViewController = tabBar
     } else {
       //переходим на страницу с логином
       let storyboard = UIStoryboard(name: "Main",bundle: nil )
-      //temp
-      let jump = storyboard.instantiateViewController(withIdentifier: "tabBarController")
-      //            let jump = storyboard.instantiateViewController(withIdentifier: "Onboarding")
-      window?.rootViewController = jump
+      let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC")
+      window?.rootViewController = loginVC
     }
   }
   
@@ -84,6 +81,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationDidEnterBackground(_ application: UIApplication) {
     Siren.shared.checkVersion(checkType: .immediately)
   }
-  
 }
-
