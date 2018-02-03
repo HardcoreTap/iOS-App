@@ -26,7 +26,7 @@ platform :ios do
 
   lane :release do
     #match(type: 'appstore')
-    #capture_screenshots                 
+    capture_screenshots                 
     sync_code_signing(type: "appstore")
     gym(scheme: "HardcoreTap")
     upload_to_app_store    
