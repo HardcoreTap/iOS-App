@@ -24,7 +24,7 @@ class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     self.navigationController?.view.backgroundColor = .clear
 		view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
 		tableView.tableFooterView = UIView(frame: CGRect.zero)
-		aboutGameLabel.text = "Служба Яндекс.Рефераты предназначена для студентов и школьников, дизайнеров и журналистов, создателей научных заявок и отчетов — для всех, кто относится к тексту, как к количеству знаков. Нажав на кнопку «Написать реферат», вы лично создаете."
+		aboutGameLabel.text = "Лови ритм! Не убивай время просто так. Убивай время с пользой. HardcoreTap  — отличная тренировка внимательности, терпеливости, чувства ритма и упорства. Поднимись на вершину рейтинга таперов. Жми на экран с интервалом в одну секунду. Важна точность до сотых. С повышением уровня игра будет к тебе всё строже. Думаешь, это так просто? Попробуй."
   }
   
 }
