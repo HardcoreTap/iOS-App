@@ -192,7 +192,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g8n-v8-CEI">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g8n-v8-CEI">
                                         <rect key="frame" x="164" y="0.0" width="51" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="49" id="e8c-DK-2Qi"/>
@@ -226,7 +226,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Погрешность: 0.1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1J-oQ-GMt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Погрешность отключена" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1J-oQ-GMt">
                                 <rect key="frame" x="47.5" y="190" width="280" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="ce6-7Y-bI8"/>
@@ -419,7 +419,7 @@
                                     <constraint firstAttribute="height" constant="24" id="Kic-GS-v4e"/>
                                     <constraint firstAttribute="width" constant="180" id="ddA-sl-eqT"/>
                                 </constraints>
-                                <state key="normal" title="Об игре / разработчиках">
+                                <state key="normal" title="Об игре / Разработчиках">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -572,7 +572,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About game" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jgd-6A-c27">
-                                            <rect key="frame" x="15" y="15" width="345" height="230"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="245"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -584,7 +584,7 @@
                                         <constraint firstItem="Jgd-6A-c27" firstAttribute="leading" secondItem="7TK-e3-zWn" secondAttribute="leading" constant="15" id="YOk-k0-Tx2"/>
                                         <constraint firstAttribute="bottom" secondItem="Jgd-6A-c27" secondAttribute="bottom" constant="15" id="b9n-jf-EqI"/>
                                         <constraint firstAttribute="trailing" secondItem="Jgd-6A-c27" secondAttribute="trailing" constant="15" id="dpa-8o-9gU"/>
-                                        <constraint firstItem="Jgd-6A-c27" firstAttribute="top" secondItem="7TK-e3-zWn" secondAttribute="top" constant="15" id="ko0-Kk-pc2"/>
+                                        <constraint firstItem="Jgd-6A-c27" firstAttribute="top" secondItem="7TK-e3-zWn" secondAttribute="top" id="ko0-Kk-pc2"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -667,7 +667,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T1T-7p-deQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T1T-7p-deQ">
                                 <rect key="frame" x="15" y="164" width="345" height="446"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -739,16 +739,29 @@
                                     <segment title="Хардкор"/>
                                 </segments>
                                 <color key="tintColor" name="yellowishGreen"/>
+                                <connections>
+                                    <action selector="switchSegmentedDidTapped:" destination="kS2-IT-05Y" eventType="valueChanged" id="7Ez-m6-6IA"/>
+                                </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEL-If-eM6" userLabel="ActivityIndicator" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="167" y="313.5" width="40" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="5O3-ib-Gf0"/>
+                                    <constraint firstAttribute="height" constant="40" id="WBg-Ee-lLb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.01762105525" green="0.62861287590000003" blue="0.96095961330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="T1T-7p-deQ" firstAttribute="centerX" secondItem="Xy7-bt-zhk" secondAttribute="centerX" id="4o5-ft-AvP"/>
                             <constraint firstItem="WvZ-ok-R2A" firstAttribute="trailing" secondItem="WFX-ln-b8a" secondAttribute="trailing" constant="16" id="90i-2M-t3a"/>
                             <constraint firstItem="WFX-ln-b8a" firstAttribute="centerX" secondItem="Xy7-bt-zhk" secondAttribute="centerX" id="By9-6w-KGg"/>
+                            <constraint firstItem="JEL-If-eM6" firstAttribute="centerY" secondItem="Xy7-bt-zhk" secondAttribute="centerY" id="I1D-IN-YZC"/>
                             <constraint firstItem="WvZ-ok-R2A" firstAttribute="trailing" secondItem="T1T-7p-deQ" secondAttribute="trailing" constant="15" id="LxH-jK-JV4"/>
                             <constraint firstItem="T1T-7p-deQ" firstAttribute="top" secondItem="WFX-ln-b8a" secondAttribute="bottom" constant="12" id="TaN-05-pHA"/>
                             <constraint firstItem="WFX-ln-b8a" firstAttribute="leading" secondItem="WvZ-ok-R2A" secondAttribute="leading" constant="16" id="Tst-Bl-YMu"/>
+                            <constraint firstItem="JEL-If-eM6" firstAttribute="centerX" secondItem="Xy7-bt-zhk" secondAttribute="centerX" id="cjF-ZK-VWh"/>
                             <constraint firstItem="T1T-7p-deQ" firstAttribute="leading" secondItem="WvZ-ok-R2A" secondAttribute="leading" constant="15" id="fgI-Br-dt3"/>
                             <constraint firstItem="WFX-ln-b8a" firstAttribute="top" secondItem="gZw-Yd-0b4" secondAttribute="bottom" constant="8" id="ioa-7t-TrL"/>
                             <constraint firstItem="T1T-7p-deQ" firstAttribute="leading" secondItem="WvZ-ok-R2A" secondAttribute="leading" constant="15" id="o3k-45-CdB"/>
@@ -759,13 +772,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Таблица лидеров" id="WfK-Xn-GZ7"/>
                     <connections>
+                        <outlet property="loadIndicator" destination="JEL-If-eM6" id="iuQ-le-Msf"/>
                         <outlet property="segmentedControlLeaderBoard" destination="WFX-ln-b8a" id="dXm-KG-ZvZ"/>
                         <outlet property="tableView" destination="T1T-7p-deQ" id="iYh-YG-Z8I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0W-ga-w6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2634.375" y="598.94366197183103"/>
+            <point key="canvasLocation" x="2632.8000000000002" y="598.65067466266873"/>
         </scene>
         <!--Игра-->
         <scene sceneID="B8P-Vr-blc">

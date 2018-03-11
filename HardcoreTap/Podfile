@@ -1,3 +1,5 @@
+platform :ios, '10.3'
+
 target 'HardcoreTap' do
 
   use_frameworks!
@@ -10,6 +12,7 @@ target 'HardcoreTap' do
   pod 'Crashlytics'
   pod 'SwiftMessages'
   pod 'Siren'
+  pod 'NVActivityIndicatorView'
   #pod 'Google-Mobile-Ads-SDK'
 
 end

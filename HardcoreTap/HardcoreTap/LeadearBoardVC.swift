@@ -9,17 +9,20 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
-
+import NVActivityIndicatorView
 
 class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var segmentedControlLeaderBoard: UISegmentedControl!
-  
+  @IBOutlet weak var loadIndicator: NVActivityIndicatorView!
+
   var rootRef = Database.database().reference()
-  var contentLeaderboardsNormal : [Content] = []
-  var contentLeaderboardsHardcore : [Content] = []
-  var countRowsInTable = Int()
+  
+  var content = [Content]()
+
+  var contentLeaderboardsNormal = [Content]()
+  var contentLeaderboardsHardcore = [Content]()
   
   var nameUser : String?
   
@@ -34,16 +37,17 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     nameUser = (UserDefaults.standard.value(forKey: "userNAME") as! String)
     
+    loadIndicator.type = .lineScale
+    loadIndicator.color = UIColor(named: "yellowishGreen")!
+    loadIndicator.startAnimating()
+    
     //получение рекордов из обычного режима
     getNormalRecords()
-    
     //получение рекордов из харкдор режима
     getHardcoreRecords()
     
     tableView.delegate = self
     tableView.dataSource = self
-    
-    tableView.reloadData()
     
     //        //показывам при загрузке экрана ту таблицу, какой режим игры был выбран
     //        if isHarcoreMode {
@@ -53,31 +57,43 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     //        }
   }
   
+  
+  @IBAction func switchSegmentedDidTapped(_ sender: Any) {
+    switch segmentedControlLeaderBoard.selectedSegmentIndex
+    {
+    case 0:
+      self.content = self.contentLeaderboardsNormal
+      self.tableView.reloadData()
+    case 1:
+      self.content = self.contentLeaderboardsHardcore
+      self.tableView.reloadData()
+    default:
+      break;
+    }
+  }
+  
   func getNormalRecords() {
-    
     rootRef.child("leaderboards_normal").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
       
-      //очищаем
       self.contentLeaderboardsNormal = []
       
       for snap in snapshot.children.allObjects as! [DataSnapshot] {
-        
         let name = snap.key
         
         if let rankedBy = snap.value as? [String : Any]  {
           self.contentLeaderboardsNormal.append(Content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
-          self.tableView.reloadData()
         }
       }
-      self.countRowsInTable = self.contentLeaderboardsNormal.count
+      self.loadIndicator.stopAnimating()
       self.contentLeaderboardsNormal.reverse()
-    })
+      self.content = self.contentLeaderboardsNormal
+      self.tableView.reloadData()
+      })
   }
   
   func getHardcoreRecords() {
-    rootRef.child("leaderboards_hadrcore").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
-      
-      //очищаем
+    rootRef.child("leaderboards_hardcore").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
+
       self.contentLeaderboardsHardcore = []
       
       for snap in snapshot.children.allObjects as! [DataSnapshot] {
@@ -85,16 +101,14 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if let rankedBy = snap.value as? [String : Any]  {
           self.contentLeaderboardsHardcore.append(Content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
-          self.tableView.reloadData()
         }
       }
-      self.countRowsInTable = self.contentLeaderboardsHardcore.count
       self.contentLeaderboardsHardcore.reverse()
     })
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.countRowsInTable-1
+    return self.content.count-1
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -106,30 +120,14 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     cell.nameCellLabel.text = nil
     cell.pointsCellLabel.text = nil
     
-    if segmentedControlLeaderBoard.selectedSegmentIndex == 0 {
-      
-      cell.nameCellLabel.text = self.contentLeaderboardsNormal[indexPath.row].sName
-      cell.pointsCellLabel.text = "\(self.contentLeaderboardsNormal[indexPath.row].sPoints!)"
-      
-      if self.contentLeaderboardsNormal[indexPath.row].sName! == nameUser  {
-        cell.backgroundColor = nil
-        cell.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)
-      } else {
-        cell.backgroundColor = nil
-      }
-      
+    cell.nameCellLabel.text = self.content[indexPath.row].sName
+    cell.pointsCellLabel.text = "\(self.content[indexPath.row].sPoints!)"
+    
+    if self.content[indexPath.row].sName! == nameUser  {
+      cell.backgroundColor = nil
+      cell.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)
     } else {
-      
-      cell.nameCellLabel.text = self.contentLeaderboardsHardcore[indexPath.row].sName
-      cell.pointsCellLabel.text = "\(self.contentLeaderboardsHardcore[indexPath.row].sPoints!)"
-      
-      if self.contentLeaderboardsHardcore[indexPath.row].sName! == nameUser  {
-        cell.backgroundColor = nil
-        cell.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)
-      } else {
-        cell.backgroundColor = nil
-      }
-      
+      cell.backgroundColor = nil
     }
     
     //для первых трек добавляем иконку короны
@@ -146,8 +144,6 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
   
 }
-
-
 
 struct Content {
   
