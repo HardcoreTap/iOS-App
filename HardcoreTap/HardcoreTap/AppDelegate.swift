@@ -16,6 +16,8 @@ import Crashlytics
 
 let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
+let appID = "1334647124"
+
 var isHarcoreMode : Bool = false
 
 @UIApplicationMain
