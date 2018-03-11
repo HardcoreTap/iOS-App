@@ -95,5 +95,5 @@ extension AboutGameVC {
       UIApplication.shared.open(url)
     }
   }
+  
 }
-

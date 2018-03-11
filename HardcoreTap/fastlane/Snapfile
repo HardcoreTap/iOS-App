@@ -3,6 +3,7 @@ devices([
   "iPhone 5s",
   "iPhone 6",
   "iPhone 6 Plus",
+  "iPhone X",
 ])
  
 # A list of supported languages

@@ -32,7 +32,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     self.navigationController?.view.backgroundColor = .clear
     view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     
-//    nameUser = (UserDefaults.standard.value(forKey: "userNAME") as! String)
+    nameUser = (UserDefaults.standard.value(forKey: "userNAME") as! String)
     
     //получение рекордов из обычного режима
     getNormalRecords()
@@ -51,7 +51,6 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     //        } else {
     //            segmentedControlLeaderBoard.selectedSegmentIndex = 0
     //        }
-    
   }
   
   func getNormalRecords() {

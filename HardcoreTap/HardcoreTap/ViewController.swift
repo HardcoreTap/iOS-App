@@ -94,7 +94,6 @@ class ViewController: UIViewController {
     }
     scoreRef = rootRef.child("leaderboards_normal").child(nameFromUserDefaults)
     
-    
     //подгрузка рекорда из UserDefaults
     if UserDefaults.standard.value(forKey: "highscore_normal") != nil {
       self.highscoreFromUserDefaults = UserDefaults.standard.value(forKey: "highscore_normal") as! Int
@@ -103,15 +102,12 @@ class ViewController: UIViewController {
       highScoreLabel.text = "Ваш рекорд: 0"
     }
     
-    
     // Регистрация рекогнайзера жестов
     let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
     view.addGestureRecognizer(tapGR)
     
-    
     // Тень у кнопки
     shadowButton.addShadow(nameButton: startGameButton)
-    
     
     self.navigationItem.title = "HardcoreTap"
     self.helloButtonWithPlayerName.setTitle("Привет, \(self.nameFromUserDefaults)", for: .normal)
@@ -121,15 +117,9 @@ class ViewController: UIViewController {
     
     view.layer.insertSublayer(rightLayer, at: 0)
     view.layer.insertSublayer(leftLayer, at: 0)
-    
-    
   }
   
-  
-  
-  
   override func viewWillAppear(_ animated: Bool) {
-    
     //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
     scoreLabel.isHidden = true
     shareButton.isHidden = true
@@ -139,9 +129,7 @@ class ViewController: UIViewController {
     startGameButton.isHidden = false
     switchModeGame.isHidden = false
     hardcoreLabel.isHidden = false
-    
   }
-  
   
   func setupGALayers() {
     
@@ -158,7 +146,6 @@ class ViewController: UIViewController {
     leftLayer.position.x = view.bounds.midX
     
   }
-  
   
   func changeLayers() {
     rightLayer.colors![0] = leftLayer.colors![0]
@@ -181,22 +168,17 @@ class ViewController: UIViewController {
   }
   
   @IBAction func switchModeDidTapped(_ sender: Any) {
-    
     if switchModeGame.isOn == false {
       self.faultLabel.text = "Погрешность: 0.05 мс"
-      
       //Флаг, для режима игры
       isHarcoreMode = false
       scoreRef = rootRef.child("leaderboards_normal").child(nameFromUserDefaults)
-      
     } else {
       self.faultLabel.text = "Погрешность отключена"
-      
       //Флаг, для режима игры
       isHarcoreMode = true
       scoreRef = rootRef.child("leaderboards_hardcore").child(nameFromUserDefaults)
     }
-    
   }
   
   @objc func didTap(tapGR: UITapGestureRecognizer) {
@@ -264,13 +246,11 @@ class ViewController: UIViewController {
   }
   
   func timerBlock(timer: Timer) {
-    
     seconds100 += 1
     if seconds100 == 100 {
       seconds += 1
       seconds100 = 0
       
-      //
       if fault > 0.0501 {
         fault -= 0.01
       } else {
@@ -278,7 +258,6 @@ class ViewController: UIViewController {
       }
       
       changeLayers()
-      
     }
     
     updateTimerLabel()
@@ -291,7 +270,6 @@ class ViewController: UIViewController {
   
   //нажали кнопку выйти
   @IBAction func logOutButtonDidTapped(_ sender: Any) {
-    
     let alert : UIAlertController = UIAlertController()
     let exitAction = UIAlertAction(title: "Выйти", style: .destructive, handler: {action in self.exitClicked()})
     let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
@@ -322,7 +300,6 @@ class ViewController: UIViewController {
   
   //конец игры
   func gameOver() {
-    
     bombSoundEffect?.stop()
     
     timer.invalidate()
@@ -346,20 +323,8 @@ class ViewController: UIViewController {
       UserDefaults.standard.set(highscoreFromUserDefaults, forKey: "highscore_normal")
       
       //MARK: SwiftMessages после окончания игры
-
-//      alertView.addButton("Играть дальше", backgroundColor: UIColor(patternImage: UIImage(named: "bg")!), action: {
-//        //рестарт игры
-//        self.tapToRestartButton.isHidden = true
-//        self.setupGame()
-//      })
-//
-//      alertView.addButton("Таблица лидеров", backgroundColor: UIColor(patternImage: UIImage(named: "bg")!), action: {
-//        //переходим на страницу с лидербоард
-//        self.tabBarController?.selectedIndex = 1
-//
-//      })
-      
-      appDelegate.simpleMsg(title: "Поздравляем!", text: "Вы побили рекорд. Ваш новый результат \(count) очков", colorBg: .green, colorText: .white, iconText: "🎉")
+      let alertBackgroundColor = UIColor(red: 102/255, green: 69/255, blue: 126/255, alpha: 1.0)
+      appDelegate.simpleMsg(title: "Поздравляем!", text: "Вы побили рекорд. Ваш новый результат \(count) очков", colorBg: alertBackgroundColor, colorText: .white, iconText: "🎉")
       
     }
     

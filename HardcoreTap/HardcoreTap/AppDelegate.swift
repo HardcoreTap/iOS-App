@@ -34,22 +34,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //Конфигурация Fabric
     Fabric.with([Crashlytics.self])
-
+    
     //Конфигурация Firebase
     FirebaseApp.configure()
     
     //Конфигурация Google AdMod
-//    GADMobileAds.configure(withApplicationID: PrivateInfo.admodKey)
+    //    GADMobileAds.configure(withApplicationID: PrivateInfo.admodKey)
     
     //Проверка на актуальность версии
     checkVersionApp()
     
     //Проверка на первых вход
-    checkOnFirstLaunchApp()
+    //    isAppAlreadyLaunchedOnce()
     
     //Увеличиваем счестчик запуска приложения
     RateManager.incrementCount()
-
+    
+    //если юзер уже авторизован отправляем на домашнюю страницу
+    if let userNAME = UserDefaults.standard.value(forKey: "userNAME") as? String {
+      if userNAME != "" {
+        login()
+      }
+    }
+    
     return true
   }
   
@@ -62,20 +69,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
   }
   
+  //переходим на страницу с игрой
+  func login() {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil )
+    let jump = storyboard.instantiateViewController(withIdentifier: "tabBarController")
+    window?.rootViewController = jump
+  }
+  
   func checkOnFirstLaunchApp() {
-    if isAppAlreadyLaunchedOnce() == true {
-      //переходим на страницу с игрой
-      let storyboard = UIStoryboard(name: "Main", bundle: nil )
-      let jump = storyboard.instantiateViewController(withIdentifier: "tabBarController")
-      window?.rootViewController = jump
-    } else {
-      //переходим на страницу с логином
-      let storyboard = UIStoryboard(name: "Main",bundle: nil )
-      //temp
-      let jump = storyboard.instantiateViewController(withIdentifier: "tabBarController")
-      //            let jump = storyboard.instantiateViewController(withIdentifier: "Onboarding")
-      window?.rootViewController = jump
-    }
+    
   }
   
   func checkVersionApp() {
@@ -92,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func simpleMsg(title: String, text: String, colorBg: UIColor, colorText: UIColor, iconText: String) {
     let view = MessageView.viewFromNib(layout: .centeredView)
     view.configureTheme(.warning)
-    view.configureContent(title: nil, body: text, iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: nil, buttonTapHandler: nil)
+    view.configureContent(title: title, body: text, iconImage: nil, iconText: iconText, buttonImage: nil, buttonTitle: nil, buttonTapHandler: nil)
     view.button?.isHidden = true
     view.configureDropShadow()
     view.configureTheme(backgroundColor: colorBg, foregroundColor: colorText)

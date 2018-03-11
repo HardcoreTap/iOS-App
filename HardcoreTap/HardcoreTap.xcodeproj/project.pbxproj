@@ -34,7 +34,6 @@
 		8D0B2BEF1FC89B4E00CE102C /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */; };
 		8D0B2BF11FC89BA400CE102C /* AboutGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */; };
 		8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */; };
-		8D378CE41FCC734E007FC3B4 /* PaperOnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */; };
 		8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */; };
 		8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA24751FC7F80600282E06 /* RateManager.swift */; };
 		A3F913136299C4D434B8C562 /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */; };
@@ -71,7 +70,6 @@
 		8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameVC.swift; sourceTree = "<group>"; };
 		8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateInfo.swift; sourceTree = "<group>"; };
-		8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperOnBoarding.swift; sourceTree = "<group>"; };
 		8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DAA24751FC7F80600282E06 /* RateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManager.swift; sourceTree = "<group>"; };
 		C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,17 +153,16 @@
 				3CE12C161FB6666200945352 /* LeaderBoardCell.swift */,
 				3C092B051FB771EF0019687C /* RulesVC.swift */,
 				8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */,
+				739F733E200B98FE0073C198 /* SettingsCell.swift */,
 				8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */,
 				8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */,
 				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
 				8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */,
-				8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */,
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 				3CE12C081FB62FEE00945352 /* Info.plist */,
 				8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
-				739F733E200B98FE0073C198 /* SettingsCell.swift */,
 			);
 			path = HardcoreTap;
 			sourceTree = "<group>";
@@ -359,7 +356,6 @@
 				3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */,
 				8D0B2BF11FC89BA400CE102C /* AboutGameVC.swift in Sources */,
 				8D0B2BED1FC89B3700CE102C /* SettingsVC.swift in Sources */,
-				8D378CE41FCC734E007FC3B4 /* PaperOnBoarding.swift in Sources */,
 				739F733F200B98FE0073C198 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
