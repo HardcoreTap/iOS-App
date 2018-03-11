@@ -2,6 +2,8 @@
 //  LoginViewController.swift
 //
 //
+
+
 import UIKit
 import Firebase
 
@@ -20,6 +22,10 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
     
     setupAddTargetIsNotEmptyTextFields()
     
+    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    self.navigationController?.navigationBar.shadowImage = UIImage()
+    self.navigationController?.navigationBar.isTranslucent = true
+    self.navigationController?.view.backgroundColor = .clear
     view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     
     //Cдвиг экрана наверх и обратно

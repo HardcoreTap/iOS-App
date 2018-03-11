@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
+    resetStateIfUITesting()
+    
     //Косметика navigationBar
     UINavigationBar.appearance().tintColor = .white
     
@@ -89,6 +91,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func applicationDidEnterBackground(_ application: UIApplication) {
     Siren.shared.checkVersion(checkType: .immediately)
+  }
+  
+  private func resetStateIfUITesting() {
+    if ProcessInfo.processInfo.arguments.contains("testMode") {
+      let defaults = UserDefaults.standard
+      let dictionary = defaults.dictionaryRepresentation()
+      dictionary.keys.forEach { key in
+        defaults.removeObject(forKey: key)
+      }
+      defaults.synchronize()
+    }
   }
   
   func simpleMsg(title: String, text: String, colorBg: UIColor, colorText: UIColor, iconText: String) {

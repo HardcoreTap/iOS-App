@@ -36,8 +36,20 @@
 		8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */; };
 		8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */; };
 		8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA24751FC7F80600282E06 /* RateManager.swift */; };
+		8DC8952820558E2E0058876D /* HardcoreTapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC8952720558E2E0058876D /* HardcoreTapUITests.swift */; };
+		8DC89531205590B90058876D /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC8952F205590B90058876D /* SnapshotHelper.swift */; };
 		92269D36383B1F38F5969B3E /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8DC8952A20558E2E0058876D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CE12BF11FB62FED00945352 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CE12BF81FB62FED00945352;
+			remoteInfo = HardcoreTap;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +85,10 @@
 		8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateInfo.swift; sourceTree = "<group>"; };
 		8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DAA24751FC7F80600282E06 /* RateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManager.swift; sourceTree = "<group>"; };
+		8DC8952520558E2E0058876D /* HardcoreTapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HardcoreTapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC8952720558E2E0058876D /* HardcoreTapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardcoreTapUITests.swift; sourceTree = "<group>"; };
+		8DC8952920558E2E0058876D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC8952F205590B90058876D /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		9A8DBFE64EDF162FA295ADF2 /* Pods-HardcoreTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +98,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				92269D36383B1F38F5969B3E /* Pods_HardcoreTap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC8952220558E2E0058876D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				3CE12BFB1FB62FED00945352 /* HardcoreTap */,
+				8DC8952620558E2E0058876D /* HardcoreTapUITests */,
 				3CE12BFA1FB62FED00945352 /* Products */,
 				D7DDCF66F7DBCCB49B6EEB8F /* Pods */,
 				A1D86CDE2B60F3C896ECD78A /* Frameworks */,
@@ -127,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				3CE12BF91FB62FED00945352 /* HardcoreTap.app */,
+				8DC8952520558E2E0058876D /* HardcoreTapUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +182,16 @@
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
 			);
 			path = HardcoreTap;
+			sourceTree = "<group>";
+		};
+		8DC8952620558E2E0058876D /* HardcoreTapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8DC8952F205590B90058876D /* SnapshotHelper.swift */,
+				8DC8952720558E2E0058876D /* HardcoreTapUITests.swift */,
+				8DC8952920558E2E0058876D /* Info.plist */,
+			);
+			path = HardcoreTapUITests;
 			sourceTree = "<group>";
 		};
 		A1D86CDE2B60F3C896ECD78A /* Frameworks */ = {
@@ -200,19 +235,42 @@
 			productReference = 3CE12BF91FB62FED00945352 /* HardcoreTap.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8DC8952420558E2E0058876D /* HardcoreTapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DC8952C20558E2E0058876D /* Build configuration list for PBXNativeTarget "HardcoreTapUITests" */;
+			buildPhases = (
+				8DC8952120558E2E0058876D /* Sources */,
+				8DC8952220558E2E0058876D /* Frameworks */,
+				8DC8952320558E2E0058876D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DC8952B20558E2E0058876D /* PBXTargetDependency */,
+			);
+			name = HardcoreTapUITests;
+			productName = HardcoreTapUITests;
+			productReference = 8DC8952520558E2E0058876D /* HardcoreTapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3CE12BF11FB62FED00945352 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Bogdan Bystritskiy";
 				TargetAttributes = {
 					3CE12BF81FB62FED00945352 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
+					};
+					8DC8952420558E2E0058876D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3CE12BF81FB62FED00945352;
 					};
 				};
 			};
@@ -230,6 +288,7 @@
 			projectRoot = "";
 			targets = (
 				3CE12BF81FB62FED00945352 /* HardcoreTap */,
+				8DC8952420558E2E0058876D /* HardcoreTapUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,6 +313,13 @@
 				3CE12C021FB62FEE00945352 /* Main.storyboard in Resources */,
 				3CA83B8B1FBA5D7B0046ED8D /* bmp60.mp3 in Resources */,
 				3C1B77361FBEB85100A4ADB3 /* SFUIDisplay-Medium.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC8952320558E2E0058876D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +428,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DC8952120558E2E0058876D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC8952820558E2E0058876D /* HardcoreTapUITests.swift in Sources */,
+				8DC89531205590B90058876D /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DC8952B20558E2E0058876D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CE12BF81FB62FED00945352 /* HardcoreTap */;
+			targetProxy = 8DC8952A20558E2E0058876D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3CE12C001FB62FEE00945352 /* Main.storyboard */ = {
@@ -534,6 +617,49 @@
 			};
 			name = Release;
 		};
+		8DC8952D20558E2E0058876D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7AZ625QQ5;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = HardcoreTapUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HardcoreTap;
+			};
+			name = Debug;
+		};
+		8DC8952E20558E2E0058876D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7AZ625QQ5;
+				ENABLE_NS_ASSERTIONS = NO;
+				INFOPLIST_FILE = HardcoreTapUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HardcoreTap;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -551,6 +677,15 @@
 			buildConfigurations = (
 				3CE12C0C1FB62FEE00945352 /* Debug */,
 				3CE12C0D1FB62FEE00945352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DC8952C20558E2E0058876D /* Build configuration list for PBXNativeTarget "HardcoreTapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DC8952D20558E2E0058876D /* Debug */,
+				8DC8952E20558E2E0058876D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
