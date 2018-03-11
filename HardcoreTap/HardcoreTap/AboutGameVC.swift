@@ -14,7 +14,7 @@ class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
   @IBOutlet weak var aboutGameLabel: UILabel!
   
   var sectionTitles = ["Расскажите о нас", "Мы на GitHub"]
-  var sectionContent = [["Оцените приложение на App Store", "Оставьте свой отзыв"],
+  var sectionContent = [["Оцените приложение на App Store", "Репозиторий на GitHub"],
                         ["Sergey Dunaev", "Bystritskiy Bogdan", "Anpleenko Pavel"]]
   
   override func viewDidLoad() {
@@ -67,9 +67,9 @@ extension AboutGameVC {
     case 0:
       switch indexPath.row {
       case 0 :
-        link(link: "https://www.apple.com/ru/ios/app-store/")
+        link(link: "itms-apps://itunes.apple.com/app/viewContentsUserReviews?id=\(appID)")
       case 1 :
-        link(link: "https://www.apple.com/ru/ipad/")
+        link(link: "https://github.com/bystritskiy/HardcoreTap")
       default:
         break
       }
@@ -95,5 +95,5 @@ extension AboutGameVC {
       UIApplication.shared.open(url)
     }
   }
+  
 }
-

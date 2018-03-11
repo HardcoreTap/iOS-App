@@ -4,9 +4,6 @@ PODS:
   - Fabric (1.7.5)
   - Firebase (4.10.1):
     - Firebase/Core (= 4.10.1)
-  - Firebase/Auth (4.10.1):
-    - Firebase/Core
-    - FirebaseAuth (= 4.4.4)
   - Firebase/Core (4.10.1):
     - FirebaseAnalytics (= 4.1.0)
     - FirebaseCore (= 4.0.17)
@@ -21,10 +18,6 @@ PODS:
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
-  - FirebaseAuth (4.4.4):
-    - FirebaseAnalytics (~> 4.1)
-    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
-    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (4.0.17):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseDatabase (4.1.5):
@@ -42,18 +35,11 @@ PODS:
     - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.5)
   - FirebaseSwizzlingUtilities (1.0.0)
-  - GoogleToolboxForMac/DebugUtils (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/Defines (2.1.3)
   - GoogleToolboxForMac/Logger (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/NSData+zlib (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
-    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
-  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.14)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
@@ -61,6 +47,9 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
   - Protobuf (3.5.0)
   - Siren (3.2.1)
   - SwiftMessages (4.1.0)
@@ -69,10 +58,10 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - Firebase
-  - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Performance
+  - NVActivityIndicatorView
   - Siren
   - SwiftMessages
 
@@ -81,7 +70,6 @@ SPEC CHECKSUMS:
   Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
   Firebase: 92c6ba593e32db0defde464a9adc981d5cb49f97
   FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
-  FirebaseAuth: d040bb7a9db6dfc29d0e7ec82d48be51352b2581
   FirebaseCore: 872307b001bbefda1dfa0dbfffa50a6919023d4a
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: d2058a35e9bebda1b6dd42486b84917bde552a9d
@@ -91,10 +79,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   Siren: 56aa9b5baa39cd28b42ff178b5171b63b1fea2b1
   SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
 
-PODFILE CHECKSUM: 7822f279d809e3682179f052c59cbd75b33c7c30
+PODFILE CHECKSUM: df3183783658eecbcb9cd6712fb737c156bacdd9
 
 COCOAPODS: 1.3.1

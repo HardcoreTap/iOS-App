@@ -34,13 +34,25 @@
 		8D0B2BEF1FC89B4E00CE102C /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */; };
 		8D0B2BF11FC89BA400CE102C /* AboutGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */; };
 		8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */; };
-		8D378CE41FCC734E007FC3B4 /* PaperOnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */; };
 		8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */; };
 		8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA24751FC7F80600282E06 /* RateManager.swift */; };
-		A3F913136299C4D434B8C562 /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */; };
+		8DC8952820558E2E0058876D /* HardcoreTapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC8952720558E2E0058876D /* HardcoreTapUITests.swift */; };
+		8DC89531205590B90058876D /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC8952F205590B90058876D /* SnapshotHelper.swift */; };
+		92269D36383B1F38F5969B3E /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8DC8952A20558E2E0058876D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3CE12BF11FB62FED00945352 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CE12BF81FB62FED00945352;
+			remoteInfo = HardcoreTap;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		3C092B051FB771EF0019687C /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
@@ -64,18 +76,20 @@
 		3CE12C101FB643CB00945352 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3CE12C141FB663A000945352 /* LeadearBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadearBoardVC.swift; sourceTree = "<group>"; };
 		3CE12C161FB6666200945352 /* LeaderBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardCell.swift; sourceTree = "<group>"; };
+		63B0CB57EA772756F3D03DA9 /* Pods-HardcoreTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.release.xcconfig"; sourceTree = "<group>"; };
 		739F733E200B98FE0073C198 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSupport.swift; sourceTree = "<group>"; };
-		817881E89D929624EF8BC84B /* Pods-HardcoreTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.release.xcconfig"; sourceTree = "<group>"; };
 		8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameVC.swift; sourceTree = "<group>"; };
 		8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateInfo.swift; sourceTree = "<group>"; };
-		8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaperOnBoarding.swift; sourceTree = "<group>"; };
 		8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DAA24751FC7F80600282E06 /* RateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManager.swift; sourceTree = "<group>"; };
-		C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.debug.xcconfig"; sourceTree = "<group>"; };
-		F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC8952520558E2E0058876D /* HardcoreTapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HardcoreTapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC8952720558E2E0058876D /* HardcoreTapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardcoreTapUITests.swift; sourceTree = "<group>"; };
+		8DC8952920558E2E0058876D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC8952F205590B90058876D /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		9A8DBFE64EDF162FA295ADF2 /* Pods-HardcoreTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,21 +97,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3F913136299C4D434B8C562 /* Pods_HardcoreTap.framework in Frameworks */,
+				92269D36383B1F38F5969B3E /* Pods_HardcoreTap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC8952220558E2E0058876D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1BA9CB629E2E5E5DFDBC2826 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F70216B3229FD89DF9BE8CC8 /* Pods_HardcoreTap.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3C52CAE71FBBC873004E31B8 /* AudioFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				3CE12BFB1FB62FED00945352 /* HardcoreTap */,
+				8DC8952620558E2E0058876D /* HardcoreTapUITests */,
 				3CE12BFA1FB62FED00945352 /* Products */,
-				41218FFB041B28DBA62CEC47 /* Pods */,
-				1BA9CB629E2E5E5DFDBC2826 /* Frameworks */,
+				D7DDCF66F7DBCCB49B6EEB8F /* Pods */,
+				A1D86CDE2B60F3C896ECD78A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				3CE12BF91FB62FED00945352 /* HardcoreTap.app */,
+				8DC8952520558E2E0058876D /* HardcoreTapUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,26 +170,43 @@
 				3CE12C161FB6666200945352 /* LeaderBoardCell.swift */,
 				3C092B051FB771EF0019687C /* RulesVC.swift */,
 				8D0B2BEC1FC89B3600CE102C /* SettingsVC.swift */,
+				739F733E200B98FE0073C198 /* SettingsCell.swift */,
 				8D0B2BEE1FC89B4E00CE102C /* StatisticsVC.swift */,
 				8D0B2BF01FC89BA400CE102C /* AboutGameVC.swift */,
 				73BC136A1FB876A200BDB8B0 /* ButtonSupport.swift */,
 				8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */,
-				8D378CE31FCC734E007FC3B4 /* PaperOnBoarding.swift */,
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 				3CE12C081FB62FEE00945352 /* Info.plist */,
 				8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
-				739F733E200B98FE0073C198 /* SettingsCell.swift */,
 			);
 			path = HardcoreTap;
 			sourceTree = "<group>";
 		};
-		41218FFB041B28DBA62CEC47 /* Pods */ = {
+		8DC8952620558E2E0058876D /* HardcoreTapUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */,
-				817881E89D929624EF8BC84B /* Pods-HardcoreTap.release.xcconfig */,
+				8DC8952F205590B90058876D /* SnapshotHelper.swift */,
+				8DC8952720558E2E0058876D /* HardcoreTapUITests.swift */,
+				8DC8952920558E2E0058876D /* Info.plist */,
+			);
+			path = HardcoreTapUITests;
+			sourceTree = "<group>";
+		};
+		A1D86CDE2B60F3C896ECD78A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7DDCF66F7DBCCB49B6EEB8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A8DBFE64EDF162FA295ADF2 /* Pods-HardcoreTap.debug.xcconfig */,
+				63B0CB57EA772756F3D03DA9 /* Pods-HardcoreTap.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -186,13 +218,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CE12C0B1FB62FEE00945352 /* Build configuration list for PBXNativeTarget "HardcoreTap" */;
 			buildPhases = (
-				D0AC01134F44F8FC2E6B6E29 /* [CP] Check Pods Manifest.lock */,
+				2DF35AAE9488F785E4CBD92D /* [CP] Check Pods Manifest.lock */,
 				3CE12BF51FB62FED00945352 /* Sources */,
 				3CE12BF61FB62FED00945352 /* Frameworks */,
 				3CE12BF71FB62FED00945352 /* Resources */,
-				82DB403C88DC0A94BE796E4A /* [CP] Embed Pods Frameworks */,
-				F85385122A5294858AB54908 /* [CP] Copy Pods Resources */,
 				8D0B13C81FD2DC11009FEBA6 /* ShellScript */,
+				AD9DC2D863033CC4501DC800 /* [CP] Embed Pods Frameworks */,
+				E8D9B32B832C387965E82244 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,19 +235,42 @@
 			productReference = 3CE12BF91FB62FED00945352 /* HardcoreTap.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8DC8952420558E2E0058876D /* HardcoreTapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DC8952C20558E2E0058876D /* Build configuration list for PBXNativeTarget "HardcoreTapUITests" */;
+			buildPhases = (
+				8DC8952120558E2E0058876D /* Sources */,
+				8DC8952220558E2E0058876D /* Frameworks */,
+				8DC8952320558E2E0058876D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DC8952B20558E2E0058876D /* PBXTargetDependency */,
+			);
+			name = HardcoreTapUITests;
+			productName = HardcoreTapUITests;
+			productReference = 8DC8952520558E2E0058876D /* HardcoreTapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3CE12BF11FB62FED00945352 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Bogdan Bystritskiy";
 				TargetAttributes = {
 					3CE12BF81FB62FED00945352 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Manual;
+					};
+					8DC8952420558E2E0058876D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3CE12BF81FB62FED00945352;
 					};
 				};
 			};
@@ -233,6 +288,7 @@
 			projectRoot = "";
 			targets = (
 				3CE12BF81FB62FED00945352 /* HardcoreTap */,
+				8DC8952420558E2E0058876D /* HardcoreTapUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,53 +316,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DC8952320558E2E0058876D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		82DB403C88DC0A94BE796E4A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D0B13C81FD2DC11009FEBA6 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 91cafb2b72a5d88bedb070de82e095b0ecd90caf 1c957528cc9da324f53eda599b1415444f67d1c9a7c2f8906bd2175abedf20c1";
-		};
-		D0AC01134F44F8FC2E6B6E29 /* [CP] Check Pods Manifest.lock */ = {
+		2DF35AAE9488F785E4CBD92D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -324,7 +344,52 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F85385122A5294858AB54908 /* [CP] Copy Pods Resources */ = {
+		8D0B13C81FD2DC11009FEBA6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 91cafb2b72a5d88bedb070de82e095b0ecd90caf 1c957528cc9da324f53eda599b1415444f67d1c9a7c2f8906bd2175abedf20c1";
+		};
+		AD9DC2D863033CC4501DC800 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8D9B32B832C387965E82244 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,12 +424,28 @@
 				3CE12C111FB643CB00945352 /* LoginVC.swift in Sources */,
 				8D0B2BF11FC89BA400CE102C /* AboutGameVC.swift in Sources */,
 				8D0B2BED1FC89B3700CE102C /* SettingsVC.swift in Sources */,
-				8D378CE41FCC734E007FC3B4 /* PaperOnBoarding.swift in Sources */,
 				739F733F200B98FE0073C198 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DC8952120558E2E0058876D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC8952820558E2E0058876D /* HardcoreTapUITests.swift in Sources */,
+				8DC89531205590B90058876D /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DC8952B20558E2E0058876D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3CE12BF81FB62FED00945352 /* HardcoreTap */;
+			targetProxy = 8DC8952A20558E2E0058876D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3CE12C001FB62FEE00945352 /* Main.storyboard */ = {
@@ -418,8 +499,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -435,8 +517,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -475,8 +557,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -486,7 +569,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -495,7 +579,7 @@
 		};
 		3CE12C0C1FB62FEE00945352 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3144BCAEEE17AF3295783A1 /* Pods-HardcoreTap.debug.xcconfig */;
+			baseConfigurationReference = 9A8DBFE64EDF162FA295ADF2 /* Pods-HardcoreTap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
@@ -509,13 +593,13 @@
 				PROVISIONING_PROFILE = "c0cb9e1a-d986-4c75-be56-8a64d64a86c0";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.bystritskiy.HardcoreTap 1515756743";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		3CE12C0D1FB62FEE00945352 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 817881E89D929624EF8BC84B /* Pods-HardcoreTap.release.xcconfig */;
+			baseConfigurationReference = 63B0CB57EA772756F3D03DA9 /* Pods-HardcoreTap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -526,10 +610,53 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "987473b7-2aec-46c1-97b6-61b6cf74e73b";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.bystritskiy.HardcoreTap";
+				PROVISIONING_PROFILE = "12492178-7525-4cd6-a47a-caabe066f267";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.bystritskiy.HardcoreTap";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8DC8952D20558E2E0058876D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7AZ625QQ5;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = HardcoreTapUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HardcoreTap;
+			};
+			name = Debug;
+		};
+		8DC8952E20558E2E0058876D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7AZ625QQ5;
+				ENABLE_NS_ASSERTIONS = NO;
+				INFOPLIST_FILE = HardcoreTapUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HardcoreTap;
 			};
 			name = Release;
 		};
@@ -550,6 +677,15 @@
 			buildConfigurations = (
 				3CE12C0C1FB62FEE00945352 /* Debug */,
 				3CE12C0D1FB62FEE00945352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DC8952C20558E2E0058876D /* Build configuration list for PBXNativeTarget "HardcoreTapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DC8952D20558E2E0058876D /* Debug */,
+				8DC8952E20558E2E0058876D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
