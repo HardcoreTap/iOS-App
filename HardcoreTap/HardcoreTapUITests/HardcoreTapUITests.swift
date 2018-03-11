@@ -52,9 +52,7 @@ class HardcoreTap_UITests: XCTestCase {
     //AboutGameScreen
     app.buttons["Об игре / Разработчиках"].tap()
     snapshot("AboutGameScreen")
-
     app.navigationBars["Об игре"].buttons["Правила игры"].tap()
-    app/*@START_MENU_TOKEN@*/.otherElements["NotificationShortLookView"]/*[[".otherElements[\"Уведомление\"]",".scrollViews",".otherElements[\"TELEGRAM, сейчас, Злата❤️: Хочу)\"]",".otherElements[\"NotificationShortLookView\"]"],[[[-1,3],[-1,2],[-1,1,2],[-1,0,1]],[[-1,3],[-1,2],[-1,1,2]],[[-1,3],[-1,2]]],[0]]@END_MENU_TOKEN@*/.tap()
     
     //SettingsScreen
     let navigationBar = app.navigationBars["Правила игры"]

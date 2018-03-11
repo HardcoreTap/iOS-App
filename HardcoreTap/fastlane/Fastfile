@@ -11,9 +11,11 @@ platform :ios do
 
   lane :beta do
 
-     #match(type: 'adhoc')
+     match(type: 'adhoc')
     
-     gym
+     gym(scheme: "HardcoreTap")
+
+     sync_code_signing(type: "adhoc")
     
      crashlytics(
        groups: "hardcoretap-test",
@@ -26,7 +28,7 @@ platform :ios do
 
   lane :release do
     #match(type: 'appstore')
-    capture_screenshots                 
+    #capture_screenshots                 
     sync_code_signing(type: "appstore")
     gym(scheme: "HardcoreTap")
     upload_to_app_store    

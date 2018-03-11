@@ -610,8 +610,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "987473b7-2aec-46c1-97b6-61b6cf74e73b";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.bystritskiy.HardcoreTap";
+				PROVISIONING_PROFILE = "12492178-7525-4cd6-a47a-caabe066f267";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.bystritskiy.HardcoreTap";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
