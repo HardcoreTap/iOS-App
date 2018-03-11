@@ -17,12 +17,6 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 /Firebase cloud functions/functions/node_modules
-HardcoreTap/fastlane/report.xml
-HardcoreTap/fastlane/Preview.html
-HardcoreTap/fastlane/screenshots
-HardcoreTap/fastlane/test_output
-HardcoreTap/fastlane/metadata
-HardcoreTap/Pods
 iOSInjectionProject/
 timeline.xctimeline
 playground.xcworkspace
