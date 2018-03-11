@@ -169,13 +169,11 @@ class ViewController: UIViewController {
   
   @IBAction func switchModeDidTapped(_ sender: Any) {
     if switchModeGame.isOn == false {
-      self.faultLabel.text = "Погрешность: 0.05 мс"
-      //Флаг, для режима игры
+      self.faultLabel.text = "Погрешность: от 0.05 мс"
       isHarcoreMode = false
       scoreRef = rootRef.child("leaderboards_normal").child(nameFromUserDefaults)
     } else {
       self.faultLabel.text = "Погрешность отключена"
-      //Флаг, для режима игры
       isHarcoreMode = true
       scoreRef = rootRef.child("leaderboards_hardcore").child(nameFromUserDefaults)
     }
