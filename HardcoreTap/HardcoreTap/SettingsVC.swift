@@ -28,6 +28,7 @@ extension SettingsVC {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return titleSetting.count
 	}
+  
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SettingsCell
 		cell.titleLabel.text = titleSetting[indexPath.row]
@@ -40,7 +41,7 @@ extension SettingsVC {
 		return cell
 	}
 	
-	@objc func switchChanged(_ sender: UISwitch!){
+	@objc func switchChanged(_ sender: UISwitch!) {
 		if sender.isOn {
 			bgSound = true
 			userDefaults.set(bgSound, forKey: "bgSound")

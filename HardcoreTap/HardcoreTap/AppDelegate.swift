@@ -9,16 +9,16 @@
 import UIKit
 import Firebase
 import Siren
-//import GoogleMobileAds
 import SwiftMessages
 import Fabric
 import Crashlytics
+import IQKeyboardManagerSwift
+//import GoogleMobileAds
 
-let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
-
+let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 let appID = "1334647124"
 
-var isHarcoreMode : Bool = false
+var isHarcoreMode: Bool = false
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     resetStateIfUITesting()
     
+    IQKeyboardManager.sharedManager().enable = true
+
     //Косметика navigationBar
     UINavigationBar.appearance().tintColor = .white
     
@@ -45,10 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //Проверка на актуальность версии
     checkVersionApp()
-    
-    //Проверка на первых вход
-    //    isAppAlreadyLaunchedOnce()
-    
+
     //Увеличиваем счестчик запуска приложения
     RateManager.incrementCount()
     
@@ -76,10 +75,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let storyboard = UIStoryboard(name: "Main", bundle: nil )
     let jump = storyboard.instantiateViewController(withIdentifier: "tabBarController")
     window?.rootViewController = jump
-  }
-  
-  func checkOnFirstLaunchApp() {
-    
   }
   
   func checkVersionApp() {
@@ -119,4 +114,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
 }
-

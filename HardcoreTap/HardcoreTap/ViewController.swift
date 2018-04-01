@@ -10,7 +10,6 @@ import Firebase
 import AudioToolbox
 import AVFoundation
 
-
 class ViewController: UIViewController {
   
   var bombSoundEffect: AVAudioPlayer? // Плеер звуков
@@ -35,15 +34,15 @@ class ViewController: UIViewController {
                      UIColor(red: 0.5, green: 0.5, blue: 0.1, alpha: 0.6),
                      UIColor(red: 1.0, green: 1.0, blue: 0.5, alpha: 0.6),
                      UIColor(red: 1.0, green: 0.5, blue: 1.0, alpha: 0.6),
-                     UIColor(red:0.19, green:0.91, blue:0.74, alpha:1.00),
-                     UIColor(red:0.66, green:0.40, blue:0.93, alpha:1.00),
-                     UIColor(red:0.40, green:0.93, blue:0.47, alpha:1.00),
-                     UIColor(red:0.93, green:0.56, blue:0.40, alpha:1.00),
-                     UIColor(red:0.93, green:0.40, blue:0.67, alpha:1.00),
-                     UIColor(red:0.68, green:0.92, blue:0.00, alpha:1.00),
-                     UIColor(red:0.81, green:0.85, blue:0.40, alpha:1.00),
-                     UIColor(red:0.00, green:0.90, blue:0.46, alpha:1.00),
-                     UIColor(red:0.98, green:0.75, blue:0.18, alpha:1.00)]
+                     UIColor(red: 0.19, green: 0.91, blue: 0.74, alpha: 1.00),
+                     UIColor(red: 0.66, green: 0.40, blue: 0.93, alpha: 1.00),
+                     UIColor(red: 0.40, green: 0.93, blue: 0.47, alpha: 1.00),
+                     UIColor(red: 0.93, green: 0.56, blue: 0.40, alpha: 1.00),
+                     UIColor(red: 0.93, green: 0.40, blue: 0.67, alpha: 1.00),
+                     UIColor(red: 0.68, green: 0.92, blue: 0.00, alpha: 1.00),
+                     UIColor(red: 0.81, green: 0.85, blue: 0.40, alpha: 1.00),
+                     UIColor(red: 0.00, green: 0.90, blue: 0.46, alpha: 1.00),
+                     UIColor(red: 0.98, green: 0.75, blue: 0.18, alpha: 1.00)]
   
   let leftLayer = CAGradientLayer()
   let rightLayer = CAGradientLayer()
@@ -67,10 +66,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var hardcoreLabel: UIButton!
   
   var nameFromUserDefaults = " "
-  var highscoreFromUserDefaults : Int = 0
+  var highscoreFromUserDefaults: Int = 0
   
-  
-  //MARK: - viewDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -182,7 +179,7 @@ class ViewController: UIViewController {
   @objc func didTap(tapGR: UITapGestureRecognizer) {
     if flPlaying {
       // Проверка точности попадания
-      if fabs(Double(seconds - count - 1) + Double(seconds100) / 100) <= fault + 0.0001{
+      if fabs(Double(seconds - count - 1) + Double(seconds100) / 100) <= fault + 0.0001 {
         // Плюс очко
         count += 1
         scoreLabel.text = "\(count)"
@@ -208,7 +205,7 @@ class ViewController: UIViewController {
     
     do {
       bombSoundEffect = try AVAudioPlayer(contentsOf: url)
-			if userDefaults.bool(forKey: "bgSound"){
+			if userDefaults.bool(forKey: "bgSound") {
 				bombSoundEffect?.play()
 			} else {
 				bombSoundEffect?.stop()
@@ -268,8 +265,8 @@ class ViewController: UIViewController {
   
   //нажали кнопку выйти
   @IBAction func logOutButtonDidTapped(_ sender: Any) {
-    let alert : UIAlertController = UIAlertController()
-    let exitAction = UIAlertAction(title: "Выйти", style: .destructive, handler: {action in self.exitClicked()})
+    let alert: UIAlertController = UIAlertController()
+    let exitAction = UIAlertAction(title: "Выйти", style: .destructive, handler: { _ in self.exitClicked() })
     let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
     
     alert.addAction(exitAction)
@@ -320,16 +317,14 @@ class ViewController: UIViewController {
       highScoreLabel.text = "Ваш рекорд: \(highscoreFromUserDefaults)"
       UserDefaults.standard.set(highscoreFromUserDefaults, forKey: "highscore_normal")
       
-      //MARK: SwiftMessages после окончания игры
       let alertBackgroundColor = UIColor(red: 102/255, green: 69/255, blue: 126/255, alpha: 1.0)
       appDelegate.simpleMsg(title: "Поздравляем!", text: "Вы побили рекорд. Ваш новый результат \(count) очков", colorBg: alertBackgroundColor, colorText: .white, iconText: "🎉")
-      
     }
     
     let scoreItem = [
       "username": nameFromUserDefaults,
       "highscore": highscoreFromUserDefaults
-      ] as [String : Any]
+      ] as [String: Any]
     
     //отправка данных в Firebase
     self.scoreRef.setValue(scoreItem)
@@ -359,4 +354,3 @@ class ViewController: UIViewController {
   }
   
 }
-

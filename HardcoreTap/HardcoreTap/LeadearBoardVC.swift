@@ -24,7 +24,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
   var contentLeaderboardsNormal = [Content]()
   var contentLeaderboardsHardcore = [Content]()
   
-  var nameUser : String?
+  var nameUser: String?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,7 +35,10 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     self.navigationController?.view.backgroundColor = .clear
     view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     
-    nameUser = (UserDefaults.standard.value(forKey: "userNAME") as! String)
+    if let nameUser = UserDefaults.standard.value(forKey: "userNAME") as? String {
+      self.nameUser = nameUser
+    }
+//    nameUser = (UserDefaults.standard.value(forKey: "userNAME") as! String)
     
     loadIndicator.type = .lineScale
     loadIndicator.color = UIColor(named: "yellowishGreen")!
@@ -57,18 +60,15 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     //        }
   }
   
-  
   @IBAction func switchSegmentedDidTapped(_ sender: Any) {
-    switch segmentedControlLeaderBoard.selectedSegmentIndex
-    {
+    switch segmentedControlLeaderBoard.selectedSegmentIndex {
     case 0:
       self.content = self.contentLeaderboardsNormal
       self.tableView.reloadData()
     case 1:
       self.content = self.contentLeaderboardsHardcore
       self.tableView.reloadData()
-    default:
-      break;
+    default: break
     }
   }
   
@@ -80,7 +80,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
       for snap in snapshot.children.allObjects as! [DataSnapshot] {
         let name = snap.key
         
-        if let rankedBy = snap.value as? [String : Any]  {
+        if let rankedBy = snap.value as? [String : Any] {
           self.contentLeaderboardsNormal.append(Content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
         }
       }
@@ -99,7 +99,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
       for snap in snapshot.children.allObjects as! [DataSnapshot] {
         let name = snap.key
         
-        if let rankedBy = snap.value as? [String : Any]  {
+        if let rankedBy = snap.value as? [String : Any] {
           self.contentLeaderboardsHardcore.append(Content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
         }
       }
@@ -123,7 +123,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     cell.nameCellLabel.text = self.content[indexPath.row].sName
     cell.pointsCellLabel.text = "\(self.content[indexPath.row].sPoints!)"
     
-    if self.content[indexPath.row].sName! == nameUser  {
+    if self.content[indexPath.row].sName! == nameUser {
       cell.backgroundColor = nil
       cell.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)
     } else {
@@ -146,13 +146,11 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 }
 
 struct Content {
-  
-  var sName : String!
-  var sPoints : Int!
+  var sName: String!
+  var sPoints: Int!
   
   init(sName: String, sPoints: Int) {
     self.sName = sName
     self.sPoints = sPoints
   }
-  
 }

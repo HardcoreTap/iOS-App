@@ -30,15 +30,14 @@ class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
   
 }
 
-
 extension AboutGameVC {
   
   //изменения цвета и шрифта в заголовках секции
   func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
     let header = view as? UITableViewHeaderFooterView
     header?.textLabel?.font = UIFont(name: "OpenSans-Regular", size: 10)
-    header?.textLabel?.textColor = UIColor(hue:0.24, saturation:0.75, brightness:0.89, alpha:1.00)
-    header?.backgroundView?.backgroundColor = UIColor(hue:0.24, saturation:0.75, brightness:0.89, alpha:0.1)
+    header?.textLabel?.textColor = UIColor(hue: 0.24, saturation: 0.75, brightness: 0.89, alpha: 1.00)
+    header?.backgroundView?.backgroundColor = UIColor(hue: 0.24, saturation: 0.75, brightness: 0.89, alpha: 0.1)
   }
   
   // MARK: - Table view data source
@@ -61,8 +60,7 @@ extension AboutGameVC {
     return cell
   }
   
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath:
-    IndexPath) {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     switch indexPath.section {
     case 0:
       switch indexPath.row {

@@ -9,7 +9,6 @@
 import UIKit
 
 class SettingsCell: UITableViewCell {
-  
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var switchController: UISwitch!
   

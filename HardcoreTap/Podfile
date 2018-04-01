@@ -13,6 +13,8 @@ target 'HardcoreTap' do
   pod 'SwiftMessages'
   pod 'Siren'
   pod 'NVActivityIndicatorView'
+  pod 'SwiftLint'
+  pod 'IQKeyboardManagerSwift'
   #pod 'Google-Mobile-Ads-SDK'
 
 end

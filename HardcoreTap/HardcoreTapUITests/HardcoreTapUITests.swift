@@ -8,7 +8,7 @@
 
 import XCTest
 
-class HardcoreTap_UITests: XCTestCase {
+class HardcoreTapUITests: XCTestCase {
   
   override func setUp() {
     super.setUp()
