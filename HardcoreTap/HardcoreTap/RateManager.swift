@@ -10,6 +10,7 @@ import UIKit
 import StoreKit
 
 @available(iOS 10.3, *)
+
 class RateManager {
   
   class func incrementCount() {

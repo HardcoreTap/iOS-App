@@ -15,7 +15,7 @@ class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
   
   var sectionTitles = ["Расскажите о нас", "Мы на GitHub"]
   var sectionContent = [["Оцените приложение на App Store", "Репозиторий на GitHub"],
-                        ["Sergey Dunaev", "Bystritskiy Bogdan", "Anpleenko Pavel"]]
+                        ["Dunaev Sergey", "Bystritskiy Bogdan", "Anpleenko Pavel"]]
   
   override func viewDidLoad() {
     super.viewDidLoad()

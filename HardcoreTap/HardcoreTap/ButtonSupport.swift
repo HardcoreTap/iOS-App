@@ -9,6 +9,7 @@
 import UIKit
 
 class AddButtonShadow {
+  
   func addShadow(nameButton: UIButton) {
     nameButton.layer.shadowColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 0.5).cgColor
     nameButton.layer.shadowOffset = CGSize(width: 2, height: 8)
