@@ -10,7 +10,6 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
   
   var userID: String = ""
   var username: String = ""
-  var shadowButton = AddButtonShadow()
   
   @IBOutlet weak var textBox: UITextField!
   @IBOutlet weak var startPlayButton: UIButton!
@@ -54,11 +53,11 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
     sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
     guard let text = textBox.text, !text.isEmpty else {
       self.startPlayButton.layer.backgroundColor = UIColor.gray.cgColor
-      self.shadowButton.clearShadow(nameButton: startPlayButton)
+      startPlayButton.clearShadow(nameButton: startPlayButton)
       return
     }
     self.startPlayButton.layer.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100).cgColor
-    self.shadowButton.addShadow(nameButton: startPlayButton)
+    self.startPlayButton.addShadow(nameButton: startPlayButton)
     return
   }
   

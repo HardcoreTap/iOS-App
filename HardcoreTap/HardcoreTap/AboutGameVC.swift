@@ -13,9 +13,12 @@ class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var aboutGameLabel: UILabel!
   
-  var sectionTitles = ["Расскажите о нас", "Мы на GitHub"]
-  var sectionContent = [["Оцените приложение на App Store", "Репозиторий на GitHub"],
-                        ["Dunaev Sergey", "Bystritskiy Bogdan", "Anpleenko Pavel"]]
+  var sectionTitles = ["Поддержите разработчиков", "Расскажите о нас", "Мы на GitHub"]
+  var sectionContent = [
+    ["Отключить рекламу в приложении"],
+    ["Оцените приложение на App Store", "Репозиторий на GitHub"],
+    ["Dunaev Sergey", "Bystritskiy Bogdan", "Anpleenko Pavel"]
+  ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -65,13 +68,20 @@ extension AboutGameVC {
     case 0:
       switch indexPath.row {
       case 0 :
+        self.performSegue(withIdentifier: "fromAboutGameToSettings", sender: self)
+      default:
+        break
+      }
+    case 1:
+      switch indexPath.row {
+      case 0 :
         link(link: "itms-apps://itunes.apple.com/app/viewContentsUserReviews?id=\(appID)")
       case 1 :
         link(link: "https://github.com/bystritskiy/HardcoreTap")
       default:
         break
       }
-    case 1:
+    case 2:
       switch indexPath.row {
       case 0:
         link(link: "https://github.com/Dunaev")

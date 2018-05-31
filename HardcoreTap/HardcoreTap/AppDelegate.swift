@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     resetStateIfUITesting()
     
-    IQKeyboardManager.sharedManager().enable = true
+    IQKeyboardManager.shared.enable = true
 
     //Косметика navigationBar
     UINavigationBar.appearance().tintColor = .white
@@ -42,9 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Конфигурация Firebase
     FirebaseApp.configure()
     
-    //Конфигурация Google AdMod
-    //    GADMobileAds.configure(withApplicationID: PrivateInfo.admodKey)
-    
+    GADMobileAds.configure(withApplicationID: PrivateInfo.admobAppID)
+
     //Проверка на актуальность версии
     checkVersionApp()
 

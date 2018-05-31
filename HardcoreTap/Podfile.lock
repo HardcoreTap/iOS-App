@@ -1,65 +1,76 @@
 PODS:
-  - Crashlytics (3.10.1):
-    - Fabric (~> 1.7.5)
-  - Fabric (1.7.5)
-  - Firebase (4.10.1):
-    - Firebase/Core (= 4.10.1)
-  - Firebase/Core (4.10.1):
-    - FirebaseAnalytics (= 4.1.0)
-    - FirebaseCore (= 4.0.17)
-  - Firebase/Database (4.10.1):
+  - Crashlytics (3.10.2):
+    - Fabric (~> 1.7.7)
+  - Fabric (1.7.7)
+  - Firebase (5.0.1):
+    - Firebase/Core (= 5.0.1)
+  - Firebase/AdMob (5.0.1):
     - Firebase/Core
-    - FirebaseDatabase (= 4.1.5)
-  - Firebase/Performance (4.10.1):
+    - Google-Mobile-Ads-SDK (= 7.30.0)
+  - Firebase/Core (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.0.0)
+  - Firebase/CoreOnly (5.0.1):
+    - FirebaseCore (= 5.0.1)
+  - Firebase/Database (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (= 5.0.0)
+  - Firebase/Performance (5.0.1):
     - Firebase/Core
-    - FirebasePerformance (= 1.1.2)
-  - FirebaseAnalytics (4.1.0):
-    - FirebaseCore (~> 4.0)
-    - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - FirebasePerformance (= 2.0.0)
+  - FirebaseAnalytics (5.0.0):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
-  - FirebaseCore (4.0.17):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
-  - FirebaseDatabase (4.1.5):
-    - FirebaseAnalytics (~> 4.1)
-    - FirebaseCore (~> 4.0)
+  - FirebaseCore (5.0.1):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseDatabase (5.0.0):
+    - FirebaseCore (~> 5.0)
     - leveldb-library (~> 1.18)
-  - FirebaseInstanceID (2.0.9):
-    - FirebaseCore (~> 4.0)
-  - FirebasePerformance (1.1.2):
-    - FirebaseAnalytics (~> 4.1)
-    - FirebaseInstanceID (~> 2.0)
-    - FirebaseSwizzlingUtilities (~> 1.0)
+  - FirebaseInstanceID (3.0.0):
+    - FirebaseCore (~> 5.0)
+  - FirebasePerformance (2.0.0):
+    - FirebaseAnalytics (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - FirebaseSwizzlingUtilities/ISASwizzling (~> 2.0)
+    - FirebaseSwizzlingUtilities/MethodSwizzling (~> 2.0)
     - GoogleToolboxForMac/Logger (~> 2.1)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.5)
-  - FirebaseSwizzlingUtilities (1.0.0)
-  - GoogleToolboxForMac/Defines (2.1.3)
-  - GoogleToolboxForMac/Logger (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GoogleToolboxForMac/NSData+zlib (2.1.3):
-    - GoogleToolboxForMac/Defines (= 2.1.3)
-  - GTMSessionFetcher/Core (1.1.14)
-  - IQKeyboardManagerSwift (5.0.8)
+  - FirebaseSwizzlingUtilities/ISASwizzling (2.0.0)
+  - FirebaseSwizzlingUtilities/MethodSwizzling (2.0.0):
+    - FirebaseCore (~> 5.0)
+  - Google-Mobile-Ads-SDK (7.30.0)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GTMSessionFetcher/Core (1.1.15)
+  - IQKeyboardManagerSwift (6.0.3)
   - leveldb-library (1.20)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - NVActivityIndicatorView (4.1.1):
-    - NVActivityIndicatorView/Presenter (= 4.1.1)
-  - NVActivityIndicatorView/Presenter (4.1.1)
+  - NVActivityIndicatorView (4.2.1):
+    - NVActivityIndicatorView/Presenter (= 4.2.1)
+  - NVActivityIndicatorView/Presenter (4.2.1)
   - Protobuf (3.5.0)
-  - Siren (3.2.1)
-  - SwiftLint (0.25.0)
-  - SwiftMessages (4.1.0)
+  - Siren (3.4.0)
+  - SwiftLint (0.25.1)
+  - SwiftMessages (4.1.4):
+    - SwiftMessages/App (= 4.1.4)
+  - SwiftMessages/App (4.1.4)
 
 DEPENDENCIES:
   - Crashlytics
   - Fabric
   - Firebase
+  - Firebase/AdMob
   - Firebase/Core
   - Firebase/Database
   - Firebase/Performance
@@ -69,27 +80,51 @@ DEPENDENCIES:
   - SwiftLint
   - SwiftMessages
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Crashlytics
+    - Fabric
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseDatabase
+    - FirebaseInstanceID
+    - FirebasePerformance
+    - FirebaseSwizzlingUtilities
+    - Google-Mobile-Ads-SDK
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - IQKeyboardManagerSwift
+    - leveldb-library
+    - nanopb
+    - NVActivityIndicatorView
+    - Protobuf
+    - Siren
+    - SwiftLint
+    - SwiftMessages
+
 SPEC CHECKSUMS:
-  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
-  Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
-  Firebase: 92c6ba593e32db0defde464a9adc981d5cb49f97
-  FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
-  FirebaseCore: 872307b001bbefda1dfa0dbfffa50a6919023d4a
-  FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
-  FirebaseInstanceID: d2058a35e9bebda1b6dd42486b84917bde552a9d
-  FirebasePerformance: 96c831a9eaf8d2ddf8bb37a4a6f6dd1b4bfe929f
-  FirebaseSwizzlingUtilities: f1c49a5a372ac852c853722a5891a0a5e2344a6c
-  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
-  GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
-  IQKeyboardManagerSwift: 2e7dc7f98c111458c1ea2b373f893e8cf95e2b97
+  Crashlytics: 0360624eea1c978a743feddb2fb1ef8b37fb7a0d
+  Fabric: bda89e242bce1b7b8ab264248cf3407774ce0095
+  Firebase: d6861c2059d8c32d1e6dd8932e22ada346d90a3a
+  FirebaseAnalytics: 19812b49fa5f283dd6b23edf8a14b5d477029ab8
+  FirebaseCore: cafc814b2d84fc8733f09e653041cc2165332ad7
+  FirebaseDatabase: 697eb53e5b4fe7cd4fa8756c1f82a9fca011345f
+  FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
+  FirebasePerformance: 1ec6c40e5dad2543ca4c4f25d15168bde6322c2c
+  FirebaseSwizzlingUtilities: 6c22677c50d0b6f5f0dc637c1233f13694a3003f
+  Google-Mobile-Ads-SDK: 7404f68120ae8682afeb5af001fbf4aad731c78e
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  NVActivityIndicatorView: 8068ba3ad39cb44cbaab25d89ff2546b3f092681
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
-  Siren: 56aa9b5baa39cd28b42ff178b5171b63b1fea2b1
-  SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
-  SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
+  Siren: 5b8be41b5cd05aa3528303325966e919bd53e412
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
+  SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
 
-PODFILE CHECKSUM: 121fbcd72574a3b8a2b0b8e1d71a46567ec9d2e1
+PODFILE CHECKSUM: 1e6734a55eefe4b87f048eb93dedace4ed7fa8f9
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0
