@@ -12,7 +12,7 @@ import FirebaseDatabase
 import NVActivityIndicatorView
 import GameKit
 
-class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource, GKGameCenterControllerDelegate {
+class LeadearBoardViewController: UIViewController, GKGameCenterControllerDelegate {
   
   func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
     gameCenterViewController.dismiss(animated: true, completion: nil)
@@ -124,13 +124,17 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     })
   }
   
+}
+
+extension LeadearBoardViewController: UITableViewDelegate, UITableViewDataSource {
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.content.count-1
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeaderBoardCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeadearBoardCell
     
     //обнуляем сначала (защита от бага с переопределением)
     cell.placeCellLabel.text = nil
@@ -160,14 +164,4 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     return cell
   }
   
-}
-
-struct Content {
-  var sName: String!
-  var sPoints: Int!
-  
-  init(sName: String, sPoints: Int) {
-    self.sName = sName
-    self.sPoints = sPoints
-  }
 }

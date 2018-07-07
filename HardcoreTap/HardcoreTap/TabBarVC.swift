@@ -14,7 +14,7 @@ class TabBarVC: UITabBarController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    //        делаем прозрачный tabbar
+
     myTabBar.backgroundColor = UIColor.clear
     myTabBar.backgroundImage = UIImage()
     myTabBar.shadowImage = UIImage()

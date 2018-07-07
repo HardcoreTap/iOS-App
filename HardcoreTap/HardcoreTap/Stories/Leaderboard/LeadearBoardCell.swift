@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeaderBoardCell: UITableViewCell {
+class LeadearBoardCell: UITableViewCell {
   
   @IBOutlet weak var nameCellLabel: UILabel!
   @IBOutlet weak var pointsCellLabel: UILabel!

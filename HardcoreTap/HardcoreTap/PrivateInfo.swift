@@ -9,6 +9,6 @@
 import Foundation
 
 struct PrivateInfo {
-    static var admobAppID = "ca-app-pub-1700430795037685~8586021594"
+  static var admobAppID = "ca-app-pub-1700430795037685~8586021594"
   static var admobBannerID = "ca-app-pub-1700430795037685/9256939587"
 }

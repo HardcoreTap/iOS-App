@@ -9,13 +9,14 @@
 import UIKit
 import StoreKit
 
-class SettingsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SettingsViewController: UIViewController {
   
   @IBOutlet weak var heighOfDisableAdStackView: NSLayoutConstraint!
   @IBOutlet weak var disableAdButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
   var titleSetting = ["Фоновый звук"]
   var bgSound = true
+  
   let userDefaults = UserDefaults.standard
   
   override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +36,8 @@ class SettingsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
   }
 }
 
-extension SettingsVC {
+extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return titleSetting.count
   }
@@ -61,4 +63,5 @@ extension SettingsVC {
       userDefaults.set(bgSound, forKey: "bgSound")
     }
   }
+  
 }

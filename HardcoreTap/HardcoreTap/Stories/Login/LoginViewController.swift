@@ -6,7 +6,7 @@
 import UIKit
 import Firebase
 
-class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
   
   var userID: String = ""
   var username: String = ""
@@ -14,16 +14,15 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
   @IBOutlet weak var textBox: UITextField!
   @IBOutlet weak var startPlayButton: UIButton!
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    makeTransparentNavigationBar()
+    setupAddTargetIsNotEmptyTextFields()
+
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    setupAddTargetIsNotEmptyTextFields()
-    
-    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    self.navigationController?.navigationBar.shadowImage = UIImage()
-    self.navigationController?.navigationBar.isTranslucent = true
-    self.navigationController?.view.backgroundColor = .clear
-    view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)    
   }
   
   @IBAction func loginDidTouch(_ sender: Any) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AboutGameViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var aboutGameLabel: UILabel!
@@ -33,7 +33,7 @@ class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
   
 }
 
-extension AboutGameVC {
+extension AboutGameViewController: UITableViewDelegate, UITableViewDataSource {
   
   //изменения цвета и шрифта в заголовках секции
   func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -43,7 +43,6 @@ extension AboutGameVC {
     header?.backgroundView?.backgroundColor = UIColor(hue: 0.24, saturation: 0.75, brightness: 0.89, alpha: 0.1)
   }
   
-  // MARK: - Table view data source
   func numberOfSections(in tableView: UITableView) -> Int {
     return sectionTitles.count
   }
@@ -96,12 +95,6 @@ extension AboutGameVC {
       break
     }
     tableView.deselectRow(at: indexPath, animated: false)
-  }
-  
-  func link(link: String) {
-    if let url = URL(string: link) {
-      UIApplication.shared.open(url)
-    }
   }
   
 }

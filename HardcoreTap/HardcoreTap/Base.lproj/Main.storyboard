@@ -129,12 +129,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1i-7m-Uvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-116" y="122.78860569715144"/>
+            <point key="canvasLocation" x="369" y="123"/>
         </scene>
         <!--HardcoreTap-->
         <scene sceneID="rtq-bR-eC2">
             <objects>
-                <viewController storyboardIdentifier="MainGameWindow" id="bow-2t-fyi" customClass="ViewController" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainGameWindow" id="bow-2t-fyi" customClass="GameViewController" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VMo-Qr-o3W"/>
                         <viewControllerLayoutGuide type="bottom" id="9SF-t2-sgv"/>
@@ -336,12 +336,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E89-7V-kn1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632.8000000000002" y="-138.0809595202399"/>
+            <point key="canvasLocation" x="2112" y="-675"/>
         </scene>
         <!--Правила игры-->
         <scene sceneID="QqO-HF-qLO">
             <objects>
-                <viewController id="Tzv-UF-5XT" customClass="RulesVC" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tzv-UF-5XT" customClass="RulesViewController" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CZM-r0-AZn"/>
                         <viewControllerLayoutGuide type="bottom" id="OYF-KU-6Nb"/>
@@ -481,12 +481,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4bX-zp-xcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2634" y="1364"/>
+            <point key="canvasLocation" x="2112" y="958"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="ut7-fG-Zf5">
             <objects>
-                <viewController id="lWS-Ka-WKU" customClass="SettingsVC" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lWS-Ka-WKU" customClass="SettingsViewController" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TMM-YF-aRR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -591,12 +591,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9n-kt-lhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2607.1999999999998" y="2241.2293853073465"/>
+            <point key="canvasLocation" x="2644" y="958"/>
         </scene>
         <!--Об игре-->
         <scene sceneID="8B0-Cy-dFp">
             <objects>
-                <viewController title="Об игре" id="grm-T7-0u7" customClass="AboutGameVC" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Об игре" id="grm-T7-0u7" customClass="AboutGameViewController" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pWJ-RP-xTH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -671,7 +671,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU8-qT-UIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3549.5999999999999" y="2241.2293853073465"/>
+            <point key="canvasLocation" x="3163" y="958"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="97C-nj-LsA">
@@ -699,7 +699,7 @@
         <!--Таблица лидеров-->
         <scene sceneID="hlx-dD-ObS">
             <objects>
-                <viewController storyboardIdentifier="leaderBoard" id="kS2-IT-05Y" customClass="LeadearBoardVC" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leaderBoard" id="kS2-IT-05Y" customClass="LeadearBoardViewController" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gZw-Yd-0b4"/>
                         <viewControllerLayoutGuide type="bottom" id="l9J-bd-nG1"/>
@@ -712,7 +712,7 @@
                                 <rect key="frame" x="15" y="164" width="345" height="446"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5wA-xA-dop" customClass="LeaderBoardCell" customModule="HardcoreTap" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5wA-xA-dop" customClass="LeadearBoardCell" customModule="HardcoreTap" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="345" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wA-xA-dop" id="czX-PB-ika">
@@ -827,7 +827,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0W-ga-w6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632.8000000000002" y="598.65067466266873"/>
+            <point key="canvasLocation" x="2112" y="123"/>
         </scene>
         <!--Игра-->
         <scene sceneID="B8P-Vr-blc">
@@ -854,7 +854,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EX5-1h-7Eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1578.4000000000001" y="-136.28185907046478"/>
+            <point key="canvasLocation" x="1579" y="-674"/>
         </scene>
         <!--Рекорды-->
         <scene sceneID="ktp-m5-7k1">
@@ -881,7 +881,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ejq-0g-eeL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="599.55022488755628"/>
+            <point key="canvasLocation" x="1579" y="123"/>
         </scene>
         <!--Правила-->
         <scene sceneID="hzn-LO-dqm">
@@ -908,7 +908,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cId-yp-UgA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="1364"/>
+            <point key="canvasLocation" x="1579" y="958"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ySg-Ho-dHD">
@@ -932,7 +932,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EL0-CU-AeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-910" y="123"/>
+            <point key="canvasLocation" x="-92" y="123"/>
         </scene>
     </scenes>
     <resources>

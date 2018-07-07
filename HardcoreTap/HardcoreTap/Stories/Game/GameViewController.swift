@@ -13,7 +13,7 @@ import GoogleMobileAds
 import GameKit
 import StoreKit
 
-class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterControllerDelegate, SKPaymentTransactionObserver, SKProductsRequestDelegate {
+class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterControllerDelegate, SKPaymentTransactionObserver, SKProductsRequestDelegate {
   
   var bombSoundEffect: AVAudioPlayer? // Плеер звуков
   
@@ -132,7 +132,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
     }
     
     // Регистрация рекогнайзера жестов
-    let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
+    let tapGR = UITapGestureRecognizer(target: self, action: #selector(didTap))
     view.addGestureRecognizer(tapGR)
     
     // Тень у кнопки
@@ -147,7 +147,6 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
     view.layer.insertSublayer(rightLayer, at: 0)
     view.layer.insertSublayer(leftLayer, at: 0)
   }
-  
   
   override func viewWillAppear(_ animated: Bool) {
     //скрываем все лишнее, и ждем нажатия кнопки "Начать игру"
@@ -175,16 +174,12 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
         
         // Get the default leaderboard ID
         localePlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardString, error) in
-          if error != nil {
-            print(error)
-          } else {
+          if error == nil {
             self.gcDefaultLeaderboard = leaderboardString!
           }
         })
-        
       } else {
         print("Local player not auth. Disable Game center")
-        print(error)
         self.gcEnable = false
       }
     }
@@ -368,7 +363,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
     defaults.synchronize()
     
     //переход на страницу авторизации
-    let loginvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+    let loginvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
     self.present(loginvc, animated: true, completion: nil)
   }
   

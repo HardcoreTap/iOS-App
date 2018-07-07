@@ -1,28 +1,26 @@
 //
-//  RulesVC.swift
-//  TimeKillerApp
+//  UIViewControllerExtensions.swift
+//  HardcoreTap
 //
-//  Created by Bogdan Bystritskiy on 11/11/2017.
-//  Copyright © 2017 Bogdan Bystritskiy. All rights reserved.
+//  Created by Богдан Быстрицкий on 07/07/2018.
+//  Copyright © 2018 Bogdan Bystritskiy. All rights reserved.
 //
 
 import UIKit
 
-class RulesVC: UIViewController {
+extension UIViewController {
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
+  func link(link: String) {
+    if let url = URL(string: link) {
+      UIApplication.shared.open(url)
+    }
+  }
+  
+  func makeTransparentNavigationBar() {
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.isTranslucent = true
     self.navigationController?.view.backgroundColor = .clear
-    
     view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
   }
-  
-  @IBAction func showSettingScreenAction(_ sender: Any) {
-    performSegue(withIdentifier: "showSettingScreen", sender: self)
-  }
-  
 }
