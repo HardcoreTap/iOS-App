@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import Siren
 import SwiftMessages
 import Fabric
 import Crashlytics
@@ -27,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var defaults = UserDefaults.standard
   
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     resetStateIfUITesting()
     
@@ -36,16 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Косметика navigationBar
     UINavigationBar.appearance().tintColor = .white
     
-    //Конфигурация Fabric
-    Fabric.with([Crashlytics.self])
-    
     //Конфигурация Firebase
     FirebaseApp.configure()
-    
-    GADMobileAds.configure(withApplicationID: PrivateInfo.admobAppID)
 
-    //Проверка на актуальность версии
-    checkVersionApp()
+    GADMobileAds.sharedInstance().start(completionHandler: nil)
+
+    // TODO: Проверка на актуальность версии
+    // checkVersionApp()
 
     //Увеличиваем счестчик запуска приложения
     RateManager.incrementCount()
@@ -76,15 +72,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.rootViewController = jump
   }
   
-  func checkVersionApp() {
-    let siren = Siren.shared
-    siren.alertType = .option
-    siren.showAlertAfterCurrentVersionHasBeenReleasedForDays = 0
-    siren.checkVersion(checkType: .daily)
-  }
+//  func checkVersionApp() {
+//    let siren = Siren.shared
+//    siren.alertType = .option
+//    siren.showAlertAfterCurrentVersionHasBeenReleasedForDays = 0
+//    siren.checkVersion(checkType: .daily)
+//  }
   
   func applicationDidEnterBackground(_ application: UIApplication) {
-    Siren.shared.checkVersion(checkType: .immediately)
+//    Siren.shared.checkVersion(checkType: .immediately)
   }
   
   private func resetStateIfUITesting() {

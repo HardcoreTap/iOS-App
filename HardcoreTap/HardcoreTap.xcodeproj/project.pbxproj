@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		3C092B021FB76CE20019687C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */; };
 		3C092B031FB76CE20019687C /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */; };
-		3C092B061FB771EF0019687C /* RulesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B051FB771EF0019687C /* RulesVC.swift */; };
-		3C092B0A1FB774010019687C /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B091FB774010019687C /* TabBarVC.swift */; };
+		3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B051FB771EF0019687C /* RulesViewController.swift */; };
+		3C092B0A1FB774010019687C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B091FB774010019687C /* TabBarController.swift */; };
 		3C1B77361FBEB85100A4ADB3 /* SFUIDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B77331FBEB84B00A4ADB3 /* SFUIDisplay-Medium.otf */; };
 		3C1B77371FBEB85100A4ADB3 /* SFUIDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B77341FBEB84D00A4ADB3 /* SFUIDisplay-Regular.otf */; };
 		3C1B77381FBEB85100A4ADB3 /* SFUIDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B77351FBEB84F00A4ADB3 /* SFUIDisplay-Bold.otf */; };
@@ -58,8 +58,8 @@
 		1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
-		3C092B051FB771EF0019687C /* RulesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesVC.swift; sourceTree = "<group>"; };
-		3C092B091FB774010019687C /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		3C092B051FB771EF0019687C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		3C092B091FB774010019687C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3C1B77331FBEB84B00A4ADB3 /* SFUIDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Medium.otf"; sourceTree = "<group>"; };
 		3C1B77341FBEB84D00A4ADB3 /* SFUIDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Regular.otf"; sourceTree = "<group>"; };
 		3C1B77351FBEB84F00A4ADB3 /* SFUIDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Bold.otf"; sourceTree = "<group>"; };
@@ -169,12 +169,12 @@
 		3CE12BFB1FB62FED00945352 /* HardcoreTap */ = {
 			isa = PBXGroup;
 			children = (
-				8D4D773F20F10C7F001F3E91 /* Exntesions */,
+				8D4D773F20F10C7F001F3E91 /* Extensions */,
 				8D4D773E20F10B9E001F3E91 /* Stories */,
 				8D4D773D20F10B07001F3E91 /* Plists */,
 				8D4D773C20F10AF4001F3E91 /* Supporting files */,
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
-				3C092B091FB774010019687C /* TabBarVC.swift */,
+				3C092B091FB774010019687C /* TabBarController.swift */,
 				8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */,
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
@@ -214,14 +214,14 @@
 			path = Stories;
 			sourceTree = "<group>";
 		};
-		8D4D773F20F10C7F001F3E91 /* Exntesions */ = {
+		8D4D773F20F10C7F001F3E91 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */,
 				73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */,
 				8DAA24751FC7F80600282E06 /* RateManager.swift */,
 			);
-			path = Exntesions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8D4D774220F10D08001F3E91 /* Game */ = {
@@ -245,7 +245,7 @@
 		8D4D774520F10D29001F3E91 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
-				3C092B051FB771EF0019687C /* RulesVC.swift */,
+				3C092B051FB771EF0019687C /* RulesViewController.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -455,7 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		AD9DC2D863033CC4501DC800 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -463,32 +463,40 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BonMot/BonMot.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/Siren/Siren.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BonMot.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siren.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -505,9 +513,9 @@
 				3CE12BFF1FB62FEE00945352 /* GameViewController.swift in Sources */,
 				8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */,
 				8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */,
-				3C092B0A1FB774010019687C /* TabBarVC.swift in Sources */,
+				3C092B0A1FB774010019687C /* TabBarController.swift in Sources */,
 				8D4D774A20F10E7F001F3E91 /* Content.swift in Sources */,
-				3C092B061FB771EF0019687C /* RulesVC.swift in Sources */,
+				3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
 				3CE12C111FB643CB00945352 /* LoginViewController.swift in Sources */,
 				8D0B2BF11FC89BA400CE102C /* AboutGameViewController.swift in Sources */,
@@ -685,7 +693,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -706,7 +714,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

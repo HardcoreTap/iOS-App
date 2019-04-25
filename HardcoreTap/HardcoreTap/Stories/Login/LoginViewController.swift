@@ -1,11 +1,8 @@
 //
 //  LoginViewController.swift
 //
-//
 
 import UIKit
-import Firebase
-
 class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
   
   var userID: String = ""
@@ -18,7 +15,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     super.viewWillAppear(animated)
     makeTransparentNavigationBar()
     setupAddTargetIsNotEmptyTextFields()
-
   }
   
   override func viewDidLoad() {
@@ -29,7 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     //Если не заполнили поля
     if textBox.text!.isEmpty {
       //Меняем цвет плейсхолдеров
-      textBox.attributedPlaceholder = NSAttributedString(string: "Придумайте никнейм", attributes: [NSAttributedStringKey.foregroundColor: UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)])
+      textBox.attributedPlaceholder = NSAttributedString(string: "Придумайте никнейм", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)])
     } else {
       //скрываем клавиатуру
       self.view.endEditing(false)
@@ -51,12 +47,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
   @objc func textFieldsIsNotEmpty(sender: UITextField) {
     sender.text = sender.text?.trimmingCharacters(in: .whitespaces)
     guard let text = textBox.text, !text.isEmpty else {
-      self.startPlayButton.layer.backgroundColor = UIColor.gray.cgColor
+      startPlayButton.layer.backgroundColor = UIColor.gray.cgColor
       startPlayButton.clearShadow(nameButton: startPlayButton)
       return
     }
-    self.startPlayButton.layer.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100).cgColor
-    self.startPlayButton.addShadow(nameButton: startPlayButton)
+    startPlayButton.layer.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100).cgColor
+    startPlayButton.addShadow(nameButton: startPlayButton)
     return
   }
   

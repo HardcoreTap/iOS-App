@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarVC: UITabBarController {
+class TabBarController: UITabBarController {
   
   @IBOutlet weak var myTabBar: UITabBar!
   

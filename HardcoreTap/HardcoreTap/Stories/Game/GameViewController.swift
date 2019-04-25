@@ -164,7 +164,7 @@ class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterC
   var gcDefaultLeaderboard = String()
   
   func authPlayerInGameCenter() {
-    let localePlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
+    let localePlayer: GKLocalPlayer = GKLocalPlayer.local
     localePlayer.authenticateHandler = {(viewController, error) -> Void in
       if viewController != nil {
         self.present(viewController!, animated: true, completion: nil)
