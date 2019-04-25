@@ -8,14 +8,17 @@
 
 import UIKit
 
-class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AboutGameViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var aboutGameLabel: UILabel!
   
-  var sectionTitles = ["Расскажите о нас", "Мы на GitHub"]
-  var sectionContent = [["Оцените приложение на App Store", "Репозиторий на GitHub"],
-                        ["Dunaev Sergey", "Bystritskiy Bogdan", "Anpleenko Pavel"]]
+  var sectionTitles = ["Поддержите разработчиков", "Расскажите о нас", "Мы на GitHub"]
+  var sectionContent = [
+    ["Отключить рекламу в приложении"],
+    ["Оцените приложение на App Store", "Репозиторий на GitHub"],
+    ["Dunaev Sergey", "Bystritskiy Bogdan", "Anpleenko Pavel"]
+  ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,7 +33,7 @@ class AboutGameVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
   
 }
 
-extension AboutGameVC {
+extension AboutGameViewController: UITableViewDelegate, UITableViewDataSource {
   
   //изменения цвета и шрифта в заголовках секции
   func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -40,7 +43,6 @@ extension AboutGameVC {
     header?.backgroundView?.backgroundColor = UIColor(hue: 0.24, saturation: 0.75, brightness: 0.89, alpha: 0.1)
   }
   
-  // MARK: - Table view data source
   func numberOfSections(in tableView: UITableView) -> Int {
     return sectionTitles.count
   }
@@ -65,13 +67,20 @@ extension AboutGameVC {
     case 0:
       switch indexPath.row {
       case 0 :
+        self.performSegue(withIdentifier: "fromAboutGameToSettings", sender: self)
+      default:
+        break
+      }
+    case 1:
+      switch indexPath.row {
+      case 0 :
         link(link: "itms-apps://itunes.apple.com/app/viewContentsUserReviews?id=\(appID)")
       case 1 :
         link(link: "https://github.com/bystritskiy/HardcoreTap")
       default:
         break
       }
-    case 1:
+    case 2:
       switch indexPath.row {
       case 0:
         link(link: "https://github.com/Dunaev")
@@ -86,12 +95,6 @@ extension AboutGameVC {
       break
     }
     tableView.deselectRow(at: indexPath, animated: false)
-  }
-  
-  func link(link: String) {
-    if let url = URL(string: link) {
-      UIApplication.shared.open(url)
-    }
   }
   
 }

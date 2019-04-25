@@ -9,8 +9,11 @@ import UIKit
 import Firebase
 import AudioToolbox
 import AVFoundation
+import GoogleMobileAds
+import GameKit
+import StoreKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterControllerDelegate, SKPaymentTransactionObserver, SKProductsRequestDelegate {
   
   var bombSoundEffect: AVAudioPlayer? // Плеер звуков
   
@@ -26,7 +29,7 @@ class ViewController: UIViewController {
   
   var timer = Timer()
   var flPlaying: Bool = false // Флаг запуска игры
-	var bgSound: Bool = true // Флаг проигрывание музыки
+  var bgSound: Bool = true // Флаг проигрывание музыки
   var timeStop = Date()
   
   let layerColors = [UIColor(red: 1.0, green: 0.5, blue: 0.5, alpha: 0.6),
@@ -49,8 +52,7 @@ class ViewController: UIViewController {
   
   var rootRef = Database.database().reference()
   var scoreRef: DatabaseReference!
-  var shadowButton = AddButtonShadow()
-	let userDefaults = UserDefaults.standard
+  let userDefaults = UserDefaults.standard
   
   @IBOutlet weak var switchModeGame: UISwitch!
   
@@ -65,24 +67,54 @@ class ViewController: UIViewController {
   @IBOutlet weak var helloButtonWithPlayerName: UIButton!
   @IBOutlet weak var hardcoreLabel: UIButton!
   
+  
   var nameFromUserDefaults = " "
   var highscoreFromUserDefaults: Int = 0
+  
+  @IBOutlet weak var bannerView: GADBannerView!
+  @IBOutlet weak var heightBannerView: NSLayoutConstraint!
+  
+  var productToPurshase = SKProduct()
+  
+  func buyDisableAd() {
+    print("Покупка = \(productToPurshase)")
+    let pay = SKPayment(product: productToPurshase)
+    SKPaymentQueue.default().add(self)
+    SKPaymentQueue.default().add(pay)
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    if SKPaymentQueue.canMakePayments() {
+      print("Покупки доступны")
+      let productID: Set<String> = ["1"]
+      let request = SKProductsRequest(productIdentifiers: productID)
+      request.delegate = self
+      request.start()
+    } else {
+      print("Покупки недоступны")
+    }
+    
+    authPlayerInGameCenter()
+    
+    bannerView.adUnitID = PrivateInfo.admobBannerID
+    bannerView.rootViewController = self
+    bannerView.load(GADRequest())
+    bannerView.delegate = self
+    
     //Косметика navbar и фон
     toDoTransperentAndBackgroundImage()
-		
-		// проверка проигрывания фоновой музыки
-		if userDefaults.bool(forKey: "bgSound") {
-			bgSound = true
-			userDefaults.set(bgSound, forKey: "bgSound")
-		} else {
-			bgSound = false
-			userDefaults.set(bgSound, forKey: "bgSound")
-		}
-		
+    
+    // проверка проигрывания фоновой музыки
+    if userDefaults.bool(forKey: "bgSound") {
+      bgSound = true
+      userDefaults.set(bgSound, forKey: "bgSound")
+    } else {
+      bgSound = false
+      userDefaults.set(bgSound, forKey: "bgSound")
+    }
+    
     //имя пользователя в левом вехнем углу
     if let username = UserDefaults.standard.value(forKey: "userNAME") as? String {
       self.nameFromUserDefaults = username
@@ -100,11 +132,11 @@ class ViewController: UIViewController {
     }
     
     // Регистрация рекогнайзера жестов
-    let tapGR = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
+    let tapGR = UITapGestureRecognizer(target: self, action: #selector(didTap))
     view.addGestureRecognizer(tapGR)
     
     // Тень у кнопки
-    shadowButton.addShadow(nameButton: startGameButton)
+    startGameButton.addShadow(nameButton: startGameButton)
     
     self.navigationItem.title = "HardcoreTap"
     self.helloButtonWithPlayerName.setTitle("Привет, \(self.nameFromUserDefaults)", for: .normal)
@@ -126,6 +158,48 @@ class ViewController: UIViewController {
     startGameButton.isHidden = false
     switchModeGame.isHidden = false
     hardcoreLabel.isHidden = false
+  }
+  
+  var gcEnable = Bool()
+  var gcDefaultLeaderboard = String()
+  
+  func authPlayerInGameCenter() {
+    let localePlayer: GKLocalPlayer = GKLocalPlayer.local
+    localePlayer.authenticateHandler = {(viewController, error) -> Void in
+      if viewController != nil {
+        self.present(viewController!, animated: true, completion: nil)
+      } else if localePlayer.isAuthenticated {
+        print("Local player already auth")
+        self.gcEnable = true
+        
+        // Get the default leaderboard ID
+        localePlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardString, error) in
+          if error == nil {
+            self.gcDefaultLeaderboard = leaderboardString!
+          }
+        })
+      } else {
+        print("Local player not auth. Disable Game center")
+        self.gcEnable = false
+      }
+    }
+  }
+  
+  func submitScoreOnGameCenter() {
+    let leaderboardID = "gamecenter-leaderboards"
+    let sScore = GKScore(leaderboardIdentifier: leaderboardID)
+    sScore.value = Int64(count)
+    GKScore.report([sScore]) { error in
+      if error != nil {
+        print(error!.localizedDescription)
+      } else {
+        print("Score submitted")
+      }
+    }
+  }
+  
+  func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+    gameCenterViewController.dismiss(animated: true, completion: nil)
   }
   
   func setupGALayers() {
@@ -205,12 +279,12 @@ class ViewController: UIViewController {
     
     do {
       bombSoundEffect = try AVAudioPlayer(contentsOf: url)
-			if userDefaults.bool(forKey: "bgSound") {
-				bombSoundEffect?.play()
-			} else {
-				bombSoundEffect?.stop()
-			}
-		} catch {
+      if userDefaults.bool(forKey: "bgSound") {
+        bombSoundEffect?.play()
+      } else {
+        bombSoundEffect?.stop()
+      }
+    } catch {
       // couldn't load file :(
     }
     
@@ -289,7 +363,7 @@ class ViewController: UIViewController {
     defaults.synchronize()
     
     //переход на страницу авторизации
-    let loginvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+    let loginvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
     self.present(loginvc, animated: true, completion: nil)
   }
   
@@ -312,6 +386,8 @@ class ViewController: UIViewController {
     
     //добавления нового рекорда
     if count > highscoreFromUserDefaults {
+      
+      submitScoreOnGameCenter()
       
       highscoreFromUserDefaults = count
       highScoreLabel.text = "Ваш рекорд: \(highscoreFromUserDefaults)"
@@ -351,6 +427,58 @@ class ViewController: UIViewController {
     self.navigationController?.navigationBar.isTranslucent = true
     self.navigationController?.view.backgroundColor = .clear
     view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+  }
+  
+  /// Tells the delegate an ad request loaded an ad.
+  func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+    print("adViewDidReceiveAd")
+  }
+  
+  /// Tells the delegate an ad request failed.
+  func adView(_ bannerView: GADBannerView,
+              didFailToReceiveAdWithError error: GADRequestError) {
+    print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+  }
+  
+  /// Tells the delegate that a full-screen view will be presented in response
+  /// to the user clicking on an ad.
+  func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+    print("adViewWillPresentScreen")
+  }
+  
+  /// Tells the delegate that the full-screen view will be dismissed.
+  func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+    print("adViewWillDismissScreen")
+  }
+  
+  /// Tells the delegate that the full-screen view has been dismissed.
+  func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+    print("adViewDidDismissScreen")
+  }
+  
+  /// Tells the delegate that a user click will open another app (such as
+  /// the App Store), backgrounding the current app.
+  func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+    print("adViewWillLeaveApplication")
+  }
+  
+  func sucessDisableAd() {
+    
+  }
+  
+  func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+    print("productsRequest")
+    let myProduct = response.products
+    for product in myProduct {
+      print("Товар добавлен")
+      print("Товар id = \(product.productIdentifier)")
+      print(product.localizedTitle)
+      print(product.localizedDescription)
+    }
+  }
+  
+  func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+    
   }
   
 }

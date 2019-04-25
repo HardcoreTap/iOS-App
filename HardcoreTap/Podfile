@@ -1,20 +1,37 @@
-platform :ios, '10.3'
+platform :ios, '11.0'
 
 target 'HardcoreTap' do
 
   use_frameworks!
 
-  pod 'Firebase'
+  pod 'SwiftLint'
+  pod 'R.swift'
+  pod 'SwifterSwift'
+  
+  pod 'SnapKit'
+  pod 'BonMot'
+
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Performance'
+  pod 'Firebase/AdMob'
   pod 'Fabric'
   pod 'Crashlytics'
+  
   pod 'SwiftMessages'
-  pod 'Siren'
+#  pod 'Siren'
   pod 'NVActivityIndicatorView'
-  pod 'SwiftLint'
   pod 'IQKeyboardManagerSwift'
-  #pod 'Google-Mobile-Ads-SDK'
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    # For Swift 4.2
+    if ['NVActivityIndicatorView', 'SwifterSwift'].include? target.name
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
+    end
+  end
 end

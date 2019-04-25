@@ -10,17 +10,22 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import NVActivityIndicatorView
+import GameKit
 
-class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LeadearBoardViewController: UIViewController, GKGameCenterControllerDelegate {
+  
+  func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+    gameCenterViewController.dismiss(animated: true, completion: nil)
+  }
   
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var segmentedControlLeaderBoard: UISegmentedControl!
   @IBOutlet weak var loadIndicator: NVActivityIndicatorView!
-
+  
   var rootRef = Database.database().reference()
   
   var content = [Content]()
-
+  
   var contentLeaderboardsNormal = [Content]()
   var contentLeaderboardsHardcore = [Content]()
   
@@ -38,7 +43,7 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     if let nameUser = UserDefaults.standard.value(forKey: "userNAME") as? String {
       self.nameUser = nameUser
     }
-//    nameUser = (UserDefaults.standard.value(forKey: "userNAME") as! String)
+    //    nameUser = (UserDefaults.standard.value(forKey: "userNAME") as! String)
     
     loadIndicator.type = .lineScale
     loadIndicator.color = UIColor(named: "yellowishGreen")!
@@ -58,6 +63,18 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     //        } else {
     //            segmentedControlLeaderBoard.selectedSegmentIndex = 0
     //        }
+  }
+  
+  @IBAction func gameCenterDidTapped(_ sender: Any) {
+    showLeaderboard()
+  }
+  
+  func showLeaderboard() {
+    let gcVC: GKGameCenterViewController = GKGameCenterViewController()
+    gcVC.gameCenterDelegate = self
+    gcVC.viewState = GKGameCenterViewControllerState.leaderboards
+    gcVC.leaderboardIdentifier = "gamecenter-leaderboards"
+    self.present(gcVC, animated: true, completion: nil)
   }
   
   @IBAction func switchSegmentedDidTapped(_ sender: Any) {
@@ -88,12 +105,12 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
       self.contentLeaderboardsNormal.reverse()
       self.content = self.contentLeaderboardsNormal
       self.tableView.reloadData()
-      })
+    })
   }
   
   func getHardcoreRecords() {
     rootRef.child("leaderboards_hardcore").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
-
+      
       self.contentLeaderboardsHardcore = []
       
       for snap in snapshot.children.allObjects as! [DataSnapshot] {
@@ -107,13 +124,17 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     })
   }
   
+}
+
+extension LeadearBoardViewController: UITableViewDelegate, UITableViewDataSource {
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.content.count-1
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeaderBoardCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! LeadearBoardCell
     
     //обнуляем сначала (защита от бага с переопределением)
     cell.placeCellLabel.text = nil
@@ -143,14 +164,4 @@ class LeadearBoardVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     return cell
   }
   
-}
-
-struct Content {
-  var sName: String!
-  var sPoints: Int!
-  
-  init(sName: String, sPoints: Int) {
-    self.sName = sName
-    self.sPoints = sPoints
-  }
 }
