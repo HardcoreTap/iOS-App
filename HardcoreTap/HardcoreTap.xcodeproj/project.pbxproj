@@ -119,12 +119,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C52CAE71FBBC873004E31B8 /* AudioFiles */ = {
+		3C52CAE71FBBC873004E31B8 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
 				3CA83B8A1FBA5D7B0046ED8D /* bmp60.mp3 */,
 			);
-			path = AudioFiles;
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		3C6EECF61FBBBBBA00DCFC10 /* Fonts */ = {
@@ -169,9 +169,11 @@
 		3CE12BFB1FB62FED00945352 /* HardcoreTap */ = {
 			isa = PBXGroup;
 			children = (
-				8D4D773F20F10C7F001F3E91 /* Extensions */,
-				8D4D773E20F10B9E001F3E91 /* Stories */,
+				FD1631532272F1E30040FC3F /* Classes */,
+				FD1631542272F1EB0040FC3F /* Helpers */,
+				FD1631552272F1F40040FC3F /* Launch */,
 				8D4D773D20F10B07001F3E91 /* Plists */,
+				FD1631562272F1FD0040FC3F /* Resources */,
 				8D4D773C20F10AF4001F3E91 /* Supporting files */,
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
 				3C092B091FB774010019687C /* TabBarController.swift */,
@@ -185,9 +187,6 @@
 		8D4D773C20F10AF4001F3E91 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				3C52CAE71FBBC873004E31B8 /* AudioFiles */,
-				3C6EECF61FBBBBBA00DCFC10 /* Fonts */,
-				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -302,6 +301,79 @@
 				63B0CB57EA772756F3D03DA9 /* Pods-HardcoreTap.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD1631532272F1E30040FC3F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FD1631572272F22B0040FC3F /* BusinessLogic */,
+				FD1631582272F2350040FC3F /* PresentationLayer */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FD1631542272F1EB0040FC3F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8D4D773F20F10C7F001F3E91 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FD1631552272F1F40040FC3F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		FD1631562272F1FD0040FC3F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3C52CAE71FBBC873004E31B8 /* Audio */,
+				3C6EECF61FBBBBBA00DCFC10 /* Fonts */,
+				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD1631572272F22B0040FC3F /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		FD1631582272F2350040FC3F /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FD1631592272F2400040FC3F /* Common */,
+				8D4D773E20F10B9E001F3E91 /* Stories */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		FD1631592272F2400040FC3F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FD16315B2272F24E0040FC3F /* UIElements */,
+				FD16315A2272F2470040FC3F /* Styles */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FD16315A2272F2470040FC3F /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		FD16315B2272F24E0040FC3F /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
