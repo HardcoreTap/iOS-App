@@ -169,17 +169,12 @@
 		3CE12BFB1FB62FED00945352 /* HardcoreTap */ = {
 			isa = PBXGroup;
 			children = (
+				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
 				FD1631532272F1E30040FC3F /* Classes */,
 				FD1631542272F1EB0040FC3F /* Helpers */,
 				FD1631552272F1F40040FC3F /* Launch */,
-				8D4D773D20F10B07001F3E91 /* Plists */,
 				FD1631562272F1FD0040FC3F /* Resources */,
 				8D4D773C20F10AF4001F3E91 /* Supporting files */,
-				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
-				3C092B091FB774010019687C /* TabBarController.swift */,
-				8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */,
-				3CE12C001FB62FEE00945352 /* Main.storyboard */,
-				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 			);
 			path = HardcoreTap;
 			sourceTree = "<group>";
@@ -187,17 +182,10 @@
 		8D4D773C20F10AF4001F3E91 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = "Supporting files";
-			sourceTree = "<group>";
-		};
-		8D4D773D20F10B07001F3E91 /* Plists */ = {
-			isa = PBXGroup;
-			children = (
 				3CE12C081FB62FEE00945352 /* Info.plist */,
 				8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */,
 			);
-			name = Plists;
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 		8D4D773E20F10B9E001F3E91 /* Stories */ = {
@@ -323,6 +311,7 @@
 		FD1631552272F1F40040FC3F /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -340,6 +329,7 @@
 		FD1631572272F22B0040FC3F /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -347,7 +337,9 @@
 		FD1631582272F2350040FC3F /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				FD1631592272F2400040FC3F /* Common */,
+				FD16315C2272F29A0040FC3F /* Base */,
 				8D4D773E20F10B9E001F3E91 /* Stories */,
 			);
 			path = PresentationLayer;
@@ -374,6 +366,14 @@
 			children = (
 			);
 			path = UIElements;
+			sourceTree = "<group>";
+		};
+		FD16315C2272F29A0040FC3F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3C092B091FB774010019687C /* TabBarController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -758,7 +758,7 @@
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
@@ -779,7 +779,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
