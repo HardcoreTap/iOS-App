@@ -90,14 +90,14 @@ class LeadearBoardViewController: UIViewController, GKGameCenterControllerDelega
   }
   
   func getNormalRecords() {
-    rootRef.child("leaderboards_normal").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
+    rootRef.child("leaderboards_normal").queryOrdered(byChild: "highscore").observe(.value, with: {snapshot in
       
       self.contentLeaderboardsNormal = []
       
       for snap in snapshot.children.allObjects as! [DataSnapshot] {
         let name = snap.key
         
-        if let rankedBy = snap.value as? [String : Any] {
+        if let rankedBy = snap.value as? [String: Any] {
           self.contentLeaderboardsNormal.append(Content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
         }
       }
@@ -109,14 +109,14 @@ class LeadearBoardViewController: UIViewController, GKGameCenterControllerDelega
   }
   
   func getHardcoreRecords() {
-    rootRef.child("leaderboards_hardcore").queryOrdered(byChild: "highscore").observe(.value, with: {(snapshot) in
+    rootRef.child("leaderboards_hardcore").queryOrdered(byChild: "highscore").observe(.value, with: {snapshot in
       
       self.contentLeaderboardsHardcore = []
       
       for snap in snapshot.children.allObjects as! [DataSnapshot] {
         let name = snap.key
         
-        if let rankedBy = snap.value as? [String : Any] {
+        if let rankedBy = snap.value as? [String: Any] {
           self.contentLeaderboardsHardcore.append(Content(sName: "\(name)", sPoints: rankedBy["highscore"] as! Int))
         }
       }
@@ -129,7 +129,7 @@ class LeadearBoardViewController: UIViewController, GKGameCenterControllerDelega
 extension LeadearBoardViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.content.count-1
+    return self.content.count - 1
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -146,7 +146,7 @@ extension LeadearBoardViewController: UITableViewDelegate, UITableViewDataSource
     
     if self.content[indexPath.row].sName! == nameUser {
       cell.backgroundColor = nil
-      cell.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)
+      cell.backgroundColor = UIColor(red: 232 / 255, green: 45 / 255, blue: 111 / 255, alpha: 100)
     } else {
       cell.backgroundColor = nil
     }

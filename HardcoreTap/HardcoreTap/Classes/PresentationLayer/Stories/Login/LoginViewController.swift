@@ -26,7 +26,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
     //Если не заполнили поля
     if textBox.text!.isEmpty {
       //Меняем цвет плейсхолдеров
-      textBox.attributedPlaceholder = NSAttributedString(string: "Придумайте никнейм", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100)])
+      textBox.attributedPlaceholder = NSAttributedString(string: "Придумайте никнейм", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 232 / 255, green: 45 / 255, blue: 111 / 255, alpha: 100)])
     } else {
       //скрываем клавиатуру
       self.view.endEditing(false)
@@ -52,7 +52,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
       startPlayButton.clearShadow(nameButton: startPlayButton)
       return
     }
-    startPlayButton.layer.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100).cgColor
+    startPlayButton.layer.backgroundColor = UIColor(red: 232 / 255, green: 45 / 255, blue: 111 / 255, alpha: 100).cgColor
     startPlayButton.addShadow()
     return
   }

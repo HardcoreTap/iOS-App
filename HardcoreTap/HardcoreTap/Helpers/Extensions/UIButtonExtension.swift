@@ -11,7 +11,7 @@ import UIKit
 extension UIButton {
   
   func addShadow() {
-    layer.shadowColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 0.5).cgColor
+    layer.shadowColor = UIColor(red: 232 / 255, green: 45 / 255, blue: 111 / 255, alpha: 0.5).cgColor
     layer.shadowOffset = CGSize(width: 2, height: 8)
     layer.shadowOpacity = 1.0
     layer.shadowRadius = 10.0

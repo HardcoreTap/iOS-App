@@ -43,7 +43,7 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
     cell.titleLabel.text = titleSetting[indexPath.row]
     let switchView = UISwitch(frame: .zero)
     switchView.setOn(userDefaults.bool(forKey: "bgSound"), animated: true)
-    switchView.onTintColor = UIColor(red: 223/255, green: 15/255, blue: 92/255, alpha: 1)
+    switchView.onTintColor = UIColor(red: 223 / 255, green: 15 / 255, blue: 92 / 255, alpha: 1)
     switchView.tag = indexPath.row
     switchView.addTarget(self, action: #selector(switchChanged(_:)), for: .valueChanged)
     cell.accessoryView = switchView

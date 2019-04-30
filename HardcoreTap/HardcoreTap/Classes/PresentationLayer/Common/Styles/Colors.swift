@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
   
-  static let htAlert = UIColor(red: 102/255, green: 69/255, blue: 126/255, alpha: 1.0)
+  static let htAlert = UIColor(red: 102 / 255, green: 69 / 255, blue: 126 / 255, alpha: 1.0)
 
   convenience init(hexString: String) {
     let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
