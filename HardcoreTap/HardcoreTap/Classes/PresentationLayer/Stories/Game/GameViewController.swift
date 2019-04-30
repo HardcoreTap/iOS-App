@@ -27,6 +27,8 @@ class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterC
     }
   }
   
+  var isHarcoreMode: Bool = false
+
   var timer = Timer()
   var flPlaying: Bool = false // Флаг запуска игры
   var bgSound: Bool = true // Флаг проигрывание музыки
@@ -66,7 +68,6 @@ class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterC
   @IBOutlet weak var shareButton: UIButton!
   @IBOutlet weak var helloButtonWithPlayerName: UIButton!
   @IBOutlet weak var hardcoreLabel: UIButton!
-  
   
   var nameFromUserDefaults = " "
   var highscoreFromUserDefaults: Int = 0
@@ -136,7 +137,7 @@ class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterC
     view.addGestureRecognizer(tapGR)
     
     // Тень у кнопки
-    startGameButton.addShadow(nameButton: startGameButton)
+    startGameButton.addShadow()
     
     self.navigationItem.title = "HardcoreTap"
     self.helloButtonWithPlayerName.setTitle("Привет, \(self.nameFromUserDefaults)", for: .normal)
@@ -165,7 +166,7 @@ class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterC
   
   func authPlayerInGameCenter() {
     let localePlayer: GKLocalPlayer = GKLocalPlayer.local
-    localePlayer.authenticateHandler = {(viewController, error) -> Void in
+    localePlayer.authenticateHandler = {viewController, error -> Void in
       if viewController != nil {
         self.present(viewController!, animated: true, completion: nil)
       } else if localePlayer.isAuthenticated {
@@ -173,7 +174,7 @@ class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterC
         self.gcEnable = true
         
         // Get the default leaderboard ID
-        localePlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardString, error) in
+        localePlayer.loadDefaultLeaderboardIdentifier(completionHandler: { leaderboardString, error in
           if error == nil {
             self.gcDefaultLeaderboard = leaderboardString!
           }
@@ -393,8 +394,10 @@ class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterC
       highScoreLabel.text = "Ваш рекорд: \(highscoreFromUserDefaults)"
       UserDefaults.standard.set(highscoreFromUserDefaults, forKey: "highscore_normal")
       
-      let alertBackgroundColor = UIColor(red: 102/255, green: 69/255, blue: 126/255, alpha: 1.0)
-      appDelegate.simpleMsg(title: "Поздравляем!", text: "Вы побили рекорд. Ваш новый результат \(count) очков", colorBg: alertBackgroundColor, colorText: .white, iconText: "🎉")
+      Message.shared.showMessage(
+        with: "🎉 Поздравляем!\nВы побили рекорд. Ваш новый результат \(count) очков",
+        type: .success
+      )
     }
     
     let scoreItem = [

@@ -13,6 +13,8 @@ class AboutGameViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var aboutGameLabel: UILabel!
   
+  let appID = "1334647124"
+
   var sectionTitles = ["Поддержите разработчиков", "Расскажите о нас", "Мы на GitHub"]
   var sectionContent = [
     ["Отключить рекламу в приложении"],
