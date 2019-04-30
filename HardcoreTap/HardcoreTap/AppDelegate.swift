@@ -9,11 +9,6 @@
 import UIKit
 import Firebase
 import IQKeyboardManagerSwift
-//import GoogleMobileAds
-
-//let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-//let appID = "1334647124"
-//var isHarcoreMode: Bool = false
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
