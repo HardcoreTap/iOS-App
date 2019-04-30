@@ -19,13 +19,9 @@ class SettingsViewController: UIViewController {
   
   let userDefaults = UserDefaults.standard
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    disableAdButton.addShadow(nameButton: disableAdButton)
-  }
-  
   override func viewDidLoad() {
     super.viewDidLoad()
+    disableAdButton.addShadow()
     view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     tableView.tableFooterView = UIView(frame: CGRect.zero)
     //		userDefaults.set(bgSound, forKey: "bgSound")

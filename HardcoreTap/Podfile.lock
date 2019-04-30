@@ -103,10 +103,13 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.7.0)
   - NVActivityIndicatorView/Presenter (4.7.0)
   - Protobuf (3.7.0)
+  - QuickLayout (3.0.0)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
   - SnapKit (5.0.0)
+  - SwiftEntryKit (1.0.1):
+    - QuickLayout (= 3.0.0)
   - SwifterSwift (5.0.0):
     - SwifterSwift/AppKit (= 5.0.0)
     - SwifterSwift/CoreGraphics (= 5.0.0)
@@ -127,9 +130,6 @@ PODS:
   - SwifterSwift/SwiftStdlib (5.0.0)
   - SwifterSwift/UIKit (5.0.0)
   - SwiftLint (0.31.0)
-  - SwiftMessages (6.0.2):
-    - SwiftMessages/App (= 6.0.2)
-  - SwiftMessages/App (6.0.2)
 
 DEPENDENCIES:
   - BonMot
@@ -143,9 +143,9 @@ DEPENDENCIES:
   - NVActivityIndicatorView
   - R.swift
   - SnapKit
+  - SwiftEntryKit
   - SwifterSwift
   - SwiftLint
-  - SwiftMessages
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -171,12 +171,13 @@ SPEC REPOS:
     - nanopb
     - NVActivityIndicatorView
     - Protobuf
+    - QuickLayout
     - R.swift
     - R.swift.Library
     - SnapKit
+    - SwiftEntryKit
     - SwifterSwift
     - SwiftLint
-    - SwiftMessages
 
 SPEC CHECKSUMS:
   BonMot: 0104d1b4eda54f4a4b7393d6559539ef25498fbd
@@ -201,13 +202,14 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SwiftEntryKit: 3f55c0b8e676afe24a3703237bcac68372891c56
   SwifterSwift: 96f90594b370802f01647c2b1229c74a84ffafee
   SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
-  SwiftMessages: 8b3cc68dba2f1c91aac1a74c90b10287aac35371
 
-PODFILE CHECKSUM: 65dce469773220039a1a9a1c11dc427bf294ace2
+PODFILE CHECKSUM: a9f109929d3aaa8eae0ed34be1a6ffeb04c0d1d7
 
 COCOAPODS: 1.6.1

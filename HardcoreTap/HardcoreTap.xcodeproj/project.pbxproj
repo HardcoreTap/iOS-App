@@ -10,7 +10,7 @@
 		3C092B021FB76CE20019687C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */; };
 		3C092B031FB76CE20019687C /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */; };
 		3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B051FB771EF0019687C /* RulesViewController.swift */; };
-		3C092B0A1FB774010019687C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B091FB774010019687C /* TabBarController.swift */; };
+		3C092B0A1FB774010019687C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B091FB774010019687C /* BaseTabBarController.swift */; };
 		3C1B77361FBEB85100A4ADB3 /* SFUIDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B77331FBEB84B00A4ADB3 /* SFUIDisplay-Medium.otf */; };
 		3C1B77371FBEB85100A4ADB3 /* SFUIDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B77341FBEB84D00A4ADB3 /* SFUIDisplay-Regular.otf */; };
 		3C1B77381FBEB85100A4ADB3 /* SFUIDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B77351FBEB84F00A4ADB3 /* SFUIDisplay-Bold.otf */; };
@@ -42,6 +42,10 @@
 		8DC8952820558E2E0058876D /* HardcoreTapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC8952720558E2E0058876D /* HardcoreTapUITests.swift */; };
 		8DC89531205590B90058876D /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC8952F205590B90058876D /* SnapshotHelper.swift */; };
 		92269D36383B1F38F5969B3E /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */; };
+		FDFFEFE2227831AD00AB8ACA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE1227831AD00AB8ACA /* Message.swift */; };
+		FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE3227832DD00AB8ACA /* Colors.swift */; };
+		FDFFEFE82278345D00AB8ACA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE72278345D00AB8ACA /* R.generated.swift */; };
+		FDFFEFEA2278346B00AB8ACA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE92278346B00AB8ACA /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +63,7 @@
 		3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		3C092B051FB771EF0019687C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
-		3C092B091FB774010019687C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3C092B091FB774010019687C /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		3C1B77331FBEB84B00A4ADB3 /* SFUIDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Medium.otf"; sourceTree = "<group>"; };
 		3C1B77341FBEB84D00A4ADB3 /* SFUIDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Regular.otf"; sourceTree = "<group>"; };
 		3C1B77351FBEB84F00A4ADB3 /* SFUIDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Bold.otf"; sourceTree = "<group>"; };
@@ -96,6 +100,10 @@
 		8DC8952920558E2E0058876D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC8952F205590B90058876D /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		9A8DBFE64EDF162FA295ADF2 /* Pods-HardcoreTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.debug.xcconfig"; sourceTree = "<group>"; };
+		FDFFEFE1227831AD00AB8ACA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FDFFEFE3227832DD00AB8ACA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		FDFFEFE72278345D00AB8ACA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = HardcoreTap/Resources/Generated/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		FDFFEFE92278346B00AB8ACA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +214,6 @@
 			children = (
 				8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */,
 				73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */,
-				8DAA24751FC7F80600282E06 /* RateManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,6 +310,7 @@
 		FD1631542272F1EB0040FC3F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8DAA24751FC7F80600282E06 /* RateManager.swift */,
 				8D4D773F20F10C7F001F3E91 /* Extensions */,
 			);
 			path = Helpers;
@@ -319,6 +327,7 @@
 		FD1631562272F1FD0040FC3F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FDFFEFE62278340100AB8ACA /* Generated */,
 				3C52CAE71FBBC873004E31B8 /* Audio */,
 				3C6EECF61FBBBBBA00DCFC10 /* Fonts */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
@@ -357,6 +366,7 @@
 		FD16315A2272F2470040FC3F /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				FDFFEFE3227832DD00AB8ACA /* Colors.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -364,6 +374,7 @@
 		FD16315B2272F24E0040FC3F /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				FDFFEFE1227831AD00AB8ACA /* Message.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -371,9 +382,19 @@
 		FD16315C2272F29A0040FC3F /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				3C092B091FB774010019687C /* TabBarController.swift */,
+				FDFFEFE92278346B00AB8ACA /* BaseView.swift */,
+				3C092B091FB774010019687C /* BaseTabBarController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		FDFFEFE62278340100AB8ACA /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				FDFFEFE72278345D00AB8ACA /* R.generated.swift */,
+			);
+			name = Generated;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,11 +405,13 @@
 			buildConfigurationList = 3CE12C0B1FB62FEE00945352 /* Build configuration list for PBXNativeTarget "HardcoreTap" */;
 			buildPhases = (
 				2DF35AAE9488F785E4CBD92D /* [CP] Check Pods Manifest.lock */,
+				FDFFEFE52278335B00AB8ACA /* R.Swift */,
 				3CE12BF51FB62FED00945352 /* Sources */,
 				3CE12BF61FB62FED00945352 /* Frameworks */,
 				3CE12BF71FB62FED00945352 /* Resources */,
 				8D0B13C81FD2DC11009FEBA6 /* ShellScript */,
 				AD9DC2D863033CC4501DC800 /* [CP] Embed Pods Frameworks */,
+				FDFFEFE02278310A00AB8ACA /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -543,9 +566,10 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -559,9 +583,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -570,6 +595,44 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FDFFEFE02278310A00AB8ACA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		FDFFEFE52278335B00AB8ACA /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/HardcoreTap/Resources/Generated/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/HardcoreTap/Resources/Generated/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -581,16 +644,20 @@
 				3CE12C151FB663A000945352 /* LeadearBoardViewController.swift in Sources */,
 				8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */,
 				73BC136B1FB876A200BDB8B0 /* UIButtonExtension.swift in Sources */,
+				FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */,
 				3CE12C171FB6666200945352 /* LeadearBoardCell.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* GameViewController.swift in Sources */,
 				8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */,
 				8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */,
-				3C092B0A1FB774010019687C /* TabBarController.swift in Sources */,
+				3C092B0A1FB774010019687C /* BaseTabBarController.swift in Sources */,
 				8D4D774A20F10E7F001F3E91 /* Content.swift in Sources */,
 				3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */,
+				FDFFEFE82278345D00AB8ACA /* R.generated.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
 				3CE12C111FB643CB00945352 /* LoginViewController.swift in Sources */,
 				8D0B2BF11FC89BA400CE102C /* AboutGameViewController.swift in Sources */,
+				FDFFEFE2227831AD00AB8ACA /* Message.swift in Sources */,
+				FDFFEFEA2278346B00AB8ACA /* BaseView.swift in Sources */,
 				8D0B2BED1FC89B3700CE102C /* SettingsViewController.swift in Sources */,
 				739F733F200B98FE0073C198 /* SettingsCell.swift in Sources */,
 			);

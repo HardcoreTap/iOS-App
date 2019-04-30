@@ -8,16 +8,12 @@
 
 import UIKit
 import Firebase
-import SwiftMessages
-import Fabric
-import Crashlytics
 import IQKeyboardManagerSwift
 //import GoogleMobileAds
 
-let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-let appID = "1334647124"
-
-var isHarcoreMode: Bool = false
+//let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//let appID = "1334647124"
+//var isHarcoreMode: Bool = false
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -92,20 +88,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
       defaults.synchronize()
     }
-  }
-  
-  func simpleMsg(title: String, text: String, colorBg: UIColor, colorText: UIColor, iconText: String) {
-    let view = MessageView.viewFromNib(layout: .centeredView)
-    view.configureTheme(.warning)
-    view.configureContent(title: title, body: text, iconImage: nil, iconText: iconText, buttonImage: nil, buttonTitle: nil, buttonTapHandler: nil)
-    view.button?.isHidden = true
-    view.configureDropShadow()
-    view.configureTheme(backgroundColor: colorBg, foregroundColor: colorText)
-    view.backgroundView.layer.cornerRadius = 10
-    var config = SwiftMessages.defaultConfig
-    config.presentationStyle = .bottom
-    config.duration = .seconds(seconds: 2)
-    SwiftMessages.show(config: config, view: view)
   }
   
 }

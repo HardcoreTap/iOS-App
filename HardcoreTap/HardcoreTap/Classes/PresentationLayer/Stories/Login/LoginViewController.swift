@@ -3,6 +3,7 @@
 //
 
 import UIKit
+
 class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate {
   
   var userID: String = ""
@@ -52,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
       return
     }
     startPlayButton.layer.backgroundColor = UIColor(red: 232/255, green: 45/255, blue: 111/255, alpha: 100).cgColor
-    startPlayButton.addShadow(nameButton: startPlayButton)
+    startPlayButton.addShadow()
     return
   }
   

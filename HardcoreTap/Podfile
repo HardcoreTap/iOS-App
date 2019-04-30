@@ -18,7 +18,7 @@ target 'HardcoreTap' do
   pod 'Fabric'
   pod 'Crashlytics'
   
-  pod 'SwiftMessages'
+  pod 'SwiftEntryKit'
 #  pod 'Siren'
   pod 'NVActivityIndicatorView'
   pod 'IQKeyboardManagerSwift'
