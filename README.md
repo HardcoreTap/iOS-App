@@ -1,5 +1,5 @@
 # HardcoreTap
-![Swift Support](https://img.shields.io/badge/Swift-4.2-orange.svg)
+![Swift Support](https://img.shields.io/badge/Swift-5.0-orange.svg)
 ![iOS Support](https://img.shields.io/badge/iOS-11.0%2B-yellow.svg)
 
 _Игра реализована в рамках хакатона от Swiftbook.ru (2 место)_
@@ -9,3 +9,7 @@ _Игра реализована в рамках хакатона от Swiftbook
 
 ### Скриншоты экрана 
 <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/01.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/02.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/03.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/04.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/05.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/06.png" width="250">
+
+### Design
+![Figma](https://www.figma.com/file/XUAIE93APxkboRRfqLdNMlqJ/HardcoreTap?node-id=7%3A315)
+
