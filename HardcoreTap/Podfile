@@ -1,4 +1,4 @@
-platform :ios, '11.0'
+platform :ios, '13.0'
 
 target 'HardcoreTap' do
 
@@ -19,7 +19,6 @@ target 'HardcoreTap' do
   pod 'Crashlytics'
   
   pod 'SwiftEntryKit'
-#  pod 'Siren'
   pod 'NVActivityIndicatorView'
   pod 'IQKeyboardManagerSwift'
 
