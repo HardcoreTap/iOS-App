@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var name: String = ""
+    @State var nickname: String = ""
     
     var body: some View {
         VStack {
@@ -18,7 +18,7 @@ struct LoginView: View {
             Text("Добро пожаловать!")
                 .font(.title)
                 .padding()
-            TextField("Придумайте себе имя", text: $name)
+            TextField("Придумайте себе имя", text: $nickname)
                 .padding()
             Button(action: {}) { Text("Начать игру") }
                 .padding()

@@ -22,7 +22,7 @@
         <!--HardcoreTap-->
         <scene sceneID="rtq-bR-eC2">
             <objects>
-                <viewController storyboardIdentifier="MainGameWindow" id="bow-2t-fyi" customClass="GameViewController" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainGameWindow" id="bow-2t-fyi" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VMo-Qr-o3W"/>
                         <viewControllerLayoutGuide type="bottom" id="9SF-t2-sgv"/>
@@ -587,7 +587,7 @@
         <!--Таблица лидеров-->
         <scene sceneID="hlx-dD-ObS">
             <objects>
-                <viewController storyboardIdentifier="leaderBoard" id="kS2-IT-05Y" customClass="LeadearBoardViewController" customModule="HardcoreTap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leaderBoard" id="kS2-IT-05Y" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gZw-Yd-0b4"/>
                         <viewControllerLayoutGuide type="bottom" id="l9J-bd-nG1"/>
