@@ -14,10 +14,6 @@ import GameKit
 
 class LeadearBoardViewController: UIViewController, GKGameCenterControllerDelegate {
   
-  func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-    gameCenterViewController.dismiss(animated: true, completion: nil)
-  }
-  
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var segmentedControlLeaderBoard: UISegmentedControl!
   @IBOutlet weak var loadIndicator: NVActivityIndicatorView!
@@ -31,14 +27,12 @@ class LeadearBoardViewController: UIViewController, GKGameCenterControllerDelega
   
   var nameUser: String?
   
+  func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+    gameCenterViewController.dismiss(animated: true, completion: nil)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    self.navigationController?.navigationBar.shadowImage = UIImage()
-    self.navigationController?.navigationBar.isTranslucent = true
-    self.navigationController?.view.backgroundColor = .clear
-    view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     
     if let nameUser = UserDefaults.standard.value(forKey: "userNAME") as? String {
       self.nameUser = nameUser

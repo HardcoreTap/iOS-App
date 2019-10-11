@@ -15,12 +15,5 @@ extension UIViewController {
       UIApplication.shared.open(url)
     }
   }
-  
-  func makeTransparentNavigationBar() {
-    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    navigationController?.navigationBar.shadowImage = UIImage()
-    navigationController?.navigationBar.isTranslucent = true
-    navigationController?.view.backgroundColor = .clear
-    view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
-  }
+
 }

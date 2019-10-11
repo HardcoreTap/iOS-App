@@ -22,9 +22,7 @@ class SettingsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     disableAdButton.addShadow()
-    view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     tableView.tableFooterView = UIView(frame: CGRect.zero)
-    //		userDefaults.set(bgSound, forKey: "bgSound")
   }
   
   @IBAction func disableAdButtonDidTapped(_ sender: Any) {

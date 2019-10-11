@@ -8,6 +8,6 @@
 
 import Foundation
 
-typealias Font = R.font
-typealias Image = R.image
+//typealias Font = R.font
+//typealias Image = R.image
 typealias File = R.file

@@ -7,18 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C092B021FB76CE20019687C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */; };
-		3C092B031FB76CE20019687C /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */; };
+		36CEAB2B234DFD6800812E09 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEAB2A234DFD6800812E09 /* LoginView.swift */; };
 		3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B051FB771EF0019687C /* RulesViewController.swift */; };
 		3C092B0A1FB774010019687C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B091FB774010019687C /* BaseTabBarController.swift */; };
-		3C1B77361FBEB85100A4ADB3 /* SFUIDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B77331FBEB84B00A4ADB3 /* SFUIDisplay-Medium.otf */; };
-		3C1B77371FBEB85100A4ADB3 /* SFUIDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B77341FBEB84D00A4ADB3 /* SFUIDisplay-Regular.otf */; };
-		3C1B77381FBEB85100A4ADB3 /* SFUIDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B77351FBEB84F00A4ADB3 /* SFUIDisplay-Bold.otf */; };
-		3C6EED021FBBC32E00DCFC10 /* BNBOLD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECFB1FBBC05600DCFC10 /* BNBOLD.ttf */; };
-		3C6EED031FBBC32E00DCFC10 /* BNBOOK.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECFC1FBBC05800DCFC10 /* BNBOOK.ttf */; };
-		3C6EED041FBBC32E00DCFC10 /* BNLIGHT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECF81FBBC05100DCFC10 /* BNLIGHT.ttf */; };
-		3C6EED051FBBC32E00DCFC10 /* BNREGULAR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECFA1FBBC05400DCFC10 /* BNREGULAR.ttf */; };
-		3C6EED061FBBC32E00DCFC10 /* BNTHUN.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C6EECF91FBBC05200DCFC10 /* BNTHUN.ttf */; };
 		3CA83B8B1FBA5D7B0046ED8D /* bmp60.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3CA83B8A1FBA5D7B0046ED8D /* bmp60.mp3 */; };
 		3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12BFC1FB62FED00945352 /* AppDelegate.swift */; };
 		3CE12BFF1FB62FEE00945352 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12BFE1FB62FEE00945352 /* GameViewController.swift */; };
@@ -60,18 +51,10 @@
 
 /* Begin PBXFileReference section */
 		1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		369F7410234DD3010062A29E /* HardcoreTap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HardcoreTap.entitlements; sourceTree = "<group>"; };
+		36CEAB2A234DFD6800812E09 /* LoginView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		3C092B051FB771EF0019687C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		3C092B091FB774010019687C /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		3C1B77331FBEB84B00A4ADB3 /* SFUIDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Medium.otf"; sourceTree = "<group>"; };
-		3C1B77341FBEB84D00A4ADB3 /* SFUIDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Regular.otf"; sourceTree = "<group>"; };
-		3C1B77351FBEB84F00A4ADB3 /* SFUIDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIDisplay-Bold.otf"; sourceTree = "<group>"; };
-		3C6EECF81FBBC05100DCFC10 /* BNLIGHT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNLIGHT.ttf; sourceTree = "<group>"; };
-		3C6EECF91FBBC05200DCFC10 /* BNTHUN.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNTHUN.ttf; sourceTree = "<group>"; };
-		3C6EECFA1FBBC05400DCFC10 /* BNREGULAR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNREGULAR.ttf; sourceTree = "<group>"; };
-		3C6EECFB1FBBC05600DCFC10 /* BNBOLD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNBOLD.ttf; sourceTree = "<group>"; };
-		3C6EECFC1FBBC05800DCFC10 /* BNBOOK.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BNBOOK.ttf; sourceTree = "<group>"; };
 		3CA83B8A1FBA5D7B0046ED8D /* bmp60.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bmp60.mp3; sourceTree = "<group>"; };
 		3CE12BF91FB62FED00945352 /* HardcoreTap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HardcoreTap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE12BFC1FB62FED00945352 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,23 +118,6 @@
 			path = Audio;
 			sourceTree = "<group>";
 		};
-		3C6EECF61FBBBBBA00DCFC10 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				3C1B77351FBEB84F00A4ADB3 /* SFUIDisplay-Bold.otf */,
-				3C1B77331FBEB84B00A4ADB3 /* SFUIDisplay-Medium.otf */,
-				3C1B77341FBEB84D00A4ADB3 /* SFUIDisplay-Regular.otf */,
-				3C6EECFB1FBBC05600DCFC10 /* BNBOLD.ttf */,
-				3C6EECFC1FBBC05800DCFC10 /* BNBOOK.ttf */,
-				3C6EECF81FBBC05100DCFC10 /* BNLIGHT.ttf */,
-				3C6EECFA1FBBC05400DCFC10 /* BNREGULAR.ttf */,
-				3C6EECF91FBBC05200DCFC10 /* BNTHUN.ttf */,
-				3C092B001FB76CE20019687C /* OpenSans-Regular.ttf */,
-				3C092B011FB76CE20019687C /* OpenSans-Semibold.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		3CE12BF01FB62FED00945352 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +143,7 @@
 		3CE12BFB1FB62FED00945352 /* HardcoreTap */ = {
 			isa = PBXGroup;
 			children = (
+				369F7410234DD3010062A29E /* HardcoreTap.entitlements */,
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
 				FD1631532272F1E30040FC3F /* Classes */,
 				FD1631542272F1EB0040FC3F /* Helpers */,
@@ -265,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				3CE12C101FB643CB00945352 /* LoginViewController.swift */,
+				36CEAB2A234DFD6800812E09 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -329,7 +297,6 @@
 			children = (
 				FDFFEFE62278340100AB8ACA /* Generated */,
 				3C52CAE71FBBC873004E31B8 /* Audio */,
-				3C6EECF61FBBBBBA00DCFC10 /* Fonts */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -493,21 +460,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C1B77371FBEB85100A4ADB3 /* SFUIDisplay-Regular.otf in Resources */,
-				3C6EED021FBBC32E00DCFC10 /* BNBOLD.ttf in Resources */,
 				8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */,
-				3C6EED031FBBC32E00DCFC10 /* BNBOOK.ttf in Resources */,
-				3C6EED041FBBC32E00DCFC10 /* BNLIGHT.ttf in Resources */,
-				3C6EED051FBBC32E00DCFC10 /* BNREGULAR.ttf in Resources */,
-				3C6EED061FBBC32E00DCFC10 /* BNTHUN.ttf in Resources */,
 				3CE12C071FB62FEE00945352 /* LaunchScreen.storyboard in Resources */,
 				3CE12C041FB62FEE00945352 /* Assets.xcassets in Resources */,
-				3C092B021FB76CE20019687C /* OpenSans-Regular.ttf in Resources */,
-				3C1B77381FBEB85100A4ADB3 /* SFUIDisplay-Bold.otf in Resources */,
-				3C092B031FB76CE20019687C /* OpenSans-Semibold.ttf in Resources */,
 				3CE12C021FB62FEE00945352 /* Main.storyboard in Resources */,
 				3CA83B8B1FBA5D7B0046ED8D /* bmp60.mp3 in Resources */,
-				3C1B77361FBEB85100A4ADB3 /* SFUIDisplay-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +616,7 @@
 				FDFFEFE2227831AD00AB8ACA /* Message.swift in Sources */,
 				FDFFEFEA2278346B00AB8ACA /* BaseView.swift in Sources */,
 				8D0B2BED1FC89B3700CE102C /* SettingsViewController.swift in Sources */,
+				36CEAB2B234DFD6800812E09 /* LoginView.swift in Sources */,
 				739F733F200B98FE0073C198 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -821,6 +779,7 @@
 			baseConfigurationReference = 9A8DBFE64EDF162FA295ADF2 /* Pods-HardcoreTap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HardcoreTap/HardcoreTap.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -832,7 +791,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -842,6 +802,7 @@
 			baseConfigurationReference = 63B0CB57EA772756F3D03DA9 /* Pods-HardcoreTap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HardcoreTap/HardcoreTap.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
@@ -853,7 +814,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

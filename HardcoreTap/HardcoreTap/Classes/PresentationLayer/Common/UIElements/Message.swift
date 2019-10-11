@@ -43,7 +43,7 @@ struct Message {
   static let shared = Message()
   
   func showMessage(with text: String, type: MessageType) {
-    let titleFont = Font.bebasNeueBold(size: 15) ?? UIFont.systemFont(ofSize: 15)
+    let titleFont = UIFont.boldSystemFont(ofSize: 15)
     var attributes = EKAttributes.topToast
     attributes.entryBackground = .color(color: EKColor(type.color))
     attributes.popBehavior = .animated(animation: .init(translate: .init(duration: 0.3), scale: .init(from: 1, to: 0.7, duration: 0.7)))

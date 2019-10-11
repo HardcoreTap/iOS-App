@@ -103,10 +103,7 @@ class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterC
     bannerView.rootViewController = self
     bannerView.load(GADRequest())
     bannerView.delegate = self
-    
-    //Косметика navbar и фон
-    toDoTransperentAndBackgroundImage()
-    
+
     // проверка проигрывания фоновой музыки
     if userDefaults.bool(forKey: "bgSound") {
       bgSound = true
@@ -423,13 +420,6 @@ class GameViewController: UIViewController, GADBannerViewDelegate, GKGameCenterC
     let activityVC = UIActivityViewController(activityItems: ["Хэй, мой рекорд в HardcoreTap: \(self.highscoreFromUserDefaults). Попробуй набрать больше;) appstore.com/hardcoretap"], applicationActivities: nil)
     activityVC.popoverPresentationController?.sourceView = self.view
     self.present(activityVC, animated: true, completion: nil)
-  }
-  
-  func toDoTransperentAndBackgroundImage() {
-    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-    self.navigationController?.navigationBar.isTranslucent = true
-    self.navigationController?.view.backgroundColor = .clear
-    view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
   }
   
   /// Tells the delegate an ad request loaded an ad.

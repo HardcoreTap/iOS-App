@@ -14,7 +14,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIGestureRecog
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    makeTransparentNavigationBar()
     setupAddTargetIsNotEmptyTextFields()
   }
   
