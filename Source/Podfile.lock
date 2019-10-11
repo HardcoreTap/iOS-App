@@ -123,8 +123,7 @@ PODS:
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
-  - SnapKit (5.0.1)
-  - SwiftEntryKit (1.1.4):
+  - SwiftEntryKit (1.2.0):
     - QuickLayout (= 3.0.0)
   - SwifterSwift (5.1.0):
     - SwifterSwift/AppKit (= 5.1.0)
@@ -160,7 +159,6 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - NVActivityIndicatorView
   - R.swift
-  - SnapKit
   - SwiftEntryKit
   - SwifterSwift
   - SwiftLint
@@ -197,7 +195,6 @@ SPEC REPOS:
     - QuickLayout
     - R.swift
     - R.swift.Library
-    - SnapKit
     - SwiftEntryKit
     - SwifterSwift
     - SwiftLint
@@ -233,11 +230,10 @@ SPEC CHECKSUMS:
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  SwiftEntryKit: fa997eb1c45afb5cf27ab0145e680759dd7152ca
+  SwiftEntryKit: 8303faf480f405b57df16b6fc2b251647cf40349
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
   SwiftLint: 5553187048b900c91aa03552807681bb6b027846
 
-PODFILE CHECKSUM: 70396f890d08382bd312ccb2dc1895cdd3ff0f9e
+PODFILE CHECKSUM: 9479f8b3b9b3580c180a4e1ce6e0ffea56052317
 
 COCOAPODS: 1.8.3
