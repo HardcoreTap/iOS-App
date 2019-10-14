@@ -7,40 +7,20 @@
 //
 
 import SwiftUI
-//
-//struct TabView : View {
-//
-//    var body: some View {
-//        TabbedView() {
-//            InboxList()
-//                .tag(1)
-//
-//            PostsList()
-//                .tag(2)
-//
-//            Spacer()
-//                .tag(3)
-//        }
-//    }
-//}
 
-struct AppTabbedView: View {
-
-    @State private var selection = 3
-
-    init() {
-        UITabBar.appearance().backgroundColor = UIColor.blue
-    }
+struct BaseTabView: View {
+    
+    @State private var selection = 1
     
     var body: some View {
-        TabView (selection:$selection){
+        TabView (selection: $selection) {
             Text("The First Tab")
                 .tabItem {
                     Image(systemName: "1.square.fill")
                     Text("First")
             }
             .tag(1)
-            Text("Another Tab")
+            Text("The Second Tab")
                 .tabItem {
                     Image(systemName: "2.square.fill")
                     Text("Second")

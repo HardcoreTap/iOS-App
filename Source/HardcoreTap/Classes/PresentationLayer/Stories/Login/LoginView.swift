@@ -10,25 +10,39 @@ import SwiftUI
 
 struct LoginView: View {
     @State var nickname: String = ""
+    @State var didTapStartButton = false
     
     var body: some View {
-        VStack {
-            Image("icon")
-                .padding()
-            Text("Добро пожаловать!")
-                .font(.title)
-                .padding()
-            TextField("Придумайте себе имя", text: $nickname)
-                .padding()
-            Button(action: {}) { Text("Начать игру") }
-                .padding()
-        }
+        NavigationView {
+            VStack {
+                Image("icon")
+                    .padding()
+                Text("Добро пожаловать!")
+                    .font(.title)
+                    .padding()
+                TextField("Придумайте себе имя", text: $nickname)
+                    .padding()
+                Button(action: {
+                    self.didTapStartButton = true
+                }) { Text("Начать игру") }
+                    .foregroundColor(.red)
+                    .padding()
+            }
+            .sheet(isPresented: $didTapStartButton) {
+                BaseTabView()
+            }
+        }.navigationBarTitle("HardcoreTap")
     }
     
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        Group {
+            LoginView()
+                .environment(\.colorScheme, .dark)
+            LoginView()
+                .environment(\.colorScheme, .light)
+        }
     }
 }
