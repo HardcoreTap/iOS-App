@@ -9,11 +9,8 @@
 import Foundation
 
 struct Content {
-  var sName: String!
-  var sPoints: Int!
+    
+  var name: String
+  var points: Int
   
-  init(sName: String, sPoints: Int) {
-    self.sName = sName
-    self.sPoints = sPoints
-  }
 }

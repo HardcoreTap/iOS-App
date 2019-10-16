@@ -13,9 +13,7 @@ import IQKeyboardManagerSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        FirebaseApp.configure()
-//        GADMobileAds.sharedInstance().start(completionHandler: nil)        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {    
         RateManager.incrementCount()
         IQKeyboardManager.shared.enable = true
         return true

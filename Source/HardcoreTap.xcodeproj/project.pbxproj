@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36668D0A235734D800EEC8BC /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36668D09235734D800EEC8BC /* LeaderboardView.swift */; };
+		36668D0C235739FF00EEC8BC /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36668D0B235739FF00EEC8BC /* RulesView.swift */; };
 		369243452350D4D800EA40C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369243442350D4D800EA40C9 /* SceneDelegate.swift */; };
 		369243472350D98B00EA40C9 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369243462350D98B00EA40C9 /* TabView.swift */; };
 		36CEAB2B234DFD6800812E09 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEAB2A234DFD6800812E09 /* LoginView.swift */; };
@@ -20,7 +22,6 @@
 		3CE12C071FB62FEE00945352 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE12C051FB62FEE00945352 /* LaunchScreen.storyboard */; };
 		3CE12C111FB643CB00945352 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C101FB643CB00945352 /* LoginViewController.swift */; };
 		3CE12C151FB663A000945352 /* LeadearBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C141FB663A000945352 /* LeadearBoardViewController.swift */; };
-		3CE12C171FB6666200945352 /* LeadearBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE12C161FB6666200945352 /* LeadearBoardCell.swift */; };
 		739F733F200B98FE0073C198 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739F733E200B98FE0073C198 /* SettingsCell.swift */; };
 		73BC136B1FB876A200BDB8B0 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */; };
 		8D0B2BED1FC89B3700CE102C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */; };
@@ -53,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36668D09235734D800EEC8BC /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		36668D0B235739FF00EEC8BC /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		369243442350D4D800EA40C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		369243462350D98B00EA40C9 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		369F7410234DD3010062A29E /* HardcoreTap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HardcoreTap.entitlements; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		3CE12C081FB62FEE00945352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE12C101FB643CB00945352 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3CE12C141FB663A000945352 /* LeadearBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadearBoardViewController.swift; sourceTree = "<group>"; };
-		3CE12C161FB6666200945352 /* LeadearBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadearBoardCell.swift; sourceTree = "<group>"; };
 		63B0CB57EA772756F3D03DA9 /* Pods-HardcoreTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.release.xcconfig"; sourceTree = "<group>"; };
 		739F733E200B98FE0073C198 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -202,8 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				3CE12C141FB663A000945352 /* LeadearBoardViewController.swift */,
-				3CE12C161FB6666200945352 /* LeadearBoardCell.swift */,
 				8D4D774920F10E7F001F3E91 /* Content.swift */,
+				36668D09235734D800EEC8BC /* LeaderboardView.swift */,
 			);
 			path = Leaderboard;
 			sourceTree = "<group>";
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				3C092B051FB771EF0019687C /* RulesViewController.swift */,
+				36668D0B235739FF00EEC8BC /* RulesView.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -575,7 +578,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/HardcoreTap/Resources/Generated/R.generated.swift",
+				$SRCROOT/HardcoreTap/Resources/Generated/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -593,7 +596,6 @@
 				8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */,
 				73BC136B1FB876A200BDB8B0 /* UIButtonExtension.swift in Sources */,
 				FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */,
-				3CE12C171FB6666200945352 /* LeadearBoardCell.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* GameViewController.swift in Sources */,
 				8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */,
 				8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */,
@@ -603,6 +605,8 @@
 				3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */,
 				FDFFEFE82278345D00AB8ACA /* R.generated.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
+				36668D0A235734D800EEC8BC /* LeaderboardView.swift in Sources */,
+				36668D0C235739FF00EEC8BC /* RulesView.swift in Sources */,
 				3CE12C111FB643CB00945352 /* LoginViewController.swift in Sources */,
 				8D0B2BF11FC89BA400CE102C /* AboutGameViewController.swift in Sources */,
 				FDFFEFE2227831AD00AB8ACA /* Message.swift in Sources */,
@@ -685,7 +689,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -703,13 +707,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -758,12 +763,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -828,7 +834,7 @@
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = HardcoreTapUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -850,7 +856,7 @@
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
 				ENABLE_NS_ASSERTIONS = NO;
 				INFOPLIST_FILE = HardcoreTapUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTapUITests;
