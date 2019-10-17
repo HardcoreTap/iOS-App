@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3634F807235894840053699F /* AboutGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3634F806235894840053699F /* AboutGameView.swift */; };
 		36668D0A235734D800EEC8BC /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36668D09235734D800EEC8BC /* LeaderboardView.swift */; };
 		36668D0C235739FF00EEC8BC /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36668D0B235739FF00EEC8BC /* RulesView.swift */; };
 		369243452350D4D800EA40C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369243442350D4D800EA40C9 /* SceneDelegate.swift */; };
-		369243472350D98B00EA40C9 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369243462350D98B00EA40C9 /* TabView.swift */; };
+		369243472350D98B00EA40C9 /* BaseTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369243462350D98B00EA40C9 /* BaseTabView.swift */; };
 		36CEAB2B234DFD6800812E09 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEAB2A234DFD6800812E09 /* LoginView.swift */; };
 		3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B051FB771EF0019687C /* RulesViewController.swift */; };
 		3C092B0A1FB774010019687C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B091FB774010019687C /* BaseTabBarController.swift */; };
@@ -54,10 +55,11 @@
 
 /* Begin PBXFileReference section */
 		1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3634F806235894840053699F /* AboutGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameView.swift; sourceTree = "<group>"; };
 		36668D09235734D800EEC8BC /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		36668D0B235739FF00EEC8BC /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		369243442350D4D800EA40C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		369243462350D98B00EA40C9 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		369243462350D98B00EA40C9 /* BaseTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabView.swift; sourceTree = "<group>"; };
 		369F7410234DD3010062A29E /* HardcoreTap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HardcoreTap.entitlements; sourceTree = "<group>"; };
 		36CEAB2A234DFD6800812E09 /* LoginView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		3C092B051FB771EF0019687C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				8D0B2BF01FC89BA400CE102C /* AboutGameViewController.swift */,
+				3634F806235894840053699F /* AboutGameView.swift */,
 			);
 			path = AboutGame;
 			sourceTree = "<group>";
@@ -359,7 +362,7 @@
 			children = (
 				FDFFEFE92278346B00AB8ACA /* BaseView.swift */,
 				3C092B091FB774010019687C /* BaseTabBarController.swift */,
-				369243462350D98B00EA40C9 /* TabView.swift */,
+				369243462350D98B00EA40C9 /* BaseTabView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -591,12 +594,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				369243472350D98B00EA40C9 /* TabView.swift in Sources */,
+				369243472350D98B00EA40C9 /* BaseTabView.swift in Sources */,
 				3CE12C151FB663A000945352 /* LeadearBoardViewController.swift in Sources */,
 				8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */,
 				73BC136B1FB876A200BDB8B0 /* UIButtonExtension.swift in Sources */,
 				FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* GameViewController.swift in Sources */,
+				3634F807235894840053699F /* AboutGameView.swift in Sources */,
 				8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */,
 				8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */,
 				369243452350D4D800EA40C9 /* SceneDelegate.swift in Sources */,

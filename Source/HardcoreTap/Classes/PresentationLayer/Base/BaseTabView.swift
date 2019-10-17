@@ -14,21 +14,21 @@ struct BaseTabView: View {
     
     var body: some View {
         TabView (selection: $selection) {
-            Text("The First Tab")
+            AboutGameView()
                 .tabItem {
                     Image(systemName: "1.square.fill")
-                    Text("First")
+                    Text("Game")
             }
             .tag(1)
-            Text("The Second Tab")
+            LeaderboardView()
                 .tabItem {
                     Image(systemName: "2.square.fill")
-                    Text("Second")
+                    Text("Leaderboard")
             }.tag(2)
-            Text("The Last Tab")
+             AboutGameView()
                 .tabItem {
                     Image(systemName: "3.square.fill")
-                    Text("Third")
+                    Text("About game")
             }.tag(3)
         }
         .font(.headline)
