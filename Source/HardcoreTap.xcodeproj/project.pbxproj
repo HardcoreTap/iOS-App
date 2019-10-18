@@ -118,6 +118,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36409E122359C9BD002AB92F /* DEPRECATED */ = {
+			isa = PBXGroup;
+			children = (
+				3CE12BFE1FB62FEE00945352 /* GameViewController.swift */,
+				3CE12C141FB663A000945352 /* LeadearBoardViewController.swift */,
+				8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */,
+				8D0B2BF01FC89BA400CE102C /* AboutGameViewController.swift */,
+				3CE12C101FB643CB00945352 /* LoginViewController.swift */,
+				3C092B091FB774010019687C /* BaseTabBarController.swift */,
+				3C092B051FB771EF0019687C /* RulesViewController.swift */,
+				739F733E200B98FE0073C198 /* SettingsCell.swift */,
+				73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */,
+				3CE12C001FB62FEE00945352 /* Main.storyboard */,
+			);
+			path = DEPRECATED;
+			sourceTree = "<group>";
+		};
 		3C52CAE71FBBC873004E31B8 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +168,7 @@
 		3CE12BFB1FB62FED00945352 /* HardcoreTap */ = {
 			isa = PBXGroup;
 			children = (
+				36409E122359C9BD002AB92F /* DEPRECATED */,
 				369F7410234DD3010062A29E /* HardcoreTap.entitlements */,
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
 				369243442350D4D800EA40C9 /* SceneDelegate.swift */,
@@ -189,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */,
-				73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -197,7 +214,6 @@
 		8D4D774220F10D08001F3E91 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				3CE12BFE1FB62FEE00945352 /* GameViewController.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -205,7 +221,6 @@
 		8D4D774420F10D20001F3E91 /* Leaderboard */ = {
 			isa = PBXGroup;
 			children = (
-				3CE12C141FB663A000945352 /* LeadearBoardViewController.swift */,
 				8D4D774920F10E7F001F3E91 /* Content.swift */,
 				36668D09235734D800EEC8BC /* LeaderboardView.swift */,
 			);
@@ -215,7 +230,6 @@
 		8D4D774520F10D29001F3E91 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
-				3C092B051FB771EF0019687C /* RulesViewController.swift */,
 				36668D0B235739FF00EEC8BC /* RulesView.swift */,
 			);
 			path = Rules;
@@ -224,8 +238,6 @@
 		8D4D774620F10D4E001F3E91 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */,
-				739F733E200B98FE0073C198 /* SettingsCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -233,7 +245,6 @@
 		8D4D774720F10D52001F3E91 /* AboutGame */ = {
 			isa = PBXGroup;
 			children = (
-				8D0B2BF01FC89BA400CE102C /* AboutGameViewController.swift */,
 				3634F806235894840053699F /* AboutGameView.swift */,
 			);
 			path = AboutGame;
@@ -242,7 +253,6 @@
 		8D4D774820F10D6B001F3E91 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				3CE12C101FB643CB00945352 /* LoginViewController.swift */,
 				36CEAB2A234DFD6800812E09 /* LoginView.swift */,
 			);
 			path = Login;
@@ -324,7 +334,6 @@
 		FD1631582272F2350040FC3F /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 				FD1631592272F2400040FC3F /* Common */,
 				FD16315C2272F29A0040FC3F /* Base */,
 				8D4D773E20F10B9E001F3E91 /* Stories */,
@@ -361,7 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				FDFFEFE92278346B00AB8ACA /* BaseView.swift */,
-				3C092B091FB774010019687C /* BaseTabBarController.swift */,
 				369243462350D98B00EA40C9 /* BaseTabView.swift */,
 			);
 			path = Base;
