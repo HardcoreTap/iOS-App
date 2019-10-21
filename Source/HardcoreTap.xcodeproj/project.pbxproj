@@ -41,7 +41,6 @@
 		73BC136B1FB876A200BDB8B0 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */; };
 		8D0B2BED1FC89B3700CE102C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */; };
 		8D0B2BF11FC89BA400CE102C /* AboutGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BF01FC89BA400CE102C /* AboutGameViewController.swift */; };
-		8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */; };
 		8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */; };
 		8D4D774A20F10E7F001F3E91 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D774920F10E7F001F3E91 /* Content.swift */; };
 		8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */; };
@@ -52,7 +51,6 @@
 		FDFFEFE2227831AD00AB8ACA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE1227831AD00AB8ACA /* Message.swift */; };
 		FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE3227832DD00AB8ACA /* Colors.swift */; };
 		FDFFEFE82278345D00AB8ACA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE72278345D00AB8ACA /* R.generated.swift */; };
-		FDFFEFEA2278346B00AB8ACA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE92278346B00AB8ACA /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +139,6 @@
 		73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8D0B2BF01FC89BA400CE102C /* AboutGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameViewController.swift; sourceTree = "<group>"; };
-		8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateInfo.swift; sourceTree = "<group>"; };
 		8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		8D4D774920F10E7F001F3E91 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -152,7 +149,6 @@
 		FDFFEFE1227831AD00AB8ACA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		FDFFEFE3227832DD00AB8ACA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FDFFEFE72278345D00AB8ACA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = HardcoreTap/Resources/Generated/R.generated.swift; sourceTree = SOURCE_ROOT; };
-		FDFFEFE92278346B00AB8ACA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,7 +397,6 @@
 		FD1631532272F1E30040FC3F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FD1631572272F22B0040FC3F /* BusinessLogic */,
 				FD1631582272F2350040FC3F /* PresentationLayer */,
 			);
 			path = Classes;
@@ -432,14 +427,6 @@
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		FD1631572272F22B0040FC3F /* BusinessLogic */ = {
-			isa = PBXGroup;
-			children = (
-				8D1BDC591FC9EB43003A3735 /* PrivateInfo.swift */,
-			);
-			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 		FD1631582272F2350040FC3F /* PresentationLayer */ = {
@@ -480,7 +467,6 @@
 		FD16315C2272F29A0040FC3F /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				FDFFEFE92278346B00AB8ACA /* BaseView.swift */,
 				369243462350D98B00EA40C9 /* BaseTabView.swift */,
 			);
 			path = Base;
@@ -804,7 +790,6 @@
 				FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* GameViewController.swift in Sources */,
 				3634F807235894840053699F /* AboutGameView.swift in Sources */,
-				8D1BDC5A1FC9EB43003A3735 /* PrivateInfo.swift in Sources */,
 				8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */,
 				369243452350D4D800EA40C9 /* SceneDelegate.swift in Sources */,
 				3C092B0A1FB774010019687C /* BaseTabBarController.swift in Sources */,
@@ -817,7 +802,6 @@
 				3CE12C111FB643CB00945352 /* LoginViewController.swift in Sources */,
 				8D0B2BF11FC89BA400CE102C /* AboutGameViewController.swift in Sources */,
 				FDFFEFE2227831AD00AB8ACA /* Message.swift in Sources */,
-				FDFFEFEA2278346B00AB8ACA /* BaseView.swift in Sources */,
 				8D0B2BED1FC89B3700CE102C /* SettingsViewController.swift in Sources */,
 				36CEAB2B234DFD6800812E09 /* LoginView.swift in Sources */,
 				739F733F200B98FE0073C198 /* SettingsCell.swift in Sources */,
