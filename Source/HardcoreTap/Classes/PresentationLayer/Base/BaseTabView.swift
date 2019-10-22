@@ -25,11 +25,16 @@ struct BaseTabView: View {
                     Image(systemName: "2.square.fill")
                     Text("Leaderboard")
             }.tag(2)
-             AboutGameView()
+            RulesView()
                 .tabItem {
-                    Image(systemName: "3.square.fill")
-                    Text("About game")
+                    Image(systemName: "4.square.fill")
+                    Text("Rules")
             }.tag(3)
+            AboutGameView()
+                .tabItem {
+                    Image(systemName: "4.square.fill")
+                    Text("About game")
+            }.tag(4)
         }
         .font(.headline)
     }

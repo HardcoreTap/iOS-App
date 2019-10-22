@@ -26,6 +26,7 @@
 		36668D0C235739FF00EEC8BC /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36668D0B235739FF00EEC8BC /* RulesView.swift */; };
 		369243452350D4D800EA40C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369243442350D4D800EA40C9 /* SceneDelegate.swift */; };
 		369243472350D98B00EA40C9 /* BaseTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369243462350D98B00EA40C9 /* BaseTabView.swift */; };
+		36B7A872235F27ED00CBCE24 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7A871235F27ED00CBCE24 /* RuleView.swift */; };
 		36CEAB2B234DFD6800812E09 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEAB2A234DFD6800812E09 /* LoginView.swift */; };
 		3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B051FB771EF0019687C /* RulesViewController.swift */; };
 		3C092B0A1FB774010019687C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C092B091FB774010019687C /* BaseTabBarController.swift */; };
@@ -121,6 +122,7 @@
 		369243442350D4D800EA40C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		369243462350D98B00EA40C9 /* BaseTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabView.swift; sourceTree = "<group>"; };
 		369F7410234DD3010062A29E /* HardcoreTap.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HardcoreTap.entitlements; sourceTree = "<group>"; };
+		36B7A871235F27ED00CBCE24 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
 		36CEAB2A234DFD6800812E09 /* LoginView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		3C092B051FB771EF0019687C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		3C092B091FB774010019687C /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 		8D4D774520F10D29001F3E91 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
+				36B7A871235F27ED00CBCE24 /* RuleView.swift */,
 				36668D0B235739FF00EEC8BC /* RulesView.swift */,
 			);
 			path = Rules;
@@ -800,6 +803,7 @@
 				36668D0A235734D800EEC8BC /* LeaderboardView.swift in Sources */,
 				36668D0C235739FF00EEC8BC /* RulesView.swift in Sources */,
 				3CE12C111FB643CB00945352 /* LoginViewController.swift in Sources */,
+				36B7A872235F27ED00CBCE24 /* RuleView.swift in Sources */,
 				8D0B2BF11FC89BA400CE102C /* AboutGameViewController.swift in Sources */,
 				FDFFEFE2227831AD00AB8ACA /* Message.swift in Sources */,
 				8D0B2BED1FC89B3700CE102C /* SettingsViewController.swift in Sources */,
