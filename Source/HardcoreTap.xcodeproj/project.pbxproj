@@ -43,7 +43,6 @@
 		8D0B2BED1FC89B3700CE102C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */; };
 		8D0B2BF11FC89BA400CE102C /* AboutGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BF01FC89BA400CE102C /* AboutGameViewController.swift */; };
 		8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */; };
-		8D4D774A20F10E7F001F3E91 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D774920F10E7F001F3E91 /* Content.swift */; };
 		8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */; };
 		8D90EB9820B96F44002A3711 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90EB9720B96F44002A3711 /* StoreKit.framework */; };
 		8D90EB9A20B981B1002A3711 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90EB9920B981B1002A3711 /* GameKit.framework */; };
@@ -142,7 +141,6 @@
 		8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8D0B2BF01FC89BA400CE102C /* AboutGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameViewController.swift; sourceTree = "<group>"; };
 		8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		8D4D774920F10E7F001F3E91 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D90EB9720B96F44002A3711 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8D90EB9920B981B1002A3711 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -340,7 +338,6 @@
 		8D4D774420F10D20001F3E91 /* Leaderboard */ = {
 			isa = PBXGroup;
 			children = (
-				8D4D774920F10E7F001F3E91 /* Content.swift */,
 				36668D09235734D800EEC8BC /* LeaderboardView.swift */,
 			);
 			path = Leaderboard;
@@ -796,7 +793,6 @@
 				8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */,
 				369243452350D4D800EA40C9 /* SceneDelegate.swift in Sources */,
 				3C092B0A1FB774010019687C /* BaseTabBarController.swift in Sources */,
-				8D4D774A20F10E7F001F3E91 /* Content.swift in Sources */,
 				3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */,
 				FDFFEFE82278345D00AB8ACA /* R.generated.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
