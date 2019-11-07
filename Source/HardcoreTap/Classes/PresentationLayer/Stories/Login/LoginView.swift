@@ -17,14 +17,14 @@ struct LoginView: View {
             VStack {
                 Image("icon")
                     .padding()
-                Text("Добро пожаловать!")
+                Text("Welcome!")
                     .font(.title)
                     .padding()
                 TextField("Придумайте себе имя", text: $nickname)
                     .padding()
                 Button(action: {
                     self.didTapStartButton = true
-                }) { Text("Начать игру") }
+                }) { Text("Start game") }
                     .foregroundColor(.red)
                     .padding()
             }
