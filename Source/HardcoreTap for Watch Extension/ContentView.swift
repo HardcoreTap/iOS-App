@@ -14,8 +14,6 @@ struct ContentView: View {
     
     var body: some View {
             VStack {
-                Image("icon")
-                    .padding()
                 Text("Добро пожаловать!")
                     .font(.title)
                     .padding()

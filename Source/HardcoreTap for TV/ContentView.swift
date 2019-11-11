@@ -6,14 +6,6 @@
 //  Copyright © 2019 Bogdan Bystritskiy. All rights reserved.
 //
 
-//
-//  LoginView.swift
-//  HardcoreTap
-//
-//  Created by Быстрицкий Богдан on 09.10.2019.
-//  Copyright © 2019 Bogdan Bystritskiy. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
