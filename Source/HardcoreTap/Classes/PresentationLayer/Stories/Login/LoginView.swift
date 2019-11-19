@@ -17,14 +17,14 @@ struct LoginView: View {
             VStack {
                 Image("icon")
                     .padding()
-                Text("Welcome!")
+                Text("welcome")
                     .font(.title)
                     .padding()
-                TextField("Придумайте себе имя", text: $nickname)
+                TextField("create.nickname", text: $nickname)
                     .padding()
                 Button(action: {
                     self.didTapStartButton = true
-                }) { Text("Start game") }
+                }) { Text("start.game") }
                     .foregroundColor(.red)
                     .padding()
             }
@@ -40,9 +40,6 @@ struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             LoginView()
-                .environment(\.colorScheme, .dark)
-            LoginView()
-                .environment(\.colorScheme, .light)
         }
     }
 }

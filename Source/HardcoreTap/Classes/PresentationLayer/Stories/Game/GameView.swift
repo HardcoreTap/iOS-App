@@ -10,15 +10,13 @@ import SwiftUI
 
 struct GameView: View {
     
-//    let startGameText: LocalizedStringKey = "start.game"
-
     var body: some View {
         NavigationView {
             VStack {
                 Image("star.fill")
                 Button(action: {
                     // TOOD:
-                }) { Text("start.game") }
+                }) { Text("play") }
                     .foregroundColor(.red)
                     .padding()
             }
@@ -31,9 +29,6 @@ struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             GameView()
-                .environment(\.colorScheme, .dark)
-            GameView()
-                .environment(\.colorScheme, .light)
         }
     }
 }

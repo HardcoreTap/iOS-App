@@ -30,9 +30,6 @@ struct LeaderboardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             LeaderboardView()
-                .environment(\.colorScheme, .dark)
-            LeaderboardView()
-                .environment(\.colorScheme, .light)
         }
     }
 }

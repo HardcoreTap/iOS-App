@@ -35,14 +35,6 @@ struct AboutGameView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             AboutGameView()
-                .environment(\.colorScheme, .dark)
-            AboutGameView()
-                .environment(\.colorScheme, .light)
-            AboutGameView()
-                .previewDevice("iPhone Xʀ")
-            AboutGameView()
-                .previewDevice("iPad (6th generation)")
-            
         }
     }
 }

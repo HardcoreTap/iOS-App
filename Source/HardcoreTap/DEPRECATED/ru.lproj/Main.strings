@@ -1,0 +1,102 @@
+
+/* Class = "UITabBarItem"; title = "Игра"; ObjectID = "0rO-s3-SAa"; */
+"0rO-s3-SAa.title" = "Игра";
+
+/* Class = "UILabel"; text = "99"; ObjectID = "6nO-Ep-rkR"; */
+"6nO-Ep-rkR.text" = "99";
+
+/* Class = "UILabel"; text = "101"; ObjectID = "8WE-Nr-zW6"; */
+"8WE-Nr-zW6.text" = "101";
+
+/* Class = "UILabel"; text = "Тапай по экрану с интервалом ровно в одну секунду. Идеальная точность — 00 миллисекунд."; ObjectID = "8dP-S2-pXO"; */
+"8dP-S2-pXO.text" = "Тапай по экрану с интервалом ровно в одну секунду. Идеальная точность — 00 миллисекунд.";
+
+/* Class = "UITabBarItem"; title = "Правила"; ObjectID = "AsA-DB-DKx"; */
+"AsA-DB-DKx.title" = "Правила";
+
+/* Class = "UIButton"; normalTitle = "Режим хардкора"; ObjectID = "CpA-Fj-PDe"; */
+"CpA-Fj-PDe.normalTitle" = "Режим хардкора";
+
+/* Class = "UIButton"; normalTitle = "Настройки"; ObjectID = "DdI-VV-Ed1"; */
+"DdI-VV-Ed1.normalTitle" = "Настройки";
+
+/* Class = "UIButton"; normalTitle = " Выйти"; ObjectID = "EpQ-u1-P5I"; */
+"EpQ-u1-P5I.normalTitle" = " Выйти";
+
+/* Class = "UITabBarItem"; title = "Рекорды"; ObjectID = "H8h-Ls-s24"; */
+"H8h-Ls-s24.title" = "Рекорды";
+
+/* Class = "UILabel"; text = "Тем самым вы поддерживаете разработчиков и будущее этой игры."; ObjectID = "HcE-zC-8Mb"; */
+"HcE-zC-8Mb.text" = "Тем самым вы поддерживаете разработчиков и будущее этой игры.";
+
+/* Class = "UILabel"; text = "About game"; ObjectID = "Jgd-6A-c27"; */
+"Jgd-6A-c27.text" = "About game";
+
+/* Class = "UILabel"; text = "С ростом уровня, тебе нужно быть всё точнее. Допустимая погрешность уменьшается и приближается к нулю. "; ObjectID = "Mer-Lc-Srv"; */
+"Mer-Lc-Srv.text" = "С ростом уровня, тебе нужно быть всё точнее. Допустимая погрешность уменьшается и приближается к нулю. ";
+
+/* Class = "UIBarButtonItem"; title = "GameCenter"; ObjectID = "OOU-hD-KnT"; */
+"OOU-hD-KnT.title" = "GameCenter";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "SfQ-82-44J"; */
+"SfQ-82-44J.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Настройки"; ObjectID = "UEm-ov-udw"; */
+"UEm-ov-udw.normalTitle" = "Настройки";
+
+/* Class = "UILabel"; text = "Имя"; ObjectID = "UdR-5C-oFn"; */
+"UdR-5C-oFn.text" = "Имя";
+
+/* Class = "UISegmentedControl"; WFX-ln-b8a.segmentTitles[0] = "Обычный"; ObjectID = "WFX-ln-b8a"; */
+"WFX-ln-b8a.segmentTitles[0]" = "Обычный";
+
+/* Class = "UISegmentedControl"; WFX-ln-b8a.segmentTitles[1] = "Хардкор"; ObjectID = "WFX-ln-b8a"; */
+"WFX-ln-b8a.segmentTitles[1]" = "Хардкор";
+
+/* Class = "UINavigationItem"; title = "Таблица лидеров"; ObjectID = "WfK-Xn-GZ7"; */
+"WfK-Xn-GZ7.title" = "Таблица лидеров";
+
+/* Class = "UIButton"; normalTitle = "Начать игру"; ObjectID = "XG3-Od-H5f"; */
+"XG3-Od-H5f.normalTitle" = "Начать игру";
+
+/* Class = "UINavigationItem"; title = "Настройки"; ObjectID = "XLE-0V-4kJ"; */
+"XLE-0V-4kJ.title" = "Настройки";
+
+/* Class = "UIButton"; normalTitle = "Привет!"; ObjectID = "Xkd-9d-Me8"; */
+"Xkd-9d-Me8.normalTitle" = "Привет!";
+
+/* Class = "UIBarButtonItem"; title = "Выйти"; ObjectID = "aai-I2-OCS"; */
+"aai-I2-OCS.title" = "Выйти";
+
+/* Class = "UILabel"; text = "Цель игры — стать лучшим ловцом ритма и возглавить TOP 10 игроков!"; ObjectID = "bff-sU-cWH"; */
+"bff-sU-cWH.text" = "Цель игры — стать лучшим ловцом ритма и возглавить TOP 10 игроков!";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "dhr-Rb-TiP"; */
+"dhr-Rb-TiP.text" = "100";
+
+/* Class = "UINavigationItem"; title = "Правила игры"; ObjectID = "eVo-gA-CMV"; */
+"eVo-gA-CMV.title" = "Правила игры";
+
+/* Class = "UIViewController"; title = "Об игре"; ObjectID = "grm-T7-0u7"; */
+"grm-T7-0u7.title" = "Об игре";
+
+/* Class = "UIButton"; normalTitle = "Об игре / Разработчиках"; ObjectID = "hFQ-ym-wgf"; */
+"hFQ-ym-wgf.normalTitle" = "Об игре / Разработчиках";
+
+/* Class = "UILabel"; text = "00:00:00"; ObjectID = "hsI-to-WQC"; */
+"hsI-to-WQC.text" = "00:00:00";
+
+/* Class = "UILabel"; text = "Ваш рекорд"; ObjectID = "m6W-2S-upj"; */
+"m6W-2S-upj.text" = "Ваш рекорд";
+
+/* Class = "UIButton"; normalTitle = "Нажмите, чтобы попытаться снова"; ObjectID = "mtA-4Z-dfW"; */
+"mtA-4Z-dfW.normalTitle" = "Нажмите, чтобы попытаться снова";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "vhZ-yn-GUD"; */
+"vhZ-yn-GUD.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "HardcoreTap"; ObjectID = "w3h-z6-VRz"; */
+"w3h-z6-VRz.title" = "HardcoreTap";
+
+/* Class = "UIButton"; normalTitle = "Отключение рекламы"; ObjectID = "zr9-nP-sWi"; */
+"zr9-nP-sWi.normalTitle" = "Отключение рекламы";

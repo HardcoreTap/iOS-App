@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  HardcoreTap
+
+  Created by Быстрицкий Богдан on 07.11.2019.
+  Copyright © 2019 Bogdan Bystritskiy. All rights reserved.
+*/
+
+// TODO: сделать русский вариант, после завершения работ на англ. языке
+
+"cancel" = "Отменить";
+"exit" = "Выйти";
+"enter" = "Войти";
+
+// Login
+"welcome" = "Добро пожаловать!";
+"create.nickname" = "Создайте себе никнейм:";
+"start.game" = "Начать игру";
+
+// Game
+

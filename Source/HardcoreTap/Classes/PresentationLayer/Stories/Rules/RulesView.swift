@@ -26,9 +26,6 @@ struct RulesView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             RulesView()
-                .environment(\.colorScheme, .dark)
-            RulesView()
-                .environment(\.colorScheme, .light)
         }
     }
 }
