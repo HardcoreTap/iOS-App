@@ -4,6 +4,14 @@
 
 _The game is implemented on the hackathon from Swiftbook.ru (2nd place)_
 
+### Road map
+- [ ] Convert project to SwiftUI and Combine
+- [ ] New design (use SF Symbols)
+- [ ] Add support iPadOS
+- [ ] Add support macOS 
+- [ ] Add support watchOS
+
+
 ### About game
 You must be able to kill time. “HardcoreTap” helps to kill time, not in vain, but with benefit. The player receives benefit in the form of training of attentiveness, rhythm and perseverance. Without this, it would not be possible to top the players rating. The main task of the player is to tap on the screen exactly 1 time per second with an accuracy of hundredths. (01:00, 02:00, 03:00, etc.). At first, the game is not so cruel to the player and makes mistakes of several hundredths. But gradually the error decreases and the player must be extremely accurate. Otherwise, he will lose and will have to start the game again.
 
