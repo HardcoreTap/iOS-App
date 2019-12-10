@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3634F807235894840053699F /* AboutGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3634F806235894840053699F /* AboutGameView.swift */; };
-		36409E1A2359D5BB002AB92F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36409E192359D5BB002AB92F /* AppDelegate.swift */; };
-		36409E1C2359D5BB002AB92F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36409E1B2359D5BB002AB92F /* ContentView.swift */; };
-		36409E1E2359D5BC002AB92F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36409E1D2359D5BC002AB92F /* Assets.xcassets */; };
-		36409E212359D5BC002AB92F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36409E202359D5BC002AB92F /* Preview Assets.xcassets */; };
-		36409E242359D5BC002AB92F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36409E222359D5BC002AB92F /* LaunchScreen.storyboard */; };
 		36409E2F2359D841002AB92F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36409E2D2359D841002AB92F /* Interface.storyboard */; };
 		36409E312359D841002AB92F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36409E302359D841002AB92F /* Assets.xcassets */; };
 		36409E382359D841002AB92F /* HardcoreTap for Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 36409E372359D841002AB92F /* HardcoreTap for Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -100,13 +95,6 @@
 /* Begin PBXFileReference section */
 		1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3634F806235894840053699F /* AboutGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameView.swift; sourceTree = "<group>"; };
-		36409E172359D5BB002AB92F /* HardcoreTap for TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HardcoreTap for TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36409E192359D5BB002AB92F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36409E1B2359D5BB002AB92F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		36409E1D2359D5BC002AB92F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		36409E202359D5BC002AB92F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		36409E232359D5BC002AB92F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		36409E252359D5BC002AB92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36409E2B2359D841002AB92F /* HardcoreTap for Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HardcoreTap for Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36409E2E2359D841002AB92F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		36409E302359D841002AB92F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,7 +117,6 @@
 		36D756C12374654800F6791D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		36E9C9A12384466100D88217 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		36E9C9A22384466100D88217 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		36E9C9A32384466100D88217 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		36E9C9A42384466100D88217 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Interface.strings; sourceTree = "<group>"; };
 		36E9C9A52384466100D88217 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3C092B051FB771EF0019687C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
@@ -161,13 +148,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		36409E142359D5BB002AB92F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		36409E342359D841002AB92F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,27 +183,6 @@
 				3CE12C001FB62FEE00945352 /* Main.storyboard */,
 			);
 			path = DEPRECATED;
-			sourceTree = "<group>";
-		};
-		36409E182359D5BB002AB92F /* HardcoreTap for TV */ = {
-			isa = PBXGroup;
-			children = (
-				36409E192359D5BB002AB92F /* AppDelegate.swift */,
-				36409E1B2359D5BB002AB92F /* ContentView.swift */,
-				36409E1D2359D5BC002AB92F /* Assets.xcassets */,
-				36409E222359D5BC002AB92F /* LaunchScreen.storyboard */,
-				36409E252359D5BC002AB92F /* Info.plist */,
-				36409E1F2359D5BC002AB92F /* Preview Content */,
-			);
-			path = "HardcoreTap for TV";
-			sourceTree = "<group>";
-		};
-		36409E1F2359D5BC002AB92F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				36409E202359D5BC002AB92F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		36409E2C2359D841002AB92F /* HardcoreTap for Watch */ = {
@@ -277,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				3CE12BFB1FB62FED00945352 /* HardcoreTap */,
-				36409E182359D5BB002AB92F /* HardcoreTap for TV */,
 				36409E2C2359D841002AB92F /* HardcoreTap for Watch */,
 				36409E3B2359D841002AB92F /* HardcoreTap for Watch Extension */,
 				3CE12BFA1FB62FED00945352 /* Products */,
@@ -292,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				3CE12BF91FB62FED00945352 /* HardcoreTap.app */,
-				36409E172359D5BB002AB92F /* HardcoreTap for TV.app */,
 				36409E2B2359D841002AB92F /* HardcoreTap for Watch.app */,
 				36409E372359D841002AB92F /* HardcoreTap for Watch Extension.appex */,
 			);
@@ -503,23 +460,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36409E162359D5BB002AB92F /* HardcoreTap for TV */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36409E262359D5BC002AB92F /* Build configuration list for PBXNativeTarget "HardcoreTap for TV" */;
-			buildPhases = (
-				36409E132359D5BB002AB92F /* Sources */,
-				36409E142359D5BB002AB92F /* Frameworks */,
-				36409E152359D5BB002AB92F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "HardcoreTap for TV";
-			productName = "HardcoreTap for TV";
-			productReference = 36409E172359D5BB002AB92F /* HardcoreTap for TV.app */;
-			productType = "com.apple.product-type.application";
-		};
 		36409E2A2359D841002AB92F /* HardcoreTap for Watch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36409E4F2359D842002AB92F /* Build configuration list for PBXNativeTarget "HardcoreTap for Watch" */;
@@ -588,10 +528,6 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Bogdan Bystritskiy";
 				TargetAttributes = {
-					36409E162359D5BB002AB92F = {
-						CreatedOnToolsVersion = 11.1;
-						ProvisioningStyle = Automatic;
-					};
 					36409E2A2359D841002AB92F = {
 						CreatedOnToolsVersion = 11.1;
 						ProvisioningStyle = Automatic;
@@ -629,7 +565,6 @@
 			projectRoot = "";
 			targets = (
 				3CE12BF81FB62FED00945352 /* HardcoreTap */,
-				36409E162359D5BB002AB92F /* HardcoreTap for TV */,
 				36409E2A2359D841002AB92F /* HardcoreTap for Watch */,
 				36409E362359D841002AB92F /* HardcoreTap for Watch Extension */,
 			);
@@ -637,16 +572,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		36409E152359D5BB002AB92F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36409E242359D5BC002AB92F /* LaunchScreen.storyboard in Resources */,
-				36409E212359D5BC002AB92F /* Preview Assets.xcassets in Resources */,
-				36409E1E2359D5BC002AB92F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		36409E292359D841002AB92F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -781,15 +706,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		36409E132359D5BB002AB92F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36409E1C2359D5BB002AB92F /* ContentView.swift in Sources */,
-				36409E1A2359D5BB002AB92F /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		36409E332359D841002AB92F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -847,15 +763,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		36409E222359D5BC002AB92F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36409E232359D5BC002AB92F /* Base */,
-				36E9C9A32384466100D88217 /* ru */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		36409E2D2359D841002AB92F /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -895,60 +802,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		36409E272359D5BC002AB92F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_ASSET_PATHS = "\"HardcoreTap for TV/Preview Content\"";
-				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "HardcoreTap for TV/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 2.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bystritskiy.HardcoreTap-for-TV";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
-			};
-			name = Debug;
-		};
-		36409E282359D5BC002AB92F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HardcoreTap for TV/Preview Content\"";
-				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "HardcoreTap for TV/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 2.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bystritskiy.HardcoreTap-for-TV";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
-			};
-			name = Release;
-		};
 		36409E4C2359D842002AB92F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1241,15 +1094,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36409E262359D5BC002AB92F /* Build configuration list for PBXNativeTarget "HardcoreTap for TV" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36409E272359D5BC002AB92F /* Debug */,
-				36409E282359D5BC002AB92F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		36409E4B2359D842002AB92F /* Build configuration list for PBXNativeTarget "HardcoreTap for Watch Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
