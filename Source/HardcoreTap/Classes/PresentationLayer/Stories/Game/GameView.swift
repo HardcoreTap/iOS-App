@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// TODO:
 struct GameView: View {
     
     var body: some View {
@@ -15,7 +16,6 @@ struct GameView: View {
             VStack {
                 Image("star.fill")
                 Button(action: {
-                    // TOOD:
                 }) { Text("play") }
                     .foregroundColor(.red)
                     .padding()
@@ -27,8 +27,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            GameView()
-        }
+        GameView()
     }
 }

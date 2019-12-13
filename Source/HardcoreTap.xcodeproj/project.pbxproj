@@ -17,6 +17,8 @@
 		36409E432359D842002AB92F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36409E422359D842002AB92F /* Assets.xcassets */; };
 		36409E462359D842002AB92F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36409E452359D842002AB92F /* Preview Assets.xcassets */; };
 		36409E4A2359D842002AB92F /* HardcoreTap for Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 36409E2B2359D841002AB92F /* HardcoreTap for Watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3644DC2323A3D1A500D4CAB7 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3644DC2223A3D1A500D4CAB7 /* SwiftUIView.swift */; };
+		3644DC2523A3D1C400D4CAB7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3644DC2423A3D1C400D4CAB7 /* SettingsView.swift */; };
 		36668D0A235734D800EEC8BC /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36668D09235734D800EEC8BC /* LeaderboardView.swift */; };
 		36668D0C235739FF00EEC8BC /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36668D0B235739FF00EEC8BC /* RulesView.swift */; };
 		369243452350D4D800EA40C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369243442350D4D800EA40C9 /* SceneDelegate.swift */; };
@@ -106,6 +108,8 @@
 		36409E422359D842002AB92F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36409E452359D842002AB92F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36409E472359D842002AB92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3644DC2223A3D1A500D4CAB7 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		3644DC2423A3D1C400D4CAB7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		36668D09235734D800EEC8BC /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		36668D0B235739FF00EEC8BC /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 		369243442350D4D800EA40C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 		8D4D774620F10D4E001F3E91 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				3644DC2423A3D1C400D4CAB7 /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -436,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				FDFFEFE1227831AD00AB8ACA /* Message.swift */,
+				3644DC2223A3D1A500D4CAB7 /* SwiftUIView.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -722,6 +728,7 @@
 			files = (
 				369243472350D98B00EA40C9 /* BaseTabView.swift in Sources */,
 				3CE12C151FB663A000945352 /* LeadearBoardViewController.swift in Sources */,
+				3644DC2323A3D1A500D4CAB7 /* SwiftUIView.swift in Sources */,
 				8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */,
 				73BC136B1FB876A200BDB8B0 /* UIButtonExtension.swift in Sources */,
 				FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */,
@@ -734,6 +741,7 @@
 				FDFFEFE82278345D00AB8ACA /* R.generated.swift in Sources */,
 				36D756BD2374646F00F6791D /* GameView.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
+				3644DC2523A3D1C400D4CAB7 /* SettingsView.swift in Sources */,
 				36668D0A235734D800EEC8BC /* LeaderboardView.swift in Sources */,
 				36668D0C235739FF00EEC8BC /* RulesView.swift in Sources */,
 				3CE12C111FB643CB00945352 /* LoginViewController.swift in Sources */,

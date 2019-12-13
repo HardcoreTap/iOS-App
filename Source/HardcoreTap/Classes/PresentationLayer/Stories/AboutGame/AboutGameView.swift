@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// TODO:
 struct AboutGameView: View {
     
     var body: some View {

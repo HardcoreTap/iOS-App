@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// TODO:
 struct LoginView: View {
     @State var nickname: String = ""
     @State var didTapStartButton = false
@@ -38,8 +39,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            LoginView()
-        }
+        LoginView()
     }
 }
