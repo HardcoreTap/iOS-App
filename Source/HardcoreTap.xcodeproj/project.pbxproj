@@ -3,21 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3634F807235894840053699F /* AboutGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3634F806235894840053699F /* AboutGameView.swift */; };
-		36409E2F2359D841002AB92F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36409E2D2359D841002AB92F /* Interface.storyboard */; };
-		36409E312359D841002AB92F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36409E302359D841002AB92F /* Assets.xcassets */; };
-		36409E382359D841002AB92F /* HardcoreTap for Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 36409E372359D841002AB92F /* HardcoreTap for Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		36409E3D2359D841002AB92F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36409E3C2359D841002AB92F /* ContentView.swift */; };
-		36409E3F2359D841002AB92F /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36409E3E2359D841002AB92F /* HostingController.swift */; };
-		36409E412359D841002AB92F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36409E402359D841002AB92F /* ExtensionDelegate.swift */; };
-		36409E432359D842002AB92F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36409E422359D842002AB92F /* Assets.xcassets */; };
-		36409E462359D842002AB92F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36409E452359D842002AB92F /* Preview Assets.xcassets */; };
-		36409E4A2359D842002AB92F /* HardcoreTap for Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 36409E2B2359D841002AB92F /* HardcoreTap for Watch.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3644DC2323A3D1A500D4CAB7 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3644DC2223A3D1A500D4CAB7 /* SwiftUIView.swift */; };
+		3644DC2323A3D1A500D4CAB7 /* ButtonLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3644DC2223A3D1A500D4CAB7 /* ButtonLinkView.swift */; };
 		3644DC2523A3D1C400D4CAB7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3644DC2423A3D1C400D4CAB7 /* SettingsView.swift */; };
 		36668D0A235734D800EEC8BC /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36668D09235734D800EEC8BC /* LeaderboardView.swift */; };
 		36668D0C235739FF00EEC8BC /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36668D0B235739FF00EEC8BC /* RulesView.swift */; };
@@ -41,7 +32,6 @@
 		73BC136B1FB876A200BDB8B0 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */; };
 		8D0B2BED1FC89B3700CE102C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */; };
 		8D0B2BF11FC89BA400CE102C /* AboutGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B2BF01FC89BA400CE102C /* AboutGameViewController.swift */; };
-		8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */; };
 		8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */; };
 		8D90EB9820B96F44002A3711 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90EB9720B96F44002A3711 /* StoreKit.framework */; };
 		8D90EB9A20B981B1002A3711 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90EB9920B981B1002A3711 /* GameKit.framework */; };
@@ -52,42 +42,13 @@
 		FDFFEFE82278345D00AB8ACA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE72278345D00AB8ACA /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		36409E392359D841002AB92F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CE12BF11FB62FED00945352 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36409E362359D841002AB92F;
-			remoteInfo = "HardcoreTap for Watch Extension";
-		};
-		36409E482359D842002AB92F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CE12BF11FB62FED00945352 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36409E2A2359D841002AB92F;
-			remoteInfo = "HardcoreTap for Watch";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		36409E4E2359D842002AB92F /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				36409E382359D841002AB92F /* HardcoreTap for Watch Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		36409E522359D842002AB92F /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				36409E4A2359D842002AB92F /* HardcoreTap for Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,18 +58,7 @@
 /* Begin PBXFileReference section */
 		1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3634F806235894840053699F /* AboutGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameView.swift; sourceTree = "<group>"; };
-		36409E2B2359D841002AB92F /* HardcoreTap for Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HardcoreTap for Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36409E2E2359D841002AB92F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		36409E302359D841002AB92F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		36409E322359D841002AB92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36409E372359D841002AB92F /* HardcoreTap for Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HardcoreTap for Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		36409E3C2359D841002AB92F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		36409E3E2359D841002AB92F /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
-		36409E402359D841002AB92F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		36409E422359D842002AB92F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		36409E452359D842002AB92F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		36409E472359D842002AB92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3644DC2223A3D1A500D4CAB7 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		3644DC2223A3D1A500D4CAB7 /* ButtonLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLinkView.swift; sourceTree = "<group>"; };
 		3644DC2423A3D1C400D4CAB7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		36668D09235734D800EEC8BC /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		36668D0B235739FF00EEC8BC /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
@@ -121,7 +71,6 @@
 		36D756C12374654800F6791D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		36E9C9A12384466100D88217 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		36E9C9A22384466100D88217 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		36E9C9A42384466100D88217 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Interface.strings; sourceTree = "<group>"; };
 		36E9C9A52384466100D88217 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3C092B051FB771EF0019687C /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		3C092B091FB774010019687C /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -140,7 +89,6 @@
 		73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8D0B2BF01FC89BA400CE102C /* AboutGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameViewController.swift; sourceTree = "<group>"; };
-		8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D90EB9720B96F44002A3711 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8D90EB9920B981B1002A3711 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -152,13 +100,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		36409E342359D841002AB92F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CE12BF61FB62FED00945352 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,37 +130,6 @@
 			path = DEPRECATED;
 			sourceTree = "<group>";
 		};
-		36409E2C2359D841002AB92F /* HardcoreTap for Watch */ = {
-			isa = PBXGroup;
-			children = (
-				36409E2D2359D841002AB92F /* Interface.storyboard */,
-				36409E302359D841002AB92F /* Assets.xcassets */,
-				36409E322359D841002AB92F /* Info.plist */,
-			);
-			path = "HardcoreTap for Watch";
-			sourceTree = "<group>";
-		};
-		36409E3B2359D841002AB92F /* HardcoreTap for Watch Extension */ = {
-			isa = PBXGroup;
-			children = (
-				36409E3C2359D841002AB92F /* ContentView.swift */,
-				36409E3E2359D841002AB92F /* HostingController.swift */,
-				36409E402359D841002AB92F /* ExtensionDelegate.swift */,
-				36409E422359D842002AB92F /* Assets.xcassets */,
-				36409E472359D842002AB92F /* Info.plist */,
-				36409E442359D842002AB92F /* Preview Content */,
-			);
-			path = "HardcoreTap for Watch Extension";
-			sourceTree = "<group>";
-		};
-		36409E442359D842002AB92F /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				36409E452359D842002AB92F /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		36D756C32374655100F6791D /* Translations */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,8 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				3CE12BFB1FB62FED00945352 /* HardcoreTap */,
-				36409E2C2359D841002AB92F /* HardcoreTap for Watch */,
-				36409E3B2359D841002AB92F /* HardcoreTap for Watch Extension */,
 				3CE12BFA1FB62FED00945352 /* Products */,
 				D7DDCF66F7DBCCB49B6EEB8F /* Pods */,
 				A1D86CDE2B60F3C896ECD78A /* Frameworks */,
@@ -254,8 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				3CE12BF91FB62FED00945352 /* HardcoreTap.app */,
-				36409E2B2359D841002AB92F /* HardcoreTap for Watch.app */,
-				36409E372359D841002AB92F /* HardcoreTap for Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,14 +202,6 @@
 				8D4D774520F10D29001F3E91 /* Rules */,
 			);
 			path = Stories;
-			sourceTree = "<group>";
-		};
-		8D4D773F20F10C7F001F3E91 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8D4D774020F10C91001F3E91 /* UIViewControllerExtensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8D4D774220F10D08001F3E91 /* Game */ = {
@@ -386,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				8DAA24751FC7F80600282E06 /* RateManager.swift */,
-				8D4D773F20F10C7F001F3E91 /* Extensions */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -441,7 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				FDFFEFE1227831AD00AB8ACA /* Message.swift */,
-				3644DC2223A3D1A500D4CAB7 /* SwiftUIView.swift */,
+				3644DC2223A3D1A500D4CAB7 /* ButtonLinkView.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -466,40 +363,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		36409E2A2359D841002AB92F /* HardcoreTap for Watch */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36409E4F2359D842002AB92F /* Build configuration list for PBXNativeTarget "HardcoreTap for Watch" */;
-			buildPhases = (
-				36409E292359D841002AB92F /* Resources */,
-				36409E4E2359D842002AB92F /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				36409E3A2359D841002AB92F /* PBXTargetDependency */,
-			);
-			name = "HardcoreTap for Watch";
-			productName = "HardcoreTap for Watch";
-			productReference = 36409E2B2359D841002AB92F /* HardcoreTap for Watch.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		36409E362359D841002AB92F /* HardcoreTap for Watch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 36409E4B2359D842002AB92F /* Build configuration list for PBXNativeTarget "HardcoreTap for Watch Extension" */;
-			buildPhases = (
-				36409E332359D841002AB92F /* Sources */,
-				36409E342359D841002AB92F /* Frameworks */,
-				36409E352359D841002AB92F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "HardcoreTap for Watch Extension";
-			productName = "HardcoreTap for Watch Extension";
-			productReference = 36409E372359D841002AB92F /* HardcoreTap for Watch Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 		3CE12BF81FB62FED00945352 /* HardcoreTap */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CE12C0B1FB62FEE00945352 /* Build configuration list for PBXNativeTarget "HardcoreTap" */;
@@ -517,7 +380,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				36409E492359D842002AB92F /* PBXTargetDependency */,
 			);
 			name = HardcoreTap;
 			productName = TimeKillerApp;
@@ -534,14 +396,6 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Bogdan Bystritskiy";
 				TargetAttributes = {
-					36409E2A2359D841002AB92F = {
-						CreatedOnToolsVersion = 11.1;
-						ProvisioningStyle = Automatic;
-					};
-					36409E362359D841002AB92F = {
-						CreatedOnToolsVersion = 11.1;
-						ProvisioningStyle = Automatic;
-					};
 					3CE12BF81FB62FED00945352 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -571,31 +425,11 @@
 			projectRoot = "";
 			targets = (
 				3CE12BF81FB62FED00945352 /* HardcoreTap */,
-				36409E2A2359D841002AB92F /* HardcoreTap for Watch */,
-				36409E362359D841002AB92F /* HardcoreTap for Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		36409E292359D841002AB92F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36409E312359D841002AB92F /* Assets.xcassets in Resources */,
-				36409E2F2359D841002AB92F /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		36409E352359D841002AB92F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36409E462359D842002AB92F /* Preview Assets.xcassets in Resources */,
-				36409E432359D842002AB92F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CE12BF71FB62FED00945352 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -712,29 +546,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		36409E332359D841002AB92F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36409E3F2359D841002AB92F /* HostingController.swift in Sources */,
-				36409E3D2359D841002AB92F /* ContentView.swift in Sources */,
-				36409E412359D841002AB92F /* ExtensionDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CE12BF51FB62FED00945352 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				369243472350D98B00EA40C9 /* BaseTabView.swift in Sources */,
 				3CE12C151FB663A000945352 /* LeadearBoardViewController.swift in Sources */,
-				3644DC2323A3D1A500D4CAB7 /* SwiftUIView.swift in Sources */,
+				3644DC2323A3D1A500D4CAB7 /* ButtonLinkView.swift in Sources */,
 				8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */,
 				73BC136B1FB876A200BDB8B0 /* UIButtonExtension.swift in Sources */,
 				FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* GameViewController.swift in Sources */,
 				3634F807235894840053699F /* AboutGameView.swift in Sources */,
-				8D4D774120F10C91001F3E91 /* UIViewControllerExtensions.swift in Sources */,
 				369243452350D4D800EA40C9 /* SceneDelegate.swift in Sources */,
 				3C092B0A1FB774010019687C /* BaseTabBarController.swift in Sources */,
 				3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */,
@@ -756,30 +579,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		36409E3A2359D841002AB92F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 36409E362359D841002AB92F /* HardcoreTap for Watch Extension */;
-			targetProxy = 36409E392359D841002AB92F /* PBXContainerItemProxy */;
-		};
-		36409E492359D842002AB92F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilter = ios;
-			target = 36409E2A2359D841002AB92F /* HardcoreTap for Watch */;
-			targetProxy = 36409E482359D842002AB92F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		36409E2D2359D841002AB92F /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36409E2E2359D841002AB92F /* Base */,
-				36E9C9A42384466100D88217 /* ru */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 		36D756C22374654800F6791D /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -810,116 +610,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		36409E4C2359D842002AB92F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_ASSET_PATHS = "\"HardcoreTap for Watch Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "HardcoreTap for Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Debug;
-		};
-		36409E4D2359D842002AB92F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"HardcoreTap for Watch Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "HardcoreTap for Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 2.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Release;
-		};
-		36409E502359D842002AB92F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				IBSC_MODULE = HardcoreTap_for_Watch_Extension;
-				INFOPLIST_FILE = "HardcoreTap for Watch/Info.plist";
-				MARKETING_VERSION = 2.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Debug;
-		};
-		36409E512359D842002AB92F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F7AZ625QQ5;
-				ENABLE_NS_ASSERTIONS = NO;
-				IBSC_MODULE = HardcoreTap_for_Watch_Extension;
-				INFOPLIST_FILE = "HardcoreTap for Watch/Info.plist";
-				MARKETING_VERSION = 2.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Release;
-		};
 		3CE12C091FB62FEE00945352 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1033,8 +723,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1055,10 +744,7 @@
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
 				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1084,10 +770,7 @@
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
 				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1102,24 +785,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		36409E4B2359D842002AB92F /* Build configuration list for PBXNativeTarget "HardcoreTap for Watch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36409E4C2359D842002AB92F /* Debug */,
-				36409E4D2359D842002AB92F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		36409E4F2359D842002AB92F /* Build configuration list for PBXNativeTarget "HardcoreTap for Watch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36409E502359D842002AB92F /* Debug */,
-				36409E512359D842002AB92F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		3CE12BF41FB62FED00945352 /* Build configuration list for PBXProject "HardcoreTap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
