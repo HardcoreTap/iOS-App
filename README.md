@@ -6,7 +6,7 @@ _The game is implemented on the hackathon from Swiftbook.ru (2nd place)_
 
 ### Road map
 - [ ] Convert project to SwiftUI and Combine
-- [ ] New design (use SF Symbols)
+- [ ] New design
 - [ ] Add support iPadOS
 - [ ] Add support macOS 
 - [ ] Add support watchOS
@@ -18,5 +18,3 @@ You must be able to kill time. “HardcoreTap” helps to kill time, not in vain
 ### Screenshots
 <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/01.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/02.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/03.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/04.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/05.png" width="250"> <img src="https://raw.githubusercontent.com/bystritskiy/HardcoreTap/master/Media/06.png" width="250">
 
-### Design
-![Figma](https://www.figma.com/file/XUAIE93APxkboRRfqLdNMlqJ/HardcoreTap?node-id=7%3A315)
