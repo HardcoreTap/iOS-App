@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  HardcoreTap
 //
-//  Created by Быстрицкий Богдан on 11.10.2019.
+//  Created by Bogdan Bystritskiy on 11.10.2019.
 //  Copyright © 2019 Bogdan Bystritskiy. All rights reserved.
 //
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,11 +35,9 @@
 		8D4E36BD2008CC8200508D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */; };
 		8D90EB9820B96F44002A3711 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90EB9720B96F44002A3711 /* StoreKit.framework */; };
 		8D90EB9A20B981B1002A3711 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90EB9920B981B1002A3711 /* GameKit.framework */; };
-		8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA24751FC7F80600282E06 /* RateManager.swift */; };
-		92269D36383B1F38F5969B3E /* Pods_HardcoreTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */; };
+		FDFF966428B3F05200A68F95 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = FDFF966328B3F05200A68F95 /* SwiftEntryKit */; };
 		FDFFEFE2227831AD00AB8ACA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE1227831AD00AB8ACA /* Message.swift */; };
 		FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE3227832DD00AB8ACA /* Colors.swift */; };
-		FDFFEFE82278345D00AB8ACA /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFFEFE72278345D00AB8ACA /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,7 +54,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HardcoreTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3634F806235894840053699F /* AboutGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutGameView.swift; sourceTree = "<group>"; };
 		3644DC2223A3D1A500D4CAB7 /* ButtonLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonLinkView.swift; sourceTree = "<group>"; };
 		3644DC2423A3D1C400D4CAB7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 		3CE12C081FB62FEE00945352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CE12C101FB643CB00945352 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3CE12C141FB663A000945352 /* LeadearBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadearBoardViewController.swift; sourceTree = "<group>"; };
-		63B0CB57EA772756F3D03DA9 /* Pods-HardcoreTap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.release.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.release.xcconfig"; sourceTree = "<group>"; };
 		739F733E200B98FE0073C198 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		73BC136A1FB876A200BDB8B0 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		8D0B2BEC1FC89B3600CE102C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -92,11 +88,8 @@
 		8D4E36BC2008CC8200508D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D90EB9720B96F44002A3711 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8D90EB9920B981B1002A3711 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		8DAA24751FC7F80600282E06 /* RateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManager.swift; sourceTree = "<group>"; };
-		9A8DBFE64EDF162FA295ADF2 /* Pods-HardcoreTap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HardcoreTap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap.debug.xcconfig"; sourceTree = "<group>"; };
 		FDFFEFE1227831AD00AB8ACA /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		FDFFEFE3227832DD00AB8ACA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		FDFFEFE72278345D00AB8ACA /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = HardcoreTap/Resources/Generated/R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +98,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D90EB9A20B981B1002A3711 /* GameKit.framework in Frameworks */,
-				92269D36383B1F38F5969B3E /* Pods_HardcoreTap.framework in Frameworks */,
 				8D90EB9820B96F44002A3711 /* StoreKit.framework in Frameworks */,
+				FDFF966428B3F05200A68F95 /* SwiftEntryKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +144,6 @@
 			children = (
 				3CE12BFB1FB62FED00945352 /* HardcoreTap */,
 				3CE12BFA1FB62FED00945352 /* Products */,
-				D7DDCF66F7DBCCB49B6EEB8F /* Pods */,
 				A1D86CDE2B60F3C896ECD78A /* Frameworks */,
 			);
 			indentWidth = 4;
@@ -174,7 +166,6 @@
 				3CE12BFC1FB62FED00945352 /* AppDelegate.swift */,
 				369243442350D4D800EA40C9 /* SceneDelegate.swift */,
 				FD1631532272F1E30040FC3F /* Classes */,
-				FD1631542272F1EB0040FC3F /* Helpers */,
 				FD1631552272F1F40040FC3F /* Launch */,
 				FD1631562272F1FD0040FC3F /* Resources */,
 				8D4D773C20F10AF4001F3E91 /* Supporting files */,
@@ -258,18 +249,8 @@
 			children = (
 				8D90EB9920B981B1002A3711 /* GameKit.framework */,
 				8D90EB9720B96F44002A3711 /* StoreKit.framework */,
-				1AAFEA8909DB74391B6B7085 /* Pods_HardcoreTap.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D7DDCF66F7DBCCB49B6EEB8F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9A8DBFE64EDF162FA295ADF2 /* Pods-HardcoreTap.debug.xcconfig */,
-				63B0CB57EA772756F3D03DA9 /* Pods-HardcoreTap.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		FD1631532272F1E30040FC3F /* Classes */ = {
@@ -278,14 +259,6 @@
 				FD1631582272F2350040FC3F /* PresentationLayer */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		FD1631542272F1EB0040FC3F /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				8DAA24751FC7F80600282E06 /* RateManager.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FD1631552272F1F40040FC3F /* Launch */ = {
@@ -300,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				36D756C32374655100F6791D /* Translations */,
-				FDFFEFE62278340100AB8ACA /* Generated */,
 				3C52CAE71FBBC873004E31B8 /* Audio */,
 				3CE12C031FB62FEE00945352 /* Assets.xcassets */,
 			);
@@ -351,15 +323,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		FDFFEFE62278340100AB8ACA /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				FDFFEFE72278345D00AB8ACA /* R.generated.swift */,
-			);
-			name = Generated;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,14 +330,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CE12C0B1FB62FEE00945352 /* Build configuration list for PBXNativeTarget "HardcoreTap" */;
 			buildPhases = (
-				2DF35AAE9488F785E4CBD92D /* [CP] Check Pods Manifest.lock */,
-				FDFFEFE52278335B00AB8ACA /* R.Swift */,
 				3CE12BF51FB62FED00945352 /* Sources */,
 				3CE12BF61FB62FED00945352 /* Frameworks */,
 				3CE12BF71FB62FED00945352 /* Resources */,
-				8D0B13C81FD2DC11009FEBA6 /* ShellScript */,
-				AD9DC2D863033CC4501DC800 /* [CP] Embed Pods Frameworks */,
-				FDFFEFE02278310A00AB8ACA /* SwiftLint */,
 				36409E522359D842002AB92F /* Embed Watch Content */,
 			);
 			buildRules = (
@@ -382,6 +340,9 @@
 			dependencies = (
 			);
 			name = HardcoreTap;
+			packageProductDependencies = (
+				FDFF966328B3F05200A68F95 /* SwiftEntryKit */,
+			);
 			productName = TimeKillerApp;
 			productReference = 3CE12BF91FB62FED00945352 /* HardcoreTap.app */;
 			productType = "com.apple.product-type.application";
@@ -393,7 +354,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1340;
 				ORGANIZATIONNAME = "Bogdan Bystritskiy";
 				TargetAttributes = {
 					3CE12BF81FB62FED00945352 = {
@@ -420,6 +381,9 @@
 				ru,
 			);
 			mainGroup = 3CE12BF01FB62FED00945352;
+			packageReferences = (
+				FDFF966228B3F05200A68F95 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
+			);
 			productRefGroup = 3CE12BFA1FB62FED00945352 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -445,104 +409,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2DF35AAE9488F785E4CBD92D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HardcoreTap-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D0B13C81FD2DC11009FEBA6 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		AD9DC2D863033CC4501DC800 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BonMot/BonMot.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftEntryKit/SwiftEntryKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BonMot.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEntryKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HardcoreTap/Pods-HardcoreTap-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FDFFEFE02278310A00AB8ACA /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		FDFFEFE52278335B00AB8ACA /* R.Swift */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
-			);
-			name = R.Swift;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				$SRCROOT/HardcoreTap/Resources/Generated/R.generated.swift,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/HardcoreTap/Resources/Generated/R.generated.swift\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		3CE12BF51FB62FED00945352 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -551,7 +417,6 @@
 				369243472350D98B00EA40C9 /* BaseTabView.swift in Sources */,
 				3CE12C151FB663A000945352 /* LeadearBoardViewController.swift in Sources */,
 				3644DC2323A3D1A500D4CAB7 /* ButtonLinkView.swift in Sources */,
-				8DAA24761FC7F80600282E06 /* RateManager.swift in Sources */,
 				73BC136B1FB876A200BDB8B0 /* UIButtonExtension.swift in Sources */,
 				FDFFEFE4227832DD00AB8ACA /* Colors.swift in Sources */,
 				3CE12BFF1FB62FEE00945352 /* GameViewController.swift in Sources */,
@@ -559,7 +424,6 @@
 				369243452350D4D800EA40C9 /* SceneDelegate.swift in Sources */,
 				3C092B0A1FB774010019687C /* BaseTabBarController.swift in Sources */,
 				3C092B061FB771EF0019687C /* RulesViewController.swift in Sources */,
-				FDFFEFE82278345D00AB8ACA /* R.generated.swift in Sources */,
 				36D756BD2374646F00F6791D /* GameView.swift in Sources */,
 				3CE12BFD1FB62FED00945352 /* AppDelegate.swift in Sources */,
 				3644DC2523A3D1C400D4CAB7 /* SettingsView.swift in Sources */,
@@ -634,6 +498,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -697,6 +562,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -721,7 +587,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -730,7 +597,6 @@
 		};
 		3CE12C0C1FB62FEE00945352 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A8DBFE64EDF162FA295ADF2 /* Pods-HardcoreTap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HardcoreTap/HardcoreTap.entitlements;
@@ -740,9 +606,13 @@
 				CURRENT_PROJECT_VERSION = 6;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -757,7 +627,6 @@
 		};
 		3CE12C0D1FB62FEE00945352 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63B0CB57EA772756F3D03DA9 /* Pods-HardcoreTap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HardcoreTap/HardcoreTap.entitlements;
@@ -767,9 +636,13 @@
 				CURRENT_PROJECT_VERSION = 6;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = F7AZ625QQ5;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/HardcoreTap/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bystritskiy.HardcoreTap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -804,6 +677,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDFF966228B3F05200A68F95 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huri000/SwiftEntryKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FDFF966328B3F05200A68F95 /* SwiftEntryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDFF966228B3F05200A68F95 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
+			productName = SwiftEntryKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3CE12BF11FB62FED00945352 /* Project object */;
 }
