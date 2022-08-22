@@ -1,6 +1,6 @@
 # HardcoreTap
-![Swift Support](https://img.shields.io/badge/Swift-5.1-orange.svg)
-![iOS Support](https://img.shields.io/badge/iOS-13.0%2B-yellow.svg)
+![Swift Support](https://img.shields.io/badge/Swift-5.6-orange.svg)
+![iOS Support](https://img.shields.io/badge/iOS-15.0%2B-yellow.svg)
 
 _The game is implemented on the hackathon from Swiftbook.ru (2nd place)_
 
