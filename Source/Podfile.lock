@@ -1,16 +1,14 @@
 PODS:
-  - BonMot (5.4.1)
-  - IQKeyboardManagerSwift (6.5.1)
-  - NVActivityIndicatorView (4.8.0):
-    - NVActivityIndicatorView/Presenter (= 4.8.0)
-  - NVActivityIndicatorView/Presenter (4.8.0)
-  - QuickLayout (3.0.0)
-  - R.swift (5.0.3):
-    - R.swift.Library (~> 5.0.0)
-  - R.swift.Library (5.0.1)
-  - SwiftEntryKit (1.2.0):
-    - QuickLayout (= 3.0.0)
-  - SwiftLint (0.35.0)
+  - BonMot (6.1.1)
+  - IQKeyboardManagerSwift (6.5.10)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - SwiftEntryKit (2.0.0)
+  - SwiftLint (0.48.0)
 
 DEPENDENCIES:
   - BonMot
@@ -25,22 +23,20 @@ SPEC REPOS:
     - BonMot
     - IQKeyboardManagerSwift
     - NVActivityIndicatorView
-    - QuickLayout
     - R.swift
     - R.swift.Library
     - SwiftEntryKit
     - SwiftLint
 
 SPEC CHECKSUMS:
-  BonMot: aa82119ff2ffa184223d8a31c72aed84fbb009e0
-  IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
-  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
-  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
-  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
-  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
-  SwiftEntryKit: 8303faf480f405b57df16b6fc2b251647cf40349
-  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+  BonMot: 42c7134bab1da1d1d8805b02113635c12f0200cc
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
+  SwiftLint: 284cea64b6187c5d6bd83e9a548a64104d546447
 
-PODFILE CHECKSUM: 01aa312559b90ec8325aef0b7dce32fedafe6026
+PODFILE CHECKSUM: df61eae6e588a8c64decc9347ebcf5d8c0a23c5d
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.11.3
