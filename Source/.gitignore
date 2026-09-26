@@ -83,3 +83,9 @@ iOSInjectionProject/
 
 # R.swift
 **/R.generated.swift
+
+# macOS
+.DS_Store
+
+# Xcode 16+ project state
+*.xcodeproj/project.xcworkspace/xcuserdata/

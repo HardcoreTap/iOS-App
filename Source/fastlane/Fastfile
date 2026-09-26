@@ -1,21 +1,35 @@
 default_platform :ios
 
+APP_SCHEME = "HardcoreTap".freeze
+TEST_DEVICE = "iPhone 17".freeze
+
 platform :ios do
-  before_all do
-    cocoapods
-  end
-
+  desc "Run the unit tests on a simulator"
   lane :test do
-    scan
+    run_tests(
+      scheme: APP_SCHEME,
+      devices: [TEST_DEVICE],
+      code_coverage: true
+    )
   end
 
-  lane :beta do    
-     gym(scheme: "HardcoreTap")
+  desc "Lint the Swift sources"
+  lane :lint do
+    swiftlint(strict: true, config_file: ".swiftlint.yml")
   end
 
+  desc "Build and ship a build to TestFlight"
+  lane :beta do
+    test
+    increment_build_number(xcodeproj: "HardcoreTap.xcodeproj")
+    build_app(scheme: APP_SCHEME)
+    upload_to_testflight
+  end
+
+  desc "Build and submit to the App Store"
   lane :release do
-    gym(scheme: "HardcoreTap")
-    upload_to_app_store    
+    test
+    build_app(scheme: APP_SCHEME)
+    upload_to_app_store
   end
-
 end
